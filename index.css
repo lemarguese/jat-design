@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button, div, h1, h2, p, input {
+    font-family: 'Fact', serif;
+}
+
+.jat-main {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.jat-main_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.jat-main-body {
+    width: 939px;
+}
+
+.jat-main-subtypes {
+    height: 500px;
+    border: solid 1px #630208;
+    border-top: none;
+    border-left: none;
+}
+
+.jat-routing {
+    padding: 55px 25px 0 25px;
+    width: 10%;
+    border-right: solid 1px #630208;
+    text-align: end;
+}
+
+.jat-routing_text {
+    margin: 50px 0;
+}
+
+.jat-logo {
+    width: 100px;
+    height: 60px;
+    background: url("assets/images/jat-logo.svg") no-repeat center;
+    background-size: 100px;
+}
+
+.jat-main_inner {
+    width: 100%;
+    max-height: 1080px;
+}
+
+.jat-main-header_block {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0 25px 50px;
+    border-bottom: 1px solid #630208;
+}
+
+.language-selector {
+    display: flex;
+    flex-direction: row;
+    text-align: end;
+    justify-content: flex-end;
+}
+
+.language-selector > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.jat-alternative {
+    height: 400px;
+}
+
+.jat-alternative.img {
+    width: 600px;
+    height: 400px;
+}
+
+.jat-main-body_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.jat-main-body_measurement {
+    width: 200px;
+}
+
+.jat-main-subtypes {
+    display: flex;
+    flex-direction: row;
+}
+
+.jat-delivery_block {
+    padding: 50px 0 25px 50px;
+}
+
+.jat-delivery-img {
+    height: 400px;
+}
+
+.jat-delivery-img.img {
+    padding-top: 100px;
+    width: 500px;
+}
+
+.jat-main_btn {
+    font-weight: 900;
+    font-size: 16px;
+    height: 50px;
+    color: #630208;
+    background-color: #FFA645;
+}
+
+.jat-advantages_block, .jat-about_block {
+    width: 50%;
+}
+
+.jat-advantages_block-inner, .jat-about_block-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 50px;
+}
+
+.jat-advantages_block {
+    background-color: #D23D37;
+}
+
+.adv-tabbing_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active-tabs {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab {
+    width: 60px;
+    border: none;
+    border-bottom: solid 1px #fff;
+    margin: 0 10px;
+}
+
+.active {
+    border-bottom: solid 5px #fff;
+}
+
+.adv-tabbing_icon {
+    width: 120px;
+    height: 140px;
+    background: url("assets/images/advantage-icon.png") no-repeat center;
+    background-size: 120px;
+}
+
+.jat-routing-body {
+    width: 50px;
+    border: 1px solid #630208;
+    border-left: none;
+    border-top: none;
+}
+
+.jat-routing_vertical-text {
+    margin: 0;
+    width: 200px;
+    position: relative;
+    top: 175px;
+    left: -75px;
+    transform: rotateZ(90deg);
+}
+
+.jat-employment-img {
+    width: 400px;
+    height: 400px;
+}
+
+.jat-partners_block, .jat-contact_block {
+    width: 50%;
+}
+
+.jat-partners_block-inner {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: 90px;
+}
+
+.tco {
+    background: url("assets/images/tco-logo.png") no-repeat center;
+}
+
+.ncoc {
+    background: url("assets/images/ncoc-logo.png") no-repeat center;
+}
+
+.kazmin {
+    background: url("assets/images/kazmin-logo.png") no-repeat center;
+}
+
+.rggold {
+    background: url("assets/images/rg-logo.png") no-repeat center;
+}
+
+.erg {
+    background: url("assets/images/erg-logo.png") no-repeat center;
+}
+
+.altynalmas {
+    background: url("assets/images/altynalmas-logo.png") no-repeat center;
+}
+
+.jat-main_attr {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #630208;
+    border-top: none;
+}
+
+.jat-main_attr > * {
+    margin: 5px;
+}
+
+.jat-main_routing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #630208;
+    border-top: none;
+}
+
+.jat-main_routing-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.jat-main_routing-inner > * {
+    margin: 0 15px;
+}
