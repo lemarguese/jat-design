@@ -5,6 +5,7 @@ body {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 img {
@@ -32,7 +33,6 @@ button, div, h1, h2, p, input {
 }
 
 .jat-main-subtypes {
-    height: 500px;
     border: solid 1px #630208;
     border-top: none;
     border-left: none;
@@ -47,6 +47,9 @@ button, div, h1, h2, p, input {
 
 .jat-routing_text {
     margin: 50px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #630208;
 }
 
 .jat-logo {
@@ -56,9 +59,22 @@ button, div, h1, h2, p, input {
     background-size: 100px;
 }
 
+.delivery-title {
+    font-weight: 800;
+    font-size: 30px;
+    color: #630208;
+    margin-bottom: 100px;
+}
+
+.delivery-content {
+    font-weight: 400;
+    font-size: 12px;
+    color: #630208;
+    margin-bottom: 100px;
+}
+
 .jat-main_inner {
     width: 100%;
-    max-height: 1080px;
 }
 
 .jat-main-header_block {
@@ -78,15 +94,22 @@ button, div, h1, h2, p, input {
 .language-selector > * {
     margin-left: 10px;
     margin-right: 10px;
+    color: #630208;
+}
+
+.active-language {
+    font-weight: bold;
 }
 
 .jat-alternative {
+    margin-bottom: 150px;
     height: 400px;
 }
 
 .jat-alternative.img {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 450px;
+    margin-top: 70px;
 }
 
 .jat-main-body_container {
@@ -95,7 +118,31 @@ button, div, h1, h2, p, input {
 }
 
 .jat-main-body_measurement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 200px;
+}
+
+.measurement-first, .measurement-second, .measurement-third {
+    width: 100px;
+    height: 100px;
+    margin: 200px 0;
+}
+
+.measurement-first {
+    background: url("assets/images/measurement-first.svg") no-repeat center;
+    background-size: 80px;
+}
+
+.measurement-second {
+    background: url("assets/images/measurement-second.svg") no-repeat center;
+    background-size: 80px;
+}
+
+.measurement-third {
+    background: url("assets/images/measurement-third.svg") no-repeat center;
+    background-size: 80px;
 }
 
 .jat-main-subtypes {
@@ -105,23 +152,34 @@ button, div, h1, h2, p, input {
 
 .jat-delivery_block {
     padding: 50px 0 25px 50px;
+    margin-right: 50px;
 }
 
-.jat-delivery-img {
-    height: 400px;
+.body-title {
+    color: #630208;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.body-content {
+    color: #630208;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .jat-delivery-img.img {
-    padding-top: 100px;
-    width: 500px;
+    padding-top: 150px;
 }
 
 .jat-main_btn {
+    width: 75%;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 12px;
     height: 50px;
     color: #630208;
     background-color: #FFA645;
+    margin-top: 50px;
 }
 
 .jat-advantages_block, .jat-about_block {
@@ -131,8 +189,19 @@ button, div, h1, h2, p, input {
 .jat-advantages_block-inner, .jat-about_block-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 50px 50px;
+}
+
+.jat-advantages_block-inner {
+    align-items: center;
+}
+
+.adv-title {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    font-size: 38px;
+    margin: 0;
 }
 
 .jat-advantages_block {
@@ -148,6 +217,7 @@ button, div, h1, h2, p, input {
 .active-tabs {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 }
 
 .tab {
@@ -168,6 +238,20 @@ button, div, h1, h2, p, input {
     background-size: 120px;
 }
 
+.adv-tabbing_title {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.adv-tabbing_content {
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
 .jat-routing-body {
     width: 50px;
     border: 1px solid #630208;
@@ -184,9 +268,62 @@ button, div, h1, h2, p, input {
     transform: rotateZ(90deg);
 }
 
+.employment-block {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
 .jat-employment-img {
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 360px;
+    margin-top: 30px;
+}
+
+.employment-tabbing {
+    display: grid;
+    grid-template-columns: 95px 95px 95px;
+    margin-bottom: 20px;
+}
+
+.employment-tabbing > * {
+    text-align: center;
+    height: 30px;
+    border: solid 1px #630208;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.city-tab {
+    border-right: none;
+}
+
+.type-tab {
+    border-left: none;
+}
+
+.employment-tabbing > * p {
+    margin: 8px;
+    color: #630208;
+}
+
+.employment-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.employment-btn, .employment-vacancies-btn {
+    margin-top: 0;
+}
+
+.employment-btn {
+    margin-bottom: 10px;
+}
+
+.employment-vacancies-btn {
+    background-color: #fff;
+    border: 1px solid #630208;
 }
 
 .jat-partners_block, .jat-contact_block {
@@ -194,7 +331,7 @@ button, div, h1, h2, p, input {
 }
 
 .jat-partners_block-inner {
-    margin: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,7 +340,8 @@ button, div, h1, h2, p, input {
 .partner-logos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 35px;
 }
 
 .logo {
@@ -212,27 +350,58 @@ button, div, h1, h2, p, input {
 }
 
 .tco {
-    background: url("assets/images/tco-logo.png") no-repeat center;
+    background: url("assets/images/tco-logo.svg") no-repeat center;
+    background-size: 120px;
 }
 
 .ncoc {
-    background: url("assets/images/ncoc-logo.png") no-repeat center;
+    background: url("assets/images/ncoc-logo.svg") no-repeat center;
+    background-size: 80px;
 }
 
 .kazmin {
-    background: url("assets/images/kazmin-logo.png") no-repeat center;
+    background: url("assets/images/kazmin-logo.svg") no-repeat 30px 25px;
+    background-size: 120px;
 }
 
 .rggold {
-    background: url("assets/images/rg-logo.png") no-repeat center;
+    background: url("assets/images/rg-logo.svg") no-repeat center;
+    background-size: 120px;
 }
 
 .erg {
-    background: url("assets/images/erg-logo.png") no-repeat center;
+    background: url("assets/images/reg-logo.svg") no-repeat center;
+    background-size: 150px;
 }
 
 .altynalmas {
-    background: url("assets/images/altynalmas-logo.png") no-repeat center;
+    background: url("assets/images/altynalmas-logo.svg") no-repeat center;
+    background-size: 120px;
+}
+
+.jat-contact_block {
+    background-color: #D23D37;
+}
+
+.jat-contact_block-inner {
+    margin: 50px;
+}
+
+.contact-title {
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contact-phones, .feedback-contact-block {
+    margin-top: 40px;
+}
+
+.contact-content {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .jat-main_attr {
@@ -240,10 +409,15 @@ button, div, h1, h2, p, input {
     flex-direction: row;
     border: solid 1px #630208;
     border-top: none;
+    border-left: none;
+    padding-left: 25px;
 }
 
 .jat-main_attr > * {
     margin: 5px;
+    text-decoration-line: underline;
+    font-size: 8px;
+    color: #630208;
 }
 
 .jat-main_routing {
@@ -252,6 +426,9 @@ button, div, h1, h2, p, input {
     justify-content: space-between;
     border: solid 1px #630208;
     border-top: none;
+    border-left: none;
+    padding-left: 30px;
+    color: #630208;
 }
 
 .jat-main_routing-inner {
@@ -260,6 +437,12 @@ button, div, h1, h2, p, input {
     align-items: center;
 }
 
+.made-by > p {
+    font-size: 12px;
+    margin-right: 50px;
+}
+
 .jat-main_routing-inner > * {
     margin: 0 15px;
+    font-size: 12px;
 }

@@ -5,6 +5,7 @@
     <title>JAT - Service</title>
     <script src="./library/jquery.min.js-3.6.0.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
@@ -19,15 +20,15 @@
             <p class="jat-routing_text">Контакты</p>
             <div class="language-selector">
                 <p>ENG</p>
-                <p>RUS</p>
+                <p class="active-language">RUS</p>
             </div>
         </aside>
         <section class="jat-main_inner">
             <div class="jat-main-header_block">
                 <div class="jat-delivery-content">
                     <div class="jat-logo"></div>
-                    <h2>Услуги</h2>
-                    <p>Мы занимаемся международными и локальными грузоперевозками <br/>
+                    <h2 class="body-title">Услуги</h2>
+                    <p class="body-content">Мы занимаемся международными и локальными грузоперевозками <br/>
                         по Казахстану, специализируемся на транспортировке оборудования <br/>
                         и негабаритных грузов по морю, воздуху, авто и железным дорогам. <br/>
                         Также перевозим опасные грузы, организуем работы по хранению <br/>
@@ -64,37 +65,38 @@
                             </div>
                             <div class="jat-internal-info">
                                 <div class="jat-delivery_block">
-                                    <h1>
-                                        Международные<br/>
-                                        перевозки
+                                    <h1 class="body-title">
+                                        Международные
+                                        автоперевозки
                                     </h1>
-                                    <p>
-                                        Итак, вы купили продукцию в другой стране и хотите<br/>доставить ее в Казахстан –
-                                        быстро, надежно и безопасно.<br/> Теперь наша очередь: мы свяжемся с производителем,<br/>
-                                        найдем перевозчиков и проследим за доставкой –<br/>
-                                        и на каждом этапе будем с вами на связи. Этот процесс<br/> также работает и в
-                                        обратном направлении.
+                                    <p class="body-content">
+                                        Наиболее популярный и доступный вид перевозки грузов<br/>
+                                        благодаря выгодным ценам и среднему транзитному<br/>
+                                        времени. Еженедельный график, тентовые фуры – если<br/>
+                                        ваш груз едет из Европы, России или Китая, чаще всего<br/>
+                                        его отправляют именно так. Если объем небольшой, мы<br/>
+                                        можем организовать консолидацию и отправить ваш груз<br/>
+                                        вместе с другими – так будет еще выгоднее.
                                     </p>
-                                    <button class="jat-main_btn">УЗНАТЬ ПОДРОБНОСТИ</button>
+                                    <button class="jat-main_btn">СВЯЖИТЕСЬ СО МНОЙ</button>
                                 </div>
-<!--                                <div class="jat-delivery-img"><img class="jat-delivery-img img" alt="Container"-->
-<!--                                                                   src="assets/images/container-img.png">-->
-<!--                                </div>-->
+                                <div class="jat-delivery-img"><img class="jat-delivery-img img" alt="Container"
+                                                                   src="assets/images/service-car-image.png">
+                                </div>
                             </div>
                         </div>
                         <div class="jat-main-subtypes">
                             <div class="jat-advantages_block">
                                 <div class="jat-advantages_block-inner">
-                                    <h1 class="adv-title">Преимущества
-                                        работы с нами</h1>
+                                    <h1 class="adv-title">Почему мы?</h1>
                                     <div class="adv-tabbing_block">
                                         <div class="adv-tabbing_icon"></div>
-                                        <p class="adv-tabbing_title">Выгодные цены</p>
-                                        <p class="adv-content">Проверяем множество перевозчиков,<br/>
-                                            чтобы найти самые выгодные для вас цены </p>
+                                        <p class="adv-tabbing_title">Скорость</p>
+                                        <p class="adv-tabbing_content">Мы всегда на связи, поэтому быстро<br/>
+                                            решаем любые вопросы
+                                        </p>
                                         <div class="active-tabs">
                                             <hr class="tab active-tab">
-                                            <hr class="tab">
                                             <hr class="tab">
                                             <hr class="tab">
                                         </div>
@@ -103,58 +105,82 @@
                             </div>
                             <div class="jat-about_block">
                                 <div class="jat-about_block-inner">
-                                    <h1>О компании</h1>
-                                    <p>JAT Transport транспортирует грузы уже более 10 лет. Сейчас мы занимаемся международными мультимодальными и локальными грузоперевозками по Казахстану, перевозкой опасных грузов, организуем работы по хранению и погрузке, а также помогаем с таможенным оформлением и консультируем по связанным вопросам.
-                                    </p>
-                                    <button class="jat-main_btn">УЗНАТЬ БОЛЬШЕ</button>
+                                    <h1 class="about-title">Оставьте запрос<br/>
+                                        и мы ответим в течение<br/> одного дня
+                                    </h1>
+                                    <form class="feedback-request_block">
+                                        <input type="text" placeholder="Имя и фамилия"
+                                               name="fullname" required class="feedback-input"/>
+                                        <input type="text" placeholder="Название компании"
+                                               name="company" required class="feedback-input"/>
+                                        <input type="text" placeholder="Номер телефона"
+                                               name="phone" required class="feedback-input"/>
+                                        <textarea placeholder="Что вас интересует?"
+                                                  name="interest" required class="feedback-input textarea-input"></textarea>
+                                    </form>
+                                    <button class="jat-main_btn feedback-btn">УЗНАТЬ БОЛЬШЕ</button>
                                 </div>
                             </div>
                         </div>
                         <div class="jat-main-subtypes">
                             <div class="jat-employment_block">
-                                <div>
-                                    <h1>Как мы
+                                <div class="jat-employment_block-inner">
+                                    <h1 class="body-title">Как мы<br/>
                                         работаем</h1>
-                                    <p>Мы строим всю логистическую цепочку, поэтому вам достаточно обратиться к нам и мы решим все вопросы: свяжемся с производителем, найдем перевозчиков, проследим за погрузкой и будем контролировать каждый этап транспортировки «от двери до двери».
-                                        При этом мы постоянно будем на связи, чтобы вовремя ответить на любой вопрос, предупредить о проблеме
+                                    <p class="body-content">Мы строим всю логистическую цепочку, поэтому вам<br/>
+                                        достаточно обратиться к нам и <strong>мы
+                                        решим все вопросы:</strong><br/>
+                                        свяжемся с производителем, найдем перевозчиков,<br/>
+                                        проследим за погрузкой и будем контролировать каждый<br/>
+                                        этап транспортировки «от двери до двери».<br/><br/>
+                                        При этом мы постоянно будем на связи, чтобы вовремя<br/>
+                                        ответить на любой вопрос, предупредить о проблеме<br/>
                                         и найти ее решение.
                                     </p>
-                                    <button class="jat-main_btn">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</button>
+                                    <button class="jat-main_btn employment-btn">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</button>
                                 </div>
                             </div>
-                            <img class="jat-employment-img" alt="" src="assets/images/how-we-work-image.png">
+                            <div class="employment-img_block"><img class="jat-employment-img" alt="" src="assets/images/how-we-work-image.png"></div>
                         </div>
                         <div class="jat-main-subtypes">
                             <div class="jat-partners_block">
                                 <div class="jat-partners_block-inner">
-                                    <h1>Наши партнеры</h1>
-                                    <div class="partner-logos">
-                                        <div class="logo tco"></div>
-                                        <div class="logo erg"></div>
-                                        <div class="logo ncoc"></div>
-                                        <div class="logo altynalmas"></div>
-                                        <div class="logo kazmin"></div>
-                                        <div class="logo rggold"></div>
+                                    <h1 class="body-title">Для кого<br/>
+                                        мы работаем
+                                    </h1>
+                                    <p class="body-content">Мы специализируемся на транспортировке<br/>
+                                        оборудования, но можем помочь и с перевозкой<br/>
+                                        стройматериалов. Возим оборудование, негабаритные<br/>
+                                        и опасные грузы, химикаты. Не занимаемся личными<br/>
+                                        грузами.
+                                    </p>
+                                    <div class="jat-top_partners">
+                                        <p class="top-partners_title">Наши основные клиенты</p>
+                                        <div class="partner-classification">
+                                            <div>ГОРНАЯ ДОБЫЧА</div>
+                                            <div>СТРОИТЕЛЬСТВО</div>
+                                            <div class="oil_and_gas_box">НЕФТЕГАЗОВЫЙ СЕКТОР</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="jat-contact_block">
-                                <div>
-                                    <h1>Контакты</h1>
-                                    <p>Алматы, 050019
-                                        проспект Достык, 85
+                                <div class="jat-contact_block-inner">
+                                    <h1 class="contact-title">Контакты</h1>
+                                    <p class="contact-content">Алматы, 050019<br/>
+                                        проспект Достык, 85<br/>
                                         офис 523</p>
-                                    <p>+7 (727) 327 14 55 
-                                        +7 (701) 951 62 15</p>
-                                    <a>Запросить тарифы</a>
-                                    <a>Отправить резюме</a>
-                                    <a>Связаться с менеджером</a>
+                                    <div class="contact-phones">
+                                        <p class="contact-content">+7 (727) 327 14 55 <br/>
+                                            +7 (701) 951 62 15</p>
+                                    </div>
+                                    <div class="feedback-contact-block">
+                                        <a class="contact-content">Запросить тарифы</a><br/>
+                                        <a class="contact-content">Отправить резюме</a><br/>
+                                        <a class="contact-content">Связаться с менеджером</a><br/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="jat-main_attr">
-                            <p>Атрибуты</p>
-                            <p>Атрибуты</p>
                         </div>
                         <div class="jat-main_routing">
                             <div class="jat-main_routing-inner">
@@ -171,7 +197,7 @@
                         </div>
                     </div>
                     <div class="jat-routing-body">
-                        <p class="jat-routing_vertical-text">ГЛАВНАЯ СТРАНИЦА</p>
+                        <p class="jat-routing_vertical-text">УСЛУГИ</p>
                     </div>
                     <div class="jat-main-body_measurement">
 

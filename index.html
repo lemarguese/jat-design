@@ -5,6 +5,7 @@
     <title>JAT - Main</title>
     <script src="./library/jquery.min.js-3.6.0.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -19,21 +20,22 @@
             <p class="jat-routing_text">Контакты</p>
             <div class="language-selector">
                 <p>ENG</p>
-                <p>RUS</p>
+                <p class="active-language">RUS</p>
             </div>
         </aside>
         <section class="jat-main_inner">
             <div class="jat-main-header_block">
                 <div class="jat-delivery-content">
                     <div class="jat-logo"></div>
-                    <h2>Доставка грузов в Казахстан<br/>
+                    <h2 class="delivery-title">Доставка грузов в Казахстан<br/>
                         и страны Центральной Азии<br/>
                         со всего мира</h2>
-                    <p>У нас только проверенные партнеры, надежный сервис и постоянная<br/> коммуникация с клиентами. Мы
+                    <p class="delivery-content">У нас только проверенные партнеры, надежный сервис и постоянная<br/>
+                        коммуникация с клиентами. Мы
                         обладаем международным опытом<br/>
                         и знаем тонкости местного рынка. А еще – учитываем все особенности<br/> транспортировки, берем
                         на себя ответственность и минимизируем риски.<br/>
-
+                        <br/>
                         Мы специализируемся на перевозке оборудования, но можем помочь<br/>
                         и в транспортировке стройматериалов, жидкостей и даже опасных грузов.
                     </p>
@@ -47,11 +49,11 @@
                     <div class="jat-main-body">
                         <div class="jat-main-subtypes">
                             <div class="jat-delivery_block">
-                                <h1>
+                                <h1 class="body-title">
                                     Международные<br/>
                                     перевозки
                                 </h1>
-                                <p>
+                                <p class="body-content">
                                     Итак, вы купили продукцию в другой стране и хотите<br/>доставить ее в Казахстан –
                                     быстро, надежно и безопасно.<br/> Теперь наша очередь: мы свяжемся с производителем,<br/>
                                     найдем перевозчиков и проследим за доставкой –<br/>
@@ -72,7 +74,7 @@
                                     <div class="adv-tabbing_block">
                                         <div class="adv-tabbing_icon"></div>
                                         <p class="adv-tabbing_title">Выгодные цены</p>
-                                        <p class="adv-content">Проверяем множество перевозчиков,<br/>
+                                        <p class="adv-tabbing_content">Проверяем множество перевозчиков,<br/>
                                             чтобы найти самые выгодные для вас цены </p>
                                         <div class="active-tabs">
                                             <hr class="tab active">
@@ -85,38 +87,44 @@
                             </div>
                             <div class="jat-about_block">
                                 <div class="jat-about_block-inner">
-                                    <h1>О компании</h1>
-                                    <p>JAT Transport транспортирует грузы уже более 10 лет. Сейчас мы занимаемся международными мультимодальными и локальными грузоперевозками по Казахстану, перевозкой опасных грузов, организуем работы по хранению и погрузке, а также помогаем с таможенным оформлением и консультируем по связанным вопросам.
+                                    <h1 class="body-title">О компании</h1>
+                                    <p class="body-content">JAT Transport транспортирует грузы уже более 10 лет.<br/>
+                                        Сейчас мы занимаемся международными мультимодальными и локальными
+                                        грузоперевозками<br/> по Казахстану, перевозкой опасных грузов,<br/> организуем
+                                        работы по хранению и погрузке, а также<br/> помогаем с таможенным оформлением
+                                        и<br/> консультируем по связанным вопросам.
                                     </p>
                                     <button class="jat-main_btn">УЗНАТЬ БОЛЬШЕ</button>
                                 </div>
                             </div>
                         </div>
                         <div class="jat-main-subtypes">
-                            <div class="jat-employment_block">
-                                <div>
-                                    <h1>Мы ищем
+                            <div class="employment-block">
+                                <div class="jat-employment_block">
+                                    <h1 class="body-title">Мы ищем<br/>
                                         в команду
                                         логиста</h1>
                                     <div class="employment-tabbing">
-                                        <div class="city-tab">АЛМАТЫ</div>
-                                        <div class="location-tab">В ШТАТ</div>
-                                        <div class="type-tab">ЛОГИСТИКА</div>
+                                        <div class="city-tab"><p>АЛМАТЫ</p></div>
+                                        <div class="location-tab"><p>В ШТАТ</p></div>
+                                        <div class="type-tab"><p>ЛОГИСТИКА</p></div>
                                     </div>
-                                    <p>Организация, оптимизация и контроль международных и внутренних перевозок. Маршрутизация и ведение процесса перевозки, контроль водителей.
+                                    <p class="body-content">Организация, оптимизация и контроль<br/> международных и
+                                        внутренних перевозок.<br/> Маршрутизация и ведение процесса перевозки,<br/>
+                                        контроль водителей.
                                     </p>
-                                    <div>
-                                        <button class="jat-main_btn">ОТОЗВАТЬСЯ</button>
-                                        <button class="jat-main_btn">ОТОЗВАТЬСЯ</button>
+                                    <div class="employment-buttons">
+                                        <button class="jat-main_btn employment-btn">ОТОЗВАТЬСЯ</button>
+                                        <button class="jat-main_btn employment-vacancies-btn">ВСЕ ВАКАНСИИ</button>
                                     </div>
                                 </div>
+                                <img class="jat-employment-img" alt="" src="assets/images/employment-img.png">
                             </div>
-                            <img class="jat-employment-img" alt="" src="assets/images/employment-img.png">
                         </div>
                         <div class="jat-main-subtypes">
                             <div class="jat-partners_block">
                                 <div class="jat-partners_block-inner">
-                                    <h1>Наши партнеры</h1>
+                                    <h1 class="body-title">Наши партнеры</h1>
                                     <div class="partner-logos">
                                         <div class="logo tco"></div>
                                         <div class="logo erg"></div>
@@ -128,16 +136,20 @@
                                 </div>
                             </div>
                             <div class="jat-contact_block">
-                                <div>
-                                    <h1>Контакты</h1>
-                                    <p>Алматы, 050019
-                                        проспект Достык, 85
+                                <div class="jat-contact_block-inner">
+                                    <h1 class="contact-title">Контакты</h1>
+                                    <p class="contact-content">Алматы, 050019<br/>
+                                        проспект Достык, 85<br/>
                                         офис 523</p>
-                                    <p>+7 (727) 327 14 55 
-                                        +7 (701) 951 62 15</p>
-                                    <a>Запросить тарифы</a>
-                                    <a>Отправить резюме</a>
-                                    <a>Связаться с менеджером</a>
+                                    <div class="contact-phones">
+                                        <p class="contact-content">+7 (727) 327 14 55 <br/>
+                                            +7 (701) 951 62 15</p>
+                                    </div>
+                                    <div class="feedback-contact-block">
+                                        <a class="contact-content">Запросить тарифы</a><br/>
+                                        <a class="contact-content">Отправить резюме</a><br/>
+                                        <a class="contact-content">Связаться с менеджером</a><br/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +175,9 @@
                         <p class="jat-routing_vertical-text">ГЛАВНАЯ СТРАНИЦА</p>
                     </div>
                     <div class="jat-main-body_measurement">
-
+                        <div class="measurement-first"></div>
+                        <div class="measurement-second"></div>
+                        <div class="measurement-third"></div>
                     </div>
                 </div>
             </div>

@@ -50,6 +50,19 @@ button, div, h1, h2, p, input {
     background-size: 100px;
 }
 
+.body-title {
+    color: #630208;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.body-content {
+    color: #630208;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .jat-main_inner {
     width: 100%;
     max-height: 1080px;
@@ -72,15 +85,6 @@ button, div, h1, h2, p, input {
 .language-selector > * {
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.jat-alternative {
-    height: 400px;
-}
-
-.jat-alternative.img {
-    width: 600px;
-    height: 400px;
 }
 
 .jat-main-body_container {
@@ -153,11 +157,11 @@ button, div, h1, h2, p, input {
 
 .jat-routing_vertical-text {
     margin: 0;
-    width: 425px;
+    width: 470px;
     position: relative;
     text-transform: uppercase;
     top: 275px;
-    left: -185px;
+    left: -210px;
     transform: rotateZ(90deg);
 }
 
@@ -166,16 +170,31 @@ button, div, h1, h2, p, input {
     height: 400px;
 }
 
-.jat-partners_block, .jat-contact_block {
-    width: 50%;
+.jat-contact_block {
+    background-color: #D23D37;
 }
 
-.jat-partners_block-inner {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.jat-contact_block-inner {
+    margin: 50px;
 }
+
+.contact-title {
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contact-phones, .feedback-contact-block {
+    margin-top: 40px;
+}
+
+.contact-content {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 
 .jat-main_routing {
     display: flex;

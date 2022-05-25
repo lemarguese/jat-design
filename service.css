@@ -5,13 +5,14 @@ body {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 img {
     max-width: 100%;
 }
 
-button, div, h1, h2, p, input {
+button, div, h1, h2, p, input, textarea {
     font-family: 'Fact', serif;
 }
 
@@ -32,7 +33,6 @@ button, div, h1, h2, p, input {
 }
 
 .jat-main-subtypes {
-    height: 500px;
     border: solid 1px #630208;
     border-top: none;
     border-left: none;
@@ -47,6 +47,9 @@ button, div, h1, h2, p, input {
 
 .jat-routing_text {
     margin: 50px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #630208;
 }
 
 .jat-logo {
@@ -58,7 +61,6 @@ button, div, h1, h2, p, input {
 
 .jat-main_inner {
     width: 100%;
-    max-height: 1080px;
 }
 
 .jat-main-header_block {
@@ -78,15 +80,29 @@ button, div, h1, h2, p, input {
 .language-selector > * {
     margin-left: 10px;
     margin-right: 10px;
+    color: #630208;
+}
+
+.active-language {
+    font-weight: bold;
+}
+
+.body-title {
+    color: #630208;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.body-content {
+    color: #630208;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .jat-alternative {
-    height: 400px;
-}
-
-.jat-alternative.img {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    margin-top: 25px;
 }
 
 .jat-main-body_container {
@@ -106,22 +122,28 @@ button, div, h1, h2, p, input {
 .jat-delivery_block {
     padding: 50px 0 25px 50px;
 }
-
 .jat-delivery-img {
-    height: 400px;
+    margin-right: 25px;
 }
 
 .jat-delivery-img.img {
+    width: 600px;
+    margin-top: 50px;
     padding-top: 100px;
-    width: 200px;
 }
 
 .jat-main_btn {
+    width: 75%;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 12px;
     height: 50px;
     color: #630208;
     background-color: #FFA645;
+    margin-top: 50px;
+}
+
+.feedback-btn {
+    margin-top: 0;
 }
 
 .jat-advantages_block, .jat-about_block {
@@ -131,8 +153,23 @@ button, div, h1, h2, p, input {
 .jat-advantages_block-inner, .jat-about_block-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 50px 50px;
+}
+
+.jat-about_block-inner {
+    align-items: center;
+    margin: 10px 50px 60px 50px;
+}
+
+.jat-advantages_block-inner {
+    align-items: center;
+}
+
+.adv-title {
+    color: #fff;
+    font-weight: 900;
+    font-size: 38px;
+    margin: 0;
 }
 
 .jat-advantages_block {
@@ -148,6 +185,7 @@ button, div, h1, h2, p, input {
 .active-tabs {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 }
 
 .tab {
@@ -162,10 +200,24 @@ button, div, h1, h2, p, input {
 }
 
 .adv-tabbing_icon {
-    width: 120px;
-    height: 140px;
-    background: url("assets/images/advantage-icon.png") no-repeat center;
-    background-size: 120px;
+    width: 175px;
+    height: 175px;
+    background: url("assets/images/advantage-service.svg") no-repeat center;
+    background-size: 170px;
+}
+
+.adv-tabbing_title {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.adv-tabbing_content {
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
 }
 
 .jat-routing-body {
@@ -181,69 +233,28 @@ button, div, h1, h2, p, input {
     position: relative;
     top: 175px;
     left: -75px;
+    color: #630208;
     transform: rotateZ(90deg);
 }
 
-.jat-employment-img {
-    width: 400px;
-    height: 400px;
+.jat-employment_block-inner {
+    margin: 50px;
 }
 
-.jat-partners_block, .jat-contact_block {
-    width: 50%;
+.employment-btn {
+    margin-top: 20px;
 }
 
-.jat-partners_block-inner {
-    margin: 20px;
+.employment-img_block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0 20px;
 }
 
-.partner-logos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
-.logo {
-    width: 150px;
-    height: 90px;
-}
-
-.tco {
-    background: url("assets/images/tco-logo.png") no-repeat center;
-}
-
-.ncoc {
-    background: url("assets/images/ncoc-logo.png") no-repeat center;
-}
-
-.kazmin {
-    background: url("assets/images/kazmin-logo.png") no-repeat center;
-}
-
-.rggold {
-    background: url("assets/images/rg-logo.png") no-repeat center;
-}
-
-.erg {
-    background: url("assets/images/erg-logo.png") no-repeat center;
-}
-
-.altynalmas {
-    background: url("assets/images/altynalmas-logo.png") no-repeat center;
-}
-
-.jat-main_attr {
-    display: flex;
-    flex-direction: row;
-    border: solid 1px #630208;
-    border-top: none;
-}
-
-.jat-main_attr > * {
-    margin: 5px;
+.jat-employment-img {
+    width: 430px;
 }
 
 .jat-main_routing {
@@ -267,22 +278,173 @@ button, div, h1, h2, p, input {
 .jat-internal-tabs {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 225px;
 }
 
 .jat-internal-tabs > *:first-child {
-    border-top: none;
+    border-top: solid 1px #630208;
+    border-bottom: 1px solid #630208;
 }
 
 .internal-tab {
-    height: 100px;
-    border: solid 1px #630208;
-    border-bottom: none;
-    border-left: none;
-    text-align: center;
+    height: 85px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px none #630208;
+    border-right-style: solid;
+    color: #630208;
 }
+
+.internal-tab > p {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
 
 .active-delivery_tab {
     border-right: none;
+    font-weight: bold;
 }
 
+.jat-internal-info {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.feedback-request_block {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.feedback-input {
+    height: 40px;
+    border: 1px solid #630208;
+    font-weight: normal;
+    font-size: 12px;
+    color: #630208;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.textarea-input {
+    height: 80px;
+    padding-top: 15px;
+}
+
+.feedback-input:focus {
+    outline: none;
+}
+
+.feedback-input::placeholder {
+    font-weight: normal;
+    font-size: 12px;
+    color: #630208;
+}
+
+.about-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: #630208;
+}
+
+
+
+.jat-contact_block {
+    background-color: #D23D37;
+}
+
+.jat-partners_block, .jat-contact_block {
+    width: 50%;
+}
+
+.jat-contact_block-inner {
+    margin: 50px;
+}
+
+.contact-title {
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contact-phones, .feedback-contact-block {
+    margin-top: 40px;
+}
+
+.contact-content {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.jat-partners_block-inner {
+    margin: 10px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jat-top_partners {
+    margin-top: 30px;
+}
+
+.top-partners_title {
+    font-weight: 900;
+    font-size: 12px;
+    color: #630208;
+    text-align: center;
+}
+
+.partner-classification {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.partner-classification > * {
+    border: 1px solid #630208;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    color: #630208;
+}
+
+.oil_and_gas_box {
+    border-top: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.jat-main_routing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #630208;
+    border-top: none;
+    border-left: none;
+    padding-left: 30px;
+    color: #630208;
+}
+
+.jat-main_routing-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.made-by > p {
+    font-size: 12px;
+    margin-right: 50px;
+}
+
+.jat-main_routing-inner > * {
+    margin: 0 15px;
+    font-size: 12px;
+}
