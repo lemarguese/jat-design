@@ -257,24 +257,6 @@ button, div, h1, h2, p, input, textarea {
     width: 430px;
 }
 
-.jat-main_routing {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid 1px #630208;
-    border-top: none;
-}
-
-.jat-main_routing-inner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.jat-main_routing-inner > * {
-    margin: 0 15px;
-}
-
 .jat-internal-tabs {
     display: flex;
     flex-direction: column;
