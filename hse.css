@@ -134,6 +134,11 @@ button, div, h1, h2, p, input {
     width: 200px;
 }
 
+.hse-measurement {
+    height: 100%;
+    background: url("assets/images/hse-measurement.svg") no-repeat center;
+}
+
 .jat-delivery_block {
     padding: 50px 0 25px 50px;
     border-right: solid 1px #630208;

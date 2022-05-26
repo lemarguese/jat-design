@@ -114,6 +114,13 @@ button, div, h1, h2, p, input, textarea {
     width: 200px;
 }
 
+.service-measurement {
+    margin: 100px 0 0 75px;
+    height: 100%;
+    background: url("assets/images/service-measurement.svg") no-repeat 0 0;
+    background-size: 120px;
+}
+
 .jat-main-subtypes {
     display: flex;
     flex-direction: row;
