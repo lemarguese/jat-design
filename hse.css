@@ -34,8 +34,8 @@ button, div, h1, h2, p, input {
 
 .jat-alternative {
     width: 600px;
-    background: url("assets/images/hse-image.png") no-repeat -180px 0;
-    background-size: 800px;
+    background: url("assets/images/hse-image.png") no-repeat -180px -10px;
+    background-size: 750px;
 }
 
 .jat-routing {
