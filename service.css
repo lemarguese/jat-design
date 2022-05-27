@@ -29,7 +29,7 @@ button, div, h1, h2, p, input, textarea {
 }
 
 .jat-main-body {
-    width: 939px;
+    width: 90%;
 }
 
 .jat-main-subtypes {
@@ -90,19 +90,11 @@ button, div, h1, h2, p, input, textarea {
 .body-title {
     color: #630208;
     font-weight: 900;
-    font-size: 40px;
 }
 
 .body-content {
     color: #630208;
-    font-size: 12px;
     font-weight: 400;
-    line-height: 20px;
-}
-
-.jat-alternative {
-    width: 700px;
-    margin-top: 25px;
 }
 
 .jat-main-body_container {
@@ -136,7 +128,8 @@ button, div, h1, h2, p, input, textarea {
 .jat-delivery-img.img {
     width: 600px;
     margin-top: 50px;
-    padding-top: 100px;
+    padding-top: 50px;
+    margin-bottom: 25px;
 }
 
 .jat-main_btn {
@@ -147,6 +140,7 @@ button, div, h1, h2, p, input, textarea {
     color: #630208;
     background-color: #FFA645;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .feedback-btn {
@@ -276,7 +270,7 @@ button, div, h1, h2, p, input, textarea {
 }
 
 .internal-tab {
-    height: 85px;
+    height: 20%;
     font-size: 12px;
     display: flex;
     flex-direction: column;
@@ -438,18 +432,56 @@ button, div, h1, h2, p, input, textarea {
     font-size: 12px;
 }
 
-@media (max-width: 1200px) {
-    .jat-alternative {
-        width: 600px;
+.head-title {
+    margin-top: 50px;
+}
+
+@media (max-width: 1920px), (max-width: 2560px) {
+    .body-title {
+        font-size: 50px;
     }
 
+    .body-content {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1650px) {
+    .jat-alternative {
+        width: 700px;
+        margin-top: 25px;
+    }
+
+    .jat-delivery-img.img {
+        padding-top: 50px;
+    }
+
+    .body-title {
+        font-size: 40px;
+    }
+
+    .body-content {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1250px) {
     .jat-delivery_block {
         width: 300px;
     }
 
     .jat-delivery-img.img {
-        margin-top: 60px;
-        width: unset;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .jat-alternative {
+        width: 600px;
     }
 
     .delivery-content {
@@ -466,5 +498,9 @@ button, div, h1, h2, p, input, textarea {
 
     .jat-routing_text {
         font-size: 15px;
+    }
+
+    .adv-title {
+        font-size: 32px;
     }
 }
