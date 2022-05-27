@@ -55,7 +55,7 @@ button, div, h1, h2, p, input, textarea {
 .jat-logo {
     width: 100px;
     height: 60px;
-    background: url("assets/images/jat-logo.svg") no-repeat center;
+    background: url("../../assets/images/jat-logo.svg") no-repeat center;
     background-size: 100px;
 }
 
@@ -109,7 +109,7 @@ button, div, h1, h2, p, input, textarea {
 .service-measurement {
     margin: 100px 0 0 75px;
     height: 100%;
-    background: url("assets/images/service-measurement.svg") no-repeat 0 0;
+    background: url("../../assets/images/service-measurement.svg") no-repeat 0 0;
     background-size: 120px;
 }
 
@@ -203,7 +203,7 @@ button, div, h1, h2, p, input, textarea {
 .adv-tabbing_icon {
     width: 175px;
     height: 175px;
-    background: url("assets/images/advantage-service.svg") no-repeat center;
+    background: url("../../assets/images/advantage-service.svg") no-repeat center;
     background-size: 170px;
 }
 

@@ -38,7 +38,7 @@ button, div, h1, h2, p, input {
 
 .jat-alternative {
     width: 600px;
-    background: url("assets/images/hse-image.png") no-repeat -180px -10px;
+    background: url("../../assets/images/hse-image.png") no-repeat -180px -10px;
     background-size: 750px;
 }
 
@@ -89,7 +89,7 @@ button, div, h1, h2, p, input {
 .jat-logo {
     width: 100px;
     height: 60px;
-    background: url("assets/images/jat-logo.svg") no-repeat center;
+    background: url("../../assets/images/jat-logo.svg") no-repeat center;
     background-size: 100px;
 }
 
@@ -139,7 +139,7 @@ button, div, h1, h2, p, input {
 
 .hse-measurement {
     height: 100%;
-    background: url("assets/images/hse-measurement.svg") no-repeat center;
+    background: url("../../assets/images/hse-measurement.svg") no-repeat center;
 }
 
 .jat-delivery_block {
@@ -166,7 +166,7 @@ button, div, h1, h2, p, input {
     width: 100%;
     height: 40px;
     margin-top: 40px;
-    background: #FFA645 url("assets/images/jat-transportation-logo.svg") no-repeat center;
+    background: #FFA645 url("../../assets/images/jat-transportation-logo.svg") no-repeat center;
     background-size: 60px;
 }
 
@@ -208,7 +208,7 @@ button, div, h1, h2, p, input {
 .adv-tabbing_icon {
     width: 120px;
     height: 140px;
-    background: url("assets/images/advantage-icon.png") no-repeat center;
+    background: url("../../assets/images/advantage-icon.png") no-repeat center;
     background-size: 120px;
 }
 
@@ -361,7 +361,7 @@ button, div, h1, h2, p, input {
     }
 
     .jat-alternative {
-        background: url(assets/images/hse-image.png) no-repeat -140px 100px;
+        background: url(../../assets/images/hse-image.png) no-repeat -140px 100px;
         background-size: 650px;
     }
 }

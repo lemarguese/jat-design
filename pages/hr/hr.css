@@ -61,7 +61,7 @@ button, div, h1, h2, p, input {
 .jat-logo {
     width: 100px;
     height: 60px;
-    background: url("assets/images/jat-logo.svg") no-repeat center;
+    background: url("../../assets/images/jat-logo.svg") no-repeat center;
     background-size: 100px;
 }
 
@@ -129,17 +129,17 @@ button, div, h1, h2, p, input {
 }
 
 .measurement-first {
-    background: url("assets/images/measurement-first.svg") no-repeat center;
+    background: url("../../assets/images/measurement-first.svg") no-repeat center;
     background-size: 80px;
 }
 
 .measurement-second {
-    background: url("assets/images/measurement-second.svg") no-repeat center;
+    background: url("../../assets/images/measurement-second.svg") no-repeat center;
     background-size: 80px;
 }
 
 .measurement-third {
-    background: url("assets/images/measurement-third.svg") no-repeat center;
+    background: url("../../assets/images/measurement-third.svg") no-repeat center;
     background-size: 80px;
 }
 
@@ -330,7 +330,7 @@ button, div, h1, h2, p, input {
 .adv-tabbing_icon {
     width: 120px;
     height: 140px;
-    background: url("assets/images/advantage-icon.png") no-repeat center;
+    background: url("../../assets/images/advantage-icon.png") no-repeat center;
     background-size: 120px;
 }
 
