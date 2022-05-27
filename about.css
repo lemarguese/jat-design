@@ -8,10 +8,6 @@ button {
     cursor: pointer;
 }
 
-img {
-    max-width: 100%;
-}
-
 button, div, h1, h2, p, input {
     font-family: 'Fact', serif;
 }
@@ -29,7 +25,7 @@ button, div, h1, h2, p, input {
 }
 
 .jat-main-body {
-    width: 939px;
+    width: 90%;
 }
 
 .jat-main-subtypes {
@@ -100,10 +96,6 @@ button, div, h1, h2, p, input {
     font-weight: bold;
 }
 
-.jat-alternative {
-    width: 700px;
-}
-
 .jat-main-body_container {
     display: flex;
     flex-direction: row;
@@ -161,7 +153,6 @@ button, div, h1, h2, p, input {
 
 .number-title {
     font-weight: 900;
-    font-size: 30px;
     margin: 35px 0 10px 0;
 }
 
@@ -213,10 +204,6 @@ button, div, h1, h2, p, input {
 
 .about-image_block {
     padding: 50px 50px 50px 20px;
-}
-
-.about-image_block img {
-    width: 350px;
 }
 
 .jat-routing-body {
@@ -433,11 +420,16 @@ button, div, h1, h2, p, input {
     text-align: center;
 }
 
+.jat-contact_block {
+    width: 100%;
+}
+
 .jat-contact_block-inner {
     margin: 50px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .jat-contact-info {
@@ -459,4 +451,58 @@ button, div, h1, h2, p, input {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+}
+
+.jat-location-img {
+    max-width: 100%;
+}
+
+@media (max-width: 1920px), (max-width: 2560px) {
+    .number-title {
+        font-size: 40px;
+    }
+
+    .body-content {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .jat-alternative {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .jat-alternative {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .body-content {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .jat-alternative {
+        width: 700px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .about-image_block img {
+        width: 350px;
+    }
+
+    .number-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .jat-alternative {
+        margin-top: 40px;
+    }
 }
