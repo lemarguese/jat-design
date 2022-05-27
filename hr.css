@@ -30,7 +30,7 @@ button, div, h1, h2, p, input {
 
 .jat-main-body {
     display: grid;
-    width: 939px;
+    width: 90%;
 }
 
 .jat-main-subtypes {
@@ -146,6 +146,7 @@ button, div, h1, h2, p, input {
 .jat-main-subtypes {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .body-title {
@@ -463,4 +464,40 @@ button, div, h1, h2, p, input {
 .employment-vacancies-btn {
     background-color: #fff;
     border: 1px solid #630208;
+}
+
+@media (max-width: 1920px), (max-width: 2560px) {
+    .body-content {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .body-title {
+        font-size: 50px;
+    }
+
+    .jat-alternative {
+        width: unset;
+    }
+}
+
+@media (max-width: 1440px) {
+    .body-content {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .body-title {
+        font-size: 40px;
+    }
+
+    .jat-alternative {
+        width: 700px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .jat-sales_block-inner {
+        margin: 50px 30px 50px 30px;
+    }
 }
