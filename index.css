@@ -29,7 +29,7 @@ button, div, h1, h2, p, input {
 }
 
 .jat-main-body {
-    width: 939px;
+    width: 90%;
 }
 
 .jat-main-subtypes {
@@ -61,14 +61,12 @@ button, div, h1, h2, p, input {
 
 .delivery-title {
     font-weight: 800;
-    font-size: 30px;
     color: #630208;
     margin-bottom: 100px;
 }
 
 .delivery-content {
     font-weight: 400;
-    font-size: 12px;
     color: #630208;
     margin-bottom: 100px;
 }
@@ -80,6 +78,7 @@ button, div, h1, h2, p, input {
 .jat-main-header_block {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 50px 0 25px 50px;
     border-bottom: 1px solid #630208;
 }
@@ -148,6 +147,7 @@ button, div, h1, h2, p, input {
 .jat-main-subtypes {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .jat-delivery_block {
@@ -158,12 +158,10 @@ button, div, h1, h2, p, input {
 .body-title {
     color: #630208;
     font-weight: 900;
-    font-size: 40px;
 }
 
 .body-content {
     color: #630208;
-    font-size: 12px;
     font-weight: 400;
     line-height: 20px;
 }
@@ -271,7 +269,9 @@ button, div, h1, h2, p, input {
 .employment-block {
     margin: 50px;
     display: flex;
+    width: 100%;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .jat-employment-img {
@@ -445,4 +445,80 @@ button, div, h1, h2, p, input {
 .jat-main_routing-inner > * {
     margin: 0 15px;
     font-size: 12px;
+}
+
+@media (max-width: 1920px), (max-width: 2560px) {
+    .delivery-title, .body-title {
+        font-size: 42px;
+    }
+
+    .jat-employment-img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .delivery-content, .body-content {
+        font-size: 18px;
+    }
+
+    .body-content {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1650px) {
+    .delivery-title {
+        font-size: 30px;
+    }
+
+    .body-title {
+        font-size: 40px;
+    }
+
+    .delivery-content, .body-content {
+        font-size: 12px;
+    }
+
+    .jat-employment-img {
+        width: 360px;
+        height: 360px;
+    }
+
+    .body-content {
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .jat-alternative {
+        height: unset;
+        margin-bottom: 0;
+    }
+
+    .jat-main-body {
+        width: unset;
+    }
+
+    .jat-alternative.img {
+        width: unset;
+        height: 320px;
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
+
+    .jat-delivery-img {
+        width: 500px;
+    }
+
+    .jat-main-header_block {
+        width: 100%;
+    }
+
+    .jat-delivery-img.img {
+        padding-top: 160px;
+    }
+    .measurement-first, .measurement-second, .measurement-third {
+        width: 80px;
+        background-size: 50px;
+    }
 }
