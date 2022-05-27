@@ -50,6 +50,7 @@ button, div, h1, h2, p, input {
 }
 
 .jat-routing_text {
+    cursor: pointer;
     margin: 50px 0;
     font-weight: 400;
     font-size: 16px;
