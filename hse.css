@@ -26,8 +26,12 @@ button, div, h1, h2, p, input {
     display: flex;
     flex-direction: row;
 }
+
+.jat-main-body {
+    width: 90%;
+}
+
 .jat-main-body_inner {
-    width: 939px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -97,9 +101,7 @@ button, div, h1, h2, p, input {
 
 .body-content {
     color: #630208;
-    font-size: 12px;
     font-weight: 400;
-    line-height: 20px;
 }
 
 .jat-main_inner {
@@ -109,6 +111,7 @@ button, div, h1, h2, p, input {
 .jat-main-header_block {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     padding: 50px 0 25px 50px;
     border-bottom: 1px solid #630208;
 }
@@ -147,6 +150,9 @@ button, div, h1, h2, p, input {
 
 .jat-transportation_block {
     padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-bottom: solid 1px #630208;
     background-color: #D23D37;
 }
@@ -318,4 +324,44 @@ button, div, h1, h2, p, input {
 .jat-main_routing-inner > * {
     margin: 0 15px;
     font-size: 12px;
+}
+
+@media (max-width: 1920px), (max-width: 2560px) {
+    .body-content {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .jat-hse-car {
+        margin: 100px 0;
+        width: 100%;
+    }
+
+    .contact-content, .types-preparement p {
+        font-size: 20px;
+    }
+
+    .jat-posttitle {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .jat-hse-car {
+        margin: 75px 0;
+    }
+
+    .jat-posttitle {
+        font-size: 20px;
+    }
+
+    .body-content, .contact-content, .types-preparement p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .jat-alternative {
+        background: url(assets/images/hse-image.png) no-repeat -140px 100px;
+        background-size: 650px;
+    }
 }
