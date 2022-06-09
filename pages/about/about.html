@@ -1,265 +1,410 @@
-<html lang="ru">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JAT - About</title>
-    <script src="../../library/jquery.min.js-3.6.0.js"></script>
-    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="about.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771" type="text/javascript"></script>
+    <script src="about.js"></script>
+    <title>JAT - About</title>
+
+    <style>
+        #map {
+            height: 300px;
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
 <div class="jat-main">
-    <div class="jat-main_container">
-        <aside class="jat-routing">
-            <p class="jat-routing_text">Главная</p>
-            <p class="jat-routing_text">Услуги</p>
-            <p class="jat-routing_text">О компании</p>
-            <p class="jat-routing_text hse">HSE</p>
-            <p class="jat-routing_text">HR</p>
-            <p class="jat-routing_text">Контакты</p>
-            <div class="language-selector">
-                <p>ENG</p>
-                <p class="active-language">RUS</p>
-            </div>
-        </aside>
-        <section class="jat-main_inner">
-            <div class="jat-main-header_block">
-                <div class="jat-delivery-content">
-                    <div class="jat-logo"></div>
-                    <h2 class="body-title">О компании</h2>
-                    <p class="body-content">JAT Transport транспортирует грузы уже более 10 лет. Сейчас мы<br/>
-                        занимаемся международными мультимодальными и локальными<br/>
-                        грузоперевозками по Казахстану, перевозкой опасных грузов,<br/>
-                        организуем работы по хранению и погрузке, а также помогаем<br/>
-                        с таможенным оформлением.<br/>
-                        Чтобы развивать сервис, мы постоянно совершенствуем навыки<br/>
-                        команды, внедряем новое программное обеспечение и расширяем<br/>
-                        сеть представительств.
-                    </p>
+    <div class="jat-main_inner">
+        <div class="jat-sidebar">
+            <div class="routing-icons--items_block">
+                <div class="routing-block">
+                    <div class="routing-block_item main-text">
+                        <h1 class="routing-block_text">главная</h1>
+                    </div>
+                    <div class="routing-block_item service-text">
+                        <h1 class="routing-block_text">услуги</h1>
+                    </div>
+                    <div class="routing-block_item hse-text">
+                        <h1 class="routing-block_text">HSE</h1>
+                    </div>
+                    <div class="routing-block_item active-route">
+                        <h1 class="routing-block_text about-text">о компании</h1>
+                    </div>
+                    <div class="routing-block_item hr-text">
+                        <h1 class="routing-block_text">hr</h1>
+                    </div>
+                    <div class="routing-block_item contacts-text">
+                        <h1 class="routing-block_text">контакты</h1>
+                    </div>
                 </div>
-                <div class="jat-alternative">
-                    <img class="jat-alternative img" src="../../assets/images/about-image.png">
+                <div class="routing-icons">
+                    <div class="upper-icon_block">
+                        <div class="upper-icon"></div>
+                        <p class="routing-block_text">наверх</p>
+                    </div>
+                    <div class="mail-icon_block">
+                        <p class="routing-block_text mail-text">mail</p>
+                    </div>
                 </div>
             </div>
-            <div class="jat-main-body_block">
-                <div class="jat-main-body_container">
-                    <div class="jat-main-body">
-                        <div class="jat-main-subtypes">
-                            <div class="jat-numbers_block">
-                                <h1 class="body-title statistics-title">
-                                    Главное в цифрах
-                                </h1>
-                                <div class="number-block">
-                                    <h1 class="number-title">12 лет</h1>
-                                    <p class="body-content number-content">компания работает<br/>
-                                        на рынке</p>
+        </div>
+        <div class="jat-body">
+            <div class="jat-head">
+                <div class="jat-head--inner">
+                    <div class="main-body_logo">
+                        <div class="main-logo"></div>
+                        <div class="language-selector">Ru</div>
+                    </div>
+                    <div class="main-title_block">
+                        <h1 class="main-body_title">О компании</h1>
+                    </div>
+                    <div class="main-body-content">
+                        <p class="main-body-content_text">JAT Transport является 100% локальной компанией,
+                            официально<br/>
+                            зарегистрированной и осуществляющей деятельность в Казахстане,<br/>
+                            головной офис которой расположен в г. Алматы. Специализированная<br/>
+                            экспедиторская компания предлагает полный комплекс услуг по перевозке<br/>
+                            грузов из любой точки мира в Казахстан. Обслуживание компаний, которые<br/>
+                            оказывают услуги по договорам в горнодобывающем, нефтегазовом<br/>
+                            секторах. Мы с уважением относимся к огромной конкуренции,<br/>
+                            существующей в Казахстане – в стране, по площади равной Европе, с<br/>
+                            огромными логистическими трудностями, при этом мы уверены в наших<br/>
+                            собственных преимуществах, имея в своем багаже знания местных<br/>
+                            особенностей и международный опыт, знания стратегии развития и рецепт<br/>
+                            успеха Казахстана, а также его стремление к внедрению инициатив в области<br/>
+                            обеспечения безопасности и внедрению услуг с добавленной стоимостью.
+                        </p>
+                    </div>
+                </div>
+                <div class="jat-head--footer">
+                    <div class="jat-head--split-text_block">
+                        <p class="jat-head--split-text">Компания, возглавляемая управленческой командой, обширный опыт
+                            работы<br/>
+                            в Казахстане и Центральной Азии которой насчитывает свыше 25 лет,<br/>
+                            работающая при поддержке исполненной энтузиазма и подготовленной<br/>
+                            команды, которая преуспевает в решении ежедневно меняющихся задач и<br/>
+                            стремится выполнять пожелания заказчиков.</p>
+                    </div>
+                    <div class="jat-head--under-imageText_block">
+                        <div class="under-image-item">
+                            <p class="under-image_text">«Достаточно мелкая компания,<br/>
+                                чтобы привлечь внимание, и<br/>
+                                достаточно крупная, чтобы<br/>
+                                внести свой вклад в<br/>
+                                осуществление перемен»…
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jat-main-body">
+                <div class="jat-main_body-inner">
+                    <div class="main--section">
+                        <div class="quantity--block">
+                            <div class="quantity-inner">
+                                <div class="quantity-title_block">
+                                    <p class="quantity-title">Главное в цифрах</p>
                                 </div>
-                                <div class="number-block">
-                                    <h1 class="number-title">100+</h1>
-                                    <p class="body-content number-content" >клиентов</p>
-                                </div>
-                                <div class="number-block">
-                                    <h1 class="number-title">15+ лет</h1>
-                                    <p class="body-content number-content">опыт работы отдельных<br/> сотрудников</p>
-                                </div>
-                                <div class="number-block">
-                                    <h1 class="number-title">250</h1>
-                                    <p class="body-content number-content">партнеров</p>
+                                <div class="quantity-items">
+                                    <div class="quantity--item">
+                                        <div class="quantity--item_icon">
+                                            <p class="icon-main-text">12</p>
+                                            <p class="icon-text">лет компания</p>
+                                        </div>
+                                        <div class="quantity--content-block">
+                                            <p class="quantity-content">работает на рынке</p>
+                                        </div>
+                                    </div>
+                                    <div class="quantity--item">
+                                        <div class="quantity--item_icon">
+                                            <p class="icon-main-text">100</p>
+                                            <p class="icon-text">и больше</p>
+                                        </div>
+                                        <div class="quantity--content-block">
+                                            <p class="quantity-content">клиентов</p>
+                                        </div>
+                                    </div>
+                                    <div class="quantity--item">
+                                        <div class="quantity--item_icon">
+                                            <p class="icon-main-text">20+</p>
+                                            <p class="icon-text">лет опыта<br/>работы</p>
+                                        </div>
+                                        <div class="quantity--content-block">
+                                            <p class="quantity-content">отдельных сотрудников</p>
+                                        </div>
+                                    </div>
+                                    <div class="quantity--item">
+                                        <div class="quantity--item_icon">
+                                            <p class="icon-main-text">250</p>
+                                            <p class="icon-text">верных</p>
+                                        </div>
+                                        <div class="quantity--content-block">
+                                            <p class="quantity-content">партнеров</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="jat-main-subtypes">
-                            <div class="jat-about_block">
-                                <div class="jat-about_block-inner">
-                                    <h1 class="body-title">Миссия компании</h1>
-                                    <p class="body-content">Мы стремимся стать главными экспертами в грузоперевозках<br/>
-                                        горнодобывающего, строительного и нефтегазового секторов<br/>
-                                        и обеспечить лучший клиентский опыт благодаря знаниям наших<br/>
-                                        специалистов, проверенным и надежным партнерам,<br/>
-                                        клиентоориентированности и постоянной коммуникации.
-                                    </p>
+                        <div class="company-mission--block">
+                            <div class="company-mission_inner">
+                                <div class="mission-title_block">
+                                    <p class="mission-title">Миссия компании</p>
+                                </div>
+                                <div class="mission-content_block">
+                                    <div class="mission-content_inner">
+                                        <div class="mission-content">
+                                            <p class="mission-content--text">Компания «JAT Transport» стремится быть
+                                                вашим<br/>
+                                                надежным деловым партнером, который предлагает<br/>
+                                                услуги с
+                                                добавленной стоимостью.<br/><br/>
+                                                Упрощая процесс, благодаря упреждающему обмену<br/>
+                                                информацией в отношении
+                                                понимания характера вашей<br/>
+                                                деятельности, ваших людей и задач по доставке
+                                                грузов,<br/>
+                                                компания «JAT» будет конструктивно подвергать<br/>
+                                                критическому
+                                                анализу ваши планы или проекты по<br/>
+                                                доставке грузов и будет предлагать
+                                                решения по<br/>
+                                                транспортировке с целью выдвижения на первый план<br/>
+                                                альтернативных маршрутов, рентабельной доставки,<br/> сокращения времени
+                                                транзита.
+                                            </p>
+                                        </div>
+                                        <div class="mission-content_image">
+                                            <img src="../../assets/icons/our-mission-image.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mission-footer-content">
+                                    <p class="mc-footer-content--text">Компания «JAT» будет поддерживать связь с
+                                        поставщиками в любой точке мира и<br/> обеспечивать приемлемость требований к
+                                        упаковке для выбранного вида транспорта,<br/> товаросопроводительные документы
+                                        проверяются нашим собственным таможенным<br/> специалистом перед отправкой товара из
+                                        страны происхождения. С тех пор как мир<br/> перевернулся с ног на голову, пережив
+                                        финансовые кризисы, девальвации, пандемию,<br/> закрытие границ, забастовки,
+                                        государственные перевороты, санкции – компания «JAT<br/> Transport» оказывала
+                                        компаниям содействие в преодолении всех проблем с целью<br/> обеспечения непрерывной
+                                        доставки товаров в пункты назначения. Мы «устанавливаем<br/> контакты» с вашими
+                                        поставщиками.</p>
                                 </div>
                             </div>
-                            <div class="about-image_block"><img src="../../assets/images/about-company-image.png" alt="Company"> </div>
                         </div>
-                        <div class="jat-main-subtypes">
-                            <div class="employees-block">
+                        <div class="employees--section">
+                            <div class="employees--section_inner">
+                                <div class="employees-content_block">
+                                    <div class="employees-title_block">
+                                        <p class="employees-title">Наша команда</p>
+                                    </div>
+                                    <div class="employees-content">
+                                        <p class="employees-content--text">Мы собрали ответственных и надежных людей,
+                                            которые готовы тщательно проверять все<br/> детали, чтобы обеспечить максимальную
+                                            безопасность ваших грузов. Мы всегда на связи,<br/> чтобы честно и открыто
+                                            рассказать вам обо всех процессах, предупредить о рисках,<br/> сообщить о
+                                            возникших проблемах и найти их решение.</p>
+                                    </div>
+                                </div>
                                 <div class="employees-info_block">
-                                    <h1 class="body-title">
-                                        Наша<br/>
-                                        команда
-                                    </h1>
-                                    <p class="body-content">Мы собрали ответственных и надежных людей, которые готовы<br/>
-                                        тщательно проверять все детали, чтобы обеспечить максимальную<br/>
-                                        безопасность ваших грузов. Мы всегда на связи, чтобы честно<br/>
-                                        и открыто рассказать вам обо всех процессах, предупредить<br/>
-                                        о рисках, сообщить о возникших проблемах и найти их решение.
-                                    </p>
-                                </div>
-                                <div class="all-employees_block">
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Джейсон Томас</p>
-                                            <p class="employee-rank">Руководитель</p>
-                                            <p class="employee-email">md@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 221 86 89</p>
+                                    <div class="employee-items">
+                                        <div class="employee--item">
+                                            <div class="employee--item_img">
+                                                <img src="../../assets/icons/employee.png">
+                                            </div>
+                                            <div class="employee-naming_block">
+                                                <p class="employee-name--text">Джейсон Томас</p>
+                                                <p class="employee-rank--text">Генеральный директор</p>
+                                            </div>
+                                            <div class="employee-more--block" onclick="sendInfoEmployee(this)">
+                                                <button class="employee-more-button">подробнее</button>
+                                            </div>
+                                        </div>
+                                        <div class="employee--item">
+                                            <div class="employee--item_img">
+                                                <img src="../../assets/icons/employee-1.png">
+                                            </div>
+                                            <div class="employee-naming_block">
+                                                <p class="employee-name--text">Ульяна Томас</p>
+                                                <p class="employee-rank--text">Исполнительный директор</p>
+                                            </div>
+                                            <div class="employee-more--block" onclick="sendInfoEmployee(this)">
+                                                <button class="employee-more-button">подробнее</button>
+                                            </div>
+                                        </div>
+                                        <div class="employee--item">
+                                            <div class="employee--item_img">
+                                                <img src="../../assets/icons/employee-2.png">
+                                            </div>
+                                            <div class="employee-naming_block">
+                                                <p class="employee-name--text">Чертищев Артём</p>
+                                                <p class="employee-rank--text">Логист</p>
+                                            </div>
+                                            <div class="employee-more--block" onclick="sendInfoEmployee(this)">
+                                                <button class="employee-more-button">подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Ульяна Томас</p>
-                                            <p class="employee-rank">Директор</p>
-                                            <p class="employee-email">sales@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 951 62 15</p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">артем чертищев</p>
-                                            <p class="employee-rank">Менеджер по проектам</p>
-                                            <p class="employee-email">sales1@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 631 18 45</p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">анар даурен</p>
-                                            <p class="employee-rank">Менеджер по контрактам<br/> и тендерам</p>
-                                            <p class="employee-email">ops8@jat.kz</p>
-                                            <p class="employee-phone">+7 (701)  301 86 16</p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Серикова Айым</p>
-                                            <p class="employee-rank">Менеджер по работе<br/>
-                                                с ключевыми клиентами</p>
-                                            <p class="employee-email">ops4@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 958 29 84</p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Оспанова Айниля</p>
-                                            <p class="employee-rank">Менеджер по работе<br/>
-                                                с ключевыми клиентами</p>
-                                            <p class="employee-email">ops1@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 301 86 17</p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Аубакирова Маржан</p>
-                                            <p class="employee-rank">Бухгалтер</p>
-                                            <p class="employee-email">acc@jat.kz</p>
-                                            <p class="employee-phone">+7 (701) 951 62 19 </p>
-                                        </div>
-                                    </div>
-                                    <div class="employee">
-                                        <div class="employee-image"><img src="../../assets/images/employee-1.png"> </div>
-                                        <div class="employee-info">
-                                            <p class="employee-name">Гульвира Жабагиева</p>
-                                            <p class="employee-rank">Таможенный советник</p>
-                                            <p class="employee-email">customs@jat.kz</p>
-                                        </div>
+                                    <div class="next-arrow-icon">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="jat-main-subtypes">
-                            <div class="jat-advantages_block">
-                                <div class="jat-advantages_block-inner">
-                                    <h1 class="adv-title">Ценности</h1>
-                                    <div class="adv-tabbing_block">
-                                        <p class="adv-tabbing_title">Ответственность</p>
-                                        <p class="adv-tabbing_content">Когда вы доверяете нам доставку вашего<br/>
-                                            груза, мы делаем все, чтобы обеспечить<br/>
-                                            максимальную скорость, безопасность<br/>
-                                            и надежность транспортировки.
-                                        </p>
-                                        <div class="active-tabs">
-                                            <hr class="tab active">
-                                            <hr class="tab">
-                                            <hr class="tab">
-                                            <hr class="tab">
+                        <div class="values-and-principles_block">
+                            <div class="values--section">
+                                <div class="values--section_inner">
+                                    <div class="values-title_block">
+                                        <p class="values-title-text">наши ценности</p>
+                                    </div>
+                                    <div class="values-content_block">
+                                        <p class="values-content--text">контроль</p>
+                                    </div>
+                                    <div class="pagination_n_info-block">
+                                        <div class="info_block">
+                                            <p class="info-text">Рассчитывайте на нас. Мы<br/>
+                                                всегда будем рядом, если <br/>
+                                                что-то пойдет не по плану. </p>
+                                        </div>
+                                        <div>
+                                            <div class="pagination-block">
+                                                <div class="pagination-control">
+                                                    <div class="prev-arrow"><</div>
+                                                    <div class="pagination_block-inner">
+                                                        <div class="pagination--item_block">
+                                                            <div class="pagination--item" onclick="changeSlide(this)">
+                                                                <p class="pagination-text">1</p>
+                                                            </div>
+                                                            <div class="current-arrow"></div>
+                                                        </div>
+                                                        <div class="pagination--item">
+                                                            <p class="pagination-text">|</p>
+                                                        </div>
+                                                        <div class="pagination--item_block">
+                                                            <div class="pagination--item" onclick="changeSlide(this)">
+                                                                <p class="pagination-text">2</p>
+                                                            </div>
+                                                            <div class="current-arrow"></div>
+                                                        </div>
+                                                        <div class="pagination--item">
+                                                            <p class="pagination-text">|</p>
+                                                        </div>
+                                                        <div class="pagination--item_block">
+                                                            <div class="pagination--item" onclick="changeSlide(this)">
+                                                                <p class="pagination-text">3</p>
+                                                            </div>
+                                                            <div class="current-arrow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="next-arrow">></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="jat-extra-adv_block">
-                                <div class="jat-extra-adv_block-inner">
-                                    <h1 class="extra-adv-title">Принципы</h1>
-                                    <p class="extra-adv-pretitle">Здоровье, безопасность
-                                        и окружающая среда
-                                    <div class="extra-adv-phones">
-                                        <p class="extra-adv-content">Мы стремимся к сохранению наших принципов<br/>
-                                            во всех рабочих процессах и соблюдаем культуру<br/>
-                                            предотвращения инцидентов: сначала проводим<br/>
-                                            аудит безопасности и оценку рисков, и только потом<br/>
-                                            запускаем остальную цепочку логистики.</p>
+                            <div class="principles--section">
+                                <div class="principles--section_inner">
+                                    <div class="principles-title_block">
+                                        <p class="principles-title--text">Наши принципы</p>
+                                    </div>
+                                    <div class="principles-content_block">
+                                        <p class="principles-content--text">здоровье, безопасность
+                                            и окружающая среда</p>
+                                    </div>
+                                    <div class="principles-info_block">
+                                        <p class="principles-info--text">Мы стремимся к сохранению наших принципов во
+                                            всех рабочих процессах и соблюдаем культуру предотвращения инцидентов:
+                                            сначала проводим аудит безопасности и оценку рисков, и только потом
+                                            запускаем остальную цепочку логистики. </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="jat-main-subtypes">
-                            <div class="jat-contact_block">
-                                <div class="jat-contact_block-inner">
-                                    <div class="jat-contact-info">
-                                        <h1 class="contact-title">Контакты</h1>
-                                        <p class="contact-content">Алматы, 050019<br/>
-                                            проспект Достык, 85<br/>
-                                            офис 523</p>
-                                        <div class="contact-phones">
-                                            <p class="contact-content">+7 (727) 327 14 55 <br/>
-                                                +7 (701) 951 62 15</p>
-                                        </div>
-                                        <div class="feedback-contact-block">
-                                            <a class="contact-content">Запросить тарифы</a><br/>
-                                            <a class="contact-content">Отправить резюме</a><br/>
-                                            <a class="contact-content">Связаться с менеджером</a><br/>
-                                        </div>
-                                    </div>
-                                    <div class="jat-location_image"><img src="../../assets/images/jat-location.png" class="jat-location-img" alt="JAT Location"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="jat-main_attr">
-                            <p>Атрибуты</p>
-                            <p>Атрибуты</p>
-                        </div>
-                        <div class="jat-main_routing">
-                            <div class="jat-main_routing-inner">
-                                <p>Главная</p>
-                                <p>Услуги</p>
-                                <p>О компании</p>
-                                <p>HSE</p>
-                                <p>HR</p>
-                                <p>Контакты</p>
-                            </div>
-                            <div class="made-by">
-                                <p>Сделано в Рояле Кусто</p>
                             </div>
                         </div>
                     </div>
-                    <div class="jat-routing-body">
-                        <p class="jat-routing_vertical-text">О КОМПАНИИ</p>
-                    </div>
-                    <div class="jat-main-body_measurement">
-                        <div class="measurement-first"></div>
-                        <div class="measurement-second"></div>
-                        <div class="measurement-third"></div>
+                    <div class="right--section">
+                        <div class="measurement--section">
+                            <div class="measurements-block">
+                                <div class="measurement--item first-measurement"></div>
+                                <div class="measurement--item second-measurement"></div>
+                                <div class="measurement--item third-measurement"></div>
+                                <div class="measurement--item fourth-measurement"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="contacts--section">
+                <div class="contacts--section_inner">
+                    <div class="contacts_block">
+                        <div class="contacts-title_block">
+                            <p class="contact-title--text">Контакты</p>
+                        </div>
+                        <div class="contacts-info_block">
+                            <p class="contact-info--text">
+                                Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж
+                            </p>
+                            <p class="contact-info--text">
+                                +7 (727) 327 14 55 <br/>
+                                +7 (701) 951 62 15
+                            </p>
+                        </div>
+                        <div class="contacts-email_block">
+                            <div class="contact-email--item">
+                                <p class="contact-email-title">связаться с менеджером</p>
+                                <p class="contact-email_email--text">ops@jat</p>
+                            </div>
+                            <div class="contact-email--item">
+                                <p class="contact-email-title">связаться с менеджером</p>
+                                <p class="contact-email_email--text">sales@jat.kz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="employee-info_modal">
+        <div class="employee-modal">
+            <div class="employee-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="contact-block-modal">
+                <div class="employee-naming_block">
+                    <div class="employee-name_modal_block">
+                        <p class="employee-name_modal--text"></p>
+                    </div>
+                    <div class="employee-rank_modal_block">
+                        <p class="employee-rank_modal--text"></p>
+                    </div>
+                </div>
+                <div class="contact-employee_block">
+                    <div class="employee-email_block">
+                        <p class="email--text">md@jat.kz</p>
+                    </div>
+                    <div class="employee-phone_block">
+                        <p class="phone--text">8 701 221 86 89</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="employee-modal_bg"></div>
+    </div>
+    <div class="jat-footer">
+        <p class="footer-text">Сделано в Рояле Кусто<br/>
+            Алматы, 2022</p>
     </div>
 </div>
 </body>
