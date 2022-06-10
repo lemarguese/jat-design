@@ -184,7 +184,7 @@ button:hover {
 }
 
 .main-body-content {
-    width: 60%;
+    width: 70%;
     margin-left: 70px;
     padding-top: 10px;
     margin-bottom: 75px;
@@ -192,7 +192,7 @@ button:hover {
 
 .main-body-content_text {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 26px;
     color: #131313;
 }
@@ -427,6 +427,12 @@ button:hover {
     width: 50%;
 }
 
+.contacts-cold_feedback-block{
+    opacity: 0;
+    transform: translate(0, -30%);
+    transition: all 2s ease;
+}
+
 .contacts-cold_feedback-block {
     padding-top: 30px;
 }
@@ -476,6 +482,8 @@ button:hover {
     font-style: italic;
     font-weight: 700;
     font-size: 30px;
+    opacity: 0;
+    transition: all 2s ease;
 }
 
 .advantage-info_content {
@@ -487,6 +495,8 @@ button:hover {
 
 .jat-inputs_block {
     margin-bottom: 15px;
+    opacity: 0;
+    transition: all 2.2s ease;
 }
 
 .jat-input--item {
@@ -641,4 +651,9 @@ button:hover {
     .footer-text {
         font-size: 5px;
     }
+}
+
+._active {
+    opacity: 1;
+    transform: translate(0, 0);
 }
