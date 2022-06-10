@@ -106,7 +106,7 @@ function changeSlide(index) {
         measurementItems[i].style.transition = 'background-size linear .25s';
     }
 
-    measurementItems[3].style.backgroundSize = '70px';
+    measurementItems[3].style.backgroundSize = '50px';
     measurementItems[3].style.transition = 'background-size linear .25s';
 
     for (const currentTabElement of currentTab) {

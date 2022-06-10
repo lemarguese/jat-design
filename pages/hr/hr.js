@@ -4,7 +4,7 @@ window.onload = function () {
     let aboutRoute = document.getElementsByClassName("routing-block_item about-text")[0];
     let serviceRoute = document.getElementsByClassName("routing-block_item service-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
-
+    initMap();
     mainRoute.addEventListener("click", function () {
         location.assign('../../index.html');
     });
@@ -76,4 +76,27 @@ function closeModal() {
         vacancyModal.style.display = 'none';
         vacancyModalBg.style.display = 'none';
     }, 350);
+}
+
+function initMap () {
+    ymaps.ready(function () {
+        let myMap = new ymaps.Map('map', {
+                center: [43.220899, 76.907511],
+                zoom: 15
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/myIcon.gif',
+                iconImageSize: [30, 42],
+                iconImageOffset: [-5, -38]
+            });
+        myMap.geoObjects
+            .add(myPlacemark);
+    });
 }

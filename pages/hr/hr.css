@@ -307,7 +307,7 @@ button:hover {
 }
 
 .measurement--item:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transition: transform linear .15s;
 }
 
@@ -328,7 +328,7 @@ button:hover {
 
 .fourth-measurement {
     background: url("../../assets/icons/e_e-hr-icon.svg") no-repeat center;
-    background-size: 70px;
+    background-size: 50px;
 }
 
 /* contact block */
@@ -680,7 +680,7 @@ button:hover {
     }
 
     .fourth-measurement {
-        background-size: 50px;
+        background-size: 35px;
     }
 
     .routing-block_item {

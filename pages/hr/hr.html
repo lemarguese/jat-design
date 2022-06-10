@@ -1,234 +1,250 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="hr.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
+        type="text/javascript"></script>
     <script src="hr.js"></script>
     <title>JAT - HR</title>
+
+    <style type="text/css">
+        #map {
+            height: 300px;
+            width: 500px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="jat-main">
-    <div class="jat-main_inner">
-        <div class="jat-sidebar">
-            <div class="routing-icons--items_block">
-                <div class="routing-block">
-                    <div class="routing-block_item main-text">
-                        <h1 class="routing-block_text">главная</h1>
-                    </div>
-                    <div class="routing-block_item service-text">
-                        <h1 class="routing-block_text">услуги</h1>
-                    </div>
-                    <div class="routing-block_item hse-text">
-                        <h1 class="routing-block_text">HSE</h1>
-                    </div>
-                    <div class="routing-block_item about-text">
-                        <h1 class="routing-block_text">о компании</h1>
-                    </div>
-                    <div class="routing-block_item hr-text active-route">
-                        <h1 class="routing-block_text">hr</h1>
-                    </div>
-                    <div class="routing-block_item contacts-text">
-                        <h1 class="routing-block_text">контакты</h1>
-                    </div>
-                </div>
-                <div class="routing-icons">
-                    <div class="upper-icon_block">
-                        <div class="upper-icon"></div>
-                        <p class="routing-block_text">наверх</p>
-                    </div>
-                    <div class="mail-icon_block">
-                        <p class="routing-block_text mail-text">mail</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="jat-body">
-            <div class="jat-head">
-                <div class="main-body_logo">
-                    <div class="main-logo"></div>
-                    <div class="language-selector">Ru</div>
-                </div>
-                <div class="main-title_block">
-                    <h1 class="main-body_title">Работа в JAT</h1>
-                </div>
-                <div class="main-body-content">
-                    <p class="main-body-content_text"> Чтобы расти и делать рынок лучше, следующее<br/>
-                        поколение специалистов должно получить<br/>
-                        необходимую квалификацию и развить нужные<br/>
-                        навыки. В нашей компании мы создаем для этого все<br/>
-                        необходимые возможности. А в связи с расширением<br/>
-                        сети представительств сейчас открыты новые<br/>
-                        вакансии.<br/>
-                        <br/>
-                        Хотите построить карьеру в транспортной компании?
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="jat-main_body-inner">
-                    <div class="main--section">
-                        <div class="vacancies-list">
-                            <div class="vacancy--item">
-                                <div class="vacancy-title_block">
-                                    <p class="vacancy-title--text">Специалист по<br/>
-                                        логистике</p>
-                                </div>
-                                <div class="vacancy-info_more">
-                                    <div class="vacancy-type-info">
-                                        <p class="vacancy-text">В ШТАТ</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">АЛМАТЫ</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">отдел логистики</p>
-                                    </div>
-                                    <div class="vacancy-content_block">
-                                        <p class="vacancy-content--text">Обязанности: получает заявки от<br/>
-                                            клиентов. Предоставляет ценовые<br/>
-                                            предложения, обрабатывает заказы с<br/>
-                                            партнерами по всему миру. Осуществляет<br/>
-                                            мониторинг за процессом доставки и<br/>
-                                            обеспечивает клиентов актуальной<br/>
-                                            информацией. Контролирует процесс<br/>
-                                            импортной таможенной очистки.
-                                        </p>
-                                    </div>
-                                    <div class="vacancy-button_block">
-                                        <button class="vacancy-btn">откликнуться на вакансию</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vacancy--item">
-                                <div class="vacancy-title_block">
-                                    <p class="vacancy-title--text">Специалист по<br/>
-                                        логистике</p>
-                                </div>
-                                <div class="vacancy-info_more">
-                                    <div class="vacancy-type-info">
-                                        <p class="vacancy-text">нурсултан</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">удаленно</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">отдел логистики</p>
-                                    </div>
-                                    <div class="vacancy-content_block">
-                                        <p class="vacancy-content--text">Обязанности: Работа в базе данных AZYRA<br/>
-                                            CRM. Обрабатывает запросы о продажах и<br/>
-                                            запросы о проведении встреч.<br/>
-                                            Предоставляет ценовые предложения.<br/>
-                                            Студенческая стажировка в отделе<br/>
-                                            логистики. Летняя программа с выдачей<br/>
-                                            сертификата.
-                                        </p>
-                                    </div>
-                                    <div class="vacancy-button_block even-block">
-                                        <button class="vacancy-btn">откликнуться на вакансию</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vacancy--item">
-                                <div class="vacancy-title_block">
-                                    <p class="vacancy-title--text">Специалист по<br/>
-                                        логистике</p>
-                                </div>
-                                <div class="vacancy-info_more">
-                                    <div class="vacancy-type-info">
-                                        <p class="vacancy-text">В ШТАТ</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">АЛМАТЫ</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">отдел логистики</p>
-                                    </div>
-                                    <div class="vacancy-content_block">
-                                        <p class="vacancy-content--text">Обязанности: получает заявки от<br/>
-                                            клиентов. Предоставляет ценовые<br/>
-                                            предложения, обрабатывает заказы с<br/>
-                                            партнерами по всему миру. Осуществляет<br/>
-                                            мониторинг за процессом доставки и<br/>
-                                            обеспечивает клиентов актуальной<br/>
-                                            информацией. Контролирует процесс<br/>
-                                            импортной таможенной очистки.
-                                        </p>
-                                    </div>
-                                    <div class="vacancy-button_block">
-                                        <button class="vacancy-btn">откликнуться на вакансию</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vacancy--item">
-                                <div class="vacancy-title_block">
-                                    <p class="vacancy-title--text">Специалист по<br/>
-                                        логистике</p>
-                                </div>
-                                <div class="vacancy-info_more">
-                                    <div class="vacancy-type-info">
-                                        <p class="vacancy-text">нурсултан</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">удаленно</p>
-                                        <p class="vacancy-text">&nbsp;|&nbsp;</p>
-                                        <p class="vacancy-text">отдел логистики</p>
-                                    </div>
-                                    <div class="vacancy-content_block">
-                                        <p class="vacancy-content--text">Обязанности: Работа в базе данных AZYRA<br/>
-                                            CRM. Обрабатывает запросы о продажах и<br/>
-                                            запросы о проведении встреч.<br/>
-                                            Предоставляет ценовые предложения.<br/>
-                                            Студенческая стажировка в отделе<br/>
-                                            логистики. Летняя программа с выдачей<br/>
-                                            сертификата.
-                                        </p>
-                                    </div>
-                                    <div class="vacancy-button_block even-block">
-                                        <button class="vacancy-btn">откликнуться на вакансию</button>
-                                    </div>
-                                </div>
-                            </div>
+
+
+    <div class="jat-main">
+        <div class="jat-main_inner">
+            <div class="jat-sidebar">
+                <div class="routing-icons--items_block">
+                    <div class="routing-block">
+                        <div class="routing-block_item main-text">
+                            <h1 class="routing-block_text">главная</h1>
+                        </div>
+                        <div class="routing-block_item service-text">
+                            <h1 class="routing-block_text">услуги</h1>
+                        </div>
+                        <div class="routing-block_item hse-text">
+                            <h1 class="routing-block_text">HSE</h1>
+                        </div>
+                        <div class="routing-block_item about-text">
+                            <h1 class="routing-block_text">о компании</h1>
+                        </div>
+                        <div class="routing-block_item hr-text active-route">
+                            <h1 class="routing-block_text">hr</h1>
+                        </div>
+                        <div class="routing-block_item contacts-text">
+                            <h1 class="routing-block_text">контакты</h1>
                         </div>
                     </div>
-                    <div class="right--section">
-                        <div class="measurement--section">
-                            <div class="measurements-block">
-                                <div class="measurement--item first-measurement"></div>
-                                <div class="measurement--item second-measurement"></div>
-                                <div class="measurement--item third-measurement"></div>
-                                <div class="measurement--item fourth-measurement"></div>
-                            </div>
+                    <div class="routing-icons">
+                        <div class="upper-icon_block">
+                            <div class="upper-icon"></div>
+                            <p class="routing-block_text">наверх</p>
+                        </div>
+                        <div class="mail-icon_block">
+                            <p class="routing-block_text mail-text">mail</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contacts--section">
-                <div class="contacts--section_inner">
-                    <div class="contacts_block">
-                        <div class="contacts-title_block">
-                            <p class="contact-title--text">Контакты</p>
-                        </div>
-                        <div class="contacts-info_block">
-                            <p class="contact-info--text">
-                                Алматы, 050019<br/>
-                                Тимирязева 42, Атакент,<br/>
-                                Бизнес-центр Парк<br/>
-                                Отель, Блок F, 3-й этаж
-                            </p>
-                            <p class="contact-info--text">
-                                +7 (727) 327 14 55 <br/>
-                                +7 (701) 951 62 15
-                            </p>
-                        </div>
-                        <div class="contacts-email_block">
-                            <div class="contact-email--item">
-                                <p class="contact-email-title">связаться с менеджером</p>
-                                <p class="contact-email_email--text">ops@jat.kz</p>
+            <div class="jat-body">
+                <div class="jat-head">
+                    <div class="main-body_logo">
+                        <div class="main-logo"></div>
+                        <div class="language-selector">Ru</div>
+                    </div>
+                    <div class="main-title_block">
+                        <h1 class="main-body_title">Работа в JAT</h1>
+                    </div>
+                    <div class="main-body-content">
+                        <p class="main-body-content_text"> Чтобы расти и делать рынок лучше, следующее<br />
+                            поколение специалистов должно получить<br />
+                            необходимую квалификацию и развить нужные<br />
+                            навыки. В нашей компании мы создаем для этого все<br />
+                            необходимые возможности. А в связи с расширением<br />
+                            сети представительств сейчас открыты новые<br />
+                            вакансии.<br />
+                            <br />
+                            Хотите построить карьеру в транспортной компании?
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="jat-main_body-inner">
+                        <div class="main--section">
+                            <div class="vacancies-list">
+                                <div class="vacancy--item">
+                                    <div class="vacancy-title_block">
+                                        <p class="vacancy-title--text">Специалист по<br />
+                                            логистике</p>
+                                    </div>
+                                    <div class="vacancy-info_more">
+                                        <div class="vacancy-type-info">
+                                            <p class="vacancy-text">В ШТАТ</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">АЛМАТЫ</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">отдел логистики</p>
+                                        </div>
+                                        <div class="vacancy-content_block">
+                                            <p class="vacancy-content--text">Обязанности: получает заявки от<br />
+                                                клиентов. Предоставляет ценовые<br />
+                                                предложения, обрабатывает заказы с<br />
+                                                партнерами по всему миру. Осуществляет<br />
+                                                мониторинг за процессом доставки и<br />
+                                                обеспечивает клиентов актуальной<br />
+                                                информацией. Контролирует процесс<br />
+                                                импортной таможенной очистки.
+                                            </p>
+                                        </div>
+                                        <div class="vacancy-button_block">
+                                            <button class="vacancy-btn">откликнуться на вакансию</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacancy--item">
+                                    <div class="vacancy-title_block">
+                                        <p class="vacancy-title--text">Специалист по<br />
+                                            логистике</p>
+                                    </div>
+                                    <div class="vacancy-info_more">
+                                        <div class="vacancy-type-info">
+                                            <p class="vacancy-text">нурсултан</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">удаленно</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">отдел логистики</p>
+                                        </div>
+                                        <div class="vacancy-content_block">
+                                            <p class="vacancy-content--text">Обязанности: Работа в базе данных
+                                                AZYRA<br />
+                                                CRM. Обрабатывает запросы о продажах и<br />
+                                                запросы о проведении встреч.<br />
+                                                Предоставляет ценовые предложения.<br />
+                                                Студенческая стажировка в отделе<br />
+                                                логистики. Летняя программа с выдачей<br />
+                                                сертификата.
+                                            </p>
+                                        </div>
+                                        <div class="vacancy-button_block even-block">
+                                            <button class="vacancy-btn">откликнуться на вакансию</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacancy--item">
+                                    <div class="vacancy-title_block">
+                                        <p class="vacancy-title--text">Специалист по<br />
+                                            логистике</p>
+                                    </div>
+                                    <div class="vacancy-info_more">
+                                        <div class="vacancy-type-info">
+                                            <p class="vacancy-text">В ШТАТ</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">АЛМАТЫ</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">отдел логистики</p>
+                                        </div>
+                                        <div class="vacancy-content_block">
+                                            <p class="vacancy-content--text">Обязанности: получает заявки от<br />
+                                                клиентов. Предоставляет ценовые<br />
+                                                предложения, обрабатывает заказы с<br />
+                                                партнерами по всему миру. Осуществляет<br />
+                                                мониторинг за процессом доставки и<br />
+                                                обеспечивает клиентов актуальной<br />
+                                                информацией. Контролирует процесс<br />
+                                                импортной таможенной очистки.
+                                            </p>
+                                        </div>
+                                        <div class="vacancy-button_block">
+                                            <button class="vacancy-btn">откликнуться на вакансию</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacancy--item">
+                                    <div class="vacancy-title_block">
+                                        <p class="vacancy-title--text">Специалист по<br />
+                                            логистике</p>
+                                    </div>
+                                    <div class="vacancy-info_more">
+                                        <div class="vacancy-type-info">
+                                            <p class="vacancy-text">нурсултан</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">удаленно</p>
+                                            <p class="vacancy-text">&nbsp;|&nbsp;</p>
+                                            <p class="vacancy-text">отдел логистики</p>
+                                        </div>
+                                        <div class="vacancy-content_block">
+                                            <p class="vacancy-content--text">Обязанности: Работа в базе данных
+                                                AZYRA<br />
+                                                CRM. Обрабатывает запросы о продажах и<br />
+                                                запросы о проведении встреч.<br />
+                                                Предоставляет ценовые предложения.<br />
+                                                Студенческая стажировка в отделе<br />
+                                                логистики. Летняя программа с выдачей<br />
+                                                сертификата.
+                                            </p>
+                                        </div>
+                                        <div class="vacancy-button_block even-block">
+                                            <button class="vacancy-btn">откликнуться на вакансию</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="contact-email--item">
-                                <p class="contact-email-title">связаться с менеджером</p>
-                                <p class="contact-email_email--text">sales@jat.kz</p>
+                        </div>
+                        <div class="right--section">
+                            <div class="measurement--section">
+                                <div class="measurements-block">
+                                    <div class="measurement--item first-measurement"></div>
+                                    <div class="measurement--item second-measurement"></div>
+                                    <div class="measurement--item third-measurement"></div>
+                                    <div class="measurement--item fourth-measurement"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div></div>
+                </div>
+                <div class="contacts--section">
+                    <div class="contacts--section_inner">
+                        <div class="contacts_block">
+                            <div class="contacts-title_block">
+                                <p class="contact-title--text">Контакты</p>
+                            </div>
+                            <div class="contacts-info_block">
+                                <p class="contact-info--text">
+                                    Алматы, 050019<br />
+                                    Тимирязева 42, Атакент,<br />
+                                    Бизнес-центр Парк<br />
+                                    Отель, Блок F, 3-й этаж
+                                </p>
+                                <p class="contact-info--text">
+                                    +7 (727) 327 14 55 <br />
+                                    +7 (701) 951 62 15
+                                </p>
+                            </div>
+                            <div class="contacts-email_block">
+                                <div class="contact-email--item">
+                                    <p class="contact-email-title">связаться с менеджером</p>
+                                    <p class="contact-email_email--text">ops@jat</p>
+                                </div>
+                                <div class="contact-email--item">
+                                    <p class="contact-email-title">связаться с менеджером</p>
+                                    <p class="contact-email_email--text">sales@jat.kz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -247,10 +263,12 @@
                 <form class="modal-content">
                     <div class="form-inputs">
                         <div class="modal-input--item">
-                            <input type="text" class="vacancy-modal_input" placeholder="Имя и фамилия" required name="name">
+                            <input type="text" class="vacancy-modal_input" placeholder="Имя и фамилия" required
+                                name="name">
                         </div>
                         <div class="modal-input--item">
-                            <input type="text" class="vacancy-modal_input" placeholder="Номер телефона" required name="phone">
+                            <input type="text" class="vacancy-modal_input" placeholder="Номер телефона" required
+                                name="phone">
                         </div>
                         <div class="modal-input--item">
                             <div class="file-input_block">
@@ -263,13 +281,13 @@
                     </div>
                     <div class="contact-block">
                         <div class="contact-location_block">
-                            <p class="contact-location--text">Алматы, 050019<br/>
-                                Тимирязева 42, Атакент,<br/>
-                                Бизнес-центр Парк<br/>
+                            <p class="contact-location--text">Алматы, 050019<br />
+                                Тимирязева 42, Атакент,<br />
+                                Бизнес-центр Парк<br />
                                 Отель, Блок F, 3-й этаж</p>
                         </div>
                         <div class="contact-phone_block">
-                            <p class="contact-phone--text">+7 (727) 327 14 55<br/>
+                            <p class="contact-phone--text">+7 (727) 327 14 55<br />
                                 +7 (701) 951 62 15</p>
                         </div>
                         <div class="close-button_block">
@@ -282,9 +300,10 @@
         <div class="vacancy-modal_bg"></div>
     </div>
     <div class="jat-footer">
-        <p class="footer-text">Сделано в Рояле Кусто<br/>
+        <p class="footer-text">Сделано в Рояле Кусто<br />
             Алматы, 2022</p>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

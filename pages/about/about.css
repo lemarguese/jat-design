@@ -691,7 +691,7 @@ button:hover {
 }
 
 .measurement--item:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transition: transform linear .15s;
 }
 
@@ -712,7 +712,7 @@ button:hover {
 
 .fourth-measurement {
     background: url("../../assets/icons/checked-list-about-icon.svg") no-repeat center;
-    background-size: 70px;
+    background-size: 50px;
 }
 
 .empty--section {
@@ -957,7 +957,7 @@ button:hover {
     }
 
     .fourth-measurement {
-        background-size: 50px;
+        background-size: 35px;
     }
 
     .employees--section {

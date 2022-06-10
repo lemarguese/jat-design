@@ -472,12 +472,13 @@ button:hover {
     width: 75px;
     height: 75px;
     margin: 10px;
+    background-size: 50px;
     transition: transform linear .15s;
 }
 
 .measurement--item:hover {
-    transform: scale(1.1);
-    transition: transform linear .15s;
+    transform: scale(1.5);
+    transition: transform linear .2s;
 }
 
 .first-measurement {
@@ -497,7 +498,7 @@ button:hover {
 
 .fourth-measurement {
     background: url("assets/icons/measurement-4.svg") no-repeat center;
-    background-size: 70px;
+    background-size: 50px;
 }
 
 .empty-block {
@@ -1243,7 +1244,7 @@ button:hover {
     }
 
     .fourth-measurement {
-        background-size: 50px;
+        background-size: 35px;
     }
 
     .empty-block {
