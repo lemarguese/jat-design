@@ -80,15 +80,6 @@ window.onload = function () {
             location.assign('pages/hr/hr.html');
         });
     }
-
-    let dostavkaTitle = document.getElementsByClassName('main-body_title')[0];
-    let dostavkaText = document.getElementsByClassName('main-body-content_text')[0];
-
-    function loadMainContent() {
-        dostavkaTitle.classList.add('_active');
-        dostavkaText.classList.add('_active');
-    }
-    loadMainContent();
     loadAnim();
 }
 
@@ -205,5 +196,41 @@ function checkPenetration(rect, title, content, button) {
         title.style.animation = 'openingFade linear 1s';
         content.style.animation = 'openingFade linear 1s';
         button.style.animation = 'openingFade linear 1s';
+    }
+}
+function loadAnim() {
+    const animItems = document.querySelectorAll('._animation');
+
+    if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+            let animItemPoint = window.innerHeight - animItemHeight/animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight/animStart;
+            }
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+            } else {
+                animItem.classList.remove('_active');
+            }
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {
+            top: rect.top + scrollTop,
+            left: rect.left + scrollLeft
+        }
+    }
+    animOnScroll();
     }
 }
