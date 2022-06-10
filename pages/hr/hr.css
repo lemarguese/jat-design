@@ -230,6 +230,29 @@ button:hover {
     padding-left: 15px;
 }
 
+.vacancy--item1{
+    opacity: 0;
+    transform: translate(-30%, 0);
+    transition: all 2s ease 0.5s;
+}
+
+.vacancy--item2{
+    opacity: 0;
+    transform: translate(30%, 0);
+    transition: all 2s ease 1s;
+}
+.vacancy--item3{
+    opacity: 0;
+    transform: translate(-30%, 0);
+    transition: all 2s ease 0.5s;
+}
+
+.vacancy--item4{
+    opacity: 0;
+    transform: translate(30%, 0);
+    transition: all 2s ease 1s;
+}
+
 .vacancy--item:nth-child(3), .vacancy--item:nth-child(4)  {
     border-bottom: none;
 }
@@ -727,4 +750,9 @@ button:hover {
     .footer-text {
         font-size: 5px;
     }
+}
+
+._active{
+    opacity: 1;
+    transform: translate(0, 0);
 }

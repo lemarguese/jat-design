@@ -343,6 +343,9 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 25px 15px;
+    opacity: 0;
+    transform: translate(-30%, 0);
+    transition: all 1s ease 0.8s;
 }
 
 .culture-title--text {
@@ -458,6 +461,18 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.contact-email_1{
+    opacity: 0;
+    transform: translate(112%, 0);
+    transition: all 2s ease;
+}
+.contact-email_2 {
+    opacity: 0;
+    transform: translate(112%, 0);
+    transition: all 2.2s ease;
+}
+
 
 .contact-email-text {
     text-transform: uppercase;
@@ -622,4 +637,9 @@ button:hover {
     .footer-text {
         font-size: 5px;
     }
+}
+
+._active{
+    opacity: 1;
+    transform: translate(0, 0);
 }

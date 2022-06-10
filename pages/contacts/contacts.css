@@ -483,7 +483,8 @@ button:hover {
     font-weight: 700;
     font-size: 30px;
     opacity: 0;
-    transition: all 2s ease;
+    transform: translate(0, -30%);
+    transition: all 2s ease 1s;
 }
 
 .advantage-info_content {
@@ -496,7 +497,7 @@ button:hover {
 .jat-inputs_block {
     margin-bottom: 15px;
     opacity: 0;
-    transition: all 2.2s ease;
+    transition: all 1s ease 1.3s;
 }
 
 .jat-input--item {
@@ -531,6 +532,11 @@ button:hover {
     width: 85%;
     height: 50px;
     margin-bottom: 50px;
+}
+.advantages-button{
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: all 1s ease 1.5s;
 }
 
 /* jat footer */
