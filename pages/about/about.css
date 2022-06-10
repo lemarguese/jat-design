@@ -284,23 +284,23 @@ button:hover {
 }
 .quantity--item1{
     opacity: 0;
-    transform: translate(0, -50%);
-    transition: all 1s ease 0.8s;
+    
+    transition: opacity 1s linear ;
 }
 .quantity--item2{
     opacity: 0;
-    transform: translate(0, -50%);
-    transition: all 1s ease 0.8s;
+    
+    transition: opacity 1s ease ;
 }
 .quantity--item3{
     opacity: 0;
-    transform: translate(0, -50%);
-    transition: all 1s ease 0.8s;
+    
+    transition: opacity 1s ease ;
 }
 .quantity--item4{
     opacity: 0;
-    transform: translate(0, -50%);
-    transition: all 1s ease 0.8s;
+    
+    transition: opacity 1s ease ;
 }
 
 .quantity--item:hover {
@@ -358,6 +358,9 @@ button:hover {
     font-size: 30px;
     font-style: italic;
     font-weight: 700;
+    opacity: 0.3;
+    transform: translate(0, -50%); 
+    transition: all 0.8s ease .3s;
 }
 
 .mission-content_inner {
@@ -368,10 +371,14 @@ button:hover {
     background-position: 20px 0, -10px -25px;
     background-size: 75px, 40px;
     padding-left: 10px;
+    opacity: 0.3; 
+    transition: all 1s ease 0s;
 }
 
 .mission-footer-content {
     padding-left: 10px;
+    opacity: 0.3; 
+    transition: all 1s ease 0s;
 }
 
 .mission-content--text, .mc-footer-content--text {
@@ -393,6 +400,8 @@ button:hover {
 
 .employees--section_inner {
     margin: 0 0 10px 0;
+    opacity: 0.3; 
+    transition: all 1s ease 0s;
 }
 
 .employees-title_block {
@@ -500,7 +509,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: opacity linear .25s;
+    
+    opacity: 0;
+    transform: translate(-30%, 0);
+    transition: all 1s ease;
 }
 
 .values-title_block {
@@ -555,6 +567,7 @@ button:hover {
     border: 3px solid #393940;
     background-color: #fff;
     border-radius: 3px;
+    
 }
 
 .pagination-control {
@@ -620,6 +633,9 @@ button:hover {
 
 .principles--section_inner {
     margin: 15px;
+    opacity: 0; 
+    transform: translate(30%, 0);
+    transition: all 1s ease 1.1s;
 }
 
 .principles-title--text {
@@ -705,6 +721,7 @@ button:hover {
 }
 
 .measurement--item {
+    cursor: pointer;
     width: 75px;
     height: 75px;
     margin: 10px;
