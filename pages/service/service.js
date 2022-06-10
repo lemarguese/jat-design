@@ -77,6 +77,7 @@ function changeSlide(index) {
     let currentTab = document.getElementsByClassName('current-arrow-second');
     for (const currentTabElement of currentTab) {
         currentTabElement.style.display = 'none';
+        currentTabElement.className = 'current-arrow-second';
     }
 
     let measurementItems = document.getElementsByClassName('measurement--item');
@@ -95,6 +96,7 @@ function changeSlide(index) {
     let idx = Number(index.children[0].innerHTML);
 
     currentTab[idx - 1].style.display = 'block';
+    currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
     if (idx === 1) {
         title.innerHTML = 'надежность';
         content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
@@ -126,12 +128,55 @@ function changeSlide(index) {
     advWorks.style.animation = 'opening linear .25s';
 }
 
+function changeSlideArrows(event) {
+    let activeIdx = document.getElementsByClassName('current-arrow-second active-arrow-second')[0];
+    let currentTabs = document.getElementsByClassName('current-arrow-second');
+    let paginationItems = document.querySelectorAll('.pagination_block-second .pagination--item_block');
+
+    let idx = 0;
+    for (let i = 0; i < currentTabs.length; i++) {
+        if (currentTabs[i] === activeIdx) idx = i;
+    }
+
+    if (event.className === 'next-arrow') {
+        idx++;
+    } else {
+        idx--;
+    }
+
+    if (idx > 3) idx = 3;
+    else if (idx < 0) idx = 0;
+    changeSlide(paginationItems[idx].children[0]);
+}
+
+function changeSlideBackground (event) {
+    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
+    let currentTabs = document.getElementsByClassName('current-arrow');
+    let paginationItems = document.querySelectorAll('.pagination_block .pagination--item_block');
+
+    let idx = 0;
+    for (let i = 0; i < currentTabs.length; i++) {
+        if (currentTabs[i] === activeIdx) idx = i;
+    }
+
+    if (event.className === 'next-arrow') {
+        idx++;
+    } else {
+        idx--;
+    }
+
+    if (idx > 2) idx = 2;
+    else if (idx < 0) idx = 0;
+    changeSlideBack(paginationItems[idx].children[0]);
+}
+
 function changeSlideBack (ev) {
     let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
 
     let currentTab = document.getElementsByClassName('current-arrow');
     for (const currentTabElement of currentTab) {
         currentTabElement.style.display = 'none';
+        currentTabElement.className = 'current-arrow';
     }
 
     setTimeout(() => {
@@ -140,6 +185,7 @@ function changeSlideBack (ev) {
 
     let idx = Number(ev.children[0].innerHTML);
     currentTab[idx - 1].style.display = 'block';
+    currentTab[idx - 1].className = 'current-arrow active-arrow';
 
     if (idx === 1) {
         sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';

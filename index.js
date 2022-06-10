@@ -111,6 +111,7 @@ function changeSlide(index) {
 
     for (const currentTabElement of currentTab) {
         currentTabElement.style.display = 'none';
+        currentTabElement.className = 'current-arrow';
     }
     setTimeout(() => {
         advWorks.style.animation = 'closing linear .25';
@@ -118,6 +119,7 @@ function changeSlide(index) {
     let idx = Number(index.children[0].innerHTML);
 
     currentTab[idx - 1].style.display = 'block';
+    currentTab[idx - 1].className = 'current-arrow active-arrow';
     if (idx === 1) {
         title.innerHTML = 'Конкурентоспособные<br/> цены';
         content.innerHTML = 'обеспечат лучшие возможные маршруты<br/> для соблюдения предельных сроков<br/> доставки на места';
@@ -170,6 +172,27 @@ function changeSlide(index) {
         measurementItems[1].style.transition = 'background-size linear .25s';
     }
     advWorks.style.animation = 'opening linear .25s';
+}
+
+function changeSlideArrows(event) {
+    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
+    let currentTabs = document.getElementsByClassName('current-arrow');
+    let paginationItems = document.getElementsByClassName('pagination--item_block');
+
+    let idx = 0;
+    for (let i = 0; i < currentTabs.length; i++) {
+        if (currentTabs[i] === activeIdx) idx = i;
+    }
+
+    if (event.className === 'next-arrow') {
+        idx++;
+    } else {
+        idx--;
+    }
+
+    if (idx > 5) idx = 5;
+    else if (idx < 0) idx = 0;
+    changeSlide(paginationItems[idx].children[0]);
 }
 
 function fadeAnim() {

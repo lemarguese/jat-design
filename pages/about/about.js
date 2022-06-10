@@ -5,6 +5,7 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
+    sliderEmployee(0, 3);
     initMap();
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
 
@@ -86,11 +87,13 @@ function changeSlide(index) {
 
     for (const currentTabElement of currentTab) {
         currentTabElement.style.display = 'none';
+        currentTabElement.className = 'current-arrow';
     }
     values.style.opacity = '0';
     let idx = Number(index.children[0].innerHTML);
 
     currentTab[idx - 1].style.display = 'block';
+    currentTab[idx - 1].className = 'current-arrow active-arrow';
     if (idx === 1) {
         title.innerHTML = 'контроль';
         content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
@@ -105,6 +108,50 @@ function changeSlide(index) {
     setTimeout(() => {
         values.style.opacity = '1';
     }, 250);
+}
+
+
+function changeSlideBackground (event) {
+    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
+    let currentTabs = document.getElementsByClassName('current-arrow');
+    let paginationItems = document.querySelectorAll('.pagination--item_block');
+
+    let idx = 0;
+    for (let i = 0; i < currentTabs.length; i++) {
+        if (currentTabs[i] === activeIdx) idx = i;
+    }
+
+    if (event.className === 'next-arrow') {
+        idx++;
+    } else {
+        idx--;
+    }
+
+    if (idx > 2) idx = 2;
+    else if (idx < 0) idx = 0;
+    changeSlide(paginationItems[idx].children[0]);
+}
+
+function sliderEmployee(start, end) {
+    let employees = document.querySelectorAll('.employee--item');
+
+    for (let i = 0; i < employees.length; i++) {
+        employees[i].style.display = 'none';
+        if (i >= start && i < end) {
+            employees[i].style.display = 'block';
+        }
+    }
+}
+
+function sliderEmployeeHandler (event) {
+    let employees = document.querySelectorAll('.employee--item');
+    let displayedEmployees = [];
+
+    let start = displayedEmployees[0] + 1;
+    let end = displayedEmployees[displayedEmployees.length - 1] + 1;
+    if (event.className === 'next-arrow-icon') {
+        sliderEmployee(start, end);
+    }
 }
 
 function sendInfoEmployee (event) {
