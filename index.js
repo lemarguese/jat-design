@@ -80,6 +80,7 @@ window.onload = function () {
             location.assign('pages/hr/hr.html');
         });
     }
+    loadAnim();
 }
 
 function closeModal() {
@@ -106,7 +107,7 @@ function changeSlide(index) {
         measurementItems[i].style.transition = 'background-size linear .25s';
     }
 
-    measurementItems[3].style.backgroundSize = '70px';
+    measurementItems[3].style.backgroundSize = '50px';
     measurementItems[3].style.transition = 'background-size linear .25s';
 
     for (const currentTabElement of currentTab) {
@@ -215,8 +216,44 @@ function fadeAnimSecond() {
 
 function checkPenetration(rect, title, content, button) {
     if (window.innerHeight >= rect.top) {
-            title.style.animation = 'openingFade linear 1s';
-            content.style.animation = 'openingFade linear 1s';
-            button.style.animation = 'openingFade linear 1s';
+        title.style.animation = 'openingFade linear 1s';
+        content.style.animation = 'openingFade linear 1s';
+        button.style.animation = 'openingFade linear 1s';
+    }
+}
+function loadAnim() {
+    const animItems = document.querySelectorAll('._animation');
+
+    if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+            let animItemPoint = window.innerHeight - animItemHeight/animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight/animStart;
+            }
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+            } else {
+                animItem.classList.remove('_active');
+            }
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {
+            top: rect.top + scrollTop,
+            left: rect.left + scrollLeft
+        }
+    }
+    animOnScroll();
     }
 }

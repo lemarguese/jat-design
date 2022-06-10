@@ -87,7 +87,7 @@ function changeSlide(index) {
         measurementItems[i].style.transition = 'background-size linear .25s';
     }
 
-    measurementItems[3].style.backgroundSize = '70px';
+    measurementItems[3].style.backgroundSize = '50px';
     measurementItems[3].style.transition = 'background-size linear .25s';
 
     setTimeout(() => {
@@ -101,7 +101,7 @@ function changeSlide(index) {
         title.innerHTML = 'надежность';
         content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
         image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
-        measurementItems[3].style.backgroundSize = '80px';
+        measurementItems[3].style.backgroundSize = '50px';
         measurementItems[3].style.transition = 'background-size linear .25s';
     } else if (idx === 2) {
         title.innerHTML = 'твердость характера';

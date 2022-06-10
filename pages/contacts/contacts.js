@@ -24,4 +24,7 @@ window.onload = function () {
     mainRoute.addEventListener('click', function () {
         location.assign('../../index.html');
     });
+
+    loadAnim();
 }
+

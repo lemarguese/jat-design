@@ -651,7 +651,7 @@ img {
 }
 
 .measurement--item:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transition: transform linear .15s;
 }
 
@@ -1163,7 +1163,7 @@ img {
     }
 
     .fourth-measurement {
-        background-size: 50px;
+        background-size: 35px;
     }
 
     .current-arrow-second {

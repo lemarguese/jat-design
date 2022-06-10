@@ -282,6 +282,26 @@ button:hover {
     align-items: center;
     transition: transform linear .15s;
 }
+.quantity--item1{
+    opacity: 0;
+    transform: translate(0, -50%);
+    transition: all 1s ease 0.8s;
+}
+.quantity--item2{
+    opacity: 0;
+    transform: translate(0, -50%);
+    transition: all 1s ease 0.8s;
+}
+.quantity--item3{
+    opacity: 0;
+    transform: translate(0, -50%);
+    transition: all 1s ease 0.8s;
+}
+.quantity--item4{
+    opacity: 0;
+    transform: translate(0, -50%);
+    transition: all 1s ease 0.8s;
+}
 
 .quantity--item:hover {
     transform: scale(1.2);
@@ -692,7 +712,7 @@ button:hover {
 }
 
 .measurement--item:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transition: transform linear .15s;
 }
 
@@ -713,7 +733,7 @@ button:hover {
 
 .fourth-measurement {
     background: url("../../assets/icons/checked-list-about-icon.svg") no-repeat center;
-    background-size: 70px;
+    background-size: 50px;
 }
 
 .empty--section {
@@ -958,7 +978,7 @@ button:hover {
     }
 
     .fourth-measurement {
-        background-size: 50px;
+        background-size: 35px;
     }
 
     .employees--section {
@@ -1021,6 +1041,7 @@ button:hover {
     .info-text {
         font-size: 10px;
         line-height: 18px;
+        
     }
 
     .principles-title--text {
@@ -1087,4 +1108,9 @@ button:hover {
     .footer-text {
         font-size: 5px;
     }
+}
+
+._active {
+    opacity: 1;
+    transform: translate(0, 0);
 }
