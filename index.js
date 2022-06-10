@@ -80,6 +80,16 @@ window.onload = function () {
             location.assign('pages/hr/hr.html');
         });
     }
+
+    let dostavkaTitle = document.getElementsByClassName('main-body_title')[0];
+    let dostavkaText = document.getElementsByClassName('main-body-content_text')[0];
+
+    function loadMainContent() {
+        dostavkaTitle.classList.add('_active');
+        dostavkaText.classList.add('_active');
+    }
+    loadMainContent();
+    loadAnim();
 }
 
 function closeModal() {
@@ -192,8 +202,8 @@ function fadeAnimSecond() {
 
 function checkPenetration(rect, title, content, button) {
     if (window.innerHeight >= rect.top) {
-            title.style.animation = 'openingFade linear 1s';
-            content.style.animation = 'openingFade linear 1s';
-            button.style.animation = 'openingFade linear 1s';
+        title.style.animation = 'openingFade linear 1s';
+        content.style.animation = 'openingFade linear 1s';
+        button.style.animation = 'openingFade linear 1s';
     }
 }
