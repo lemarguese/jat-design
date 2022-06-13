@@ -137,13 +137,13 @@ function changeSlide(index) {
 
     let measurementItems = document.getElementsByClassName('measurement--item');
 
-    for (let i = 0; i < measurementItems.length - 1; i++) {
+    for (let i = 0; i < measurementItems.length; i++) {
         measurementItems[i].style.backgroundSize = '50px';
+        if (window.matchMedia('(max-width: 1439px)').matches) {
+            measurementItems[i].style.backgroundSize = '35px';
+        }
         measurementItems[i].style.transition = 'background-size linear .25s';
     }
-
-    measurementItems[3].style.backgroundSize = '50px';
-    measurementItems[3].style.transition = 'background-size linear .25s';
 
     setTimeout(() => {
         advWorks.style.animation = 'closing linear .25';
@@ -157,6 +157,9 @@ function changeSlide(index) {
         content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
         image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
         measurementItems[3].style.backgroundSize = '80px';
+        if (window.matchMedia('(max-width: 1439px)').matches) {
+            measurementItems[3].style.backgroundSize = '50px';
+        }
         measurementItems[3].style.transition = 'background-size linear .25s';
     } else if (idx === 2) {
         title.innerHTML = 'твердость характера';
@@ -164,6 +167,9 @@ function changeSlide(index) {
 
         image.setAttribute('src', "../../assets/icons/service-slider-2.png");
         measurementItems[2].style.backgroundSize = '80px';
+        if (window.matchMedia('(max-width: 1439px)').matches) {
+            measurementItems[2].style.backgroundSize = '50px';
+        }
         measurementItems[2].style.transition = 'background-size linear .25s';
     } else if (idx === 3) {
         title.innerHTML = 'ориентация на клиента';
@@ -171,6 +177,9 @@ function changeSlide(index) {
 
         image.setAttribute('src', "../../assets/icons/service-slider-3.png");
         measurementItems[0].style.backgroundSize = '80px';
+        if (window.matchMedia('(max-width: 1439px)').matches) {
+            measurementItems[0].style.backgroundSize = '50px';
+        }
         measurementItems[0].style.transition = 'background-size linear .25s';
     } else if (idx === 4) {
         title.innerHTML = 'скорость коммуникации';
@@ -178,6 +187,9 @@ function changeSlide(index) {
 
         image.setAttribute('src', "../../assets/icons/service-slider-4.png");
         measurementItems[1].style.backgroundSize = '80px';
+        if (window.matchMedia('(max-width: 1439px)').matches) {
+            measurementItems[1].style.backgroundSize = '50px';
+        }
         measurementItems[1].style.transition = 'background-size linear .25s';
     }
     advWorks.style.animation = 'opening linear .25s';

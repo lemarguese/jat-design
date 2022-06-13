@@ -532,6 +532,8 @@ img {
     position: relative;
     width: 45%;
     background-color: #B62D39;
+    padding: 10px;
+    min-height: 625px;
 }
 
 .advantages-work--item {
@@ -1341,6 +1343,7 @@ img {
     }
 
     .advantages-work {
+        min-height: 480px;
         justify-content: flex-start;
     }
 
