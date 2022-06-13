@@ -680,64 +680,40 @@ button:hover {
     height: 100%;
 }
 
-
-
 .tco-logo {
     background: url("assets/icons/tco-logo.svg") no-repeat center;
     background-size: contain;
-    opacity: 0;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.3s ease 0s;
-    
+
 }
 
 .kazmin-logo {
     background: url("assets/icons/kazmin-logo.svg") no-repeat center;
     background-size: contain;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.4s ease 0.1s;
 }
 
 .erg-logo {
     background: url("assets/icons/erg-logo.svg") no-repeat center;
     background-size: 75px;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.5s ease 0.2s;
 }
 
 .ncoc-logo {
     background: url("assets/icons/ncoc-logo.svg") no-repeat center;
     background-size: 75px;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.6s ease 0.3s;
 }
 
 .kazzinc-logo {
     background: url("assets/icons/kazzinc-logo.svg") no-repeat center;
     background-size: 75px;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.7s ease .4s;
 }
 
 .altynalmas-logo {
     background: url("assets/icons/altynalmas-logo.svg") no-repeat center;
     background-size: 90px;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.8s ease .5s;
 }
 
 .rggold-logo {
     background: url("assets/icons/kazmin-logo.svg") no-repeat center;
     background-size: 75px;
-    opacity: 0;
-    transform: translate(-112%, 0);
-    transition: all 1.9s ease .6s;
 }
 
 /* contact block */

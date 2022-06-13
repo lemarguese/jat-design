@@ -112,7 +112,7 @@ function changeSlide(index) {
 }
 
 
-function changeSlideBackground (event) {
+function changeSlideBackground(event) {
     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
     let currentTabs = document.getElementsByClassName('current-arrow');
     let paginationItems = document.querySelectorAll('.pagination--item_block');
@@ -145,7 +145,7 @@ function sliderEmployee(start, end) {
     }
 }
 
-function sliderEmployeeHandler (event) {
+function sliderEmployeeHandler(event) {
     let employees = document.querySelectorAll('.employee--item');
     let displayedEmployees = [];
     for (let i = 0; i < employees.length; i++) {
@@ -154,15 +154,32 @@ function sliderEmployeeHandler (event) {
         }
     }
 
-    let start = displayedEmployees[0] + 1 > 0 ? displayedEmployees[0] + 1 : 0;
-    let end = displayedEmployees[2] + 1 < 5 ? displayedEmployees[2] + 1 : 5;
+    let prevArrow = document.getElementsByClassName('prev-arrow-icon')[0];
+    let nextArrow = document.getElementsByClassName('next-arrow-icon')[0];
 
+    let start;
+    let end;
     if (event.className === 'next-arrow-icon') {
-        sliderEmployee(start, end);
+        prevArrow.style.display = 'block';
+        start = displayedEmployees[0] + 1;
+        end = displayedEmployees[2] + 1;
+        if (end === 5) {
+            event.style.display = 'none';
+            end = 5;
+        }
+    } else {
+        start = displayedEmployees[0] - 1;
+        end = displayedEmployees[2] - 1;
+        if (start === 0) {
+            event.style.display = 'none';
+            start = 0;
+            nextArrow.style.display = 'block';
+        }
     }
+    sliderEmployee(start, end);
 }
 
-function sendInfoEmployee (event) {
+function sendInfoEmployee(event) {
     let name = event.previousSibling.previousSibling.children[0].innerText;
     let rank = event.previousSibling.previousSibling.children[1].innerText;
 
@@ -170,7 +187,7 @@ function sendInfoEmployee (event) {
     localStorage.setItem('rank', rank);
 }
 
-function initMap () {
+function initMap() {
     ymaps.ready(function () {
         let myMap = new ymaps.Map('map', {
                 center: [43.220899, 76.907511],
@@ -197,35 +214,36 @@ function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 
     if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+        window.addEventListener('scroll', animOnScroll);
 
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-            let animItemPoint = window.innerHeight - animItemHeight/animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight/animStart;
-            }
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            } else {
-                animItem.classList.remove('_active');
+        function animOnScroll() {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('_active');
+                } else {
+                    animItem.classList.remove('_active');
+                }
             }
         }
-    }
 
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return {
-            top: rect.top + scrollTop,
-            left: rect.left + scrollLeft
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            }
         }
-    }
-    animOnScroll();
+
+        animOnScroll();
     }
 }

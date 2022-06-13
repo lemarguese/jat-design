@@ -481,11 +481,17 @@ button:hover {
     font-weight: 700;
 }
 
-.next-arrow-icon {
+.next-arrow-icon, .prev-arrow-icon {
     width: 30px;
-    background: url("../../assets/icons/next-arr.svg") no-repeat center 100px;
+    background: url("../../assets/icons/next-arr.svg") no-repeat center center /* 100px should be */;
     background-size: 20px;
     padding-left: 10px;
+}
+
+.prev-arrow-icon {
+    display: none;
+    transform: rotate(180deg);
+    background-position: center;
 }
 
 /* values block */
