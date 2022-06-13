@@ -140,7 +140,7 @@ function changeSlide(index) {
 
     let measurementItems = document.getElementsByClassName('measurement--item');
 
-    for (let i = 0; i < measurementItems.length - 1; i++) {
+    for (let i = 0; i < measurementItems.length; i++) {
         measurementItems[i].style.backgroundSize = '50px';
         if (window.matchMedia('(max-width: 1439px)').matches) {
             measurementItems[i].style.backgroundSize = '35px';

@@ -467,6 +467,8 @@ img {
 }
 
 .pagination_block-second {
+    position: absolute;
+    bottom: 25px;
     width: 70%;
     border: 3px solid #393940;
     background-color: #fff;
@@ -527,6 +529,7 @@ img {
 }
 
 .advantages-work {
+    position: relative;
     width: 45%;
     background-color: #B62D39;
 }
@@ -1392,10 +1395,6 @@ img {
 
     .fourth-measurement {
         background-size: 35px;
-    }
-
-    .current-arrow-second {
-        margin-left: -90px;
     }
 
     .partners-block {
