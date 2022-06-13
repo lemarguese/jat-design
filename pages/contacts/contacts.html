@@ -13,8 +13,9 @@
 <div class="jat-main">
     <div class="jat-main_inner">
         <div class="jat-sidebar">
-            <div>
+            <div class="routing-icons--items_block">
                 <div class="routing-block">
+                    <div class="jat-logo-sidebar"></div>
                     <div class="routing-block_item main-text">
                         <h1 class="routing-block_text">главная</h1>
                     </div>
@@ -54,7 +55,8 @@
                         <h1 class="main-body_title">Контакты</h1>
                     </div>
                     <div class="main-body-content">
-                        <p class="main-body-content_text">Надежный экспедитор грузов, работающий на рынке с 2010 года, обслуживающий<br/>
+                        <p class="main-body-content_text">Надежный экспедитор грузов, работающий на рынке с 2010 года,
+                            обслуживающий<br/>
                             клиентов с мировым именем, занимающий ведущее положение в области обеспечения<br/>
                             безопасности, знаний, соблюдения законодательства и поиска решений.<br/><br/>
                             Опыт перевозок промышленных товаров, крупногабаритных и опасных материалов<br/>
@@ -131,7 +133,8 @@
                                         <input class="jat-contact_input" placeholder="Номер телефона">
                                     </div>
                                     <div class="jat-input--item">
-                                        <textarea class="jat-contact_input textarea-input" placeholder="Что Вас интересует?"></textarea>
+                                        <textarea class="jat-contact_input textarea-input"
+                                                  placeholder="Что Вас интересует?"></textarea>
                                     </div>
                                 </div>
                                 <div class="advantages-button_block">
@@ -143,6 +146,55 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="question-apply_modal">
+        <div class="question-modal">
+            <div class="question-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+                <div class="modal-title_block">
+                    <h2 class="question-modal--text">Отправить письмо в JAT</h2>
+                </div>
+                <form class="modal-content">
+                    <div class="form-inputs">
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Имя и фамилия" required
+                                   name="name">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Название компании" required
+                                   name="company">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Номер телефона" required
+                                   name="phone">
+                        </div>
+                        <div class="modal-input--item">
+                            <textarea class="question-modal_input textarea-modal-input"
+                                      placeholder="Что Вас интересует?" required name="interest"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-block-modal">
+                        <div class="contact-location_block">
+                            <p class="contact-location--text">Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж</p>
+                        </div>
+                        <div class="contact-phone_block">
+                            <p class="contact-phone--text">+7 (727) 327 14 55<br/>
+                                +7 (701) 951 62 15</p>
+                        </div>
+                        <div class="close-button_block">
+                            <button class="modal-btn">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="question-modal_bg"></div>
     </div>
     <div class="jat-footer">
         <p class="footer-text">Сделано в Рояле Кусто<br/>

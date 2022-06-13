@@ -87,6 +87,7 @@ button:hover {
 }
 
 .jat-logo-sidebar {
+    display: none;
     height: 75px;
     background: url("../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
 }
@@ -107,13 +108,19 @@ button:hover {
     justify-content: center;
 }
 
+.upper-icon_block, .mail-icon_block {
+    display: none;
+}
+
 .upper-icon {
+    cursor: pointer;
     width: 40px;
     height: 60px;
     background: url("../../assets/icons/up-icon.svg") no-repeat center;
 }
 
 .mail-icon_block {
+    cursor: pointer;
     width: 75px;
     height: 75px;
     background: url("../../assets/icons/mail-icon.svg") no-repeat center;
@@ -515,6 +522,239 @@ button:hover {
     font-weight: 900;
     font-size: 8px;
     text-align: end;
+}
+
+.question-apply_modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.question-modal {
+    position: absolute;
+    z-index: 99;
+    width: 800px;
+    max-height: 520px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("../../assets/icons/modal-triangle-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 520px 0, 490px 5px, 50px 40px;
+    background-size: 90px, 80px, 50px;
+}
+
+.question-inner {
+    padding: 10px 10px 0 0;
+}
+
+.question-modal_bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.close-block {
+    height: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.close-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 35px;
+    background: url("../../assets/icons/close-icon.svg") no-repeat center;
+    background-size: 20px;
+    margin-right: 10px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+}
+
+.modal-title_block, .form-inputs {
+    padding: 0 0 0 125px;
+}
+
+.modal-title_block {
+    margin: 20px 0;
+}
+
+.question-modal--text {
+    margin: 0;
+    font-size: 24px;
+}
+
+.question-rank--text {
+    font-style: italic;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.modal-input--item {
+    margin: 15px 0;
+    position: relative;
+}
+
+.close-button_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.modal-content--text {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.modal-btn {
+    background-color: #FFE800;
+    height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.question-modal_input, .file-input_cover {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #131313;
+    border-radius: 3px;
+    padding-left: 10px;
+    color: #131313;
+    font-size: 14px;
+}
+
+.textarea-modal-input {
+    padding-top: 10px;
+    height: 80px;
+}
+
+.question-modal_input::placeholder {
+    opacity: 0.6;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+
+.file-input_cover {
+    width: calc(100% - 42px);
+    padding-left: 40px;
+    position: absolute;
+    background: url("../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
+    top: 0;
+}
+
+.file-input--text {
+    margin: 9px 0;
+}
+
+.contact-block-modal {
+    padding-top: 50px;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
+    background-size: 100px, 85px;
+    background-position: 20px 10px, 0 0;
+    background-repeat: no-repeat;
+}
+
+.contact-location--text, .contact-phone--text {
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+@keyframes dropDownLogo {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropUpLogo {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+@keyframes closeModal {
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.33;
+    }
+    60% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opening {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closing {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {

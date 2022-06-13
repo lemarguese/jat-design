@@ -7,6 +7,9 @@ window.onload = function () {
 
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
 
+    mailModal();
+
+    window.addEventListener('scroll', routingDropUp);
     serviceRoute.addEventListener("click", function () {
         location.assign('pages/service/service.html');
     });
@@ -81,6 +84,18 @@ window.onload = function () {
         });
     }
     loadAnim();
+    window.addEventListener('scroll', logoDrop);
+}
+
+function mailModal () {
+    let modalMailInner = document.getElementsByClassName('question-modal')[0];
+    let mail = document.getElementsByClassName('mail-icon_block')[0];
+    let modalMail = document.getElementsByClassName('question-apply_modal')[0];
+    mail.addEventListener('click', function () {
+        modalMail.style.display = 'block';
+        modalMailInner.style.display = 'block';
+        modalMailInner.style.animation = 'openModal linear .2s';
+    });
 }
 
 function closeModal() {
@@ -92,6 +107,29 @@ function closeModal() {
         askModal.style.display = 'none';
         askModalBg.style.display = 'none';
     }, 350);
+}
+
+function routingDropUp () {
+    let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
+    let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
+
+    let aboutHR = document.getElementsByClassName('about_and_hr')[0];
+    let aboutHRrect = aboutHR.getBoundingClientRect();
+    if (window.innerHeight >= aboutHRrect.top) {
+        upperIcon.style.animation = 'opening linear .25s';
+        mailIcon.style.animation = 'opening linear .25s';
+        setTimeout(() => {
+            upperIcon.style.display = 'flex';
+            mailIcon.style.display = 'flex';
+        }, 250);
+    } else {
+        upperIcon.style.animation = 'closing linear .25s';
+        mailIcon.style.animation = 'closing linear .25s';
+        setTimeout(() => {
+            upperIcon.style.display = 'none';
+            mailIcon.style.display = 'none';
+        }, 250);
+    }
 }
 
 function changeSlide(index) {
@@ -196,6 +234,22 @@ function changeSlideArrows(event) {
     changeSlide(paginationItems[idx].children[0]);
 }
 
+function logoDrop () {
+    let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
+    let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
+    if (rect.top <= 0) {
+        setTimeout(() => {
+            dropLogo.style.display = 'block';
+        }, 250)
+        dropLogo.style.animation = 'dropDownLogo linear .5s';
+    } else {
+        dropLogo.style.animation = 'dropUpLogo linear .5s';
+        setTimeout(() => {
+            dropLogo.style.display = 'none';
+        }, 250);
+    }
+}
+
 function fadeAnim() {
     let title = document.getElementsByClassName('suggestion_title')[0];
     let content = document.getElementsByClassName('suggestion_content')[0];
@@ -221,6 +275,7 @@ function checkPenetration(rect, title, content, button) {
         button.style.animation = 'openingFade linear 1s';
     }
 }
+
 function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 

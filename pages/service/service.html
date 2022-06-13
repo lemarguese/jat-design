@@ -8,671 +8,724 @@
     <script src="service.js"></script>
 </head>
 <body>
-<div>
-    <div class="jat-main">
-        <div class="jat-main_inner">
-            <div class="jat-sidebar">
-                <div class="routing-icons--items_block">
-                    <div class="routing-block">
-                        <div class="routing-block_item main-text">
-                            <h1 class="routing-block_text">главная</h1>
+<div class="jat-main">
+    <div class="jat-main_inner">
+        <div class="jat-sidebar">
+            <div class="routing-icons--items_block">
+                <div class="routing-block">
+                    <div class="jat-logo-sidebar"></div>
+                    <div class="routing-block_item main-text">
+                        <h1 class="routing-block_text">главная</h1>
+                    </div>
+                    <div class="routing-block_item service-text active-route">
+                        <h1 class="routing-block_text">услуги</h1>
+                    </div>
+                    <div class="routing-block_item hse-text">
+                        <h1 class="routing-block_text">HSE</h1>
+                    </div>
+                    <div class="routing-block_item about-text">
+                        <h1 class="routing-block_text">о компании</h1>
+                    </div>
+                    <div class="routing-block_item hr-text">
+                        <h1 class="routing-block_text">hr</h1>
+                    </div>
+                    <div class="routing-block_item contacts-text">
+                        <h1 class="routing-block_text">контакты</h1>
+                    </div>
+                </div>
+                <div class="routing-icons">
+                    <div class="upper-icon_block">
+                        <div class="upper-icon"></div>
+                        <p class="routing-block_text">наверх</p>
+                    </div>
+                    <div class="mail-icon_block">
+                        <p class="routing-block_text mail-text">mail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jat-body">
+            <div>
+                <div class="selector_block">
+                    <div class="language-selector">Ru</div>
+                </div>
+                <div class="jat-head">
+                    <div>
+                        <div class="main-body_logo">
+                            <div class="main-logo"></div>
                         </div>
-                        <div class="routing-block_item service-text active-route">
-                            <h1 class="routing-block_text">услуги</h1>
+                        <div class="main-title_block">
+                            <h1 class="main-body_title">Услуги</h1>
                         </div>
-                        <div class="routing-block_item hse-text">
-                            <h1 class="routing-block_text">HSE</h1>
-                        </div>
-                        <div class="routing-block_item about-text">
-                            <h1 class="routing-block_text">о компании</h1>
-                        </div>
-                        <div class="routing-block_item hr-text">
-                            <h1 class="routing-block_text">hr</h1>
-                        </div>
-                        <div class="routing-block_item contacts-text">
-                            <h1 class="routing-block_text">контакты</h1>
+                        <div class="main-body-content">
+                            <p class="main-body-content_text">Мы занимаемся международными и локальными<br/>
+                                грузоперевозками по Казахстану, специализируемся на<br/>
+                                транспортировке оборудования и негабаритных грузов по морю,<br/>
+                                воздуху, обычным и железным дорогам. Также перевозим<br/>
+                                опасные грузы, организуем работы по хранению и погрузке,<br/>
+                                помогаем с таможенным оформлением и общими консультациями.
+                            </p>
                         </div>
                     </div>
-                    <div class="routing-icons">
-                        <div class="upper-icon_block">
-                            <div class="upper-icon"></div>
-                            <p class="routing-block_text">наверх</p>
+                    <div class="container-img">
+                        <img src="../../assets/icons/jat-containers.png">
+                    </div>
+                </div>
+            </div>
+            <div class="jat-services-block">
+                <div class="jat-services">
+                    <aside class="service-titles--section">
+                        <p class="titles-list__title">Услуги</p>
+                        <ul class="titles-list">
+                            <li class="titles-item active-title" onclick="slide(this)">Международные автомобильные
+                                перевозки
+                            </li>
+                            <li class="titles-item" onclick="slide(this)">Локальные автомобильные перевозки в
+                                Казахстане
+                            </li>
+                            <li class="titles-item" onclick="slide(this)">Морские перевозки
+                            </li>
+                            <li class="titles-item" onclick="slide(this)">Воздушные перевозки</li>
+                            <li class="titles-item" onclick="slide(this)">Железнодорожные перевозки
+                            </li>
+                            <li class="titles-item" onclick="slide(this)">Услуги таможенной очистки</li>
+                            <li class="titles-item" onclick="slide(this)">Услуги складского хранения и обработки
+                                местных грузов
+                            </li>
+                        </ul>
+                    </aside>
+                    <section class="service--info_section">
+                        <div class="service--info--lists">
+                            <div class="service-info--item active-service">
+                                <div>
+                                    <h1 class="services-main-title">Международные<br/>
+                                        автомобильные перевозки</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Автоприцепы могут быть предоставлены в
+                                        складские помещения<br/> поставщиков в течение 2 дней после получения заказа
+                                        в любой точке мира.<br/><br/>
+                                        Стандартные автоприцепы с тентом, мега прицепы и низкорамные прицепы<br/>
+                                        доступны в Европе, России, Китае с маршрутом следования до
+                                        Казахстана.<br/><br/>
+                                        Зачастую популярный выбор с точки зрения цены за большой объем груза, и
+                                        <br/>время транзита для средней дальности.<br/><br/>
+                                        Даже 1 паллет можно отправить автомобильным консолидированным грузом<br/> из
+                                        Европы и Китая со средним временем транзита – 22 дня.</p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-1.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Локальные автомобильные<br/> перевозки в
+                                        Казахстане</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Для такой огромной страны, по площади равной
+                                        Европе, протяженность<br/>
+                                        которой от востока до запада занимает 7 дней пути, Вы можете
+                                        рассчитывать<br/>
+                                        на компанию «JAT», которая найдет для Вас автомобиль в течение
+                                        нескольких<br/>
+                                        часов после получения запроса.<br/><br/>
+
+                                        Благодаря практическому опыту по доставке грузов в удаленные пункты по<br/>
+                                        всей стране, который насчитывает свыше 12 лет, компания «JAT» имеет<br/>
+                                        надежную сеть операторов в каждом регионе, предлагающих различные типы<br/>
+                                        прицепов, низкорамных грузовых прицепов-платформ от 12 до 18
+                                        метров.<br/><br/>
+
+                                        Мы управляем нашими водителями на протяжении всего процесса доставки,<br/>
+                                        начиная с погрузки, в пути и заканчивая разгрузкой.<br/><br/>
+
+                                        Мы применяем меры обеспечения безопасности при погрузке и креплении<br/>
+                                        грузов в качестве стандарта, и пользуемся услугами нашего собственного<br/>
+                                        консультанта по ОТ,ТБ и ООС по негабаритным грузам или грузам,<br/>
+                                        относящимся к тяжеловесным.
+                                    </p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-2.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Морские перевозки</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Для таких перевозок грузов с удаленных пунктов
+                                        в Северной/Южной<br/>
+                                        Америке и Азии, используются морские перевозки и грузы перенаправляются<br/>
+                                        в порты Балтийского моря, Черного моря и восточного побережья Китая.<br/>
+                                        Товары либо продолжают свой путь в том же контейнере по железной дороге<br/>
+                                        или перегружаются в собственные контейнеры/вагоны. Если время играет<br/>
+                                        существенную роль, то товар перегружается на прицепы для доставки до<br/>
+                                        дверей.<br/><br/>
+
+                                        Компания «JAT Transport» сотрудничает со всеми известными контейнерными<br/>
+                                        перевозчиками по всему миру и операторами RORO по перевозкам<br/>
+                                        негабаритных грузов.<br/><br/>
+
+                                        Для больших объемов груза, перевозок сверх-негабаритных грузов, также<br/>
+                                        организуется доставка чартерными морскими судами через Европу до речных<br/>
+                                        систем России и в Каспийское море.<br/>
+                                    </p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-3.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Воздушные перевозки</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Компания «JAT Transport» способна организовать
+                                        забор груза в тот же день в<br/>
+                                        любой точке мира и направить ваш груз пассажирским/грузовым самолетом,<br/>
+                                        в зависимости от размера вашего груза.<br/><br/>
+
+                                        Для таких критических заказов, специальный чартерный самолет может быть<br/>
+                                        организован в течение 48-72 часов после уведомления.</p>
+                                </div>
+                                <div class="service-more-info_block">
+                                    <div class="service-more-info_inner">
+                                        <div class="service-info-more-title_block">
+                                            <p class="service-info-more_title--text">Войдет ли в него груз?</p>
+                                        </div>
+                                        <ul class="service-info-more-lists">
+                                            <li class="service-info-more--text">Все воздушные суда имеют разную
+                                                вместимость/допуск.
+                                            </li>
+                                            <li class="service-info-more--text">Чтобы удостоверится в том, что ваш
+                                                груз войдет в воздушное судно,<br/>
+                                                просто
+                                                свяжитесь с нами для получения технической консультации.<br/>
+                                                ( md@jat.kz )
+                                            </li>
+                                            <li class="service-info-more--text">Для грузов, габариты которых
+                                                превышают размеры транспортного<br/>
+                                                контейнера – Вы должны предоставить чертежи для<br/>
+                                                транспортировки, с указанием полных габаритов, веса, точек<br/>
+                                                подъема, центра гравитации.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-4.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Железнодорожные<br/> перевозки</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Прагматичный вариант перевозки, если груз
+                                        большого объема и время<br/>
+                                        транзита не играет существенной роли.<br/><br/>
+
+                                        Компания «JAT» может предложить перевозку железнодорожным<br/>
+                                        транспортом в стандартных 20 и 40-футовых контейнерах из Европы,
+                                        России,<br/>
+                                        Кавказа, Китая в Казахстан. <br/><br/>
+
+                                        Для грузов из Европы, нижеприведенные размеры вагонов доступны <br/>
+                                        из г. Лодзь, Польша и г. Клайпеда, Литва.<br/><br/>
+
+                                        Вагон 158 м3 Вес груза до 66 т<br/><br/>
+                                        Вагон 220 м3 Вес груза до 51 т</p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-5.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Услуги таможенной очистки</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Компания «JAT» обладает опытом оказания услуг
+                                        таможенной очистки на<br/>
+                                        всей территории Казахстана для всех видов транспорта.<br/><br/>
+
+                                        Полное соблюдение и прозрачность при толковании статей законов о<br/>
+                                        таможенной очистке, определении кодов товара, расчете пошлин и<br/>
+                                        управлении цифровыми записями.<br/><br/>
+
+                                        Компания «JAT Transport» предлагает полное обслуживание «под ключ»,<br/>
+                                        которое включает таможенную очистку в дополнение к доставке ваших<br/>
+                                        грузов.<br/><br/>
+
+                                        Мы предлагаем консультационные услуги по вопросам таможенной очистки в<br/>
+                                        целях обеспечения соответствия ваших товаросопроводительных документов<br/>
+                                        требованиям казахстанских таможенных органов.
+                                    </p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-6.png">
+                                </div>
+                            </div>
+                            <div class="service-info--item">
+                                <div>
+                                    <h1 class="services-main-title">Услуги складского хранения<br/> и обработки
+                                        местных грузов</h1>
+                                </div>
+                                <div class="services-content__block">
+                                    <p class="services-main-content">Хранение в помещении/на улице (площади для
+                                        хранения - 50 м2, 200 м2,<br/>
+                                        1000 м2, 2 000 м2) – обеспечение безопасности - 24/7.<br/><br/>
+
+                                        Офисные помещения и организация питания на рабочей площадке.<br/><br/>
+
+                                        Система управления складскими запасами на базе облачной платформы,<br/>
+                                        обеспечение безопасности - 24/7.<br/><br/>
+
+                                        Услуги подъема тяжелых грузов (Мобильные краны) 120, 200, 220 тонн по<br/>
+                                        всему Казахстану (21-дневная мобилизация – минимальная арендная плата<br/>
+                                        за один месяц).<br/><br/>
+
+                                        Вилочные погрузчики 1,5 – 16 тонн.<br/><br/>
+
+                                        Услуги упаковки и упаковки в ящики.<br/><br/>
+
+                                        Услуги крепления и фиксации грузов.<br/><br/>
+
+                                    </p>
+                                </div>
+                                <div class="service-image">
+                                    <img src="../../assets/icons/service-image-7.png">
+                                </div>
+                            </div>
                         </div>
-                        <div class="mail-icon_block">
-                            <p class="routing-block_text mail-text">mail</p>
+                    </section>
+                </div>
+            </div>
+            <div class="jat-advantages">
+                <div class="jat-advantages_inner">
+                    <div class="jat-advantages-title">
+                        <h1 class="jat-advantages-title_text">Почему выбирают нас?</h1>
+                    </div>
+                    <div class="jat-data_block">
+                        <div class="jat-datas">
+                            <div class="jat-data--item">
+                                <div class="data-icon">
+                                    <img src="../../assets/icons/data-icon.svg">
+                                </div>
+                                <div class="data_block">
+                                    <div class="data-title">
+                                        <p class="data-title__text">Скорость коммуникации:</p>
+                                    </div>
+                                    <div class="line-icon_block">
+                                        <img src="../../assets/icons/lines.svg">
+                                    </div>
+                                    <div class="data-content">
+                                        <p class="data-content__text">Вы сразу же отметите коммуникацию и
+                                            отзывчивость, как только<br/> Вы обратитесь в компанию «JAT».</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jat-data--item">
+                                <div class="data-icon">
+                                    <img src="../../assets/icons/lifting-service-icon.svg">
+                                </div>
+                                <div class="data_block">
+                                    <div class="data-title">
+                                        <p class="data-title__text">Надежность:</p>
+                                    </div>
+                                    <div class="line-icon_block">
+                                        <img src="../../assets/icons/lines.svg">
+                                    </div>
+                                    <div class="data-content">
+                                        <p class="data-content__text">Мы всегда рядом. Мы всегда доставляем грузы.
+                                            Мы всегда<br/> находим решения. Иногда все идет не по плану – Мы
+                                            устраняем<br/>
+                                            проблемы, прежде чем Вы увидите их. Рассчитывайте на нас <br/>и вместе
+                                            мы вернем все на круги своя.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jat-data--item">
+                                <div class="data-icon">
+                                    <img src="../../assets/icons/danger-flame-icon.svg">
+                                </div>
+                                <div class="data_block">
+                                    <div class="data-title">
+                                        <p class="data-title__text">Твердость характера Сила духа:</p>
+                                    </div>
+                                    <div class="line-icon_block">
+                                        <img src="../../assets/icons/lines.svg">
+                                    </div>
+                                    <div class="data-content">
+                                        <p class="data-content__text">Каждую неделю мы обсуждаем друг с другом
+                                            результаты работы<br/>
+                                            за прошедшую неделю, что прошло хорошо, что идет не так, и<br/>
+                                            вместе вырабатываем решения. <br/><br/>
+                                            Мы придерживаемся выбранного курса и искренне верим, что<br/>
+                                            прохождение дополнительной мили пути, ее преодоление,<br/>
+                                            заложено в «ДНК компании «JAT».
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jat-data--item">
+                                <div class="data-icon">
+                                    <img src="../../assets/icons/operator-icon.svg">
+                                </div>
+                                <div class="data_block">
+                                    <div class="data-title">
+                                        <p class="data-title__text">Ориентированность на клиента:</p>
+                                    </div>
+                                    <div class="line-icon_block">
+                                        <img src="../../assets/icons/lines.svg">
+                                    </div>
+                                    <div class="data-content">
+                                        <p class="data-content__text">Мы предлагаем специально назначенное
+                                            контактное лицо компании «JAT» для удовлетворения всех ваших
+                                            потребностей по перевозке грузов всеми видами транспорта. Вас не будут
+                                            перенаправлять в другой отдел и другим коллегам. За вами будет закреплен
+                                            один человек и одно контактное лицо для решения вопросов на более
+                                            высоком уровне. Ваш опыт сотрудничества с компанией «JAT» будет
+                                            заключаться в простоте коммуникации для «выполнения поставленных задач».
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yellow-rectangle_block">
+                            <div class="yellow-rect first-yellow"></div>
+                            <div class="yellow-rect second-yellow"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="jat-body">
-                <div>
-                    <div class="selector_block">
-                        <div class="language-selector">Ru</div>
+            <div class="jat-how_we_work">
+                <div class="how_we_work-inner">
+                    <div class="how_we_work-title-block">
+                        <p class="how_we_work-title _animation">Как мы работаем</p>
                     </div>
-                    <div class="jat-head">
-                        <div>
-                            <div class="main-body_logo">
-                                <div class="main-logo"></div>
-                            </div>
-                            <div class="main-title_block">
-                                <h1 class="main-body_title">Услуги</h1>
-                            </div>
-                            <div class="main-body-content">
-                                <p class="main-body-content_text">Мы занимаемся международными и локальными<br/>
-                                    грузоперевозками по Казахстану, специализируемся на<br/>
-                                    транспортировке оборудования и негабаритных грузов по морю,<br/>
-                                    воздуху, обычным и железным дорогам. Также перевозим<br/>
-                                    опасные грузы, организуем работы по хранению и погрузке,<br/>
-                                    помогаем с таможенным оформлением и общими консультациями.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="container-img">
-                            <img src="../../assets/icons/jat-containers.png">
-                        </div>
+                    <div class="how_we_work-content-block">
+                        <p class="how_we_work-content _animation">Мы предлагаем специально назначенное контактное
+                            лицо<br/>
+                            компании «JAT» для удовлетворения всех ваших потребностей<br/>
+                            по перевозке грузов всеми видами транспорта. Вас не будут<br/>
+                            перенаправлять в другой отдел и другим коллегам. За вами <br/>
+                            будет закреплен один человек и одно контактное лицо для<br/>
+                            решения вопросов на более высоком уровне. Ваш опыт<br/>
+                            сотрудничества с компанией «JAT» будет заключаться в<br/>
+                            простоте коммуникации для «выполнения поставленных<br/> задач».
+                        </p>
                     </div>
-                </div>
-                <div class="jat-services-block">
-                    <div class="jat-services">
-                        <aside class="service-titles--section">
-                            <p class="titles-list__title">Услуги</p>
-                            <ul class="titles-list">
-                                <li class="titles-item active-title" onclick="slide(this)">Международные автомобильные
-                                    перевозки
-                                </li>
-                                <li class="titles-item" onclick="slide(this)">Локальные автомобильные перевозки в
-                                    Казахстане
-                                </li>
-                                <li class="titles-item" onclick="slide(this)">Морские перевозки
-                                </li>
-                                <li class="titles-item" onclick="slide(this)">Воздушные перевозки</li>
-                                <li class="titles-item" onclick="slide(this)">Железнодорожные перевозки
-                                </li>
-                                <li class="titles-item" onclick="slide(this)">Услуги таможенной очистки</li>
-                                <li class="titles-item" onclick="slide(this)">Услуги складского хранения и обработки
-                                    местных грузов
-                                </li>
-                            </ul>
-                        </aside>
-                        <section class="service--info_section">
-                            <div class="service--info--lists">
-                                <div class="service-info--item active-service">
-                                    <div>
-                                        <h1 class="services-main-title">Международные<br/>
-                                            автомобильные перевозки</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Автоприцепы могут быть предоставлены в
-                                            складские помещения<br/> поставщиков в течение 2 дней после получения заказа
-                                            в любой точке мира.<br/><br/>
-                                            Стандартные автоприцепы с тентом, мега прицепы и низкорамные прицепы<br/>
-                                            доступны в Европе, России, Китае с маршрутом следования до
-                                            Казахстана.<br/><br/>
-                                            Зачастую популярный выбор с точки зрения цены за большой объем груза, и
-                                            <br/>время транзита для средней дальности.<br/><br/>
-                                            Даже 1 паллет можно отправить автомобильным консолидированным грузом<br/> из
-                                            Европы и Китая со средним временем транзита – 22 дня.</p>
-                                    </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-1.png">
-                                    </div>
-                                </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Локальные автомобильные<br/> перевозки в
-                                            Казахстане</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Для такой огромной страны, по площади равной
-                                            Европе, протяженность<br/>
-                                            которой от востока до запада занимает 7 дней пути, Вы можете
-                                            рассчитывать<br/>
-                                            на компанию «JAT», которая найдет для Вас автомобиль в течение
-                                            нескольких<br/>
-                                            часов после получения запроса.<br/><br/>
-
-                                            Благодаря практическому опыту по доставке грузов в удаленные пункты по<br/>
-                                            всей стране, который насчитывает свыше 12 лет, компания «JAT» имеет<br/>
-                                            надежную сеть операторов в каждом регионе, предлагающих различные типы<br/>
-                                            прицепов, низкорамных грузовых прицепов-платформ от 12 до 18
-                                            метров.<br/><br/>
-
-                                            Мы управляем нашими водителями на протяжении всего процесса доставки,<br/>
-                                            начиная с погрузки, в пути и заканчивая разгрузкой.<br/><br/>
-
-                                            Мы применяем меры обеспечения безопасности при погрузке и креплении<br/>
-                                            грузов в качестве стандарта, и пользуемся услугами нашего собственного<br/>
-                                            консультанта по ОТ,ТБ и ООС по негабаритным грузам или грузам,<br/>
-                                            относящимся к тяжеловесным.
-                                        </p>
-                                    </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-2.png">
-                                    </div>
-                                </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Морские перевозки</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Для таких перевозок грузов с удаленных пунктов
-                                            в Северной/Южной<br/>
-                                            Америке и Азии, используются морские перевозки и грузы перенаправляются<br/>
-                                            в порты Балтийского моря, Черного моря и восточного побережья Китая.<br/>
-                                            Товары либо продолжают свой путь в том же контейнере по железной дороге<br/>
-                                            или перегружаются в собственные контейнеры/вагоны. Если время играет<br/>
-                                            существенную роль, то товар перегружается на прицепы для доставки до<br/>
-                                            дверей.<br/><br/>
-
-                                            Компания «JAT Transport» сотрудничает со всеми известными контейнерными<br/>
-                                            перевозчиками по всему миру и операторами RORO по перевозкам<br/>
-                                            негабаритных грузов.<br/><br/>
-
-                                            Для больших объемов груза, перевозок сверх-негабаритных грузов, также<br/>
-                                            организуется доставка чартерными морскими судами через Европу до речных<br/>
-                                            систем России и в Каспийское море.<br/>
-                                        </p>
-                                    </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-3.png">
-                                    </div>
-                                </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Воздушные перевозки</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Компания «JAT Transport» способна организовать
-                                            забор груза в тот же день в<br/>
-                                            любой точке мира и направить ваш груз пассажирским/грузовым самолетом,<br/>
-                                            в зависимости от размера вашего груза.<br/><br/>
-
-                                            Для таких критических заказов, специальный чартерный самолет может быть<br/>
-                                            организован в течение 48-72 часов после уведомления.</p>
-                                    </div>
-                                    <div class="service-more-info_block">
-                                        <div class="service-more-info_inner">
-                                            <div class="service-info-more-title_block">
-                                                <p class="service-info-more_title--text">Войдет ли в него груз?</p>
-                                            </div>
-                                            <ul class="service-info-more-lists">
-                                                <li class="service-info-more--text">Все воздушные суда имеют разную вместимость/допуск.</li>
-                                                <li class="service-info-more--text">Чтобы удостоверится в том, что ваш груз войдет в воздушное судно,<br/>
-                                                    просто
-                                                    свяжитесь с нами для получения технической консультации.<br/>
-                                                    ( md@jat.kz )
-                                                </li>
-                                                <li class="service-info-more--text">Для грузов, габариты которых превышают размеры транспортного<br/>
-                                                    контейнера – Вы должны предоставить чертежи для<br/>
-                                                    транспортировки, с указанием полных габаритов, веса, точек<br/>
-                                                    подъема, центра гравитации.
-                                                </li>
-                                            </ul>
+                    <div class="how_we_work-button-block">
+                        <button class="how_we_work-btn _animation">скачать презентацию</button>
+                    </div>
+                    <div class="how_we_work-pagination">
+                        <div class="pagination_block">
+                            <div class="pagination-control">
+                                <div class="prev-arrow" onclick="changeSlideBackground(this)"><</div>
+                                <div class="pagination_block-inner">
+                                    <div class="pagination--item_block">
+                                        <div class="pagination--item" onclick="changeSlideBack(this)">
+                                            <p class="pagination-text">1</p>
                                         </div>
+                                        <div class="current-arrow"></div>
                                     </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-4.png">
+                                    <div class="pagination--item">
+                                        <p class="pagination-text">|</p>
                                     </div>
-                                </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Железнодорожные<br/> перевозки</h1>
+                                    <div class="pagination--item_block">
+                                        <div class="pagination--item" onclick="changeSlideBack(this)">
+                                            <p class="pagination-text">2</p>
+                                        </div>
+                                        <div class="current-arrow"></div>
                                     </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Прагматичный вариант перевозки, если груз
-                                            большого объема и время<br/>
-                                            транзита не играет существенной роли.<br/><br/>
-
-                                            Компания «JAT» может предложить перевозку железнодорожным<br/>
-                                            транспортом в стандартных 20 и 40-футовых контейнерах из Европы,
-                                            России,<br/>
-                                            Кавказа, Китая в Казахстан. <br/><br/>
-
-                                            Для грузов из Европы, нижеприведенные размеры вагонов доступны <br/>
-                                            из г. Лодзь, Польша и г. Клайпеда, Литва.<br/><br/>
-
-                                            Вагон 158 м3 Вес груза до 66 т<br/><br/>
-                                            Вагон 220 м3 Вес груза до 51 т</p>
+                                    <div class="pagination--item">
+                                        <p class="pagination-text">|</p>
                                     </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-5.png">
+                                    <div class="pagination--item_block">
+                                        <div class="pagination--item" onclick="changeSlideBack(this)">
+                                            <p class="pagination-text">3</p>
+                                        </div>
+                                        <div class="current-arrow"></div>
                                     </div>
                                 </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Услуги таможенной очистки</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Компания «JAT» обладает опытом оказания услуг
-                                            таможенной очистки на<br/>
-                                            всей территории Казахстана для всех видов транспорта.<br/><br/>
-
-                                            Полное соблюдение и прозрачность при толковании статей законов о<br/>
-                                            таможенной очистке, определении кодов товара, расчете пошлин и<br/>
-                                            управлении цифровыми записями.<br/><br/>
-
-                                            Компания «JAT Transport» предлагает полное обслуживание «под ключ»,<br/>
-                                            которое включает таможенную очистку в дополнение к доставке ваших<br/>
-                                            грузов.<br/><br/>
-
-                                            Мы предлагаем консультационные услуги по вопросам таможенной очистки в<br/>
-                                            целях обеспечения соответствия ваших товаросопроводительных документов<br/>
-                                            требованиям казахстанских таможенных органов.
-                                        </p>
-                                    </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-6.png">
-                                    </div>
-                                </div>
-                                <div class="service-info--item">
-                                    <div>
-                                        <h1 class="services-main-title">Услуги складского хранения<br/> и обработки
-                                            местных грузов</h1>
-                                    </div>
-                                    <div class="services-content__block">
-                                        <p class="services-main-content">Хранение в помещении/на улице (площади для
-                                            хранения - 50 м2, 200 м2,<br/>
-                                            1000 м2, 2 000 м2) – обеспечение безопасности - 24/7.<br/><br/>
-
-                                            Офисные помещения и организация питания на рабочей площадке.<br/><br/>
-
-                                            Система управления складскими запасами на базе облачной платформы,<br/>
-                                            обеспечение безопасности - 24/7.<br/><br/>
-
-                                            Услуги подъема тяжелых грузов (Мобильные краны) 120, 200, 220 тонн по<br/>
-                                            всему Казахстану (21-дневная мобилизация – минимальная арендная плата<br/>
-                                            за один месяц).<br/><br/>
-
-                                            Вилочные погрузчики 1,5 – 16 тонн.<br/><br/>
-
-                                            Услуги упаковки и упаковки в ящики.<br/><br/>
-
-                                            Услуги крепления и фиксации грузов.<br/><br/>
-
-                                        </p>
-                                    </div>
-                                    <div class="service-image">
-                                        <img src="../../assets/icons/service-image-7.png">
-                                    </div>
-                                </div>
+                                <div class="next-arrow" onclick="changeSlideBackground(this)">></div>
                             </div>
-                        </section>
+                        </div>
+                        <div class="current-arrow"></div>
                     </div>
                 </div>
-                <div class="jat-advantages">
-                    <div class="jat-advantages_inner">
-                        <div class="jat-advantages-title">
-                            <h1 class="jat-advantages-title_text">Почему выбирают нас?</h1>
-                        </div>
-                        <div class="jat-data_block">
-                            <div class="jat-datas">
-                                <div class="jat-data--item">
-                                    <div class="data-icon">
-                                        <img src="../../assets/icons/data-icon.svg">
-                                    </div>
-                                    <div class="data_block">
-                                        <div class="data-title">
-                                            <p class="data-title__text">Скорость коммуникации:</p>
-                                        </div>
-                                        <div class="line-icon_block">
-                                            <img src="../../assets/icons/lines.svg">
-                                        </div>
-                                        <div class="data-content">
-                                            <p class="data-content__text">Вы сразу же отметите коммуникацию и
-                                                отзывчивость, как только<br/> Вы обратитесь в компанию «JAT».</p>
-                                        </div>
-                                    </div>
+            </div>
+            <div class="about_and_hr">
+                <div class="about_and_hr-inner">
+                    <div class="about_block">
+                        <div class="advantages-work">
+                            <div class="advantages-work--item">
+                                <div class="advantage-text_block">
+                                    <p class="advantage-text">почему мы?</p>
                                 </div>
-                                <div class="jat-data--item">
-                                    <div class="data-icon">
-                                        <img src="../../assets/icons/lifting-service-icon.svg">
-                                    </div>
-                                    <div class="data_block">
-                                        <div class="data-title">
-                                            <p class="data-title__text">Надежность:</p>
-                                        </div>
-                                        <div class="line-icon_block">
-                                            <img src="../../assets/icons/lines.svg">
-                                        </div>
-                                        <div class="data-content">
-                                            <p class="data-content__text">Мы всегда рядом. Мы всегда доставляем грузы.
-                                                Мы всегда<br/> находим решения. Иногда все идет не по плану – Мы
-                                                устраняем<br/>
-                                                проблемы, прежде чем Вы увидите их. Рассчитывайте на нас <br/>и вместе
-                                                мы вернем все на круги своя.
-                                            </p>
-                                        </div>
-                                    </div>
+                                <div class="advantages-image_block">
+                                    <img src="../../assets/icons/service-slider-image-1.png">
                                 </div>
-                                <div class="jat-data--item">
-                                    <div class="data-icon">
-                                        <img src="../../assets/icons/danger-flame-icon.svg">
+                                <div class="advantage_block">
+                                    <div class="advantage-title_block">
+                                        <p class="advantage-title-text">надежность</p>
                                     </div>
-                                    <div class="data_block">
-                                        <div class="data-title">
-                                            <p class="data-title__text">Твердость характера Сила духа:</p>
-                                        </div>
-                                        <div class="line-icon_block">
-                                            <img src="../../assets/icons/lines.svg">
-                                        </div>
-                                        <div class="data-content">
-                                            <p class="data-content__text">Каждую неделю мы обсуждаем друг с другом
-                                                результаты работы<br/>
-                                                за прошедшую неделю, что прошло хорошо, что идет не так, и<br/>
-                                                вместе вырабатываем решения. <br/><br/>
-                                                Мы придерживаемся выбранного курса и искренне верим, что<br/>
-                                                прохождение дополнительной мили пути, ее преодоление,<br/>
-                                                заложено в «ДНК компании «JAT».
-                                            </p>
-                                        </div>
+                                    <div class="advantage-content_block">
+                                        <p class="advantage-content-text">Мы всегда рядом. Мы всегда доставляем
+                                            грузы. Мы всегда находим решения.</p>
                                     </div>
-                                </div>
-                                <div class="jat-data--item">
-                                    <div class="data-icon">
-                                        <img src="../../assets/icons/operator-icon.svg">
-                                    </div>
-                                    <div class="data_block">
-                                        <div class="data-title">
-                                            <p class="data-title__text">Ориентированность на клиента:</p>
-                                        </div>
-                                        <div class="line-icon_block">
-                                            <img src="../../assets/icons/lines.svg">
-                                        </div>
-                                        <div class="data-content">
-                                            <p class="data-content__text">Мы предлагаем специально назначенное
-                                                контактное лицо компании «JAT» для удовлетворения всех ваших
-                                                потребностей по перевозке грузов всеми видами транспорта. Вас не будут
-                                                перенаправлять в другой отдел и другим коллегам. За вами будет закреплен
-                                                один человек и одно контактное лицо для решения вопросов на более
-                                                высоком уровне. Ваш опыт сотрудничества с компанией «JAT» будет
-                                                заключаться в простоте коммуникации для «выполнения поставленных задач».
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="yellow-rectangle_block">
-                                <div class="yellow-rect first-yellow"></div>
-                                <div class="yellow-rect second-yellow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="jat-how_we_work">
-                    <div class="how_we_work-inner">
-                        <div class="how_we_work-title-block">
-                            <p class="how_we_work-title _animation">Как мы работаем</p>
-                        </div>
-                        <div class="how_we_work-content-block">
-                            <p class="how_we_work-content _animation">Мы предлагаем специально назначенное контактное лицо<br/>
-                                компании «JAT» для удовлетворения всех ваших потребностей<br/>
-                                по перевозке грузов всеми видами транспорта. Вас не будут<br/>
-                                перенаправлять в другой отдел и другим коллегам. За вами <br/>
-                                будет закреплен один человек и одно контактное лицо для<br/>
-                                решения вопросов на более высоком уровне. Ваш опыт<br/>
-                                сотрудничества с компанией «JAT» будет заключаться в<br/>
-                                простоте коммуникации для «выполнения поставленных<br/> задач».
-                            </p>
-                        </div>
-                        <div class="how_we_work-button-block">
-                            <button class="how_we_work-btn _animation">скачать презентацию</button>
-                        </div>
-                        <div class="how_we_work-pagination">
-                            <div class="pagination_block">
-                                <div class="pagination-control">
-                                    <div class="prev-arrow" onclick="changeSlideBackground(this)"><</div>
-                                    <div class="pagination_block-inner">
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlideBack(this)">
-                                                <p class="pagination-text">1</p>
-                                            </div>
-                                            <div class="current-arrow"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlideBack(this)">
-                                                <p class="pagination-text">2</p>
-                                            </div>
-                                            <div class="current-arrow"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlideBack(this)">
-                                                <p class="pagination-text">3</p>
-                                            </div>
-                                            <div class="current-arrow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="next-arrow" onclick="changeSlideBackground(this)">></div>
-                                </div>
-                            </div>
-                            <div class="current-arrow"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about_and_hr">
-                    <div class="about_and_hr-inner">
-                        <div class="about_block">
-                            <div class="advantages-work">
-                                <div class="advantages-work--item">
-                                    <div class="advantage-text_block">
-                                        <p class="advantage-text">почему мы?</p>
-                                    </div>
-                                    <div class="advantages-image_block">
-                                        <img src="../../assets/icons/service-slider-image-1.png">
-                                    </div>
-                                    <div class="advantage_block">
-                                        <div class="advantage-title_block">
-                                            <p class="advantage-title-text">надежность</p>
-                                        </div>
-                                        <div class="advantage-content_block">
-                                            <p class="advantage-content-text">Мы всегда рядом. Мы всегда доставляем
-                                                грузы. Мы всегда находим решения.</p>
-                                        </div>
-                                        <div class="pagination_block-second">
-                                            <div class="pagination-control">
-                                                <div class="prev-arrow" onclick="changeSlideArrows(this)"><</div>
-                                                <div class="pagination_block-inner">
-                                                    <div class="pagination--item_block">
-                                                        <div class="pagination--item" onclick="changeSlide(this)">
-                                                            <p class="pagination-text">1</p>
-                                                        </div>
-                                                        <div class="current-arrow-second"></div>
+                                    <div class="pagination_block-second">
+                                        <div class="pagination-control">
+                                            <div class="prev-arrow" onclick="changeSlideArrows(this)"><</div>
+                                            <div class="pagination_block-inner">
+                                                <div class="pagination--item_block">
+                                                    <div class="pagination--item" onclick="changeSlide(this)">
+                                                        <p class="pagination-text">1</p>
                                                     </div>
-                                                    <div class="pagination--item">
-                                                        <p class="pagination-text">|</p>
-                                                    </div>
-                                                    <div class="pagination--item_block">
-                                                        <div class="pagination--item" onclick="changeSlide(this)">
-                                                            <p class="pagination-text">2</p>
-                                                        </div>
-                                                        <div class="current-arrow-second"></div>
-                                                    </div>
-                                                    <div class="pagination--item">
-                                                        <p class="pagination-text">|</p>
-                                                    </div>
-                                                    <div class="pagination--item_block">
-                                                        <div class="pagination--item" onclick="changeSlide(this)">
-                                                            <p class="pagination-text">3</p>
-                                                        </div>
-                                                        <div class="current-arrow-second"></div>
-                                                    </div>
-                                                    <div class="pagination--item">
-                                                        <p class="pagination-text">|</p>
-                                                    </div>
-                                                    <div class="pagination--item_block">
-                                                        <div class="pagination--item" onclick="changeSlide(this)">
-                                                            <p class="pagination-text">4</p>
-                                                        </div>
-                                                        <div class="current-arrow-second"></div>
-                                                    </div>
+                                                    <div class="current-arrow-second"></div>
                                                 </div>
-                                                <div class="next-arrow" onclick="changeSlideArrows(this)">></div>
+                                                <div class="pagination--item">
+                                                    <p class="pagination-text">|</p>
+                                                </div>
+                                                <div class="pagination--item_block">
+                                                    <div class="pagination--item" onclick="changeSlide(this)">
+                                                        <p class="pagination-text">2</p>
+                                                    </div>
+                                                    <div class="current-arrow-second"></div>
+                                                </div>
+                                                <div class="pagination--item">
+                                                    <p class="pagination-text">|</p>
+                                                </div>
+                                                <div class="pagination--item_block">
+                                                    <div class="pagination--item" onclick="changeSlide(this)">
+                                                        <p class="pagination-text">3</p>
+                                                    </div>
+                                                    <div class="current-arrow-second"></div>
+                                                </div>
+                                                <div class="pagination--item">
+                                                    <p class="pagination-text">|</p>
+                                                </div>
+                                                <div class="pagination--item_block">
+                                                    <div class="pagination--item" onclick="changeSlide(this)">
+                                                        <p class="pagination-text">4</p>
+                                                    </div>
+                                                    <div class="current-arrow-second"></div>
+                                                </div>
                                             </div>
+                                            <div class="next-arrow" onclick="changeSlideArrows(this)">></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="advantages-info">
-                                <form class="advantages-info_inner">
-                                    <div>
-                                        <h1 class="advantage-info_title _animation">Оставьте запрос и
-                                            мы ответим в течение
-                                            одного дня</h1>
+                        </div>
+                        <div class="advantages-info">
+                            <form class="advantages-info_inner">
+                                <div>
+                                    <h1 class="advantage-info_title _animation">Оставьте запрос и
+                                        мы ответим в течение
+                                        одного дня</h1>
+                                </div>
+                                <div class="jat-inputs_block _animation">
+                                    <div class="jat-input--item">
+                                        <input class="jat-contact_input" placeholder="Имя и фамилия" required
+                                               name="name">
                                     </div>
-                                    <div class="jat-inputs_block _animation">
-                                        <div class="jat-input--item">
-                                            <input class="jat-contact_input" placeholder="Имя и фамилия" required
-                                                   name="name">
-                                        </div>
-                                        <div class="jat-input--item">
-                                            <input class="jat-contact_input" placeholder="Название компании" required
-                                                   name="organization">
-                                        </div>
-                                        <div class="jat-input--item">
-                                            <input class="jat-contact_input" placeholder="Номер телефона" required
-                                                   name="phone">
-                                        </div>
-                                        <div class="jat-input--item">
+                                    <div class="jat-input--item">
+                                        <input class="jat-contact_input" placeholder="Название компании" required
+                                               name="organization">
+                                    </div>
+                                    <div class="jat-input--item">
+                                        <input class="jat-contact_input" placeholder="Номер телефона" required
+                                               name="phone">
+                                    </div>
+                                    <div class="jat-input--item">
                                             <textarea class="jat-contact_input textarea-input" required name="interest"
                                                       placeholder="Что Вас интересует?"></textarea>
-                                        </div>
                                     </div>
-                                    <div class="advantages-button_block">
-                                        <button class="advantages-button _animation">отправить письмо</button>
-                                    </div>
-                                </form>
-                            </div>
+                                </div>
+                                <div class="advantages-button_block">
+                                    <button class="advantages-button _animation">отправить письмо</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="measurements-block">
-                        <div class="measurement--item first-measurement"></div>
-                        <div class="measurement--item second-measurement"></div>
-                        <div class="measurement--item third-measurement"></div>
-                        <div class="measurement--item fourth-measurement"></div>
-                    </div>
-                    <div class="empty-block"></div>
                 </div>
-                <div class="partners-contact-block">
-                    <div class="partners-block">
-                        <div><p class="partners-text">Для кого мы работаем</p></div>
-                        <div class="workers-content_block">
-                            <p class="worker-content-text">Персонал компании «JAT» обладает<br/>
-                                многолетним опытом работы в<br/>
-                                горнодобывающем и нефтегазовом секторах и<br/>
-                                выбрал их в качестве основного направления,<br/>
-                                полагаясь исключительно на понимание<br/>
-                                отрасли и специфики материалов, доставку<br/>
-                                которых необходимо осуществлять. Понимая<br/>
-                                сезонные тонкости, корпоративную культуру<br/>
-                                клиентов, терминологию, удаленные пункты<br/>
-                                доставки, процедуры допуска на площадки и<br/>
-                                ожидания наряду с ежегодными остановами<br/>
-                                для технического обслуживания, компания<br/>
-                                «JAT» обладает ловкостью и сноровкой в<br/>
-                                осуществлении «критических доставок грузов»,<br/>
-                                заведомо представляющих угрозу для<br/>
-                                производственного процесса или жизни, а<br/>
-                                также влекущих миллионные убытки в<br/>
-                                долларах США.
-                            </p>
+                <div class="measurements-block">
+                    <div class="measurement--item first-measurement"></div>
+                    <div class="measurement--item second-measurement"></div>
+                    <div class="measurement--item third-measurement"></div>
+                    <div class="measurement--item fourth-measurement"></div>
+                </div>
+                <div class="empty-block"></div>
+            </div>
+            <div class="partners-contact-block">
+                <div class="partners-block">
+                    <div><p class="partners-text">Для кого мы работаем</p></div>
+                    <div class="workers-content_block">
+                        <p class="worker-content-text">Персонал компании «JAT» обладает<br/>
+                            многолетним опытом работы в<br/>
+                            горнодобывающем и нефтегазовом секторах и<br/>
+                            выбрал их в качестве основного направления,<br/>
+                            полагаясь исключительно на понимание<br/>
+                            отрасли и специфики материалов, доставку<br/>
+                            которых необходимо осуществлять. Понимая<br/>
+                            сезонные тонкости, корпоративную культуру<br/>
+                            клиентов, терминологию, удаленные пункты<br/>
+                            доставки, процедуры допуска на площадки и<br/>
+                            ожидания наряду с ежегодными остановами<br/>
+                            для технического обслуживания, компания<br/>
+                            «JAT» обладает ловкостью и сноровкой в<br/>
+                            осуществлении «критических доставок грузов»,<br/>
+                            заведомо представляющих угрозу для<br/>
+                            производственного процесса или жизни, а<br/>
+                            также влекущих миллионные убытки в<br/>
+                            долларах США.
+                        </p>
+                    </div>
+                    <div class="our-clients_block">
+                        <div class="clients_title-block">
+                            <p class="clients-title">Наши основные клиенты</p>
                         </div>
-                        <div class="our-clients_block">
-                            <div class="clients_title-block">
-                                <p class="clients-title">Наши основные клиенты</p>
+                        <div class="clients-sphere_block">
+                            <div class="sphere--item">
+                                <div class="sphere-img_block"><img src="../../assets/icons/mountain-icon.svg"></div>
+                                <div class="sphere-content_block">
+                                    <p class="sphere-content--text">
+                                        Горная добыча
+                                    </p>
+                                </div>
                             </div>
-                            <div class="clients-sphere_block">
-                                <div class="sphere--item">
-                                    <div class="sphere-img_block"><img src="../../assets/icons/mountain-icon.svg"></div>
-                                    <div class="sphere-content_block">
-                                        <p class="sphere-content--text">
-                                            Горная добыча
-                                        </p>
-                                    </div>
+                            <div class="sphere--item">
+                                <div class="sphere-img_block"><img src="../../assets/icons/building-icon.svg"></div>
+                                <div class="sphere-content_block">
+                                    <p class="sphere-content--text">
+                                        Строительство
+                                    </p>
                                 </div>
-                                <div class="sphere--item">
-                                    <div class="sphere-img_block"><img src="../../assets/icons/building-icon.svg"></div>
-                                    <div class="sphere-content_block">
-                                        <p class="sphere-content--text">
-                                            Строительство
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="sphere--item">
-                                    <div class="sphere-img_block"><img src="../../assets/icons/factory-icon.svg"></div>
-                                    <div class="sphere-content_block">
-                                        <p class="sphere-content--text">
-                                            Нефтегазовый сектор
-                                        </p>
-                                    </div>
+                            </div>
+                            <div class="sphere--item">
+                                <div class="sphere-img_block"><img src="../../assets/icons/factory-icon.svg"></div>
+                                <div class="sphere-content_block">
+                                    <p class="sphere-content--text">
+                                        Нефтегазовый сектор
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="contact-block">
-                        <div>
-                            <div class="social-medias_block">
-                                <p class="social-media-title">контакты</p>
-                                <div class="social-medias">
-                                    <div class="instagram"></div>
-                                    <div class="facebook"></div>
-                                    <div class="linkedin"></div>
-                                    <div class="youtube"></div>
-                                </div>
-                            </div>
-                            <div class="contact-content-block">
-                                <p class="contact-text">Алматы, 050019<br/>
-                                    Тимирязева 42, Атакент,<br/>
-                                    Бизнес-центр Парк<br/>
-                                    Отель, Блок F, 3-й этаж</p>
-                                <p class="contact-text">+7 (701) 951 62 15</p>
-                            </div>
-                            <div class="contacts-emails">
-                                <div class="contact-email contact-email_1 _animation">
-                                    <p class="contact-email-text">связаться с менеджером</p>
-                                    <p class="contact-email-text">ops@jat</p>
-                                </div>
-                                <div class="contact-email contact-email_2 _animation">
-                                    <p class="contact-email-text">связаться с менеджером</p>
-                                    <p class="contact-email-text">sales@jat.kz</p>
-                                </div>
+                </div>
+                <div class="contact-block">
+                    <div>
+                        <div class="social-medias_block">
+                            <p class="social-media-title">контакты</p>
+                            <div class="social-medias">
+                                <div class="instagram"></div>
+                                <div class="facebook"></div>
+                                <div class="linkedin"></div>
+                                <div class="youtube"></div>
                             </div>
                         </div>
-                        <div class="jat-logo_block">
-                            <img src="../../assets/icons/jat-logo-white.svg">
+                        <div class="contact-content-block">
+                            <p class="contact-text">Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж</p>
+                            <p class="contact-text">+7 (701) 951 62 15</p>
+                        </div>
+                        <div class="contacts-emails">
+                            <div class="contact-email contact-email_1 _animation">
+                                <p class="contact-email-text">связаться с менеджером</p>
+                                <p class="contact-email-text">ops@jat</p>
+                            </div>
+                            <div class="contact-email contact-email_2 _animation">
+                                <p class="contact-email-text">связаться с менеджером</p>
+                                <p class="contact-email-text">sales@jat.kz</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="empty-block"></div>
+                    <div class="jat-logo_block">
+                        <img src="../../assets/icons/jat-logo-white.svg">
+                    </div>
+                </div>
+                <div class="empty-block"></div>
+            </div>
+        </div>
+    </div>
+    <div class="question-apply_modal">
+        <div class="question-modal">
+            <div class="question-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+                <div class="modal-title_block">
+                    <h2 class="question-modal--text">Отправить письмо в JAT</h2>
+                </div>
+                <form class="modal-content-second">
+                    <div class="form-inputs">
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Имя и фамилия" required
+                                   name="name">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Название компании" required
+                                   name="company">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Номер телефона" required
+                                   name="phone">
+                        </div>
+                        <div class="modal-input--item">
+                                <textarea class="question-modal_input textarea-modal-input"
+                                          placeholder="Что Вас интересует?" required name="interest"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-block-modal">
+                        <div class="contact-location_block">
+                            <p class="contact-location--text">Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж</p>
+                        </div>
+                        <div class="contact-phone_block">
+                            <p class="contact-phone--text">+7 (727) 327 14 55<br/>
+                                +7 (701) 951 62 15</p>
+                        </div>
+                        <div class="close-button_block-second">
+                            <button class="modal-btn-second">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="question-modal_bg"></div>
+    </div>
+    <div class="jat-footer">
+        <p class="footer-text">Сделано в Рояле Кусто<br/>
+            Алматы, 2022</p>
+    </div>
+    <div class="feedback-modal_block">
+        <div class="feedback-modal">
+            <div class="feedback-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <p class="modal-content--text">Спасибо за ваше обращение,<br/>
+                        менеджер JAT свяжется с вами<br/>
+                        в ближайшее время</p>
+                </div>
+                <div class="close-button_block">
+                    <button class="modal-btn">OK</button>
                 </div>
             </div>
         </div>
-        <div class="jat-footer">
-            <p class="footer-text">Сделано в Рояле Кусто<br/>
-                Алматы, 2022</p>
-        </div>
-        <div class="feedback-modal_block">
-            <div class="feedback-modal">
-                <div class="feedback-inner">
-                    <div class="close-block">
-                        <div class="close-icon">
-                        </div>
-                    </div>
-                    <div class="modal-content">
-                        <p class="modal-content--text">Спасибо за ваше обращение,<br/>
-                            менеджер JAT свяжется с вами<br/>
-                            в ближайшее время</p>
-                    </div>
-                    <div class="close-button_block">
-                        <button class="modal-btn">OK</button>
-                    </div>
-                </div>
-            </div>
-            <div class="feedback-bg"></div>
-        </div>
+        <div class="feedback-bg"></div>
     </div>
 </div>
 </body>

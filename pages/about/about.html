@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="about.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
+            type="text/javascript"></script>
     <script src="about.js"></script>
     <title>JAT - About</title>
 
@@ -23,6 +24,7 @@
         <div class="jat-sidebar">
             <div class="routing-icons--items_block">
                 <div class="routing-block">
+                    <div class="jat-logo-sidebar"></div>
                     <div class="routing-block_item main-text">
                         <h1 class="routing-block_text">главная</h1>
                     </div>
@@ -187,11 +189,14 @@
                                     <p class="mc-footer-content--text">Компания «JAT» будет поддерживать связь с
                                         поставщиками в любой точке мира и<br/> обеспечивать приемлемость требований к
                                         упаковке для выбранного вида транспорта,<br/> товаросопроводительные документы
-                                        проверяются нашим собственным таможенным<br/> специалистом перед отправкой товара из
-                                        страны происхождения. С тех пор как мир<br/> перевернулся с ног на голову, пережив
+                                        проверяются нашим собственным таможенным<br/> специалистом перед отправкой
+                                        товара из
+                                        страны происхождения. С тех пор как мир<br/> перевернулся с ног на голову,
+                                        пережив
                                         финансовые кризисы, девальвации, пандемию,<br/> закрытие границ, забастовки,
                                         государственные перевороты, санкции – компания «JAT<br/> Transport» оказывала
-                                        компаниям содействие в преодолении всех проблем с целью<br/> обеспечения непрерывной
+                                        компаниям содействие в преодолении всех проблем с целью<br/> обеспечения
+                                        непрерывной
                                         доставки товаров в пункты назначения. Мы «устанавливаем<br/> контакты» с вашими
                                         поставщиками.</p>
                                 </div>
@@ -205,7 +210,8 @@
                                     </div>
                                     <div class="employees-content">
                                         <p class="employees-content--text">Мы собрали ответственных и надежных людей,
-                                            которые готовы тщательно проверять все<br/> детали, чтобы обеспечить максимальную
+                                            которые готовы тщательно проверять все<br/> детали, чтобы обеспечить
+                                            максимальную
                                             безопасность ваших грузов. Мы всегда на связи,<br/> чтобы честно и открыто
                                             рассказать вам обо всех процессах, предупредить о рисках,<br/> сообщить о
                                             возникших проблемах и найти их решение.</p>
@@ -311,7 +317,8 @@
                                         <div>
                                             <div class="pagination-block">
                                                 <div class="pagination-control">
-                                                    <div class="prev-arrow" onclick="changeSlideBackground(this)"><</div>
+                                                    <div class="prev-arrow" onclick="changeSlideBackground(this)"><
+                                                    </div>
                                                     <div class="pagination_block-inner">
                                                         <div class="pagination--item_block">
                                                             <div class="pagination--item" onclick="changeSlide(this)">
@@ -338,7 +345,8 @@
                                                             <div class="current-arrow"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="next-arrow" onclick="changeSlideBackground(this)">></div>
+                                                    <div class="next-arrow" onclick="changeSlideBackground(this)">>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -406,7 +414,6 @@
                         </div>
                     </div>
                     <div id="map"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -440,10 +447,58 @@
         </div>
         <div class="employee-modal_bg"></div>
     </div>
+    <div class="question-apply_modal">
+        <div class="question-modal">
+            <div class="question-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+                <div class="modal-title_block">
+                    <h2 class="question-modal--text">Отправить письмо в JAT</h2>
+                </div>
+                <form class="modal-content">
+                    <div class="form-inputs">
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Имя и фамилия" required
+                                   name="name">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Название компании" required
+                                   name="company">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Номер телефона" required
+                                   name="phone">
+                        </div>
+                        <div class="modal-input--item">
+                        <textarea class="question-modal_input textarea-modal-input" placeholder="Что Вас интересует?"
+                                  required name="interest"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-block-modal-second">
+                        <div class="contact-location_block">
+                            <p class="contact-location--text">Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж</p>
+                        </div>
+                        <div class="contact-phone_block">
+                            <p class="contact-phone--text">+7 (727) 327 14 55<br/>
+                                +7 (701) 951 62 15</p>
+                        </div>
+                        <div class="close-button_block">
+                            <button class="modal-btn">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="question-modal_bg"></div>
+    </div>
     <div class="jat-footer">
         <p class="footer-text">Сделано в Рояле Кусто<br/>
             Алматы, 2022</p>
     </div>
-</div>
 </body>
 </html>

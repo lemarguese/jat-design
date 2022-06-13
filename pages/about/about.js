@@ -8,6 +8,9 @@ window.onload = function () {
     sliderEmployee(0, 2);
     initMap();
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    mailModal();
+
+    window.addEventListener('scroll', logoDrop);
 
     mainRoute.addEventListener("click", function () {
         location.assign('../../index.html');
@@ -28,6 +31,8 @@ window.onload = function () {
     contactsRoute.addEventListener('click', function () {
         location.assign('../contacts/contacts.html');
     });
+
+    window.addEventListener('scroll', routingDropUp);
 
     let employeeInfoBg = document.getElementsByClassName('employee-info_modal')[0];
     let employeeInfoModal = document.getElementsByClassName('employee-modal')[0];
@@ -62,7 +67,31 @@ window.onload = function () {
 
     let closeIcon = document.getElementsByClassName("close-icon")[0];
     closeIcon.addEventListener('click', closeModal);
+    let closeIconSecond = document.getElementsByClassName("close-icon")[1];
+    closeIconSecond.addEventListener('click', closeMailModal);
     loadAnim();
+}
+
+function mailModal() {
+    let mail = document.getElementsByClassName('mail-icon_block')[0];
+    let mailInner = document.getElementsByClassName('question-modal')[0];
+    let modalMail = document.getElementsByClassName('question-apply_modal')[0];
+    mail.addEventListener('click', function () {
+        modalMail.style.display = 'block';
+        mailInner.style.display = 'block';
+        mailInner.style.animation = 'openModal linear .2s';
+    });
+}
+
+function closeMailModal() {
+    let askModal = document.getElementsByClassName('question-modal')[0];
+    let askModalBg = document.getElementsByClassName('question-apply_modal')[0];
+    askModal.style.animation = 'closeModal linear .35s';
+
+    setTimeout(() => {
+        askModal.style.display = 'none';
+        askModalBg.style.display = 'none';
+    }, 350);
 }
 
 function closeModal() {
@@ -111,7 +140,6 @@ function changeSlide(index) {
     }, 250);
 }
 
-
 function changeSlideBackground(event) {
     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
     let currentTabs = document.getElementsByClassName('current-arrow');
@@ -133,14 +161,30 @@ function changeSlideBackground(event) {
     changeSlide(paginationItems[idx].children[0]);
 }
 
-function sliderEmployee(start, end) {
+function logoDrop() {
+    let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
+    let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
+    if (rect.top <= 0) {
+        setTimeout(() => {
+            dropLogo.style.display = 'block';
+        }, 250)
+        dropLogo.style.animation = 'dropDownLogo linear .5s';
+    } else {
+        dropLogo.style.animation = 'dropUpLogo linear .5s';
+        setTimeout(() => {
+            dropLogo.style.display = 'none';
+        }, 250);
+    }
+}
+
+function sliderEmployee(start, end, animation) {
     let employees = document.querySelectorAll('.employee--item');
 
     for (let i = 0; i < employees.length; i++) {
         employees[i].style.display = 'none';
         if (i >= start && i <= end) {
             employees[i].style.display = 'block';
-            employees[i].style.animation = 'backgroundRightSlide linear .25s';
+            employees[i].style.animation = animation ? animation : 'backgroundRightSlide linear .25s';
         }
     }
 }
@@ -159,6 +203,8 @@ function sliderEmployeeHandler(event) {
 
     let start;
     let end;
+    let animation;
+
     if (event.className === 'next-arrow-icon') {
         prevArrow.style.display = 'block';
         start = displayedEmployees[0] + 1;
@@ -167,7 +213,9 @@ function sliderEmployeeHandler(event) {
             event.style.display = 'none';
             end = 5;
         }
+        animation = 'backgroundRightSlide linear .25s';
     } else {
+        nextArrow.style.display = 'block';
         start = displayedEmployees[0] - 1;
         end = displayedEmployees[2] - 1;
         if (start === 0) {
@@ -175,8 +223,9 @@ function sliderEmployeeHandler(event) {
             start = 0;
             nextArrow.style.display = 'block';
         }
+        animation = 'backgroundLeftSlide linear .25s';
     }
-    sliderEmployee(start, end);
+    sliderEmployee(start, end, animation);
 }
 
 function sendInfoEmployee(event) {
@@ -208,6 +257,29 @@ function initMap() {
         myMap.geoObjects
             .add(myPlacemark);
     });
+}
+
+function routingDropUp () {
+    let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
+    let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
+
+    let aboutHR = document.getElementsByClassName('employees--section')[0];
+    let aboutHRrect = aboutHR.getBoundingClientRect();
+    if (window.innerHeight >= aboutHRrect.top) {
+        upperIcon.style.animation = 'opening linear .25s';
+        mailIcon.style.animation = 'opening linear .25s';
+        setTimeout(() => {
+            upperIcon.style.display = 'flex';
+            mailIcon.style.display = 'flex';
+        }, 250);
+    } else {
+        upperIcon.style.animation = 'closing linear .25s';
+        mailIcon.style.animation = 'closing linear .25s';
+        setTimeout(() => {
+            upperIcon.style.display = 'none';
+            mailIcon.style.display = 'none';
+        }, 250);
+    }
 }
 
 function loadAnim() {

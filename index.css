@@ -111,6 +111,10 @@ button:hover {
     justify-content: center;
 }
 
+.upper-icon_block, .mail-icon_block {
+    display: none;
+}
+
 .upper-icon {
     cursor: pointer;
     width: 40px;
@@ -119,6 +123,7 @@ button:hover {
 }
 
 .mail-icon_block {
+    cursor: pointer;
     width: 75px;
     height: 75px;
     background: url("assets/icons/mail-icon.svg") no-repeat center;
@@ -131,6 +136,28 @@ button:hover {
     font-weight: 700;
     margin-top: 25px;
     color: #131313;
+}
+
+@keyframes dropDownLogo {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropUpLogo {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }
 
 /* jat body */
