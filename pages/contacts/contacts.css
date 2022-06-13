@@ -336,6 +336,12 @@ button:hover {
     cursor: pointer;
 }
 
+.city_aberdin:hover {
+    transform: scale(1.05);
+    transition: .1s linear;
+}
+
+
 .city_aberdin::after {
     content: '';
     position: absolute;

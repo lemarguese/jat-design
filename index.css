@@ -344,6 +344,12 @@ button:hover {
     border-bottom: solid 1px #B62D39;
 }
 
+.about_block {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
 .advantages-work {
     width: 45%;
     background-color: #B62D39;
@@ -620,7 +626,7 @@ button:hover {
 
 /* hr vacancies */
 .hr-image{
-    opacity: 0; 
+    opacity: 0;
     transform: translate(0, -112%);
     transition: all 3s ease 0s;
 }
