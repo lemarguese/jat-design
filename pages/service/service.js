@@ -156,7 +156,7 @@ function changeSlide(index) {
         title.innerHTML = 'надежность';
         content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
         image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
-        measurementItems[3].style.backgroundSize = '50px';
+        measurementItems[3].style.backgroundSize = '80px';
         measurementItems[3].style.transition = 'background-size linear .25s';
     } else if (idx === 2) {
         title.innerHTML = 'твердость характера';
@@ -170,15 +170,15 @@ function changeSlide(index) {
         content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
 
         image.setAttribute('src', "../../assets/icons/service-slider-3.png");
-        measurementItems[1].style.backgroundSize = '80px';
-        measurementItems[1].style.transition = 'background-size linear .25s';
+        measurementItems[0].style.backgroundSize = '80px';
+        measurementItems[0].style.transition = 'background-size linear .25s';
     } else if (idx === 4) {
         title.innerHTML = 'скорость коммуникации';
         content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
 
         image.setAttribute('src', "../../assets/icons/service-slider-4.png");
-        measurementItems[0].style.backgroundSize = '80px';
-        measurementItems[0].style.transition = 'background-size linear .25s';
+        measurementItems[1].style.backgroundSize = '80px';
+        measurementItems[1].style.transition = 'background-size linear .25s';
     }
     advWorks.style.animation = 'opening linear .25s';
 }
