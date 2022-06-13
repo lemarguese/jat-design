@@ -912,6 +912,17 @@ button:hover {
     }
 }
 
+@keyframes backgroundRightSlide {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1439px) {
 
     .jat-body {

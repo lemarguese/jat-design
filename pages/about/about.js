@@ -5,7 +5,7 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
-    sliderEmployee(0, 3);
+    sliderEmployee(0, 2);
     initMap();
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
 
@@ -138,8 +138,9 @@ function sliderEmployee(start, end) {
 
     for (let i = 0; i < employees.length; i++) {
         employees[i].style.display = 'none';
-        if (i >= start && i < end) {
+        if (i >= start && i <= end) {
             employees[i].style.display = 'block';
+            employees[i].style.animation = 'backgroundRightSlide linear .25s';
         }
     }
 }
@@ -147,9 +148,15 @@ function sliderEmployee(start, end) {
 function sliderEmployeeHandler (event) {
     let employees = document.querySelectorAll('.employee--item');
     let displayedEmployees = [];
+    for (let i = 0; i < employees.length; i++) {
+        if (getComputedStyle(employees[i]).display === 'block') { // 0 2
+            displayedEmployees.push(i);
+        }
+    }
 
-    let start = displayedEmployees[0] + 1;
-    let end = displayedEmployees[displayedEmployees.length - 1] + 1;
+    let start = displayedEmployees[0] + 1 > 0 ? displayedEmployees[0] + 1 : 0;
+    let end = displayedEmployees[2] + 1 < 5 ? displayedEmployees[2] + 1 : 5;
+
     if (event.className === 'next-arrow-icon') {
         sliderEmployee(start, end);
     }

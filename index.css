@@ -404,7 +404,6 @@ button:hover {
 .prev-arrow, .next-arrow {
     cursor: pointer;
     margin: 0 10px;
-    cursor: pointer;
 }
 
 .active-slider {
