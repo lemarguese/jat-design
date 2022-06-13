@@ -10,7 +10,6 @@ window.onload = function () {
     mailModal();
 
     window.addEventListener('scroll', routingDropUp);
-
     window.addEventListener('scroll', logoDrop);
 
     mainRoute.addEventListener("click", function () {
@@ -307,6 +306,7 @@ function checkPenetration(rect) {
         rect.style.animation = 'slideRight linear 1s';
     }
 }
+
 function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 

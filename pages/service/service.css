@@ -151,13 +151,15 @@ img {
 
 .container-img {
     width: 50%;
+    opacity: 0;
+    transform: translate(0, -30%);
+    transition: all 1s ease 0.8s;
 }
 
 .container-img img {
     width: 100%;
     margin-top: 15rem;
 }
-
 
 /* jat head */
 
@@ -747,6 +749,11 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform linear .25s;
+}
+.sphere--item:hover{
+    transform:scale(1.3);
+    transition: transform linear .25s;
 }
 
 .sphere--item, .sphere-img_block {
@@ -927,7 +934,7 @@ img {
 }
 
 
-@keyframes opening {
+@keyframes а {
     from {
         opacity: 0;
     }
