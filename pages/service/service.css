@@ -678,6 +678,7 @@ img {
 }
 
 .measurement--item {
+    cursor: pointer;
     width: 75px;
     height: 75px;
     margin: 10px;
@@ -685,7 +686,7 @@ img {
 }
 
 .measurement--item:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform linear .15s;
 }
 
