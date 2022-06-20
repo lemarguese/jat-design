@@ -542,6 +542,7 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 25px;
+    
 }
 
 .advantage-text_block {
@@ -749,6 +750,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 .sphere--item {
@@ -756,6 +758,8 @@ img {
     flex-direction: column;
     align-items: center;
     transition: transform linear .25s;
+    width: 30%;
+    padding: 0;
 }
 .sphere--item:hover{
     transform:scale(1.3);
@@ -763,7 +767,7 @@ img {
 }
 
 .sphere--item, .sphere-img_block {
-    padding: 5px;
+    padding: 0px;
 }
 
 .sphere-img_block img {
@@ -1451,7 +1455,7 @@ img {
     }
 
     .sphere-img_block img {
-        width: 35px;
+        width: 50px;
     }
 
     .sphere-content--text {

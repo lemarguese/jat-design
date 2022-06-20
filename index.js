@@ -166,10 +166,6 @@ function changeSlide(index) {
         advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/first-slider-main.png")';
         advWorks.style.backgroundSize = '250px, 200px';
         advWorks.style.backgroundPosition = 'center 5px, center 75px';
-        measurementItems[0].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[0].style.backgroundSize = '50px';
-        }
         measurementItems[0].style.transition = 'background-size linear .25s';
     } else if (idx === 2) {
         title.innerHTML = 'Исполненный<br/> энтузиазма персонал';
@@ -185,10 +181,8 @@ function changeSlide(index) {
         advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/third-slider-main.png")';
         advWorks.style.backgroundSize = '250px, 250px';
         advWorks.style.backgroundPosition = 'center 5px, center 50px';
-        measurementItems[2].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[2].style.backgroundSize = '50px';
-        }
+        
+        
         measurementItems[2].style.transition = 'background-size linear .25s';
     } else if (idx === 4) {
         title.innerHTML = 'Владельцы компании<br/> принимают участие<br/> в работе 24/7 ';
@@ -197,10 +191,8 @@ function changeSlide(index) {
         advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
         advWorks.style.backgroundSize = '250px, 375px';
         advWorks.style.backgroundPosition = 'center 5px, center 10px';
-        measurementItems[3].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[3].style.backgroundSize = '50px';
-        }
+        
+        
         measurementItems[3].style.transition = 'background-size linear .25s';
     } else if (idx === 5) {
         title.innerHTML = 'прозрачность';
@@ -216,10 +208,7 @@ function changeSlide(index) {
         advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/last-slider-main.png")';
         advWorks.style.backgroundSize = '250px, 225px';
         advWorks.style.backgroundPosition = 'center 5px, center 70px';
-        measurementItems[1].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[1].style.backgroundSize = '50px';
-        }
+        
         measurementItems[1].style.transition = 'background-size linear .25s';
     }
     advWorks.style.animation = 'opening linear .25s';

@@ -62,7 +62,6 @@ window.onload = function () {
             behavior: "smooth"
         });
     });
-
     loadAnim();
 }
 
@@ -145,9 +144,13 @@ function changeSlide(index) {
         measurementItems[i].style.transition = 'background-size linear .25s';
     }
 
-    setTimeout(() => {
-        advWorks.style.animation = 'closing linear .25';
-    }, 250);
+    
+    advWorks.style.animation = 'closing 0.5s linear 0s';
+
+
+    
+    setTimeout(()=>{
+        
     let idx = Number(index.children[0].innerHTML);
 
     currentTab[idx - 1].style.display = 'block';
@@ -156,43 +159,35 @@ function changeSlide(index) {
         title.innerHTML = 'надежность';
         content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
         image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
-        measurementItems[3].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[3].style.backgroundSize = '50px';
-        }
         measurementItems[3].style.transition = 'background-size linear .25s';
     } else if (idx === 2) {
         title.innerHTML = 'твердость характера';
         content.innerHTML = 'Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».';
 
         image.setAttribute('src', "../../assets/icons/service-slider-2.png");
-        measurementItems[2].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[2].style.backgroundSize = '50px';
-        }
+        
         measurementItems[2].style.transition = 'background-size linear .25s';
     } else if (idx === 3) {
         title.innerHTML = 'ориентация на клиента';
         content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
 
         image.setAttribute('src', "../../assets/icons/service-slider-3.png");
-        measurementItems[0].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[0].style.backgroundSize = '50px';
-        }
+        
         measurementItems[0].style.transition = 'background-size linear .25s';
     } else if (idx === 4) {
         title.innerHTML = 'скорость коммуникации';
         content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
 
         image.setAttribute('src', "../../assets/icons/service-slider-4.png");
-        measurementItems[1].style.backgroundSize = '80px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[1].style.backgroundSize = '50px';
-        }
+        
         measurementItems[1].style.transition = 'background-size linear .25s';
     }
-    advWorks.style.animation = 'opening linear .25s';
+    }, 500)
+
+    
+    setTimeout(() => {
+        advWorks.style.animation = 'opening .5s linear 0s';
+    }, 500);
 }
 
 function changeSlideArrows(event) {
@@ -271,21 +266,32 @@ function changeSlideBack (ev) {
 function slide (event) {
     let serviceItem = document.getElementsByClassName("service-info--item");
     let titlesItem = document.getElementsByClassName('titles-item');
+    
+    let serviceinfoitem = document.getElementsByClassName('active-service')[0];
 
     let activeTitleItem = document.getElementsByClassName('titles-item active-title')[0];
     let activeServiceItem = document.getElementsByClassName('service-info--item active-service')[0];
 
     let idx = 0;
-
-    for (let i = 0; i < titlesItem.length; i++) {
-        if (titlesItem[i] === event) idx = i;
+    
+    activeServiceItem.style.animation = 'closing 0.5s linear 0s';
+        activeTitleItem.className = 'titles-item';
+        event.className = 'titles-item active-title';
+    
+    setTimeout(()=>{
+        
+        for (let i = 0; i < titlesItem.length; i++) {
+            if (titlesItem[i] === event) idx = i;
     }
+        activeServiceItem.className = 'service-info--item';
+        serviceItem[idx].className = 'service-info--item active-service';
+        activeServiceItem.style.animation = 'opening 0.5s linear 0s';
+    }, 500)
 
-    activeTitleItem.className = 'titles-item';
-    event.className = 'titles-item active-title';
 
-    activeServiceItem.className = 'service-info--item';
-    serviceItem[idx].className = 'service-info--item active-service';
+    setTimeout(()=>{
+        
+    }, 500)
 
 }
 
