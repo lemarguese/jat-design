@@ -7,7 +7,14 @@ window.onload = function () {
 
     sliderEmployee(0, 2);
     initMap();
+
+    let index = 2;
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    setInterval(() => {
+        changeSlide(document.getElementsByClassName('pagination--item')[index]);
+        index += 2;
+        if (index >= 6) index = 0;
+    }, 3000);
     mailModal();
 
     window.addEventListener('scroll', logoDrop);
@@ -120,24 +127,27 @@ function changeSlide(index) {
         currentTabElement.className = 'current-arrow';
     }
     values.style.opacity = '0';
-    let idx = Number(index.children[0].innerHTML);
 
-    currentTab[idx - 1].style.display = 'block';
-    currentTab[idx - 1].className = 'current-arrow active-arrow';
-    if (idx === 1) {
-        title.innerHTML = 'контроль';
-        content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
-    } else if (idx === 2) {
-        title.innerHTML = 'Ответственность';
-        content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
-    } else if (idx === 3) {
-        title.innerHTML = 'надежность';
-        content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
-    }
+    setTimeout(() => {
+        let idx = Number(index.children[0].innerHTML);
+
+        currentTab[idx - 1].style.display = 'block';
+        currentTab[idx - 1].className = 'current-arrow active-arrow';
+        if (idx === 1) {
+            title.innerHTML = 'контроль';
+            content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
+        } else if (idx === 2) {
+            title.innerHTML = 'Ответственность';
+            content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
+        } else if (idx === 3) {
+            title.innerHTML = 'надежность';
+            content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
+        }
+    }, 500);
 
     setTimeout(() => {
         values.style.opacity = '1';
-    }, 250);
+    }, 500);
 }
 
 function changeSlideBackground(event) {
@@ -259,7 +269,7 @@ function initMap() {
     });
 }
 
-function routingDropUp () {
+function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 

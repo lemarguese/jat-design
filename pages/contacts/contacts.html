@@ -5,9 +5,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
+            type="text/javascript"></script>
     <link rel="stylesheet" href="contacts.css">
     <script src="contacts.js"></script>
     <title>JAT - Contacts</title>
+
+    <style>
+        #map {
+            height: 380px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="jat-main">
@@ -115,33 +124,7 @@
                         </div>
                     </div>
                     <div class="contact-warm_feedback-block">
-                        <div class="advantages-info">
-                            <div class="advantages-info_inner">
-                                <div>
-                                    <h1 class="advantage-info_title _animation">Оставьте запрос и<br/>
-                                        мы ответим в течение<br/>
-                                        одного дня</h1>
-                                </div>
-                                <div class="jat-inputs_block _animation">
-                                    <div class="jat-input--item">
-                                        <input class="jat-contact_input" placeholder="Имя и фамилия">
-                                    </div>
-                                    <div class="jat-input--item">
-                                        <input class="jat-contact_input" placeholder="Название компании">
-                                    </div>
-                                    <div class="jat-input--item">
-                                        <input class="jat-contact_input" placeholder="Номер телефона">
-                                    </div>
-                                    <div class="jat-input--item">
-                                        <textarea class="jat-contact_input textarea-input"
-                                                  placeholder="Что Вас интересует?"></textarea>
-                                    </div>
-                                </div>
-                                <div class="advantages-button_block">
-                                    <button class="advantages-button _animation">отправить письмо</button>
-                                </div>
-                            </div>
-                        </div>
+                        <div id = "map"></div>
                     </div>
                 </div>
             </div>

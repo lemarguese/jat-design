@@ -5,7 +5,13 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-route")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
+    let index = 2;
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    setInterval(() => {
+        changeSlide(document.getElementsByClassName('pagination--item')[index]);
+        index += 2;
+        if (index >= 10) index = 0;
+    }, 3000);
 
     mailModal();
 
@@ -87,7 +93,7 @@ window.onload = function () {
     window.addEventListener('scroll', logoDrop);
 }
 
-function mailModal () {
+function mailModal() {
     let modalMailInner = document.getElementsByClassName('question-modal')[0];
     let mail = document.getElementsByClassName('mail-icon_block')[0];
     let modalMail = document.getElementsByClassName('question-apply_modal')[0];
@@ -109,7 +115,7 @@ function closeModal() {
     }, 350);
 }
 
-function routingDropUp () {
+function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 
@@ -138,80 +144,64 @@ function changeSlide(index) {
     let advWorks = document.getElementsByClassName('advantages-work--item')[0];
     let currentTab = document.getElementsByClassName('current-arrow');
 
-    let measurementItems = document.getElementsByClassName('measurement--item');
-
-    for (let i = 0; i < measurementItems.length; i++) {
-        measurementItems[i].style.backgroundSize = '50px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[i].style.backgroundSize = '35px';
-        }
-        measurementItems[i].style.transition = 'background-size linear .25s';
-    }
-
     for (const currentTabElement of currentTab) {
         currentTabElement.style.display = 'none';
         currentTabElement.className = 'current-arrow';
     }
+    advWorks.style.animation = 'closing 0.5s linear 0s';
     setTimeout(() => {
-        advWorks.style.animation = 'closing linear .25';
-    }, 250);
-    let idx = Number(index.children[0].innerHTML);
+        let idx = Number(index.children[0].innerHTML);
 
-    currentTab[idx - 1].style.display = 'block';
-    currentTab[idx - 1].className = 'current-arrow active-arrow';
-    if (idx === 1) {
-        title.innerHTML = 'Конкурентоспособные<br/> цены';
-        content.innerHTML = 'обеспечат лучшие возможные маршруты<br/> для соблюдения предельных сроков<br/> доставки на места';
+        currentTab[idx - 1].style.display = 'block';
+        currentTab[idx - 1].className = 'current-arrow active-arrow';
+        if (idx === 1) {
+            title.innerHTML = 'Конкурентоспособные<br/> цены';
+            content.innerHTML = 'обеспечат лучшие возможные маршруты<br/> для соблюдения предельных сроков<br/> доставки на места';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/first-slider-main.png")';
-        advWorks.style.backgroundSize = '250px, 200px';
-        advWorks.style.backgroundPosition = 'center 5px, center 75px';
-        measurementItems[0].style.transition = 'background-size linear .25s';
-    } else if (idx === 2) {
-        title.innerHTML = 'Исполненный<br/> энтузиазма персонал';
-        content.innerHTML = 'даст ответы на вопросы даже<br/> в нерабочее время';
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/first-slider-main.png")';
+            advWorks.style.backgroundSize = '250px, 200px';
+            advWorks.style.backgroundPosition = 'center 5px, center 75px';
+        } else if (idx === 2) {
+            title.innerHTML = 'Исполненный<br/> энтузиазма персонал';
+            content.innerHTML = 'даст ответы на вопросы даже<br/> в нерабочее время';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/second-slider-main.png")';
-        advWorks.style.backgroundSize = '250px, 200px';
-        advWorks.style.backgroundPosition = 'center 5px, center 85px';
-    } else if (idx === 3) {
-        title.innerHTML = 'высокий уровень<br/> взаимодействия<br/> и отчётность';
-        content.innerHTML = '';
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/second-slider-main.png")';
+            advWorks.style.backgroundSize = '250px, 200px';
+            advWorks.style.backgroundPosition = 'center 5px, center 85px';
+        } else if (idx === 3) {
+            title.innerHTML = 'высокий уровень<br/> взаимодействия<br/> и отчётность';
+            content.innerHTML = '';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/third-slider-main.png")';
-        advWorks.style.backgroundSize = '250px, 250px';
-        advWorks.style.backgroundPosition = 'center 5px, center 50px';
-        
-        
-        measurementItems[2].style.transition = 'background-size linear .25s';
-    } else if (idx === 4) {
-        title.innerHTML = 'Владельцы компании<br/> принимают участие<br/> в работе 24/7 ';
-        content.innerHTML = '';
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/third-slider-main.png")';
+            advWorks.style.backgroundSize = '250px, 250px';
+            advWorks.style.backgroundPosition = 'center 5px, center 50px';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
-        advWorks.style.backgroundSize = '250px, 375px';
-        advWorks.style.backgroundPosition = 'center 5px, center 10px';
-        
-        
-        measurementItems[3].style.transition = 'background-size linear .25s';
-    } else if (idx === 5) {
-        title.innerHTML = 'прозрачность';
-        content.innerHTML = 'в области законодательства во время<br/> транспортировки, которая гарантирует<br/> защиту поставщика и клиента';
+        } else if (idx === 4) {
+            title.innerHTML = 'Владельцы компании<br/> принимают участие<br/> в работе 24/7 ';
+            content.innerHTML = '';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/fifth-slider-main.png")';
-        advWorks.style.backgroundSize = '250px, 250px';
-        advWorks.style.backgroundPosition = 'center 5px, center 100px';
-    } else if (idx === 6) {
-        title.innerHTML = 'работа с претензиями';
-        content.innerHTML = 'Прозрачный процесс урегулирования<br/> претензий и управление страховыми<br/> компаниями';
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
+            advWorks.style.backgroundSize = '250px, 375px';
+            advWorks.style.backgroundPosition = 'center 5px, center 10px';
+        } else if (idx === 5) {
+            title.innerHTML = 'прозрачность';
+            content.innerHTML = 'в области законодательства во время<br/> транспортировки, которая гарантирует<br/> защиту поставщика и клиента';
 
-        advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/last-slider-main.png")';
-        advWorks.style.backgroundSize = '250px, 225px';
-        advWorks.style.backgroundPosition = 'center 5px, center 70px';
-        
-        measurementItems[1].style.transition = 'background-size linear .25s';
-    }
-    advWorks.style.animation = 'opening linear .25s';
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/fifth-slider-main.png")';
+            advWorks.style.backgroundSize = '250px, 250px';
+            advWorks.style.backgroundPosition = 'center 5px, center 100px';
+        } else if (idx === 6) {
+            title.innerHTML = 'работа с претензиями';
+            content.innerHTML = 'Прозрачный процесс урегулирования<br/> претензий и управление страховыми<br/> компаниями';
+
+            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/last-slider-main.png")';
+            advWorks.style.backgroundSize = '250px, 225px';
+            advWorks.style.backgroundPosition = 'center 5px, center 70px';
+        }
+    }, 500);
+    setTimeout(() => {
+        advWorks.style.animation = 'opening .5s linear 0s';
+    }, 500);
 }
 
 function changeSlideArrows(event) {
@@ -235,7 +225,7 @@ function changeSlideArrows(event) {
     changeSlide(paginationItems[idx].children[0]);
 }
 
-function logoDrop () {
+function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
     if (rect.top <= 0) {
@@ -281,35 +271,36 @@ function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 
     if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+        window.addEventListener('scroll', animOnScroll);
 
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-            let animItemPoint = window.innerHeight - animItemHeight/animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight/animStart;
-            }
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            } else {
-                animItem.classList.remove('_active');
+        function animOnScroll() {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('_active');
+                } else {
+                    animItem.classList.remove('_active');
+                }
             }
         }
-    }
 
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return {
-            top: rect.top + scrollTop,
-            left: rect.left + scrollLeft
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            }
         }
-    }
-    animOnScroll();
+
+        animOnScroll();
     }
 }

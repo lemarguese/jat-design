@@ -7,6 +7,7 @@ window.onload = function () {
 
     window.addEventListener('scroll', logoDrop);
     mailModal();
+    initMap();
     window.addEventListener('scroll', routingDropUp);
 
     serviceRoute.addEventListener("click", function () {
@@ -62,6 +63,29 @@ function routingDropUp () {
             mailIcon.style.display = 'none';
         }, 250);
     }
+}
+
+function initMap() {
+    ymaps.ready(function () {
+        let myMap = new ymaps.Map('map', {
+                center: [43.220899, 76.907511],
+                zoom: 15
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/myIcon.gif',
+                iconImageSize: [30, 42],
+                iconImageOffset: [-5, -38]
+            });
+        myMap.geoObjects
+            .add(myPlacemark);
+    });
 }
 
 function closeMailModal() {

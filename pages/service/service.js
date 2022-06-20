@@ -5,8 +5,8 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    changeSlideBack(document.getElementsByClassName('pagination--item')[0]);
+    intervalSlider(changeSlideBack, 11, 5);
+    intervalSlider(changeSlide, 13, 5);
     mailModal();
 
     window.addEventListener('scroll', routingDropUp);
@@ -76,7 +76,7 @@ function closeModal() {
     }, 350);
 }
 
-function mailModal () {
+function mailModal() {
     let modalInner = document.getElementsByClassName('question-modal')[0];
     let mail = document.getElementsByClassName('mail-icon_block')[0];
     let modalMail = document.getElementsByClassName('question-apply_modal')[0];
@@ -89,7 +89,7 @@ function mailModal () {
     });
 }
 
-function routingDropUp () {
+function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 
@@ -133,58 +133,31 @@ function changeSlide(index) {
         currentTabElement.style.display = 'none';
         currentTabElement.className = 'current-arrow-second';
     }
-
-    let measurementItems = document.getElementsByClassName('measurement--item');
-
-    for (let i = 0; i < measurementItems.length; i++) {
-        measurementItems[i].style.backgroundSize = '50px';
-        if (window.matchMedia('(max-width: 1439px)').matches) {
-            measurementItems[i].style.backgroundSize = '35px';
-        }
-        measurementItems[i].style.transition = 'background-size linear .25s';
-    }
-
-    
     advWorks.style.animation = 'closing 0.5s linear 0s';
+    setTimeout(() => {
+        let idx = Number(index.children[0].innerHTML);
 
+        currentTab[idx - 1].style.display = 'block';
+        currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
+        if (idx === 1) {
+            title.innerHTML = 'надежность';
+            content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
+            image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
+        } else if (idx === 2) {
+            title.innerHTML = 'твердость характера';
+            content.innerHTML = 'Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».';
+            image.setAttribute('src', "../../assets/icons/service-slider-2.png");
+        } else if (idx === 3) {
+            title.innerHTML = 'ориентация на клиента';
+            content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
+            image.setAttribute('src', "../../assets/icons/service-slider-3.png");
+        } else if (idx === 4) {
+            title.innerHTML = 'скорость коммуникации';
+            content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
+            image.setAttribute('src', "../../assets/icons/service-slider-4.png");
+        }
+    }, 500);
 
-    
-    setTimeout(()=>{
-        
-    let idx = Number(index.children[0].innerHTML);
-
-    currentTab[idx - 1].style.display = 'block';
-    currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
-    if (idx === 1) {
-        title.innerHTML = 'надежность';
-        content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
-        image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
-        measurementItems[3].style.transition = 'background-size linear .25s';
-    } else if (idx === 2) {
-        title.innerHTML = 'твердость характера';
-        content.innerHTML = 'Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».';
-
-        image.setAttribute('src', "../../assets/icons/service-slider-2.png");
-        
-        measurementItems[2].style.transition = 'background-size linear .25s';
-    } else if (idx === 3) {
-        title.innerHTML = 'ориентация на клиента';
-        content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
-
-        image.setAttribute('src', "../../assets/icons/service-slider-3.png");
-        
-        measurementItems[0].style.transition = 'background-size linear .25s';
-    } else if (idx === 4) {
-        title.innerHTML = 'скорость коммуникации';
-        content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
-
-        image.setAttribute('src', "../../assets/icons/service-slider-4.png");
-        
-        measurementItems[1].style.transition = 'background-size linear .25s';
-    }
-    }, 500)
-
-    
     setTimeout(() => {
         advWorks.style.animation = 'opening .5s linear 0s';
     }, 500);
@@ -211,7 +184,7 @@ function changeSlideArrows(event) {
     changeSlide(paginationItems[idx].children[0]);
 }
 
-function changeSlideBackground (event) {
+function changeSlideBackground(event) {
     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
     let currentTabs = document.getElementsByClassName('current-arrow');
     let paginationItems = document.querySelectorAll('.pagination_block .pagination--item_block');
@@ -232,7 +205,7 @@ function changeSlideBackground (event) {
     changeSlideBack(paginationItems[idx].children[0]);
 }
 
-function changeSlideBack (ev) {
+function changeSlideBack(ev) {
     let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
 
     let currentTab = document.getElementsByClassName('current-arrow');
@@ -263,35 +236,30 @@ function changeSlideBack (ev) {
     sliderImage.style.animation = 'opening linear .25s';
 }
 
-function slide (event) {
+function slide(event) {
     let serviceItem = document.getElementsByClassName("service-info--item");
     let titlesItem = document.getElementsByClassName('titles-item');
-    
+
     let serviceinfoitem = document.getElementsByClassName('active-service')[0];
 
     let activeTitleItem = document.getElementsByClassName('titles-item active-title')[0];
     let activeServiceItem = document.getElementsByClassName('service-info--item active-service')[0];
 
     let idx = 0;
-    
+
     activeServiceItem.style.animation = 'closing 0.5s linear 0s';
-        activeTitleItem.className = 'titles-item';
-        event.className = 'titles-item active-title';
-    
-    setTimeout(()=>{
-        
+    activeTitleItem.className = 'titles-item';
+    event.className = 'titles-item active-title';
+
+    setTimeout(() => {
+
         for (let i = 0; i < titlesItem.length; i++) {
             if (titlesItem[i] === event) idx = i;
-    }
+        }
         activeServiceItem.className = 'service-info--item';
         serviceItem[idx].className = 'service-info--item active-service';
         activeServiceItem.style.animation = 'opening 0.5s linear 0s';
-    }, 500)
-
-
-    setTimeout(()=>{
-        
-    }, 500)
+    }, 500);
 
 }
 
@@ -302,7 +270,7 @@ function slideRight() {
     }
 }
 
-function logoDrop () {
+function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
     if (rect.top <= 0) {
@@ -329,35 +297,44 @@ function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 
     if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+        window.addEventListener('scroll', animOnScroll);
 
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-            let animItemPoint = window.innerHeight - animItemHeight/animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight/animStart;
-            }
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            } else {
-                animItem.classList.remove('_active');
+        function animOnScroll() {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('_active');
+                } else {
+                    animItem.classList.remove('_active');
+                }
             }
         }
-    }
 
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return {
-            top: rect.top + scrollTop,
-            left: rect.left + scrollLeft
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            }
         }
+
+        animOnScroll();
     }
-    animOnScroll();
-    }
+}
+
+function intervalSlider (callback, limit, index) {
+    setInterval(() => {
+        callback(document.querySelectorAll('.pagination--item')[index]);
+        index += 2;
+        if (limit === index) index = 5;
+    }, 3000);
 }

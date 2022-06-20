@@ -111,30 +111,39 @@ img {
     justify-content: center;
 }
 
+.routing-block {
+    margin-bottom: 150px;
+}
+
 .upper-icon_block, .mail-icon_block {
     display: none;
 }
 
 .upper-icon {
     cursor: pointer;
-    width: 40px;
-    height: 60px;
+    width: 30px;
+    height: 50px;
     background: url("../../assets/icons/up-icon.svg") no-repeat center;
+    background-size: 30px;
+}
+
+.upper-text {
+    font-size: 12px;
 }
 
 .mail-icon_block {
     cursor: pointer;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     background: url("../../assets/icons/mail-icon.svg") no-repeat center;
-    background-size: 75px;
+    background-size: 50px;
     margin-top: 50px;
 }
 
 .mail-text {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 700;
-    margin-top: 25px;
+    margin-top: 15px;
     color: #131313;
 }
 
@@ -771,7 +780,7 @@ img {
 }
 
 .sphere-img_block img {
-    width: 40px;
+    width: 50px;
 }
 
 .sphere-content--text {
@@ -1397,11 +1406,7 @@ img {
         height: 50px;
     }
 
-    .first-measurement, .second-measurement, .third-measurement {
-        background-size: 35px;
-    }
-
-    .fourth-measurement {
+    .first-measurement, .second-measurement, .third-measurement, .fourth-measurement {
         background-size: 35px;
     }
 
@@ -1455,7 +1460,7 @@ img {
     }
 
     .sphere-img_block img {
-        width: 50px;
+        width: 40px;
     }
 
     .sphere-content--text {
