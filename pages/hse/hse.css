@@ -279,20 +279,15 @@ button:hover {
     max-width: 100%;
 }
 
-.footer_block {
-    display: flex;
-    flex-direction: row;
-}
-
 .footer-text_block {
     padding-right: 15px;
     padding-left: 25px;
 }
 
-.footer-img_block img {
-    margin: 75px 0;
+.footer-text_block img {
     width: 400px;
     height: 300px;
+    float: right;
 }
 
 /* pagination block */
