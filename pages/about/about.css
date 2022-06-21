@@ -454,6 +454,9 @@ button:hover {
 }
 
 .employee--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -468,6 +471,10 @@ button:hover {
     max-width: 100%;
 }
 
+.modal-image_hidden {
+    display: none;
+}
+
 .employee-name--text {
     font-size: 18px;
     font-weight: 700;
@@ -479,6 +486,10 @@ button:hover {
     font-size: 12px;
     text-align: center;
     margin-top: 5px;
+}
+
+.employee-telephone--text, .employee-email--text {
+    display: none;
 }
 
 .employee-more--block {

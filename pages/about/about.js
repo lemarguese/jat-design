@@ -1,68 +1,14 @@
 window.onload = function () {
-    let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
-    let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];
-    let servicesRoute = document.getElementsByClassName("routing-block_item service-text")[0];
-    let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
-    let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
-
+    routeHandlers();
     sliderEmployee(0, 2);
     initMap();
-
-    let index = 2;
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    setInterval(() => {
-        changeSlide(document.getElementsByClassName('pagination--item')[index]);
-        index += 2;
-        if (index >= 6) index = 0;
-    }, 3000);
     mailModal();
+    intervalAnim();
+    employeesInfoSlider();
+    closeButtonHandler();
 
     window.addEventListener('scroll', logoDrop);
-
-    mainRoute.addEventListener("click", function () {
-        location.assign('../../index.html');
-    });
-
-    hseRoute.addEventListener('click', function () {
-        location.assign('../hse/hse.html');
-    });
-
-    servicesRoute.addEventListener('click', function () {
-        location.assign('../service/service.html');
-    });
-
-    hrRoute.addEventListener('click', function () {
-        location.assign('../hr/hr.html');
-    });
-
-    contactsRoute.addEventListener('click', function () {
-        location.assign('../contacts/contacts.html');
-    });
-
     window.addEventListener('scroll', routingDropUp);
-
-    let employeeInfoBg = document.getElementsByClassName('employee-info_modal')[0];
-    let employeeInfoModal = document.getElementsByClassName('employee-modal')[0];
-    let employeeImage = document.getElementsByClassName('employee-inner')[0];
-    let employeeName = document.getElementsByClassName('employee-name_modal--text')[0];
-    let employeeRank = document.getElementsByClassName('employee-rank_modal--text')[0];
-
-    let employeeButtons = document.getElementsByClassName('employee-more-button');
-
-    for (let i = 0; i < employeeButtons.length; i++) {
-        employeeButtons[i].addEventListener('click', function () {
-            setTimeout(() => {
-                employeeInfoBg.style.display = 'block';
-                employeeInfoModal.style.display = 'block';
-
-                employeeImage.style.backgroundImage = `url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("../../assets/icons/employee-modal-${i}.jpg")`;
-                employeeName.innerHTML = localStorage.getItem('name');
-                employeeRank.innerHTML = localStorage.getItem('rank');
-            }, 350);
-
-            employeeInfoModal.style.animation = 'openModal linear .35s';
-        });
-    }
 
     let upperScroll = document.getElementsByClassName("upper-icon_block")[0];
     upperScroll.addEventListener('click', function () {
@@ -71,11 +17,6 @@ window.onload = function () {
             behavior: "smooth"
         });
     });
-
-    let closeIcon = document.getElementsByClassName("close-icon")[0];
-    closeIcon.addEventListener('click', closeModal);
-    let closeIconSecond = document.getElementsByClassName("close-icon")[1];
-    closeIconSecond.addEventListener('click', closeMailModal);
     loadAnim();
 }
 
@@ -113,7 +54,19 @@ function closeModal() {
 
     localStorage.removeItem('name');
     localStorage.removeItem('rank');
+    localStorage.removeItem('email');
+    localStorage.removeItem('telephone');
     localStorage.removeItem('image');
+}
+
+function intervalAnim () {
+    let index = 2;
+    changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    setInterval(() => {
+        changeSlide(document.getElementsByClassName('pagination--item')[index]);
+        index += 2;
+        if (index >= 6) index = 0;
+    }, 3000);
 }
 
 function changeSlide(index) {
@@ -193,7 +146,7 @@ function sliderEmployee(start, end, animation) {
     for (let i = 0; i < employees.length; i++) {
         employees[i].style.display = 'none';
         if (i >= start && i <= end) {
-            employees[i].style.display = 'block';
+            employees[i].style.display = 'flex';
             employees[i].style.animation = animation ? animation : 'backgroundRightSlide linear .25s';
         }
     }
@@ -203,7 +156,7 @@ function sliderEmployeeHandler(event) {
     let employees = document.querySelectorAll('.employee--item');
     let displayedEmployees = [];
     for (let i = 0; i < employees.length; i++) {
-        if (getComputedStyle(employees[i]).display === 'block') { // 0 2
+        if (getComputedStyle(employees[i]).display === 'flex') { // 0 2
             displayedEmployees.push(i);
         }
     }
@@ -219,9 +172,9 @@ function sliderEmployeeHandler(event) {
         prevArrow.style.display = 'block';
         start = displayedEmployees[0] + 1;
         end = displayedEmployees[2] + 1;
-        if (end === 5) {
+        if (end === 11) {
             event.style.display = 'none';
-            end = 5;
+            end = 11;
         }
         animation = 'backgroundRightSlide linear .25s';
     } else {
@@ -239,11 +192,16 @@ function sliderEmployeeHandler(event) {
 }
 
 function sendInfoEmployee(event) {
-    let name = event.previousSibling.previousSibling.children[0].innerText;
-    let rank = event.previousSibling.previousSibling.children[1].innerText;
-
+    let name = `${event.previousSibling.previousSibling.children[0].innerText}`;
+    let rank = `${event.previousSibling.previousSibling.children[1].innerText}`;
+    let telephone = `${event.previousSibling.previousSibling.children[2].innerText}`;
+    let email = `${event.previousSibling.previousSibling.children[3].innerText}`;
+    let image = `${event.previousSibling.previousSibling.previousSibling.previousSibling.children[1].getAttribute('src')}`;
     localStorage.setItem('name', name);
     localStorage.setItem('rank', rank);
+    localStorage.setItem('telephone', telephone);
+    localStorage.setItem('email', email);
+    localStorage.setItem('image', image);
 }
 
 function initMap() {
@@ -256,13 +214,12 @@ function initMap() {
             }),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
+                hintContent: 'JAT Location',
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'images/myIcon.gif',
-                iconImageSize: [30, 42],
-                iconImageOffset: [-5, -38]
+                iconImageHref: '../../assets/icons/placemark-icon.png',
+                iconImageSize: [50, 62],
+                iconImageOffset: [-10, -38]
             });
         myMap.geoObjects
             .add(myPlacemark);
@@ -290,6 +247,13 @@ function routingDropUp() {
             mailIcon.style.display = 'none';
         }, 250);
     }
+}
+
+function closeButtonHandler () {
+    let closeIcon = document.getElementsByClassName("close-icon")[0];
+    closeIcon.addEventListener('click', closeModal);
+    let closeIconSecond = document.getElementsByClassName("close-icon")[1];
+    closeIconSecond.addEventListener('click', closeMailModal);
 }
 
 function loadAnim() {
@@ -327,5 +291,63 @@ function loadAnim() {
         }
 
         animOnScroll();
+    }
+}
+
+function routeHandlers () {
+    let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
+    let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];
+    let servicesRoute = document.getElementsByClassName("routing-block_item service-text")[0];
+    let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
+    let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
+
+    mainRoute.addEventListener("click", function () {
+        location.assign('../../index.html');
+    });
+
+    hseRoute.addEventListener('click', function () {
+        location.assign('../hse/hse.html');
+    });
+
+    servicesRoute.addEventListener('click', function () {
+        location.assign('../service/service.html');
+    });
+
+    hrRoute.addEventListener('click', function () {
+        location.assign('../hr/hr.html');
+    });
+
+    contactsRoute.addEventListener('click', function () {
+        location.assign('../contacts/contacts.html');
+    });
+}
+
+function employeesInfoSlider () {
+    let employeeInfoBg = document.getElementsByClassName('employee-info_modal')[0];
+    let employeeInfoModal = document.getElementsByClassName('employee-modal')[0];
+    let employeeImage = document.getElementsByClassName('employee-inner')[0];
+    let employeeName = document.getElementsByClassName('employee-name_modal--text')[0];
+    let employeeRank = document.getElementsByClassName('employee-rank_modal--text')[0];
+    let employeeEmail = document.getElementsByClassName('email--text')[0];
+    let employeePhone = document.getElementsByClassName('phone--text')[0];
+
+    let employeeButtons = document.getElementsByClassName('employee-more-button');
+
+    for (let i = 0; i < employeeButtons.length; i++) {
+        employeeButtons[i].addEventListener('click', function () {
+            setTimeout(() => {
+                employeeInfoBg.style.display = 'block';
+                employeeInfoModal.style.display = 'block';
+                let image = localStorage.getItem('image');
+
+                employeeImage.style.backgroundImage = `url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("${image}")`;
+                employeeName.innerText = localStorage.getItem('name');
+                employeeRank.innerText = localStorage.getItem('rank');
+                employeeEmail.innerText = localStorage.getItem('email');
+                employeePhone.innerText =  localStorage.getItem('telephone');
+            }, 350);
+
+            employeeInfoModal.style.animation = 'openModal linear .35s';
+        });
     }
 }
