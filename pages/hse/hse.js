@@ -1,4 +1,7 @@
 window.onload = function () {
+    if (window.matchMedia('(max-width: 425px)').matches) {
+        location.assign('https://m.jat.test.invision.kz');
+    }
     let serviceRoute = document.getElementsByClassName("routing-block_item service-text")[0];
     let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
     let aboutRoute = document.getElementsByClassName("routing-block_item about-text")[0];
@@ -50,19 +53,19 @@ function routingDropUp () {
     let aboutHR = document.getElementsByClassName('culture-contact_block')[0];
     let aboutHRrect = aboutHR.getBoundingClientRect();
     if (window.innerHeight >= aboutHRrect.top) {
-        upperIcon.style.animation = 'opening linear .25s';
-        mailIcon.style.animation = 'opening linear .25s';
+        upperIcon.style.animation = 'openingRoutingIcons linear 1s';
+        mailIcon.style.animation = 'openingRoutingIcons linear 1s';
         setTimeout(() => {
             upperIcon.style.display = 'flex';
             mailIcon.style.display = 'flex';
-        }, 250);
+        }, 500);
     } else {
-        upperIcon.style.animation = 'closing linear .25s';
-        mailIcon.style.animation = 'closing linear .25s';
+        upperIcon.style.animation = 'closingRoutingIcons linear 1s';
+        mailIcon.style.animation = 'closingRoutingIcons linear 1s';
         setTimeout(() => {
             upperIcon.style.display = 'none';
             mailIcon.style.display = 'none';
-        }, 250);
+        }, 500);
     }
 }
 

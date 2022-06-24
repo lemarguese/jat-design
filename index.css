@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
 }
@@ -44,10 +48,6 @@ button:hover {
     position: sticky;
     top: 25px;
     padding-bottom: 50px;
-}
-
-.routing-block {
-    margin-bottom: 300px;
 }
 
 .routing-block_item {
@@ -166,6 +166,28 @@ button:hover {
     to {
         transform: translateY(-50px);
         opacity: 0;
+    }
+}
+
+@keyframes openingRoutingIcons {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closingRoutingIcons {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
     }
 }
 
@@ -844,6 +866,7 @@ button:hover {
 
 .contacts-emails {
     margin-bottom: 25px;
+    overflow: hidden;
 }
 
 .contact-email {

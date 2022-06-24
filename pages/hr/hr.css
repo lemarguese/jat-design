@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
 }
@@ -105,10 +109,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.routing-block {
-    margin-bottom: 300px;
 }
 
 .upper-icon_block, .mail-icon_block {
@@ -823,6 +823,28 @@ button:hover {
     }
     to {
         opacity: 0;
+    }
+}
+
+@keyframes openingRoutingIcons {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closingRoutingIcons {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
     }
 }
 
