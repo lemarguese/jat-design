@@ -47,7 +47,7 @@ button:hover {
 }
 
 .routing-block {
-    margin-bottom: 150px;
+    margin-bottom: 300px;
 }
 
 .routing-block_item {
@@ -914,6 +914,7 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 99;
 }
 
 .question-modal {

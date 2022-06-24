@@ -448,6 +448,7 @@ button:hover {
 
 .employee-items {
     display: grid;
+    overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     justify-content: space-between;
@@ -458,6 +459,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
+    transition: transform linear .15s;
 }
 
 .employee--item_img {
@@ -1133,23 +1135,29 @@ button:hover {
     }
 }
 
-@keyframes backgroundRightSlide {
-    from {
-        transform: translateX(50px);
+@keyframes leftSlider {
+    0% {
+        transform: translateX(-150px);
         opacity: 0;
     }
-    to {
+    50% {
+        opacity: 0.66;
+    }
+    100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes backgroundLeftSlide {
-    from {
-        transform: translateX(-50px);
+@keyframes rightSlider {
+    0% {
+        transform: translateX(150px);
         opacity: 0;
     }
-    to {
+    50% {
+        opacity: 0.66;
+    }
+    100% {
         transform: translateX(0);
         opacity: 1;
     }

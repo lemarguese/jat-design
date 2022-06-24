@@ -147,7 +147,25 @@ function sliderEmployee(start, end, animation) {
         employees[i].style.display = 'none';
         if (i >= start && i <= end) {
             employees[i].style.display = 'flex';
-            employees[i].style.animation = animation ? animation : 'backgroundRightSlide linear .25s';
+            employees[i].style.animation = animation ? animation : 'rightSlider ease-in-out .5s';
+            setTimeout(() => {
+                employees[start].style.transform = 'scale(1.1)';
+            }, 500);
+            setTimeout(() => {
+                employees[(start + end) / 2].style.transform = 'scale(1.1)';
+            }, 600);
+            setTimeout(() => {
+                employees[end].style.transform = 'scale(1.1)';
+            }, 700);
+            setTimeout(() => {
+                employees[end].style.transform = 'scale(1)';
+            }, 800);
+            setTimeout(() => {
+                employees[(start + end) / 2].style.transform = 'scale(1)';
+            }, 900);
+            setTimeout(() => {
+                employees[start].style.transform = 'scale(1)';
+            }, 1000);
         }
     }
 }
@@ -170,23 +188,23 @@ function sliderEmployeeHandler(event) {
 
     if (event.className === 'next-arrow-icon') {
         prevArrow.style.display = 'block';
-        start = displayedEmployees[0] + 1;
-        end = displayedEmployees[2] + 1;
+        start = displayedEmployees[0] + 3;
+        end = displayedEmployees[2] + 3;
         if (end === 11) {
             event.style.display = 'none';
             end = 11;
         }
-        animation = 'backgroundRightSlide linear .25s';
+        animation = 'rightSlider ease-in-out .5s';
     } else {
         nextArrow.style.display = 'block';
-        start = displayedEmployees[0] - 1;
-        end = displayedEmployees[2] - 1;
+        start = displayedEmployees[0] - 3;
+        end = displayedEmployees[2] - 3;
         if (start === 0) {
             event.style.display = 'none';
             start = 0;
             nextArrow.style.display = 'block';
         }
-        animation = 'backgroundLeftSlide linear .25s';
+        animation = 'leftSlider ease-in-out .5s';
     }
     sliderEmployee(start, end, animation);
 }

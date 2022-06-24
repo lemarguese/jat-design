@@ -214,34 +214,32 @@ function changeSlideBack(ev) {
         currentTabElement.className = 'current-arrow';
     }
 
+    sliderImage.style.animation = 'closing .5s linear 0s';
+
     setTimeout(() => {
-        sliderImage.style.animation = 'closing linear .25';
-    }, 250);
+        let idx = Number(ev.children[0].innerHTML);
+        currentTab[idx - 1].style.display = 'block';
+        currentTab[idx - 1].className = 'current-arrow active-arrow';
 
-    let idx = Number(ev.children[0].innerHTML);
-    currentTab[idx - 1].style.display = 'block';
-    currentTab[idx - 1].className = 'current-arrow active-arrow';
-
-    if (idx === 1) {
-        sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';
-        sliderImage.style.backgroundSize = 'cover';
-    } else if (idx === 2) {
-        sliderImage.style.background = 'url("../../assets/icons/employee-service-2.jpg") no-repeat center';
-        sliderImage.style.backgroundSize = 'cover';
-    } else if (idx === 3) {
-        sliderImage.style.background = 'url("../../assets/icons/employee-service-3.jpg") no-repeat center';
-        sliderImage.style.backgroundSize = 'cover';
-    }
-
-    sliderImage.style.animation = 'opening linear .25s';
+        if (idx === 1) {
+            sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';
+            sliderImage.style.backgroundSize = 'cover';
+        } else if (idx === 2) {
+            sliderImage.style.background = 'url("../../assets/icons/employee-service-2.jpg") no-repeat center';
+            sliderImage.style.backgroundSize = 'cover';
+        } else if (idx === 3) {
+            sliderImage.style.background = 'url("../../assets/icons/employee-service-3.jpg") no-repeat center';
+            sliderImage.style.backgroundSize = 'cover';
+        }
+    }, 500);
+    setTimeout(() => {
+        sliderImage.style.animation = 'opening 1.5s linear 0s';
+    }, 500);
 }
 
 function slide(event) {
     let serviceItem = document.getElementsByClassName("service-info--item");
     let titlesItem = document.getElementsByClassName('titles-item');
-
-    let serviceinfoitem = document.getElementsByClassName('active-service')[0];
-
     let activeTitleItem = document.getElementsByClassName('titles-item active-title')[0];
     let activeServiceItem = document.getElementsByClassName('service-info--item active-service')[0];
 
@@ -331,7 +329,7 @@ function loadAnim() {
     }
 }
 
-function intervalSlider (callback, limit, index) {
+function intervalSlider(callback, limit, index) {
     setInterval(() => {
         callback(document.querySelectorAll('.pagination--item')[index]);
         index += 2;
