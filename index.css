@@ -50,6 +50,10 @@ button:hover {
     padding-bottom: 50px;
 }
 
+.routing-icons {
+    margin-top: 25px;
+}
+
 .routing-block_item {
     cursor: pointer;
     margin: 25px 25px;

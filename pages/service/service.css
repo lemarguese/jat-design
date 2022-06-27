@@ -45,6 +45,10 @@ img {
     margin-left: 10%;
 }
 
+.routing-icons {
+    margin-top: 25px;
+}
+
 .routing-icons--items_block {
     display: flex;
     flex-direction: column;

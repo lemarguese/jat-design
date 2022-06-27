@@ -41,6 +41,10 @@ button:hover {
     margin-left: 10%;
 }
 
+.routing-icons {
+    margin-top: 25px;
+}
+
 .routing-icons--items_block {
     display: flex;
     flex-direction: column;
@@ -1299,10 +1303,10 @@ button:hover {
         font-size: 7px;
     }
 
-    .next-arrow-icon {
+    .next-arrow-icon, .prev-arrow-icon {
         width: 15px;
         background-size: 15px;
-        background-position: center 70px;
+        background-position: center center;
     }
 
     .employee-more--block {
