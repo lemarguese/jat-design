@@ -11,6 +11,8 @@ window.onload = function () {
     intervalSlider(changeSlideBack, 11, 5);
     intervalSlider(changeSlide, 13, 5);
     mailModal();
+    telephoneMask();
+    changeLanguage();
 
     window.addEventListener('scroll', routingDropUp);
     window.addEventListener('scroll', logoDrop);
@@ -210,6 +212,7 @@ function changeSlideBackground(event) {
 
 function changeSlideBack(ev) {
     let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
+    let infoHowWeWork = document.getElementsByClassName('how_we_work-info')[0];
 
     let currentTab = document.getElementsByClassName('current-arrow');
     for (const currentTabElement of currentTab) {
@@ -217,7 +220,7 @@ function changeSlideBack(ev) {
         currentTabElement.className = 'current-arrow';
     }
 
-    sliderImage.style.animation = 'closing .5s linear 0s';
+    infoHowWeWork.style.animation = 'closing .5s linear 0s';
 
     setTimeout(() => {
         let idx = Number(ev.children[0].innerHTML);
@@ -236,7 +239,7 @@ function changeSlideBack(ev) {
         }
     }, 500);
     setTimeout(() => {
-        sliderImage.style.animation = 'opening 1.5s linear 0s';
+        infoHowWeWork.style.animation = 'opening 1.5s linear 0s';
     }, 500);
 }
 
@@ -338,4 +341,29 @@ function intervalSlider(callback, limit, index) {
         index += 2;
         if (limit === index) index = 5;
     }, 3000);
+}
+
+function telephoneMask() {
+    let inputTel = document.querySelectorAll('.telephone-input');
+
+    for (const inputTelElement of inputTel) {
+        inputTelElement.addEventListener('input', function () {
+            let x = inputTelElement.value.slice(2).replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            inputTelElement.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
+        });
+    }
+}
+
+function changeLanguage () {
+    let langBlock = document.getElementsByClassName('language-selector')[0];
+
+    langBlock.addEventListener('mouseenter', () => {
+        langBlock.innerText = 'En';
+    });
+
+    langBlock.addEventListener('mouseleave', () => {
+        langBlock.innerText = 'Ru';
+    });
+
+    // changing logic on progress
 }

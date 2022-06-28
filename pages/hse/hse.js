@@ -10,7 +10,9 @@ window.onload = function () {
 
     window.addEventListener('scroll', logoDrop);
 
+    telephoneMask();
     mailModal();
+    changeLanguage();
     window.addEventListener('scroll', routingDropUp);
 
     let closeIcon = document.getElementsByClassName("close-icon")[0];
@@ -46,7 +48,7 @@ window.onload = function () {
     });
 }
 
-function routingDropUp () {
+function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 
@@ -80,7 +82,7 @@ function closeModal() {
     }, 350);
 }
 
-function mailModal () {
+function mailModal() {
     let mail = document.getElementsByClassName('mail-icon_block')[0];
     let mailInner = document.getElementsByClassName('question-modal')[0];
     let modalMail = document.getElementsByClassName('question-apply_modal')[0];
@@ -91,7 +93,7 @@ function mailModal () {
     });
 }
 
-function logoDrop () {
+function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
     if (rect.top <= 0) {
@@ -111,35 +113,59 @@ function loadAnim() {
     const animItems = document.querySelectorAll('._animation');
 
     if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+        window.addEventListener('scroll', animOnScroll);
 
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-            let animItemPoint = window.innerHeight - animItemHeight/animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight/animStart;
-            }
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            } else {
-                animItem.classList.remove('_active');
+        function animOnScroll() {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('_active');
+                } else {
+                    animItem.classList.remove('_active');
+                }
             }
         }
-    }
 
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return {
-            top: rect.top + scrollTop,
-            left: rect.left + scrollLeft
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            }
         }
+
+        animOnScroll();
     }
-    animOnScroll();
-    }
+}
+
+function telephoneMask() {
+    let inputTel = document.querySelector('.telephone-input');
+
+    inputTel.addEventListener('input', function () {
+        let x = inputTel.value.slice(2).replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        inputTel.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
+    });
+}
+
+function changeLanguage () {
+    let langBlock = document.getElementsByClassName('language-selector')[0];
+
+    langBlock.addEventListener('mouseenter', () => {
+        langBlock.innerText = 'En';
+    });
+
+    langBlock.addEventListener('mouseleave', () => {
+        langBlock.innerText = 'Ru';
+    });
+
+    // changing logic on progress
 }

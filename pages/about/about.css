@@ -213,6 +213,7 @@ button:hover {
 }
 
 .language-selector {
+    cursor: pointer;
     width: 60px;
     background: url("../../assets/icons/ru-logo.png") no-repeat right;
     background-size: 60px;
@@ -225,6 +226,13 @@ button:hover {
     position: relative;
     top: -50px;
     left: -230px;
+    transition: background linear .25s;
+}
+
+.language-selector:hover {
+    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background-size: 60px;
+    transition: background linear .25s;
 }
 
 .main-title_block {
@@ -385,6 +393,7 @@ button:hover {
 .mission-content_inner {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/aqua-block-about.svg");
     background-repeat: no-repeat;
     background-position: 20px 0, -10px -25px;
@@ -541,6 +550,9 @@ button:hover {
     padding: 10px;
     background-color: #B62D39;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .values--section_inner {
@@ -548,7 +560,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    width: 75%;
     opacity: 0;
     transform: translate(-30%, 0);
     transition: all 1s ease;
@@ -601,7 +613,7 @@ button:hover {
 }
 
 .pagination-block {
-    width: 90%;
+    width: 50%;
     margin: 0 5%;
     border: 3px solid #393940;
     background-color: #fff;
@@ -612,6 +624,7 @@ button:hover {
 .pagination-control {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .prev-arrow, .next-arrow {
@@ -754,6 +767,7 @@ button:hover {
 .contacts--section_inner {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .contacts_block {
@@ -1186,6 +1200,26 @@ button:hover {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    .main-body-content_text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .under-image_text, .jat-head--split-text {
+        font-size: 16px;
+    }
+
+    .mission-content--text, .mc-footer-content--text {
+        font-size: 20px;
+    }
+
+    .employees-content--text {
+        font-size: 18px;
     }
 }
 

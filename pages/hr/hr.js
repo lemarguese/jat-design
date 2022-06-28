@@ -9,6 +9,8 @@ window.onload = function () {
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
     initMap();
     mailModal();
+    telephoneMask();
+    changeLanguage();
     window.addEventListener('scroll', logoDrop);
 
     window.addEventListener('scroll', routingDropUp);
@@ -77,7 +79,7 @@ window.onload = function () {
     loadAnim();
 }
 
-function routingDropUp () {
+function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 
@@ -100,7 +102,7 @@ function routingDropUp () {
     }
 }
 
-function mailModal () {
+function mailModal() {
     let mail = document.getElementsByClassName('mail-icon_block')[0];
     let mailInner = document.getElementsByClassName('question-modal')[0];
     let modalMail = document.getElementsByClassName('question-apply_modal')[0];
@@ -208,4 +210,29 @@ function loadAnim() {
 
         animOnScroll();
     }
+}
+
+function telephoneMask() {
+    let inputTel = document.querySelectorAll('.telephone-input');
+
+    for (const inputTelElement of inputTel) {
+        inputTelElement.addEventListener('input', function () {
+            let x = inputTelElement.value.slice(2).replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            inputTelElement.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
+        });
+    }
+}
+
+function changeLanguage () {
+    let langBlock = document.getElementsByClassName('language-selector')[0];
+
+    langBlock.addEventListener('mouseenter', () => {
+        langBlock.innerText = 'En';
+    });
+
+    langBlock.addEventListener('mouseleave', () => {
+        langBlock.innerText = 'Ru';
+    });
+
+    // changing logic on progress
 }

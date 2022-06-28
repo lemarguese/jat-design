@@ -162,6 +162,7 @@ button:hover {
 }
 
 .language-selector {
+    cursor: pointer;
     width: 60px;
     background: url("../../assets/icons/ru-logo.png") no-repeat right;
     background-size: 60px;
@@ -174,6 +175,13 @@ button:hover {
     position: relative;
     top: -70px;
     left: -230px;
+    transition: background linear .25s;
+}
+
+.language-selector:hover {
+    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background-size: 60px;
+    transition: background linear .25s;
 }
 
 .title_n_content-block {

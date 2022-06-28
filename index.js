@@ -17,6 +17,8 @@ window.onload = function () {
     }, 3000);
 
     mailModal();
+    telephoneMask();
+    changeLanguage();
 
     window.addEventListener('scroll', routingDropUp);
     serviceRoute.addEventListener("click", function () {
@@ -105,6 +107,20 @@ function mailModal() {
         modalMailInner.style.display = 'block';
         modalMailInner.style.animation = 'openModal linear .2s';
     });
+}
+
+function changeLanguage () {
+    let langBlock = document.getElementsByClassName('language-selector')[0];
+
+    langBlock.addEventListener('mouseenter', () => {
+       langBlock.innerText = 'En';
+    });
+
+    langBlock.addEventListener('mouseleave', () => {
+        langBlock.innerText = 'Ru';
+    });
+
+    // changing logic on progress
 }
 
 function closeModal() {
@@ -306,4 +322,13 @@ function loadAnim() {
 
         animOnScroll();
     }
+}
+
+function telephoneMask() {
+    let inputTel = document.querySelector('.telephone-input');
+
+    inputTel.addEventListener('input', function () {
+        let x = inputTel.value.slice(2).replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        inputTel.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
+    });
 }

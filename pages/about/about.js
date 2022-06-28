@@ -9,6 +9,8 @@ window.onload = function () {
     intervalAnim();
     employeesInfoSlider();
     closeButtonHandler();
+    telephoneMask();
+    changeLanguage();
 
     window.addEventListener('scroll', logoDrop);
     window.addEventListener('scroll', routingDropUp);
@@ -62,7 +64,7 @@ function closeModal() {
     localStorage.removeItem('image');
 }
 
-function intervalAnim () {
+function intervalAnim() {
     let index = 2;
     changeSlide(document.getElementsByClassName('pagination--item')[0]);
     setInterval(() => {
@@ -153,24 +155,6 @@ function sliderEmployee(start, end, animation) {
         if (i >= start && i <= end) {
             employees[i].style.display = 'flex';
             employees[i].style.animation = animation ? animation : 'rightSlider ease-in-out .5s';
-            setTimeout(() => {
-                employees[start].style.transform = 'scale(1.1)';
-            }, 500);
-            setTimeout(() => {
-                employees[(start + end) / 2].style.transform = 'scale(1.1)';
-            }, 600);
-            setTimeout(() => {
-                employees[end].style.transform = 'scale(1.1)';
-            }, 700);
-            setTimeout(() => {
-                employees[end].style.transform = 'scale(1)';
-            }, 800);
-            setTimeout(() => {
-                employees[(start + end) / 2].style.transform = 'scale(1)';
-            }, 900);
-            setTimeout(() => {
-                employees[start].style.transform = 'scale(1)';
-            }, 1000);
         }
     }
 }
@@ -272,7 +256,7 @@ function routingDropUp() {
     }
 }
 
-function closeButtonHandler () {
+function closeButtonHandler() {
     let closeIcon = document.getElementsByClassName("close-icon")[0];
     closeIcon.addEventListener('click', closeModal);
     let closeIconSecond = document.getElementsByClassName("close-icon")[1];
@@ -317,7 +301,7 @@ function loadAnim() {
     }
 }
 
-function routeHandlers () {
+function routeHandlers() {
     let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
     let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];
     let servicesRoute = document.getElementsByClassName("routing-block_item service-text")[0];
@@ -345,7 +329,7 @@ function routeHandlers () {
     });
 }
 
-function employeesInfoSlider () {
+function employeesInfoSlider() {
     let employeeInfoBg = document.getElementsByClassName('employee-info_modal')[0];
     let employeeInfoModal = document.getElementsByClassName('employee-modal')[0];
     let employeeImage = document.getElementsByClassName('employee-inner')[0];
@@ -367,10 +351,33 @@ function employeesInfoSlider () {
                 employeeName.innerText = localStorage.getItem('name');
                 employeeRank.innerText = localStorage.getItem('rank');
                 employeeEmail.innerText = localStorage.getItem('email');
-                employeePhone.innerText =  localStorage.getItem('telephone');
+                employeePhone.innerText = localStorage.getItem('telephone');
             }, 350);
 
             employeeInfoModal.style.animation = 'openModal linear .35s';
         });
     }
+}
+
+function telephoneMask() {
+    let inputTel = document.querySelector('.telephone-input');
+
+    inputTel.addEventListener('input', function () {
+        let x = inputTel.value.slice(2).replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        inputTel.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
+    });
+}
+
+function changeLanguage () {
+    let langBlock = document.getElementsByClassName('language-selector')[0];
+
+    langBlock.addEventListener('mouseenter', () => {
+        langBlock.innerText = 'En';
+    });
+
+    langBlock.addEventListener('mouseleave', () => {
+        langBlock.innerText = 'Ru';
+    });
+
+    // changing logic on progress
 }

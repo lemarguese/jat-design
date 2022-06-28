@@ -202,6 +202,7 @@ img {
 }
 
 .language-selector {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,7 +214,17 @@ img {
     position: absolute;
     left: 810px;
     top: 50px;
+    font-weight: 500;
+    z-index: 99;
+    transition: background linear .25s;
 }
+
+.language-selector:hover {
+    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background-size: 60px;
+    transition: background linear .25s;
+}
+
 
 .main-title_block {
     margin: 50px 0 0 90px;
@@ -491,6 +502,7 @@ img {
 .pagination-control {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .prev-arrow, .next-arrow {
@@ -543,6 +555,9 @@ img {
 
 .advantages-work {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 45%;
     background-color: #B62D39;
     padding: 10px;
@@ -650,12 +665,11 @@ img {
     padding-left: 10px;
     font-weight: 400;
     color: #131313;
-    opacity: 0.32;
 }
 
 .jat-contact_input::placeholder {
     color: #131313;
-    opacity: 0.75;
+    opacity: 0.32;
     font-weight: 400;
 }
 
