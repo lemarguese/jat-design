@@ -430,6 +430,7 @@ img {
 .jat-how_we_work {
     background: url("../../assets/icons/jat-service-employee.png") no-repeat center;
     background-size: cover;
+    transition: background linear 1.25s;
 }
 
 .how_we_work-inner {

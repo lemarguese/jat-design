@@ -220,6 +220,10 @@ function changeSlideBack(ev) {
         currentTabElement.className = 'current-arrow';
     }
 
+    setTimeout(() => {
+        sliderImage.style.background = 'transparent';
+        sliderImage.style.transition = 'background linear 1.25s';
+    }, 500);
     infoHowWeWork.style.animation = 'closing .5s linear 0s';
 
     setTimeout(() => {

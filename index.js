@@ -201,7 +201,7 @@ function changeSlide(index) {
 
             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
             advWorks.style.backgroundSize = '250px, 375px';
-            advWorks.style.backgroundPosition = 'center 5px, center 10px';
+            advWorks.style.backgroundPosition = 'center 5px, center center';
         } else if (idx === 5) {
             title.innerHTML = 'прозрачность';
             content.innerHTML = 'в области законодательства во время<br/> транспортировки, которая гарантирует<br/> защиту поставщика и клиента';
