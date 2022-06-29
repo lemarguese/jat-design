@@ -1392,6 +1392,10 @@ button:hover {
         left: -180px;
     }
 
+    .language-selector:hover {
+        background-size: 40px;
+    }
+
     .routing-block_item {
         margin: 25px 15px;
     }

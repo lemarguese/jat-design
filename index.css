@@ -1184,12 +1184,16 @@ button:hover {
 
     .language-selector {
         background-position: center;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         background-size: 40px;
         font-size: 10px;
         top: -30px;
         left: -180px;
+    }
+
+    .language-selector:hover {
+        background-size: 40px;
     }
 
     .jat-sidebar {

@@ -923,6 +923,10 @@ button:hover {
         left: -110px;
     }
 
+    .language-selector:hover {
+        background-size: 40px;
+    }
+
     .vacancy-title--text {
         font-size: 20px;
     }

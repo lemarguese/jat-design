@@ -854,6 +854,10 @@ button:hover {
         left: -145px;
     }
 
+    .language-selector:hover {
+        background-size: 40px;
+    }
+
     .main-title_block {
         margin-left: 50px;
     }
