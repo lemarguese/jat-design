@@ -892,6 +892,7 @@ img {
 .contact-email {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -915,6 +916,7 @@ img {
     font-size: 12px;
     margin-left: 10px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 .contact-email-text:nth-child(2n) {

@@ -167,5 +167,9 @@ function changeLanguage () {
         langBlock.innerText = 'Ru';
     });
 
+    langBlock.addEventListener('click', function () {
+        location.assign('../../pages/en_lang/pages/hse/hse.html');
+    });
+
     // changing logic on progress
 }

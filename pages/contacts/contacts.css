@@ -545,6 +545,7 @@ button:hover {
 }
 
 .email-text {
+    text-decoration: none;
     color: #B62D39;
     margin-left: 20px;
 }

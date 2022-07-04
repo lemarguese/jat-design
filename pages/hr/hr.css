@@ -414,9 +414,11 @@ button:hover {
 .contact-email--item {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .contact-email_email--text {
+    text-decoration: none;
     margin-left: 10px;
     color: #B62D39;
 }

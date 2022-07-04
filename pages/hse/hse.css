@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 p, h1, h2, div, button, textarea, input {
     font-family: Montserrat, serif;
     font-style: normal;
@@ -492,6 +496,7 @@ button:hover {
 .contact-email {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -507,7 +512,6 @@ button:hover {
     transform: translate(112%, 0);
     transition: all 2.2s ease;
 }
-
 
 .contact-email-text {
     text-transform: uppercase;

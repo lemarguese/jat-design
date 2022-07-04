@@ -884,10 +884,12 @@ button:hover {
 .contact-email {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .contact-email_1{
     opacity: 0;
     transform: translate(112%, 0);
@@ -905,6 +907,7 @@ button:hover {
     font-size: 14px;
     margin-left: 10px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 .contact-email-text:nth-child(2n) {

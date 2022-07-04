@@ -794,10 +794,12 @@ button:hover {
 .contact-email--item {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .contact-email_email--text {
     margin-left: 10px;
+    text-decoration: none;
     color: #B62D39;
 }
 
@@ -969,6 +971,8 @@ button:hover {
 
 .email--text, .phone--text {
     margin: 0;
+    color: #000;
+    text-decoration: none;
 }
 
 .employee-phone_block {

@@ -120,6 +120,10 @@ function changeLanguage () {
         langBlock.innerText = 'Ru';
     });
 
+    langBlock.addEventListener('click', function () {
+        location.assign('pages/en_lang/index.html');
+    });
+
     // changing logic on progress
 }
 

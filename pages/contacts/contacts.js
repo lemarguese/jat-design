@@ -178,5 +178,9 @@ function changeLanguage () {
         langBlock.innerText = 'Ru';
     });
 
+    langBlock.addEventListener('click', function () {
+        location.assign('../../pages/en_lang/pages/contacts/contacts.html');
+    });
+
     // changing logic on progress
 }

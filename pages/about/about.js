@@ -129,8 +129,6 @@ function changeSlideBackground(event) {
     changeSlide(paginationItems[idx].children[0]);
 }
 
-// тнадо прописать если max-width(425) -> m.jat.test.invision.k
-
 function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
@@ -351,7 +349,9 @@ function employeesInfoSlider() {
                 employeeName.innerText = localStorage.getItem('name');
                 employeeRank.innerText = localStorage.getItem('rank');
                 employeeEmail.innerText = localStorage.getItem('email');
+                employeeEmail.setAttribute('href', `mailto:${localStorage.getItem('email')}`);
                 employeePhone.innerText = localStorage.getItem('telephone');
+                employeePhone.setAttribute('href', `tel:${localStorage.getItem('telephone')}`);
             }, 350);
 
             employeeInfoModal.style.animation = 'openModal linear .35s';
@@ -377,6 +377,10 @@ function changeLanguage () {
 
     langBlock.addEventListener('mouseleave', () => {
         langBlock.innerText = 'Ru';
+    });
+
+    langBlock.addEventListener('click', function () {
+        location.assign('../../pages/en_lang/pages/about/about.html');
     });
 
     // changing logic on progress

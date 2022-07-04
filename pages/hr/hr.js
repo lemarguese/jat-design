@@ -234,5 +234,9 @@ function changeLanguage () {
         langBlock.innerText = 'Ru';
     });
 
+    langBlock.addEventListener('click', function () {
+        location.assign('../../pages/en_lang/pages/hr/hr.html');
+    });
+
     // changing logic on progress
 }
