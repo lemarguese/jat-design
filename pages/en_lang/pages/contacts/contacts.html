@@ -1,0 +1,198 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
+            type="text/javascript"></script>
+    <link rel="stylesheet" href="contacts.css">
+    <script src="contacts.js"></script>
+    <title>JAT - Contacts</title>
+
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="jat-main">
+    <div class="jat-main_inner">
+        <div class="jat-sidebar">
+            <div class="routing-icons--items_block">
+                <div class="routing-block">
+                    <div class="jat-logo-sidebar"></div>
+                    <div class="routing-block_item main-text">
+                        <h1 class="routing-block_text">Homepage</h1>
+                    </div>
+                    <div class="routing-block_item service-text">
+                        <h1 class="routing-block_text">Services</h1>
+                    </div>
+                    <div class="routing-block_item hse-text active-route">
+                        <h1 class="routing-block_text">HSE</h1>
+                    </div>
+                    <div class="routing-block_item about-text">
+                        <h1 class="routing-block_text">About company
+                        </h1>
+                    </div>
+                    <div class="routing-block_item hr-text">
+                        <h1 class="routing-block_text">hr</h1>
+                    </div>
+                    <div class="routing-block_item contacts-text">
+                        <h1 class="routing-block_text">contacts
+                        </h1>
+                    </div>
+                </div>
+                <div class="routing-icons">
+                    <div class="upper-icon_block">
+                        <div class="upper-icon"></div>
+                        <p class="routing-block_text upper-text">up</p>
+                    </div>
+                    <div class="mail-icon_block">
+                        <p class="routing-block_text mail-text">mail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jat-body">
+            <div class="jat-head">
+                <div class="main-body_logo">
+                    <div class="main-logo"></div>
+                    <div class="language-selector">Ru</div>
+                </div>
+            </div>
+            <div class="jat-body-head">
+                <div class="title_n_content-block">
+                    <div class="main-title_block">
+                        <h1 class="main-body_title">Contacts</h1>
+                    </div>
+                    <div class="main-body-content">
+                        <p class="main-body-content_text">Reliable freight forwarder operating since 2010, serving
+                            global branded clients<br/>
+                            with leadership
+                            in safety, knowledge, compliance and solutions.<br/><br/>
+                            Transportation experience with industrial goods, oversize and hazardous materials<br/>
+                            classes 1-9 ,
+                            by Air,Rail and Road.<br/><br/>
+                            Customs advisory service with all booked freight
+                        </p>
+                    </div>
+                </div>
+                <div class="contacts-map_block">
+                    <div class="contacts-title_block">
+                        <p class="contacts-title--text">Key Partner Hubs</p>
+                    </div>
+                    <div class="contacts-map_img">
+                        <div class="map">
+                            <img class="map_image" src="../../assets/icons/hubs-image.png">
+                            <span class="city huston">Houston</span>
+                            <span class="city_aberdin">Aberdeen</span>
+                            <span class="city madrid">Madrid</span>
+                            <span class="city klapeida">klaipeda</span>
+                            <span class="city novoross">Novorossiysk</span>
+                            <span class="city stambul">istanbul</span>
+                            <span class="city dubai">Dubai</span>
+                            <span class="city hoshimin">Ho Chi Minh</span>
+                            <span class="city brisben">Brisbane</span>
+                            <span class="city cindao">Qingdao</span>
+                            <span class="city nahodka">Nakhodka</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jat-body-footer">
+                <div class="jat-body-footer_inner">
+                    <div class="contacts-cold_feedback-block _animation">
+                        <div class="contacts-location_block">
+                            <p class="contact-text location-text">
+                                Almaty, 050059<br/>
+                                42 Timiryazeva st, Atakent<br/>
+                                Park Hotel Business Center<br/>
+                                Block F, 3RD Floor
+                            </p>
+                            <p class="contact-text">+7 (727) 327 14 55<br/>
+                                +7 (701) 951 62 15</p>
+                        </div>
+                        <div class="contacts-email_block">
+                            <div class="contact-emails_list">
+                                <div class="contact-emails--item">
+                                    <p class="contact-text">contact a manager</p>
+                                    <a href="mailto:ops@jat.kz" class="contact-text email-text">ops@jat.kz</a>
+                                </div>
+                                <div class="contact-emails--item">
+                                    <p class="contact-text">contact a manager</p>
+                                    <a href="mailto:ops@jat.kz" class="contact-text email-text">ops@jat.kz</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-image">
+                            <img src="../../assets/icons/contacts-image.png">
+                        </div>
+                    </div>
+                    <div class="contact-warm_feedback-block">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="question-apply_modal">
+        <div class="question-modal">
+            <div class="question-inner">
+                <div class="close-block">
+                    <div class="close-icon">
+                    </div>
+                </div>
+                <div class="modal-title_block">
+                    <h2 class="question-modal--text">Отправить письмо в JAT</h2>
+                </div>
+                <form class="modal-content">
+                    <div class="form-inputs">
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Имя и фамилия" required
+                                   name="name">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input" placeholder="Название компании" required
+                                   name="company">
+                        </div>
+                        <div class="modal-input--item">
+                            <input type="text" class="question-modal_input telephone-input" placeholder="Номер телефона"
+                                   required
+                                   name="phone">
+                        </div>
+                        <div class="modal-input--item">
+                            <textarea class="question-modal_input textarea-modal-input"
+                                      placeholder="Что Вас интересует?" required name="interest"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-block-modal">
+                        <div class="contact-location_block">
+                            <p class="contact-location--text">Алматы, 050019<br/>
+                                Тимирязева 42, Атакент,<br/>
+                                Бизнес-центр Парк<br/>
+                                Отель, Блок F, 3-й этаж</p>
+                        </div>
+                        <div class="contact-phone_block">
+                            <p class="contact-phone--text">+7 (727) 327 14 55<br/>
+                                +7 (701) 951 62 15</p>
+                        </div>
+                        <div class="close-button_block">
+                            <button class="modal-btn">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="question-modal_bg"></div>
+    </div>
+    <div class="jat-footer">
+        <p class="footer-text">Made by Royal Kusto<br/>
+            Almaty, 2022</p>
+    </div>
+</div>
+</body>
+</html>

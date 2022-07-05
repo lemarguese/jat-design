@@ -1,0 +1,929 @@
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+}
+
+p, h1, h2, div, button, textarea, input {
+    font-family: Montserrat, serif;
+    font-style: normal;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: border linear .05s;
+    border: 2px solid #000000;
+}
+
+.jat-main {
+    background-color: #B62D39;
+}
+
+.jat-main_inner {
+    display: flex;
+    flex-direction: row;
+    max-width: 1920px;
+    margin: auto;
+}
+
+/* sidebar */
+
+.jat-sidebar {
+    border-left: solid 2px #e5e5e5;
+    width: 15%;
+    padding-top: 100px;
+    margin-left: 10%;
+}
+
+.routing-icons {
+    margin-top: 25px;
+}
+
+.routing-icons--items_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 25px;
+    padding-bottom: 50px;
+}
+
+.routing-block_item {
+    cursor: pointer;
+    margin: 25px 25px;
+    padding: 10px;
+    border: none;
+    transition: border linear .15s;
+}
+
+.routing-block_item:hover {
+    border: solid 1px #fff;
+}
+
+.main-text {
+    width: 70px;
+}
+
+.service-text {
+    width: 70px;
+}
+
+.hse-text {
+    width: 50px;
+}
+
+.hr-text {
+    width: 50px;
+}
+
+.active-route {
+    background-color: #FFE800;
+    border: 2px solid #393940;
+    border-radius: 4px;
+    color: #45443C;
+}
+
+.active-route > .routing-block_text {
+    color: #45443C;
+    font-weight: 700;
+}
+
+.jat-logo-sidebar {
+    display: none;
+    height: 75px;
+    background: url("../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
+}
+
+.routing-block_text {
+    font-family: 'Montserrat', serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffff;
+    font-weight: 500;
+    margin: 0;
+}
+
+.routing-icons, .mail-icon_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail-icon_block {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: url("../../assets/icons/mail-icon.svg") no-repeat center;
+    background-size: 50px;
+    margin-top: 50px;
+}
+
+.mail-text {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #131313;
+}
+
+/* jat body */
+
+.jat-body {
+    width: 85%;
+    background-color: #fff;
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/transport-logo.png");
+    background-position: 100px 0, -180px 0;
+    background-repeat: no-repeat;
+    background-size: 100px, 1100px;
+}
+
+/* jat head */
+
+.main-body_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 85px;
+    margin-left: 80px;
+}
+
+.main-logo {
+    width: 200px;
+    height: 60px;
+    background: url("../../assets/icons/jat-logo.svg") no-repeat;
+    background-size: 80px;
+}
+
+.language-selector {
+    cursor: pointer;
+    width: 60px;
+    background: url("../../assets/icons/ru-logo.png") no-repeat right;
+    background-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    top: -70px;
+    left: -230px;
+    transition: background linear .25s;
+}
+
+.language-selector:hover {
+    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background-size: 60px;
+    transition: background linear .25s;
+}
+
+.title_n_content-block {
+    border-top: #B62D39 solid 1px;
+}
+
+.main-title_block {
+    margin: 25px 0 0 70px;
+}
+
+.main-body_title {
+    font-style: italic;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+    color: #ffff;
+    text-shadow: #000;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 85px;
+    margin: 0;
+}
+
+.main-body-content {
+    width: 70%;
+    margin-left: 70px;
+    padding-top: 10px;
+    margin-bottom: 75px;
+}
+
+.main-body-content_text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 26px;
+    color: #131313;
+}
+
+.contacts-map_block {
+    padding: 0 50px 25px 50px;
+}
+
+.contacts-title--text {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.contacts-map_img {
+    width: 100%;
+    position: relative;
+    height: 70vh;
+    box-sizing: border-box;
+}
+
+.map_image {
+    width: 100%;
+    height:100%;
+}
+
+.city {
+    display: inline-block;
+    padding: 0px 32px 0px 35px;
+    background-color: #FFE800;
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #131313;
+    cursor: pointer;
+}
+
+.city::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    bottom: -5px;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../assets/icons/star-icon.svg');
+}
+
+.city:hover {
+    transform: scale(1.05);
+    transition: .1s linear;
+}
+
+.huston {
+    position: absolute;
+    top: 47.7%;
+    left: 14%;
+}
+
+.madrid {
+    position: absolute;
+    top: 47%;
+    left: 36%;
+}
+
+.klapeida {
+    position: absolute;
+    top: 41%;
+    left: 44%;
+
+}
+
+.novoross {
+    position: absolute;
+    top: 47%;
+    left: 51%;
+}
+
+.stambul {
+    position: absolute;
+    top: 54%;
+    left: 44%;
+}
+
+.dubai {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+}
+
+.hoshimin {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+}
+
+.brisben {
+    position: absolute;
+    top: 84%;
+    left: 69%;
+}
+
+.cindao {
+    position: absolute;
+    top: 46%;
+    left: 78%;
+}
+
+.nahodka {
+    position: absolute;
+    top: 34%;
+    left: 85%;
+}
+
+.city_aberdin {
+    display: inline-block;
+    padding: 0px 32px 0px 35px;
+    background-color: #FFE800;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #131313;
+
+    position: absolute;
+    top: 34%;
+    left: 31%;
+    cursor: pointer;
+}
+
+.city_aberdin:hover {
+    transform: scale(1.05);
+    transition: .1s linear;
+}
+
+
+.city_aberdin::after {
+    content: '';
+    position: absolute;
+    right: -25px;
+    bottom: -5px;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../assets/icons/star-icon.svg');
+}
+
+@keyframes closeModal {
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.33;
+    }
+    60% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opening {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closing {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes dropDownLogo {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropUpLogo {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .city {
+        padding: 0px 15px 0px 25px;
+        font-size: 12px;
+    }
+
+    .city::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        bottom: -5px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../../assets/icons/star-icon.svg');
+    }
+
+
+    .city_aberdin {
+        display: inline-block;
+        padding: 0px 25px 0px 25px;
+        background-color: #FFE800;
+        position: relative;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #131313;
+
+        position: absolute;
+        top: 34%;
+        left: 31%;
+    }
+    .city_aberdin::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: -5px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../../assets/icons/star-icon.svg');
+    }
+}
+
+/* contacts map block */
+
+.contacts-location_block {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-text {
+    font-size: 12px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+/* jat body footer */
+
+.jat-body-footer {
+    border-top: #B62D39 solid 1px;
+    border-bottom: #B62D39 solid 1px;
+}
+
+.jat-body-footer_inner {
+    display: flex;
+    padding-left: 70px;
+    flex-direction: row;
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-rect.svg");
+    background-repeat: no-repeat;
+    background-size: 85px, 65px;
+    background-position: 60px 0, 35px 5px;
+}
+
+.contacts-cold_feedback-block, .contact-warm_feedback-block {
+    width: 50%;
+}
+
+.contacts-cold_feedback-block{
+    opacity: 0;
+    transform: translate(0, -30%);
+    transition: all 2s ease;
+}
+
+.contacts-cold_feedback-block {
+    padding-top: 30px;
+}
+
+.contact-emails--item {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-emails--item > .contact-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.location-text {
+    margin-right: 30px;
+}
+
+.email-text {
+    text-decoration: none;
+    color: #B62D39;
+    margin-left: 20px;
+}
+
+.contact-image img {
+    width: 450px;
+}
+
+.contact-emails_list {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* contact inputs */
+
+.advantages-info {
+    background: url("../../assets/icons/jat-advantage-icon.svg") no-repeat 20px 30px;
+    background-size: 50px;
+    padding-right: 50px;
+}
+
+.advantages-info_inner {
+    padding-top: 30px;
+    padding-left: 85px;
+}
+
+.advantage-info_title {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+    opacity: 0;
+    transform: translate(0, -30%);
+    transition: all 2s ease 1s;
+}
+
+.advantage-info_content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 50px 0;
+}
+
+.jat-inputs_block {
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: all 1s ease 1.3s;
+}
+
+.jat-input--item {
+    padding: 10px 5px 10px 0;
+}
+
+.jat-contact_input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #393940;
+    border-radius: 3px;
+    padding-left: 10px;
+    color: #131313;
+}
+
+.jat-contact_input::placeholder {
+    color: #131313;
+    opacity: 0.32;
+}
+
+.textarea-input {
+    padding-top: 10px;
+    height: 60px;
+}
+
+.advantages-button, .hr-button {
+    text-transform: uppercase;
+    background-color: #FFE800;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.advantages-button{
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: all 1s ease 1.5s;
+}
+
+/* jat footer */
+
+.jat-footer {
+    height: 100px;
+    background: #fff url("../../assets/icons/transport-logo.png") no-repeat center;
+    background-size: 1050px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-text {
+    margin: 0 17.5% 0 15%;
+    font-weight: 900;
+    font-size: 8px;
+    text-align: end;
+}
+
+.question-apply_modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.question-modal {
+    position: absolute;
+    z-index: 99;
+    width: 800px;
+    max-height: 520px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("../../assets/icons/modal-triangle-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 520px 0, 490px 5px, 50px 40px;
+    background-size: 90px, 80px, 50px;
+}
+
+.question-inner {
+    padding: 10px 10px 0 0;
+}
+
+.question-modal_bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.close-block {
+    height: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.close-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 35px;
+    background: url("../../assets/icons/close-icon.svg") no-repeat center;
+    background-size: 20px;
+    margin-right: 10px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+}
+
+.modal-title_block, .form-inputs {
+    padding: 0 0 0 125px;
+}
+
+.modal-title_block {
+    margin: 20px 0;
+}
+
+.question-modal--text {
+    margin: 0;
+    font-size: 24px;
+}
+
+.question-rank--text {
+    font-style: italic;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.modal-input--item {
+    margin: 15px 0;
+    position: relative;
+}
+
+.close-button_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.modal-content--text {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.modal-btn {
+    background-color: #FFE800;
+    height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.question-modal_input, .file-input_cover {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #131313;
+    border-radius: 3px;
+    padding-left: 10px;
+    color: #131313;
+    font-size: 14px;
+}
+
+.textarea-modal-input {
+    padding-top: 10px;
+    height: 80px;
+}
+
+.question-modal_input::placeholder {
+    opacity: 0.6;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+
+.file-input_cover {
+    width: calc(100% - 42px);
+    padding-left: 40px;
+    position: absolute;
+    background: url("../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
+    top: 0;
+}
+
+.file-input--text {
+    margin: 9px 0;
+}
+
+.contact-block-modal {
+    padding-top: 50px;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
+    background-size: 100px, 85px;
+    background-position: 20px 10px, 0 0;
+    background-repeat: no-repeat;
+}
+
+.contact-location--text, .contact-phone--text {
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .jat-body {
+        background-position: 75px 0, -125px 0;
+        background-size: 60px, 800px;
+    }
+
+    .main-body_logo {
+        margin-top: 65px;
+        margin-left: 65px;
+    }
+
+    .routing-block_item {
+        margin: 25px 15px;
+    }
+
+    .routing-block_text {
+        font-size: 10px;
+    }
+
+    .mail-text {
+        margin-top: 10px;
+    }
+
+    .mail-icon_block {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        background-size: 50px;
+    }
+
+    .language-selector {
+        width: 40px;
+        background-size: 40px;
+        font-size: 10px;
+        top: -40px;
+        left: -145px;
+    }
+
+    .language-selector:hover {
+        background-size: 40px;
+    }
+
+    .main-title_block {
+        margin-left: 50px;
+    }
+
+    .main-body_title {
+        font-size: 44px;
+    }
+
+    .main-body-content {
+        margin-left: 55px;
+    }
+
+    .main-body-content_text {
+        font-size: 12px;
+    }
+
+    .contact-text {
+        font-size: 10px;
+    }
+
+    .contact-image img {
+        width: 325px;
+    }
+
+    .jat-body-footer_inner {
+        padding-left: 55px;
+    }
+
+    .advantages-info {
+        background-size: 40px;
+    }
+
+    .advantages-info_inner {
+        padding-left: 65px;
+    }
+
+    .advantage-info_title {
+        font-size: 24px;
+    }
+
+    .advantages-button {
+        height: 35px;
+        width: 80%;
+        font-size: 8px;
+    }
+
+    .jat-contact_input::placeholder {
+        font-size: 10px;
+    }
+
+    .contacts-title--text {
+        font-size: 22px;
+    }
+
+    .jat-footer {
+        height: 60px;
+        background-size: 750px;
+    }
+
+    .footer-text {
+        font-size: 5px;
+    }
+}
+
+._active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
