@@ -63,7 +63,7 @@ button:hover {
 }
 
 .main-text {
-    width: 70px;
+    width: 90px;
 }
 
 .service-text {
@@ -185,6 +185,7 @@ button:hover {
 }
 
 .jat-head--under-imageText_block {
+    margin-top: 120px;
     margin-left: 40px;
     padding: 0 10px 10px 0;
 }

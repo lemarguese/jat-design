@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/stylesheet.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
             type="text/javascript"></script>
     <link rel="stylesheet" href="contacts.css">
@@ -31,7 +31,7 @@
                     <div class="routing-block_item service-text">
                         <h1 class="routing-block_text">Services</h1>
                     </div>
-                    <div class="routing-block_item hse-text active-route">
+                    <div class="routing-block_item hse-text">
                         <h1 class="routing-block_text">HSE</h1>
                     </div>
                     <div class="routing-block_item about-text">
@@ -41,16 +41,12 @@
                     <div class="routing-block_item hr-text">
                         <h1 class="routing-block_text">hr</h1>
                     </div>
-                    <div class="routing-block_item contacts-text">
+                    <div class="routing-block_item contacts-text active-route">
                         <h1 class="routing-block_text">contacts
                         </h1>
                     </div>
                 </div>
                 <div class="routing-icons">
-                    <div class="upper-icon_block">
-                        <div class="upper-icon"></div>
-                        <p class="routing-block_text upper-text">up</p>
-                    </div>
                     <div class="mail-icon_block">
                         <p class="routing-block_text mail-text">mail</p>
                     </div>
@@ -87,7 +83,7 @@
                     </div>
                     <div class="contacts-map_img">
                         <div class="map">
-                            <img class="map_image" src="../../assets/icons/hubs-image.png">
+                            <img class="map_image" src="../../../../assets/icons/hubs-image.png">
                             <span class="city huston">Houston</span>
                             <span class="city_aberdin">Aberdeen</span>
                             <span class="city madrid">Madrid</span>
@@ -128,9 +124,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contact-image">
-                            <img src="../../assets/icons/contacts-image.png">
-                        </div>
                     </div>
                     <div class="contact-warm_feedback-block">
                         <div id="map"></div>
@@ -147,41 +140,42 @@
                     </div>
                 </div>
                 <div class="modal-title_block">
-                    <h2 class="question-modal--text">Отправить письмо в JAT</h2>
+                    <h2 class="question-modal--text">Send a message to JAT</h2>
                 </div>
                 <form class="modal-content">
                     <div class="form-inputs">
                         <div class="modal-input--item">
-                            <input type="text" class="question-modal_input" placeholder="Имя и фамилия" required
+                            <input type="text" class="question-modal_input" placeholder="First name and Last name" required
                                    name="name">
                         </div>
                         <div class="modal-input--item">
-                            <input type="text" class="question-modal_input" placeholder="Название компании" required
+                            <input type="text" class="question-modal_input" placeholder="Company name" required
                                    name="company">
                         </div>
                         <div class="modal-input--item">
-                            <input type="text" class="question-modal_input telephone-input" placeholder="Номер телефона"
-                                   required
-                                   name="phone">
+                            <input type="text" class="question-modal_input telephone-input"
+                                   placeholder="Phone number" required name="phone">
                         </div>
                         <div class="modal-input--item">
-                            <textarea class="question-modal_input textarea-modal-input"
-                                      placeholder="Что Вас интересует?" required name="interest"></textarea>
+                                <textarea class="question-modal_input textarea-modal-input"
+                                          placeholder="What do you want to know?" required name="interest"></textarea>
                         </div>
                     </div>
                     <div class="contact-block-modal">
                         <div class="contact-location_block">
-                            <p class="contact-location--text">Алматы, 050019<br/>
-                                Тимирязева 42, Атакент,<br/>
-                                Бизнес-центр Парк<br/>
-                                Отель, Блок F, 3-й этаж</p>
+                            <p class="contact-location--text">
+                                Almaty, 050059<br/>
+                                42 Timiryazeva st, Atakent<br/>
+                                Park Hotel Business Center<br/>
+                                Block F, 3RD Floor
+                            </p>
                         </div>
                         <div class="contact-phone_block">
                             <p class="contact-phone--text">+7 (727) 327 14 55<br/>
                                 +7 (701) 951 62 15</p>
                         </div>
                         <div class="close-button_block">
-                            <button class="modal-btn">ОТПРАВИТЬ</button>
+                            <button class="modal-btn">Send</button>
                         </div>
                     </div>
                 </form>

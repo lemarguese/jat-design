@@ -235,7 +235,7 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/en_lang/pages/hr/hr.html');
+        location.assign('../en_lang/pages/hr/hr.html');
     });
 
     // changing logic on progress

@@ -67,7 +67,7 @@ img {
 }
 
 .main-text {
-    width: 70px;
+    width: 90px;
 }
 
 .service-text {
@@ -100,7 +100,7 @@ img {
 .jat-logo-sidebar {
     display: none;
     height: 75px;
-    background: url("../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
+    background: url("../../../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
 }
 
 .routing-block_text {
@@ -127,7 +127,7 @@ img {
     cursor: pointer;
     width: 30px;
     height: 50px;
-    background: url("../../assets/icons/up-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/up-icon.svg") no-repeat center;
     background-size: 30px;
 }
 
@@ -139,7 +139,7 @@ img {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background: url("../../assets/icons/mail-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/mail-icon.svg") no-repeat center;
     background-size: 50px;
     margin-top: 50px;
 }
@@ -156,7 +156,7 @@ img {
 .jat-body {
     width: 85%;
     background-color: #fff;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/transport-logo.png");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/transport-logo.png");
     background-position: 100px 0, -180px 0;
     background-repeat: no-repeat;
     background-size: 100px, 1100px;
@@ -193,7 +193,7 @@ img {
 .main-logo {
     width: 200px;
     height: 60px;
-    background: url("../../assets/icons/jat-logo.svg") no-repeat;
+    background: url("../../../../assets/icons/jat-logo.svg") no-repeat;
     background-size: 80px;
 }
 
@@ -209,7 +209,7 @@ img {
     align-items: center;
     width: 60px;
     height: 60px;
-    background: url("../../assets/icons/ru-logo.png") no-repeat right;
+    background: url("../../../../assets/icons/ru-logo.png") no-repeat right;
     background-size: 60px;
     position: absolute;
     left: 810px;
@@ -220,7 +220,7 @@ img {
 }
 
 .language-selector:hover {
-    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background: url("../../../../assets/icons/en-icon-lang.svg") no-repeat right;
     background-size: 60px;
     transition: background linear .25s;
 }
@@ -242,7 +242,7 @@ img {
 }
 
 .main-body-content {
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-rect.svg");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/yellow-rect.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: 30px 0, 0 0;
     background-size: 100px, 80px;
@@ -287,7 +287,7 @@ img {
 }
 
 .service-more-info_inner {
-    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/aqua-block-about.svg");
+    background-image:url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/aqua-block-about.svg");
     background-repeat: no-repeat;
     background-size: 75px, 80px;
     background-position: 15px 5px, -20px -15px;
@@ -428,7 +428,7 @@ img {
 /* jat service employee */
 
 .jat-how_we_work {
-    background: url("../../assets/icons/jat-service-employee.png") no-repeat center;
+    background: url("../../../../assets/icons/jat-service-employee.png") no-repeat center;
     background-size: cover;
     transition: background linear 1.25s;
 }
@@ -575,7 +575,7 @@ img {
 }
 
 .advantage-text_block {
-    background: url("../../assets/icons/title-back.svg") no-repeat center;
+    background: url("../../../../assets/icons/title-back.svg") no-repeat center;
     background-size: contain;
     padding: 50px;
 }
@@ -620,7 +620,7 @@ img {
 .advantages-info {
     width: 55%;
     border-right: solid 1px #B62D39;
-    background: url("../../assets/icons/jat-advantage-icon.svg") no-repeat 20px 40px;
+    background: url("../../../../assets/icons/jat-advantage-icon.svg") no-repeat 20px 40px;
     background-size: 50px;
     padding-right: 50px;
 }
@@ -628,7 +628,7 @@ img {
 .advantages-info_inner {
     padding-top: 35px;
     padding-left: 85px;
-    background: url("../../assets/icons/lines.svg") no-repeat 130px 0;
+    background: url("../../../../assets/icons/lines.svg") no-repeat 130px 0;
 }
 
 .advantage-info_title {
@@ -720,22 +720,22 @@ img {
 }
 
 .first-measurement {
-    background: url("../../assets/icons/operator-service-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/operator-service-icon.svg") no-repeat center;
     background-size: 50px;
 }
 
 .second-measurement {
-    background: url("../../assets/icons/time-service-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/time-service-icon.svg") no-repeat center;
     background-size: 50px;
 }
 
 .third-measurement {
-    background: url("../../assets/icons/24-hours-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/24-hours-icon.svg") no-repeat center;
     background-size: 50px;
 }
 
 .fourth-measurement {
-    background: url("../../assets/icons/heavylifter-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/heavylifter-icon.svg") no-repeat center;
     background-size: 50px;
 }
 
@@ -819,7 +819,7 @@ img {
 .social-medias_block {
     display: flex;
     flex-direction: row;
-    background: url("../../assets/icons/contact-bg.svg") no-repeat center;
+    background: url("../../../../assets/icons/contact-bg.svg") no-repeat center;
     background-size: contain;
     margin-top: 15px;
     margin-left: 25px;
@@ -847,28 +847,28 @@ img {
 .instagram {
     width: 30px;
     height: 30px;
-    background: url("../../assets/icons/instagram-white.svg") no-repeat center;
+    background: url("../../../../assets/icons/instagram-white.svg") no-repeat center;
     background-size: 30px;
 }
 
 .facebook {
     width: 30px;
     height: 30px;
-    background: url("../../assets/icons/facebook-white.svg") no-repeat center;
+    background: url("../../../../assets/icons/facebook-white.svg") no-repeat center;
     background-size: 30px;
 }
 
 .linkedin {
     width: 30px;
     height: 30px;
-    background: url("../../assets/icons/linkedin-white.svg") no-repeat center;
+    background: url("../../../../assets/icons/linkedin-white.svg") no-repeat center;
     background-size: 30px;
 }
 
 .youtube {
     width: 30px;
     height: 30px;
-    background: url("../../assets/icons/youtube-white.svg") no-repeat center;
+    background: url("../../../../assets/icons/youtube-white.svg") no-repeat center;
     background-size: 30px;
 }
 
@@ -938,7 +938,7 @@ img {
 
 .jat-footer {
     height: 100px;
-    background: #fff url("../../assets/icons/transport-logo.png") no-repeat center;
+    background: #fff url("../../../../assets/icons/transport-logo.png") no-repeat center;
     background-size: 1050px;
     display: flex;
     flex-direction: column;
@@ -1055,7 +1055,7 @@ img {
     top: 0;
     bottom: 0;
     background-color: #fff;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/modal-yellow-icon.svg"), url("../../assets/icons/modal-triangle-icon.svg");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/modal-yellow-icon.svg"), url("../../../../assets/icons/modal-triangle-icon.svg");
     background-repeat: no-repeat;
     background-position: 215px 0, 200px 0, 50px 40px;
     background-size: 80px, 60px, 50px;
@@ -1087,7 +1087,7 @@ img {
     cursor: pointer;
     width: 30px;
     height: 35px;
-    background: url("../../assets/icons/close-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/close-icon.svg") no-repeat center;
     background-size: 20px;
     margin-right: 10px;
 }
@@ -1135,7 +1135,7 @@ img {
     top: 0;
     bottom: 0;
     background-color: #fff;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("../../assets/icons/modal-triangle-icon.svg");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/question-modal-rect.svg"), url("../../../../assets/icons/modal-triangle-icon.svg");
     background-repeat: no-repeat;
     background-position: 520px 0, 490px 5px, 50px 40px;
     background-size: 90px, 80px, 50px;
@@ -1167,7 +1167,7 @@ img {
     cursor: pointer;
     width: 30px;
     height: 35px;
-    background: url("../../assets/icons/close-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/close-icon.svg") no-repeat center;
     background-size: 20px;
     margin-right: 10px;
 }
@@ -1253,7 +1253,7 @@ img {
     width: calc(100% - 42px);
     padding-left: 40px;
     position: absolute;
-    background: url("../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
+    background: url("../../../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
     top: 0;
 }
 
@@ -1267,7 +1267,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
+    background-image:url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;
     background-repeat: no-repeat;

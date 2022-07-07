@@ -168,7 +168,7 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/hse/hse.html');
+        location.assign('../../../hse/hse.html');
     });
 
     // changing logic on progress

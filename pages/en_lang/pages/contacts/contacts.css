@@ -67,7 +67,7 @@ button:hover {
 }
 
 .main-text {
-    width: 70px;
+    width: 90px;
 }
 
 .service-text {
@@ -97,7 +97,7 @@ button:hover {
 .jat-logo-sidebar {
     display: none;
     height: 75px;
-    background: url("../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
+    background: url("../../../../assets/icons/jat-logo-sidebar.svg") no-repeat center;
 }
 
 .routing-block_text {
@@ -121,7 +121,7 @@ button:hover {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background: url("../../assets/icons/mail-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/mail-icon.svg") no-repeat center;
     background-size: 50px;
     margin-top: 50px;
 }
@@ -138,7 +138,7 @@ button:hover {
 .jat-body {
     width: 85%;
     background-color: #fff;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/transport-logo.png");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/transport-logo.png");
     background-position: 100px 0, -180px 0;
     background-repeat: no-repeat;
     background-size: 100px, 1100px;
@@ -157,14 +157,14 @@ button:hover {
 .main-logo {
     width: 200px;
     height: 60px;
-    background: url("../../assets/icons/jat-logo.svg") no-repeat;
+    background: url("../../../../assets/icons/jat-logo.svg") no-repeat;
     background-size: 80px;
 }
 
 .language-selector {
     cursor: pointer;
     width: 60px;
-    background: url("../../assets/icons/ru-logo.png") no-repeat right;
+    background: url("../../../../assets/icons/ru-logo.png") no-repeat right;
     background-size: 60px;
     display: flex;
     flex-direction: column;
@@ -179,7 +179,7 @@ button:hover {
 }
 
 .language-selector:hover {
-    background: url("../../assets/icons/en-icon-lang.svg") no-repeat right;
+    background: url("../../../../assets/icons/en-icon-lang.svg") no-repeat right;
     background-size: 60px;
     transition: background linear .25s;
 }
@@ -264,7 +264,7 @@ button:hover {
     height: 45px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../../assets/icons/star-icon.svg');
+    background-image: url('../../../../assets/icons/star-icon.svg');
 }
 
 .city:hover {
@@ -274,8 +274,8 @@ button:hover {
 
 .huston {
     position: absolute;
-    top: 47.7%;
-    left: 14%;
+    top: 40%;
+    left: 12%;
 }
 
 .madrid {
@@ -366,7 +366,7 @@ button:hover {
     height: 45px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../../assets/icons/star-icon.svg');
+    background-image: url('../../../../assets/icons/star-icon.svg');
 }
 
 @keyframes closeModal {
@@ -452,7 +452,7 @@ button:hover {
         height: 40px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('../../assets/icons/star-icon.svg');
+        background-image: url('../../../../assets/icons/star-icon.svg');
     }
 
 
@@ -482,13 +482,16 @@ button:hover {
         height: 40px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('../../assets/icons/star-icon.svg');
+        background-image: url('../../../../assets/icons/star-icon.svg');
     }
 }
 
 /* contacts map block */
 
 .contacts-location_block {
+    background-color: #fff;
+    padding-left: 15px;
+    width: 65%;
     display: flex;
     flex-direction: row;
 }
@@ -508,12 +511,13 @@ button:hover {
 
 .jat-body-footer_inner {
     display: flex;
-    padding-left: 70px;
+    padding-left: 20px;
     flex-direction: row;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-rect.svg");
+    height: 300px;
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/yellow-rect.svg"), url("../../../../assets/icons/jat-address.jpg");
     background-repeat: no-repeat;
-    background-size: 85px, 65px;
-    background-position: 60px 0, 35px 5px;
+    background-size: 85px, 65px, contain;
+    background-position: 15px 5px, 0 5px, 0 0;
 }
 
 .contacts-cold_feedback-block, .contact-warm_feedback-block {
@@ -554,6 +558,12 @@ button:hover {
     width: 450px;
 }
 
+.contacts-email_block {
+    padding-left: 15px;
+    background-color: #fff;
+    width: 65%;
+}
+
 .contact-emails_list {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -562,7 +572,7 @@ button:hover {
 /* contact inputs */
 
 .advantages-info {
-    background: url("../../assets/icons/jat-advantage-icon.svg") no-repeat 20px 30px;
+    background: url("../../../../assets/icons/jat-advantage-icon.svg") no-repeat 20px 30px;
     background-size: 50px;
     padding-right: 50px;
 }
@@ -637,7 +647,7 @@ button:hover {
 
 .jat-footer {
     height: 100px;
-    background: #fff url("../../assets/icons/transport-logo.png") no-repeat center;
+    background: #fff url("../../../../assets/icons/transport-logo.png") no-repeat center;
     background-size: 1050px;
     display: flex;
     flex-direction: column;
@@ -673,7 +683,7 @@ button:hover {
     top: 0;
     bottom: 0;
     background-color: #fff;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("../../assets/icons/modal-triangle-icon.svg");
+    background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/question-modal-rect.svg"), url("../../../../assets/icons/modal-triangle-icon.svg");
     background-repeat: no-repeat;
     background-position: 520px 0, 490px 5px, 50px 40px;
     background-size: 90px, 80px, 50px;
@@ -705,7 +715,7 @@ button:hover {
     cursor: pointer;
     width: 30px;
     height: 35px;
-    background: url("../../assets/icons/close-icon.svg") no-repeat center;
+    background: url("../../../../assets/icons/close-icon.svg") no-repeat center;
     background-size: 20px;
     margin-right: 10px;
 }
@@ -791,7 +801,7 @@ button:hover {
     width: calc(100% - 42px);
     padding-left: 40px;
     position: absolute;
-    background: url("../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
+    background: url("../../../../assets/icons/pdf-icon.svg") no-repeat 10px 5px;
     top: 0;
 }
 
@@ -805,7 +815,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
+    background-image:url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;
     background-repeat: no-repeat;

@@ -92,14 +92,14 @@ function changeSlide(index) {
         currentTab[idx - 1].style.display = 'block';
         currentTab[idx - 1].className = 'current-arrow active-arrow';
         if (idx === 1) {
-            title.innerHTML = 'контроль';
-            content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
+            title.innerHTML = 'Reliability';
+            content.innerHTML = 'We are always there <br/>and updating you every <br/>step of the way.';
         } else if (idx === 2) {
-            title.innerHTML = 'Ответственность';
-            content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
+            title.innerHTML = 'Responsibility';
+            content.innerHTML = 'We take ownership <br/>of your cargo from collection<br/> to delivery';
         } else if (idx === 3) {
-            title.innerHTML = 'надежность';
-            content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
+            title.innerHTML = 'Accountability';
+            content.innerHTML = 'Count on us to always be there<br/> in case things go wrong.';
         }
     }, 500);
 
@@ -222,7 +222,7 @@ function initMap() {
                 hintContent: 'JAT Location',
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '../../assets/icons/placemark-icon.png',
+                iconImageHref: '../../../../assets/icons/placemark-icon.png',
                 iconImageSize: [50, 62],
                 iconImageOffset: [-10, -38]
             });
@@ -345,7 +345,7 @@ function employeesInfoSlider() {
                 employeeInfoModal.style.display = 'block';
                 let image = localStorage.getItem('image');
 
-                employeeImage.style.backgroundImage = `url("../../assets/icons/lines.svg"), url("../../assets/icons/question-modal-rect.svg"), url("${image}")`;
+                employeeImage.style.backgroundImage = `url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/question-modal-rect.svg"), url("${image}")`;
                 employeeName.innerText = localStorage.getItem('name');
                 employeeRank.innerText = localStorage.getItem('rank');
                 employeeEmail.innerText = localStorage.getItem('email');
@@ -380,8 +380,7 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/about/about.html');
+        location.assign('../../../about/about.html');
     });
 
-    // changing logic on progress
 }

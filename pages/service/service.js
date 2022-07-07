@@ -213,6 +213,7 @@ function changeSlideBackground(event) {
 function changeSlideBack(ev) {
     let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
     let infoHowWeWork = document.getElementsByClassName('how_we_work-info')[0];
+    let content = document.querySelector('.how_we_work-content');
 
     let currentTab = document.getElementsByClassName('current-arrow');
     for (const currentTabElement of currentTab) {
@@ -233,12 +234,39 @@ function changeSlideBack(ev) {
 
         if (idx === 1) {
             sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';
+            content.innerHTML = 'Мы предлагаем специально назначенное контактное лицо<br/>' +
+                ' компании «JAT» для удовлетворения всех ваших потребностей<br/>' +
+                ' по перевозке грузов всеми видами транспорта. Вас не будут<br/>' +
+                ' перенаправлять в другой отдел и другим коллегам. За вами<br/>' +
+                ' будет закреплен один человек и одно контактное лицо для<br/>' +
+                ' решения вопросов на более высоком уровне. Ваш опыт<br/>' +
+                ' сотрудничества с компанией «JAT» будет заключаться в<br/>' +
+                ' простоте коммуникации для «выполнения поставленных<br/>' +
+                ' задач».';
             sliderImage.style.backgroundSize = 'cover';
         } else if (idx === 2) {
             sliderImage.style.background = 'url("../../assets/icons/employee-service-2.jpg") no-repeat center';
+            content.innerHTML = 'В тот момент когда мы получаем ваш Заказ на перевозку груза, мы<br/>' +
+                ' изучаем характеристики груза и запрашиваем эту же информацию у<br/>' +
+                ' поставщика и работаем по нашему внутреннему списку задач, чтобы<br/>' +
+                ' удостовериться в том, что мы можем начать работу, прежде чем<br/>' +
+                ' размещать заказ у перевозчиков. Мы предоставляем вам обновленную<br/>' +
+                ' информацию по мере выполнения задач и предлагаем отслеживание в<br/>' +
+                ' режиме реального времени по электронной почте или с помощью доступа<br/>' +
+                ' к нашей программе отслеживания в облаке, куда Вы можете загрузить<br/>' +
+                ' все ваши товаросопроводительные документы и фотографии груза в<br/>' +
+                ' любое время.'
             sliderImage.style.backgroundSize = 'cover';
         } else if (idx === 3) {
             sliderImage.style.background = 'url("../../assets/icons/employee-service-3.jpg") no-repeat center';
+            content.innerHTML = 'Рассматривая Вас в качестве нашего клиента, мы<br/>' +
+                ' понимаем, что у Вас также есть клиент и вам необходима<br/>' +
+                ' компания «JAT Transport» в качестве надежного<br/>' +
+                ' делового партнера, который поможет вам добиться<br/>' +
+                ' успеха в бизнесе, благодаря своевременным и<br/>' +
+                ' безопасным доставкам грузов, четкой коммуникации –<br/> ' +
+                ' все это доступно по согласованной цене, определенной<br/>' +
+                ' в начале сотрудничества.';
             sliderImage.style.backgroundSize = 'cover';
         }
     }, 500);
@@ -370,8 +398,6 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/en_lang/pages/service/service.html');
+        location.assign('../en_lang/pages/service/service.html');
     });
-
-    // changing logic on progress
 }

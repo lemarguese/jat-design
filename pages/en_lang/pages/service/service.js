@@ -63,8 +63,7 @@ window.onload = function () {
     let upperScroll = document.getElementsByClassName("upper-icon_block")[0];
     upperScroll.addEventListener('click', function () {
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            top: 0, behavior: "smooth"
         });
     });
     loadAnim();
@@ -145,21 +144,21 @@ function changeSlide(index) {
         currentTab[idx - 1].style.display = 'block';
         currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
         if (idx === 1) {
-            title.innerHTML = 'надежность';
-            content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
-            image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
+            title.innerHTML = 'Reliability';
+            content.innerHTML = 'We are always there. We are always delivering. We are always replying with solutions.';
+            image.setAttribute('src', "../../../../assets/icons/service-slider-image-1.png");
         } else if (idx === 2) {
-            title.innerHTML = 'твердость характера';
-            content.innerHTML = 'Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».';
-            image.setAttribute('src', "../../assets/icons/service-slider-2.png");
+            title.innerHTML = 'Grit';
+            content.innerHTML = 'We stay the course and genuinely believe that going the extra mile, getting it done, is ingrained in the JAT DNA.';
+            image.setAttribute('src', "../../../../assets/icons/service-slider-2.png");
         } else if (idx === 3) {
-            title.innerHTML = 'ориентация на клиента';
-            content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
-            image.setAttribute('src', "../../assets/icons/service-slider-3.png");
+            title.innerHTML = 'Personal attitude';
+            content.innerHTML = 'We offer dedicated JAT point of contact to handle all your shipping needs in all modes of transport.';
+            image.setAttribute('src', "../../../../assets/icons/service-slider-3.png");
         } else if (idx === 4) {
-            title.innerHTML = 'скорость коммуникации';
-            content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
-            image.setAttribute('src', "../../assets/icons/service-slider-4.png");
+            title.innerHTML = 'Speed of communication';
+            content.innerHTML = 'You will immediately notice the communication and responsiveness as you start to contact JAT.';
+            image.setAttribute('src', "../../../../assets/icons/service-slider-4.png");
         }
     }, 500);
 
@@ -184,8 +183,7 @@ function changeSlideArrows(event) {
         idx--;
     }
 
-    if (idx > 3) idx = 3;
-    else if (idx < 0) idx = 0;
+    if (idx > 3) idx = 3; else if (idx < 0) idx = 0;
     changeSlide(paginationItems[idx].children[0]);
 }
 
@@ -205,14 +203,14 @@ function changeSlideBackground(event) {
         idx--;
     }
 
-    if (idx > 2) idx = 2;
-    else if (idx < 0) idx = 0;
+    if (idx > 2) idx = 2; else if (idx < 0) idx = 0;
     changeSlideBack(paginationItems[idx].children[0]);
 }
 
 function changeSlideBack(ev) {
     let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
     let infoHowWeWork = document.getElementsByClassName('how_we_work-info')[0];
+    let content = document.querySelector('.how_we_work-content');
 
     let currentTab = document.getElementsByClassName('current-arrow');
     for (const currentTabElement of currentTab) {
@@ -232,13 +230,16 @@ function changeSlideBack(ev) {
         currentTab[idx - 1].className = 'current-arrow active-arrow';
 
         if (idx === 1) {
-            sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';
+            sliderImage.style.background = 'url("../../../../assets/icons/jat-service-employee.png") no-repeat center';
+            content.innerHTML = 'We offer one dedicated JAT point of contact to handle all your<br/> shipping needs in all modes of transport. You will not be transferred<br/> to another department and colleagues. You will have one name <br/>and an escalation contact. Your JAT experience will be simplicity<br/> in communication to ‘’getting things done’’.'
             sliderImage.style.backgroundSize = 'cover';
         } else if (idx === 2) {
-            sliderImage.style.background = 'url("../../assets/icons/employee-service-2.jpg") no-repeat center';
+            sliderImage.style.background = 'url("../../../../assets/icons/employee-service-2.jpg") no-repeat center';
+            content.innerHTML = 'The minute we receive your Transport Order, we review the cargo details<br/> and query same with the vendor and work through our internal checklist<br/> to ensure we can start the job before booking with carriers. We update you<br/> as we progress and offer live tracking  either by mail or access to our cloud<br/> based internet tracking in which you can download all your shipping<br/> documents and cargo photos at any time.\n'
             sliderImage.style.backgroundSize = 'cover';
         } else if (idx === 3) {
-            sliderImage.style.background = 'url("../../assets/icons/employee-service-3.jpg") no-repeat center';
+            sliderImage.style.background = 'url("../../../../assets/icons/employee-service-3.jpg") no-repeat center';
+            content.innerHTML = 'While we see you as our customer, we understand you too<br/> have a customer and you need JAT Transport as a reliable<br/> business partner to help  your business succeed with timely<br/> & safe  deliveries, accurate communication all at the agreed<br/> price set out at the start.'
             sliderImage.style.backgroundSize = 'cover';
         }
     }, 500);
@@ -330,8 +331,7 @@ function loadAnim() {
                 scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
                 scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             return {
-                top: rect.top + scrollTop,
-                left: rect.left + scrollLeft
+                top: rect.top + scrollTop, left: rect.left + scrollLeft
             }
         }
 
@@ -358,7 +358,7 @@ function telephoneMask() {
     }
 }
 
-function changeLanguage () {
+function changeLanguage() {
     let langBlock = document.getElementsByClassName('language-selector')[0];
 
     langBlock.addEventListener('mouseenter', () => {
@@ -370,7 +370,7 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/service/service.html');
+        location.assign('../../../service/service.html');
     });
 
     // changing logic on progress

@@ -237,7 +237,7 @@ button:hover {
 
 .map_image {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 .city {
@@ -274,8 +274,8 @@ button:hover {
 
 .huston {
     position: absolute;
-    top: 47.7%;
-    left: 14%;
+    top: 40%;
+    left: 12%;
 }
 
 .madrid {
@@ -473,6 +473,7 @@ button:hover {
         top: 34%;
         left: 31%;
     }
+
     .city_aberdin::after {
         content: '';
         position: absolute;
@@ -489,6 +490,9 @@ button:hover {
 /* contacts map block */
 
 .contacts-location_block {
+    background-color: #fff;
+    padding-left: 15px;
+    width: 60%;
     display: flex;
     flex-direction: row;
 }
@@ -508,19 +512,20 @@ button:hover {
 
 .jat-body-footer_inner {
     display: flex;
-    padding-left: 70px;
+    padding-left: 20px;
     flex-direction: row;
-    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-rect.svg");
+    height: 300px;
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-rect.svg"), url("../../assets/icons/jat-address.jpg");
     background-repeat: no-repeat;
-    background-size: 85px, 65px;
-    background-position: 60px 0, 35px 5px;
+    background-size: 85px, 65px, contain;
+    background-position: 15px 5px, 0 5px, 0 0;
 }
 
 .contacts-cold_feedback-block, .contact-warm_feedback-block {
     width: 50%;
 }
 
-.contacts-cold_feedback-block{
+.contacts-cold_feedback-block {
     opacity: 0;
     transform: translate(0, -30%);
     transition: all 2s ease;
@@ -552,6 +557,12 @@ button:hover {
 
 .contact-image img {
     width: 450px;
+}
+
+.contacts-email_block {
+    padding-left: 15px;
+    background-color: #fff;
+    width: 60%;
 }
 
 .contact-emails_list {
@@ -627,7 +638,8 @@ button:hover {
     height: 50px;
     margin-bottom: 50px;
 }
-.advantages-button{
+
+.advantages-button {
     opacity: 0;
     transform: translate(0, 30%);
     transition: all 1s ease 1.5s;
@@ -805,7 +817,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
+    background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;
     background-repeat: no-repeat;

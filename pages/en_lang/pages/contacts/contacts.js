@@ -179,7 +179,7 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('../../pages/contacts/contacts.html');
+        location.assign('../../../contacts/contacts.html');
     });
 
     // changing logic on progress
