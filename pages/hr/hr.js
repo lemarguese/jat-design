@@ -1,6 +1,6 @@
 window.onload = function () {
     if (window.matchMedia('(max-width: 425px)').matches) {
-        location.assign('https://m.jat.test.invision.kz');
+        location.assign('../../mobile/pages/hr/hr.html');
     }
     let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
     let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];

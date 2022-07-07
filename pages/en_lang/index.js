@@ -1,6 +1,6 @@
 window.onload = function () {
     if (window.matchMedia('(max-width: 425px)').matches) {
-        location.assign('https://m.jat.test.invision.kz');
+        location.assign('../../mobile/pages/en_lang/index.html');
     }
     let serviceRoute = document.getElementsByClassName("routing-block_item service-text")[0];
     let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];

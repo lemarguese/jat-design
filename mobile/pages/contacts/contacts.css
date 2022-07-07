@@ -1,0 +1,422 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.mobile-jat-contacts {
+    width: 100%;
+}
+/* Header ------------------------------------------------------------------------------------------------------*/
+.mobileHeader {
+    position: fixed;
+    z-index: 1;
+    
+    top: 0;
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: no-repeat center 100% url('../../assets/icons/Transport.svg');
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+
+.dropdown_icon {
+    position: absolute;
+    left: 10px;
+    width: 32px;
+    min-height: 21px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('../../assets/icons/dropdown_icon.svg');
+    
+}
+.dropdown_menu {
+
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    overflow: auto;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(0, -112%);
+    transition: all 1s cubic-bezier(0, 0.81, 0.26, 0.98);
+}
+.drop_act{
+    background: #FFE800;
+    border: 2px solid #393940;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: #131313;
+}
+.dropdown_menu a{
+    height: 40px;
+    font-family: 'Montserrat';
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #131313;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.language_buttons {
+    text-align: center;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #393940;
+    
+}
+.language_btn {
+    cursor: pointer;
+    background: none;
+    padding: 2px;
+    border-radius: 4px;
+    min-width: 29px;
+    margin: 0 1px;
+    border: 0;
+}
+.language_btn_active{
+    background-color: #FFE800;
+    border: 1px solid black;
+}
+
+
+.mobileHeader_logo {
+
+    width: 60px;
+    min-height: 28px;
+    margin-left: 20px;
+    background: url('../../assets/icons/header_logo.svg') no-repeat left;
+    background-size: 100%;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+
+.stripes {
+    min-height: 10px;
+    width: 64px;
+    position: absolute;
+    top: 0;
+    background-image: url('../../assets/icons/stripes.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+}
+.mobileCotnacts_promo {
+    margin-top: 42px;
+    width: 100%;
+}
+.mobileCotnacts_promo-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 0;
+    padding-top: 40px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+}
+
+.mobileContacts_promo-map{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.mobileContacts {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 0 10px;
+    position: relative;
+    background: #fff;
+    
+}
+.mobileContacts_title-wrapper {
+    position: relative;
+    width: 100%;
+}
+.mobileContacts_title {
+    margin-top: 0;
+    background: #B62D39;
+    color: black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 70px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('../../assets/icons/contacts_bg.png');
+}
+.mobileContacts_adress-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+.mobileContacts_phone {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 126.9%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.mobileContacts_phones{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileContacts_email {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+.mobileContacts_email-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #393940;
+    width: 60%;
+}
+.mobileContacts_email-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* JAT_main_red */
+
+    color: #B62D39;
+
+    width: 30%;
+}
+.mobileContacts_img{
+    position: relative;
+    
+}
+.mobileContacts_img.stripes{
+    left: 10px;
+}
+.mobileContacts_img img{
+    width: 100%;
+}
+.yellowRect{
+    width: 38px;
+    height: 69px;
+    background: #FFE800;
+    position: absolute;
+}
+.mobileFooter {
+    width: 100%;
+    height: 42px;
+    background: no-repeat center 100% url('../../assets/icons/Transport.svg');
+}
+.mobileContacts_form-wrapper {
+    width: 100%;
+    position: relative;
+}
+.mobileContacts_form-block{
+    padding: 30px 10px;
+}
+.mobileContacts_form-title {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 1.3s ease;
+    color: #131313;
+}
+.mobileContacts_form {
+    opacity: 0;
+    transition: all 1.3s ease 1s;
+    margin-top: 20px;
+}
+.mobileContacts_form-input{
+    margin: 5px 0;
+    background: #FFFFFF;
+    border: 0.5px solid #393940;
+    border-radius: 3px;
+    width: 100%;
+    height: 31px;
+    padding: 0 10px;
+}
+.big_input{
+    height: 63px;
+    margin-bottom: 20px;
+}
+.mobileContacts_form-input::placeholder{
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #131313;
+    opacity: 0.32;
+}
+.mobileContacts_form-button {
+    border: 0;
+    background: #FFE800;
+    width: 100%;
+    color: #000;
+    height: 41px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modalWindow{
+    background: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.modalWindow_content{
+    position: absolute;
+    top: calc(50% - 119px);
+    padding: 10px;
+    width: 100%;
+    min-height: 238px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../assets/icons/modal_thanks.svg');
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modalWindow_content-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #131313
+}
+.modalWindow_content-button{
+    
+    width: 100%;
+    height: 41px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+    background: #FFE800;
+    border: 0;
+}
+
+.modalWindow_content-close{
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('../../assets/icons/modal_close.svg');
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+
+._active{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+@media (max-width: 320px){
+    .mobileContacts_email-link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        /* identical to box height */
+    
+        text-transform: uppercase;
+    
+        /* JAT_main_red */
+    
+        color: #B62D39;
+    
+        width: 35%;
+    }
+}

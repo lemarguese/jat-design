@@ -1,0 +1,1254 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    padding-top: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-jat-index {
+    width: 100%;
+
+}
+
+.mobile-jat-index {
+    overflow: hidden;
+
+}
+
+/* Header ------------------------------------------------------------------------------------------------------*/
+.mobileHeader {
+    position: fixed;
+    z-index: 1;
+
+    top: 0;
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: no-repeat center 100% url('./assets/icons/Transport.svg');
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.dropdown_icon {
+    position: absolute;
+    left: 10px;
+    width: 32px;
+    min-height: 21px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('./assets/icons/dropdown_icon.svg');
+
+}
+
+.dropdown_menu {
+
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    overflow: auto;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(0, -112%);
+    transition: all 1s cubic-bezier(0, 0.81, 0.26, 0.98);
+}
+
+.drop_act {
+    background: #FFE800;
+    border: 2px solid #393940;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: #131313;
+}
+
+.dropdown_menu a {
+    height: 40px;
+    font-family: 'Montserrat';
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #131313;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.language_buttons {
+    text-align: center;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #393940;
+
+}
+
+.language_btn {
+    cursor: pointer;
+    background: none;
+    padding: 2px;
+    border-radius: 4px;
+    min-width: 29px;
+    margin: 0 1px;
+    border: 0;
+}
+
+.language_btn_active {
+    background-color: #FFE800;
+    border: 1px solid black;
+}
+
+
+.mobileHeader_logo {
+
+    width: 60px;
+    min-height: 28px;
+    margin-left: 20px;
+    background: url('./assets/icons/header_logo.svg') no-repeat left;
+    background-size: 100%;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+
+/* Promo Block ______________________________________________________________*/
+.mobilePromo_wrapper {
+    padding-top: 42px;
+    position: relative;
+    width: 100%;
+}
+
+.mobilePromo {
+    width: 100%;
+    min-height: 365px;
+    background: url('./assets/icons/promo_bg.jpg') no-repeat -80px 0;
+    background-size: 125%;
+}
+
+.mobilePromo_title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 0;
+    padding-top: 40px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+}
+
+
+/* _____________________________________________________________________________________________________ */
+/* Logistics Block */
+.mobileLogistics_wrapper {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #B62D39;
+    border-bottom: 1px solid #B62D39;
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.mobileLogistics {
+    padding: 0 10px;
+    width: 100%;
+    min-height: 200px;
+    background: url('./assets/icons/logistics_bg.jpg') no-repeat left;
+    background-size: cover;
+}
+
+.mobileLogistics_title {
+    font-family: 'Montserrat';
+    margin-top: 0;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+    padding-top: 30px;
+}
+
+.mobileLogistics_btn {
+
+    /* FONT */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #131313;
+    margin-top: 30px;
+    width: 170px;
+    min-height: 40px;
+    background: #FFE800;
+
+    border: 0;
+}
+
+
+/* _____________________________________________________________________________________________________ */
+/* Delivery Block */
+
+.mobileDelivery_wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.mobileDelivery {
+    width: 100%;
+}
+
+.stripes {
+    min-height: 10px;
+    width: 64px;
+    position: absolute;
+    top: 0;
+    background-image: url('./assets/icons/stripes.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+}
+
+.mobileDelivery_title {
+    margin: 0;
+    padding-top: 30px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0;
+    transition: opacity 1.3s ease;
+
+}
+
+.mobileDelivery_text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #131313;
+    opacity: 0;
+    transition: all 1.3s ease .5s;
+}
+
+.mobileDelivery_btn {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #131313;
+    margin-top: 30px;
+    width: 170px;
+    min-height: 40px;
+    background: #FFE800;
+
+    border: 0;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translate(-112%, 0);
+    transition: all 1.3s ease .6s;
+}
+
+.mobileBestSides_wrapper {
+    width: 100%;
+    background: #B62D39;
+    opacity: 0;
+    transition: all 1.3s ease 0.5s;
+    padding: 20px 0 40px 0;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slides {
+    z-index: 2;
+    position: relative;
+}
+
+.whiteBG {
+    width: 90%;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: #fff;
+    position: absolute;
+    bottom: 38px;
+    left: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slick-track {
+    display: flex;
+
+}
+
+.slick-slider {
+    padding: 0;
+    width: 100%;
+    border: 0;
+}
+
+.slick-arrow {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: white;
+    border: 0px solid black;
+}
+
+.slick-prev {
+    width: 28px;
+    height: 31px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 150px);
+}
+
+.slick-next {
+    width: 28px;
+    height: 31px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: calc(50% - 150px);
+}
+
+.slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li button {
+    width: 28px;
+    height: 31px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    line-height: 26px;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: white;
+    border: 0px solid black;
+}
+
+.slick-dots li button:focus {
+    outline: none;
+}
+
+li.slick-active {
+    position: relative;
+}
+
+li.slick-active::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    left: 10%;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #fff;
+    bottom: -10px;
+}
+
+.mobileBestSides {
+    width: 100%;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.plain {
+
+    width: 100%;
+}
+
+.mobileBestSides_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-image: url('./assets/icons/red_white.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.mobileBestSides_content-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.img_slide2 {
+    width: 200px;
+    height: 238px;
+}
+
+.img_slide3 {
+    width: 330px;
+    height: 214px;
+}
+
+.img_slide4 {
+    width: 200px;
+    height: 230px;
+}
+
+.img_slide5 {
+    width: 235px;
+    height: 230px;
+}
+
+.img_slide6 {
+    width: 250px;
+    height: 190px;
+}
+
+.mobileBestSides_content-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #FFFFFF;
+
+}
+
+.mobileBestSides_content-text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.mobileBestSides_reasons-slider-control {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 33px;
+    padding: 0 10px;
+
+    margin-bottom: 30px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #393940;
+    background: #FFFFFF;
+    border: 3px solid #393940;
+    border-radius: 3px;
+
+}
+
+.mobileBestSides_reasons-slider-control-ctrl {
+    width: 28px;
+}
+
+.mobileBestSides_reasons-slider-control-ctrl:nth-child(2) {
+    width: 20px;
+}
+
+.mobileBestSides_reasons-slider-control-leftarrow {
+    background: none;
+    border: 0;
+    width: 28px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+
+}
+
+@keyframes sliderAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mobileBestSides_reasons-slider-control-rightarrow {
+    width: 28px;
+    background: none;
+    border: 0;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+
+}
+
+
+.mobileAbout_wrapper {
+    position: relative;
+    border-bottom: 1px solid #B62D39;
+
+}
+
+.mobileAbout {
+    width: 100%;
+    padding: 10px;
+}
+
+.mobileAbout_title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+    padding-top: 30px;
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.mobileAbout_text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #131313;
+    opacity: 0;
+    transition: all 1.3s ease .5s;
+}
+
+.mobileAbout_btn {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+    margin-top: 30px;
+    width: 100%;
+    min-height: 40px;
+    background: #FFE800;
+    border: 0;
+    margin-bottom: 30px;
+    opacity: 0;
+    transition: all 1.3s ease .8s;
+    transform: translate(-100%, 0);
+}
+
+.mobileVacancie_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileVacancie {
+    padding: 0 10px;
+}
+
+.blueRectangle {
+}
+
+.mobileVacancie_title {
+    margin-top: 0;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #131313;
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.mobileVacancie_info {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+
+    text-transform: uppercase;
+    color: #B62D39;
+    opacity: 0;
+    transform: translate(-112%, 0);
+    transition: all 1.3s ease .4s;
+}
+
+.mobileVacancie_bg-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 146px;
+    height: 264px;
+}
+
+.mobileVacancie_info_where {
+    padding: 2px 5px;
+    background-color: #FFE800;
+    background: #FFE800;
+    border: 1px solid #393940;
+    border-radius: 4px;
+    color: #393940;
+}
+
+.mobileVacancie_text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #131313;
+    opacity: 0;
+    transition: all 1.3s ease 1.1s;
+}
+
+.mobileVacancie_btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.mobileVacancie_btn {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+    width: 170px;
+    min-height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    opacity: 0;
+    transform: translate(-112%, 0);
+    transition: all 1.3s ease 1.8s;
+}
+
+.btn_active {
+    background-color: #FFE800;
+    border: 0;
+    opacity: 0;
+    transform: translate(-112%, 0);
+    transition: all 1.3s ease 1.4s;
+}
+
+.mobilePartners_wrapper {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #B62D39;
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.mobilePartners {
+    padding: 0 10px;
+    padding-bottom: 40px;
+}
+
+.mobilePartners_title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #131313;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.mobilePartners_partners-block {
+    margin: 0 auto;
+    width: 90%;
+    min-height: 250px;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('./assets/icons/partners.jpg');
+}
+
+.mobileContacts_wrapper {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.3s ease;
+}
+
+.mobileContacts {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    background: #B62D39;
+}
+
+.mobileContacts_title-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileContacts_title {
+    margin-top: 0;
+    background: #B62D39;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 70px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('./assets/icons/contacts_bg.png');
+}
+
+.mobileContacts_adress-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.mobileContacts_phone {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 126.9%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.mobileContacts_email {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.mobileContacts_email-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #393940;
+    width: 60%;
+}
+
+.mobileContacts_email-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* JAT_main_red */
+
+    color: #B62D39;
+
+    width: 30%;
+}
+
+.mobileContacts_socialmedia {
+    width: 100%;
+    min-height: 160px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileContacts_socialmedia_socialmedia-logos {
+    display: flex;
+}
+
+.mobileContacts_socialmedia_socialmedia-logos-item {
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin: 0 10px;
+}
+
+.instagram {
+    background-image: url('./assets/icons/inst.svg');
+}
+
+.facebook {
+    background-image: url('./assets/icons/facebook.svg');
+}
+
+.linkedin {
+    background-image: url('./assets/icons/linkedin.svg');
+}
+
+.youtube {
+    background-image: url('./assets/icons/youtube.svg');
+}
+
+.mobileContacts_socialmedia-jatlogo {
+    width: 80px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('./assets/icons/jat_footer.svg');
+    margin-top: 30px;
+}
+
+.mobileFooter {
+    width: 100%;
+    height: 42px;
+    background: no-repeat center 100% url('./assets/icons/Transport.svg');
+}
+
+
+/* ================================================================= */
+.sendModal_wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    top: 0;
+
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s ease;
+}
+
+.sendModal {
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+    background: #fff;
+    position: fixed;
+    opacity: 0;
+    transform: scale(0);
+    top: calc(50% - 250px);
+    display: none;
+    transition: all 1s ease;
+}
+
+.sendModal_subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #131313;
+}
+
+.sendModal_title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #131313;
+
+}
+
+.sendModal_form {
+    width: 100%;
+}
+
+.sendModal_button {
+    width: 100%;
+    height: 40px;
+    background: #FFE800;
+    border: 2px solid #393940;
+    margin: 10px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+}
+
+.sendModal_adress {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+}
+
+.sendModal_phone {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 126.9%;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+}
+
+.sendModal_input {
+    padding: 0 10px;
+    width: 100%;
+    height: 31px;
+    margin: 5px 0;
+    border: 0.5px solid #393940;
+    border-radius: 3px;
+}
+
+.sendModal_input::placeholder {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 26px;
+    color: #131313;
+    opacity: 0.32;
+}
+
+
+.sendModal_input__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 5px 0;
+    text-align: center;
+    background: #FFFFFF;
+    /* Dark */
+
+    border: 0.5px solid #393940;
+    border-radius: 3px;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+
+}
+
+.input__file-icon-wrapper {
+    height: 31px;
+    width: 30px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-right: 1px solid #fff;
+}
+
+.input__file-icon {
+    margin-left: 10px;
+    width: 30px;
+    height: 20px;
+    object-fit: fill;
+}
+
+.input__file-button-text {
+    line-height: 20px;
+    margin-top: 1px;
+}
+
+.input__file-button {
+    width: 100%;
+    height: 31px;
+    background: #fff;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 26px;
+    /* identical to box height, or 260% */
+
+    text-align: center;
+
+    color: #131313;
+}
+
+.sendModal_close {
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('./assets/icons/modal_close.svg');
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+/* ================================================================= */
+.modalWindow {
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.modalWindow_content {
+    position: absolute;
+    top: calc(50% - 119px);
+    padding: 10px;
+    width: 100%;
+    min-height: 238px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./assets/icons/modal_thanks.svg');
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modalWindow_content-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #131313
+}
+
+.modalWindow_content-button {
+
+    width: 100%;
+    height: 41px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #131313;
+    background: #FFE800;
+    border: 0;
+}
+
+.modalWindow_content-close {
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('./assets/icons/modal_close.svg');
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+/* ================================================================= */
+
+.sendEmailModal {
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+    background: #fff;
+    position: fixed;
+    display: none;
+    top: calc(50% - 250px);
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+._textarea {
+    height: 50px;
+}
+
+/* ================================================================= */
+._active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@media (max-width: 375px) {
+    .slick-prev {
+        left: calc(50% - 140px);
+    }
+
+    .slick-next {
+        right: calc(50% - 140px);
+    }
+}
+
+@media (max-width: 320px) {
+    .mobileContacts_email-link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        /* JAT_main_red */
+
+        color: #B62D39;
+
+        width: 35%;
+    }
+}

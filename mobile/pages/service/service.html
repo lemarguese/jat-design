@@ -1,0 +1,436 @@
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>JAT - Service</title>
+    <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="service.css">
+    <script src="../../jQuery.js"></script>
+    <script src="../../jquery.maskedinput.min.js"></script>
+    <script src="../../slick.min.js"></script>
+    <script src="service.js"></script>
+</head>
+<body>
+<div class="mobile-jat-service">
+    <!-- Header -->
+    <header class="mobileHeader">
+        <!-- SideBar -->
+        <div class="dropdown_icon" onclick="dropdownToggle()"></div>
+        <div id="myDropdown" class="dropdown_menu">
+            <a href="../../index.html">Главная</a>
+            <a href="../../pages/service/service.html" class="drop_act">Услуги</a>
+            <a href="../../pages/hse/hse.html">HSE</a>
+            <a href="../../pages/about/about.html">О компании</a>
+            <a href="../../pages/hr/hr.html">HR</a>
+            <a href="../../pages/contacts/contacts.html">Контакты</a>
+        </div>
+        <div class="mobileHeader_logo"></div>
+    </header>
+    <!-- Main selector -->
+    <div class="mobileService_main">
+        <h2 class="mobileService_main-title">Услуги</h2>
+        <div class="__select" data-state="">
+            <div class="__select__title" data-default="Международные перевозки">Международные перевозки</div>
+            <div class="__select__content">
+                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect0" class="__select__label">Международные перевозки</label>
+                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect1" class="__select__label">локальные автоперевозки в казахстане</label>
+                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect2" class="__select__label">Морские перевозки</label>
+                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect3" class="__select__label">Воздушные перевозки</label>
+                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect4" class="__select__label">Железнодорожные перевозки</label>
+                <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect5" class="__select__label">Услуги таможенной очистки</label>
+                <input id="singleSelect6" class="__select__input" type="radio" name="singleSelect"/>
+                <label for="singleSelect6" class="__select__label">Услуги складского хранения и обработки местных
+                    грузов</label>
+                <input id="singleSelect7" class="__select__input" type="radio" name="singleSelect" checked/>
+                <label for="singleSelect7" class="__select__label">Международные перевозки</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="mobileService_main-content-wrapper">
+        <!-- 1 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Локальные автоперевозки
+                в Казахстане</h2>
+            <p class="mobileService_main-content-text">Для такой огромной страны, по площади равной Европе,
+                протяженность которой от востока до запада занимает 7 дней пути, Вы можете рассчитывать на компанию
+                «JAT», которая найдет для Вас автомобиль в течение нескольких часов после получения запроса.
+                Благодаря практическому опыту по доставке грузов в удаленные пункты по всей стране, который насчитывает
+                свыше 12 лет, компания «JAT» имеет надежную сеть операторов в каждом регионе, предлагающих различные
+                типы прицепов, низкорамных грузовых прицепов-платформ от 12 до 18 метров.</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_local.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 2 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Морские перевозки</h2>
+            <p class="mobileService_main-content-text">Для таких перевозок грузов с удаленных пунктов в Северной/Южной
+                Америке и Азии, используются морские перевозки и грузы перенаправляются в порты Балтийского моря,
+                Черного моря и восточного побережья Китая. Товары либо продолжают свой путь в том же контейнере по
+                железной дороге или перегружаются в собственные контейнеры/вагоны. Если время играет существенную роль,
+                то товар перегружается на прицепы для доставки до дверей.</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_ship.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 3 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Воздушные перевозки</h2>
+            <p class="mobileService_main-content-text">Компания «JAT Transport» способна организовать забор груза в тот
+                же день в любой точке мира и направить ваш груз пассажирским/грузовым самолетом, в зависимости от
+                размера вашего груза.
+                Для таких критических заказов, специальный чартерный самолет может быть организован в течение 48-72
+                часов после уведомления.</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_air.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 4 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Железнодорожные перевозки</h2>
+            <p class="mobileService_main-content-text">Прагматичный вариант перевозки, если груз большого объема и время
+                транзита не играет существенной роли.
+                Компания «JAT» может предложить перевозку железнодорожным транспортом в стандартных 20 и 40-футовых
+                контейнерах из Европы, России, Кавказа, Китая в Казахстан.
+                Для грузов из Европы, нижеприведенные размеры вагонов доступны из г. Лодзь, Польша и г. Клайпеда, Литва.
+                Вагон 158 м<sup>3</sup> Вес груза до 66 т
+                Вагон 220 м<sup>3</sup> Вес груза до 51 т</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_train.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 5 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Услуги таможенной очистки</h2>
+            <p class="mobileService_main-content-text">Компания «JAT» обладает опытом оказания услуг таможенной очистки
+                на всей территории Казахстана для всех видов транспорта.
+                Полное соблюдение и прозрачность при толковании статей законов о таможенной очистке, определении кодов
+                товара, расчете пошлин и управлении цифровыми записями.
+                Компания «JAT Transport» предлагает полное обслуживание «под ключ», которое включает таможенную очистку
+                в дополнение к доставке ваших грузов.
+            </p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_tamoj.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 6 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Услуги складского хранения
+                и обработки местных грузов</h2>
+            <p class="mobileService_main-content-text">Хранение в помещении/на улице (площади для хранения - 50
+                м<sup>2</sup>, 200 м<sup>2</sup>, 1000 м<sup>2</sup>, 2 000 м<sup>2</sup>) – обеспечение безопасности -
+                24/7.
+                Офисные помещения и организация питания на рабочей площадке.
+                Система управления складскими запасами на базе облачной платформы, обеспечение безопасности - 24/7.
+                Услуги подъема тяжелых грузов (Мобильные краны) 120, 200, 220 тонн по всему Казахстану (21-дневная
+                мобилизация – минимальная арендная плата за один месяц).
+                Вилочные погрузчики 1,5 – 16 тонн.
+                Услуги упаковки и упаковки в ящики.
+                Услуги крепления и фиксации грузов.</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_sklad.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+        <!-- 7 -->
+        <div class="mobileService_main-content">
+            <div class="stripes"></div>
+            <h2 class="mobileService_main-content-title">Международные автоперевозки</h2>
+            <p class="mobileService_main-content-text">Наиболее популярный и доступный вид перевозки грузов
+                благодаря выгодным ценам и среднему транзитному времени. Еженедельный график, тентовые фуры.
+                Если объем небольшой, мы можем организовать консолидацию и отправить ваш груз вместе с другими -
+                так будет еще выгоднее.</p>
+            <img class="mobileService_main-content-imgs" src="../../assets/icons/main_mezhdunarod.svg" alt=""/>
+            <button class="mobileService_main-content-button">Свяжитесь со мной</button>
+        </div>
+
+    </div>
+
+    <!-- Reasons -->
+    <div class="mobileService_reasons-wrapper">
+        <div class="mobileService_reasons ">
+            <div class="stripes"></div>
+            <h2 class="mobileService_reasons-title ">Почему выбирают нас?</h2>
+            <div class="mobileService_reasons-cards">
+                <div class="mobileService_reasons-card _animation">
+                    <div class="mobileService_reasons-card-img">
+                        <img src="../../assets/icons/reason_speed.svg" alt="">
+                    </div>
+                    <h3 class="mobileService_reasons-card-title">Скорость коммуникации</h3>
+                </div>
+                <div class="mobileService_reasons-card _animation">
+                    <div class="mobileService_reasons-card-img">
+                        <img src="../../assets/icons/reason_deff.svg" alt="">
+                    </div>
+                    <h3 class="mobileService_reasons-card-title">Надежность</h3>
+                </div>
+                <div class="mobileService_reasons-card _animation">
+                    <div class="mobileService_reasons-card-img">
+                        <img src="../../assets/icons/reason_strength.svg" alt="">
+                    </div>
+                    <h3 class="mobileService_reasons-card-title">Твердость<br> характера <br>Сила духа</h3>
+                </div>
+                <div class="mobileService_reasons-card _animation">
+                    <div class="mobileService_reasons-card-img">
+                        <img src="../../assets/icons/reason_client.svg" alt="">
+                    </div>
+                    <h3 class="mobileService_reasons-card-title">Ориентированность на клиента</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How we work -->
+
+    <div class="mobileService_work-wrapper">
+        <div class="slides_big">
+            <!-- 1 -->
+            <div class="mobileService_work">
+                <div class="blueRectangle"></div>
+                <div class="stripes"></div>
+                <p class="mobileService_work-title">Мы предлагаем специально назначенное
+                    контактное лицо компании «JAT»
+                    для удовлетворения всех ваших потребностей
+                    по перевозке грузов всеми видами транспорта.</p>
+                <a href="../../assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                    презентацию</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="mobileService_work work_slide2">
+                <div class="blueRectangle"></div>
+                <div class="stripes"></div>
+                <p class="mobileService_work-title work_slide2-title">«JAT Transport» надёжный партнёр, <br>
+                    который поможет вам добиться успеха
+                    в бизнесе, благодаря своевременным
+                    и безопасным доставкам грузов,
+                    четкой коммуникации</p>
+                <a href="../../assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                    презентацию</a>
+            </div>
+            <!-- 3 -->
+            <div class="mobileService_work work_slide3">
+                <div class="blueRectangle"></div>
+                <div class="stripes"></div>
+                <p class="mobileService_work-title">Отслеживание в режиме реального времени
+                    по электронной почте или с помощью доступа
+                    к нашей программе отслеживания в облаке,
+                    куда Вы можете загрузить все ваши
+                    товаросопроводительные документы
+                    и фотографии груза в любое время.
+                </p>
+                <a href="../../assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                    презентацию</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="mobileService_reasons-slider-wrapper _animation">
+        <div class="mobileService_reasons-title-wrapper">
+            <h2 class="mobileService_reasons-slider-title">Почему мы</h2>
+        </div>
+        <div class="slides">
+            <!-- 1 -->
+            <div class="mobileService_reasons-slider">
+                <img class="mobileService_reasons-slider-igm" src="../../assets/icons/heart.svg" alt="">
+                <h3 class="mobileService_reasons-slider-img-title">Надежность</h3>
+                <p class="mobileService_reasons-reasons-slider-img-text">Мы придерживаемся выбранного курса и искренне
+                    верим, любое преодоление, заложено в «ДНК компании «JAT».</p>
+                <div class="bar1"></div>
+            </div>
+            <!-- 2 -->
+            <div class="mobileService_reasons-slider">
+                <img class="mobileService_reasons-slider-igm" src="../../assets/icons/service_slide2.svg" alt="">
+                <h3 class="mobileService_reasons-slider-img-title">твердость характера</h3>
+                <p class="mobileService_reasons-reasons-slider-img-text">Мы всегда рядом. Мы всегда доставляем грузы. Мы
+                    всегда находим решения.</p>
+                <div class="bar2"></div>
+            </div>
+            <!-- 3 -->
+            <div class="mobileService_reasons-slider">
+                <img class="mobileService_reasons-slider-igm" src="../../assets/icons/service_slide3.svg" alt="">
+                <h3 class="mobileService_reasons-slider-img-title">ориентация на клиента</h3>
+                <p class="mobileService_reasons-reasons-slider-img-text">За вами будет закреплен одно контактное лицо
+                    для решения вопросов на более высоком уровне.</p>
+                <div class="bar3"></div>
+            </div>
+            <!-- 4 -->
+            <div class="mobileService_reasons-slider">
+                <img class="mobileService_reasons-slider-igm" src="../../assets/icons/service_slide4.svg" alt="">
+                <h3 class="mobileService_reasons-slider-img-title">скорость коммуникации</h3>
+                <p class="mobileService_reasons-reasons-slider-img-text">Сразу же отметите коммуникацию и отзывчивость,
+                    как только Вы обратитесь в компанию «JAT».</p>
+                <div class="bar4"></div>
+            </div>
+
+        </div>
+        <div class="whiteBG"></div>
+    </div>
+
+    <!-- Form -->
+    <div class="mobileService_form-wrapper">
+        <div class="mobileService_form-block">
+            <div class="stripes"></div>
+            <h2 class="mobileService_form-title _animation">Оставьте запрос и мы ответим в течение одного дня</h2>
+            <form class="mobileService_form _animation">
+                <input type="text" class="mobileService_form-input" placeholder="Имя и фамилия">
+                <input type="text" class="mobileService_form-input " placeholder="Название компании">
+                <input type="tel" class="mobileService_form-input telephone" placeholder="Номер телефона">
+                <textarea class="mobileService_form-input big_input" placeholder="Что Вас интересует?"></textarea>
+                <button class="mobileService_form-button">Узнать больше</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- For clients -->
+    <div class="mobileService_clients-wrapper _animation">
+        <div class="mobileService_clients">
+            <div class="stripes"></div>
+            <h2 class="mobileService_clients-title">Для кого мы работаем</h2>
+            <p class="mobileService_clients-text">Персонал компании «JAT» обладает многолетним опытом работы в
+                горнодобывающем и нефтегазовом секторах и выбрал их в качестве основного направления, полагаясь
+                исключительно на понимание отрасли и специфики материалов, доставку которых необходимо осуществлять.
+            </p>
+            <h3 class="mobileService_clients-subtitle">Наши основные клиенты</h3>
+            <div class="mobileService_clients-cards _animation">
+                <div class="mobileService_clients-card">
+                    <img src="../../assets/icons/clients_mountain.svg" alt="">
+                    <h4 class="mobileService_clients-card-title">Горная добыча</h4>
+                </div>
+                <div class="mobileService_clients-card">
+                    <img src="../../assets/icons/clients_building.svg" alt="">
+                    <h4 class="mobileService_clients-card-title">Строительство</h4>
+                </div>
+                <div class="mobileService_clients-card">
+                    <img src="../../assets/icons/clients_oil.svg" alt="">
+                    <h4 class="mobileService_clients-card-title">Нефтегазовый сектор</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="mobileContacts_wrapper _animation">
+        <div class="mobileContacts">
+            <div class="mobileContacts_title-wrapper"></div>
+            <h2 class="mobileContacts_title">Контакты</h2>
+
+            <p class="mobileContacts_adress-text">
+                Алматы, 050019<br>
+                Тимирязева 42, Атакент, Бизнес-центр<br>
+                Парк Отель, Блок F, 3-й этаж
+            </p>
+            <a href="tel:+7 (701) 951 62 15" class="mobileContacts_phone">+7 (701) 951 62 15</a>
+        </div>
+        <div class="mobileContacts_email">
+            <p class="mobileContacts_email-title">Связаться с менеджером</p>
+            <a href="mailto:ops@jat.kz" class="mobileContacts_email-link">ops@jat.kz</a>
+        </div>
+        <div class="mobileContacts_email">
+            <p class="mobileContacts_email-title">Связаться с менеджером</p>
+            <a href="mailto:sales@jat.kz" class="mobileContacts_email-link">sales@jat.kz</a>
+        </div>
+        <div class="mobileContacts_socialmedia">
+            <div class="mobileContacts_socialmedia_socialmedia-logos">
+                <div class="mobileContacts_socialmedia_socialmedia-logos-item instagram"></div>
+                <div class="mobileContacts_socialmedia_socialmedia-logos-item facebook"></div>
+                <div class="mobileContacts_socialmedia_socialmedia-logos-item linkedin"></div>
+                <div class="mobileContacts_socialmedia_socialmedia-logos-item youtube"></div>
+            </div>
+            <div class="mobileContacts_socialmedia-jatlogo"></div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="mobileFooter"></div>
+
+    <div class="sendModal_wrapper"></div>
+
+
+    <div class="sendModal">
+        <div class="blueRectangle"></div>
+        <div class="sendModal_close"></div>
+        <h3 class="sendModal_subtitle">Отзыв на вакансию</h3>
+        <h2 class="sendModal_title">Специалист по логистике</h2>
+        <div class="stripes"></div>
+        <form action="" class="sendModal_form">
+            <input type="text" class="sendModal_input" placeholder="Имя и фамилия">
+            <input type="tel" class="sendModal_input telephone" placeholder="Номер телефона">
+            <div class="sendModal_input__wrapper">
+                <input type="file" name="file" id="input__file" class="input input__file" multiple>
+                <label for="input__file" class="input__file-button">
+                    <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                                                src="../../assets/icons/pdf_icon.svg" alt="Выбрать файл"
+                                                                width="25"></span>
+                    <span class="input__file-button-text">Приктрепить резюме (pdf, word, text)</span>
+                </label>
+            </div>
+
+        </form>
+        <button class="sendModal_button"> откликнуться на вакансию</button>
+        <p class="sendModal_adress">Алматы, 050019 <br>
+            Тимирязева 42, Атакент, Бизнес-центр <br>
+            Парк Отель, Блок F, 3-й этаж
+        </p>
+
+        <p class="sendModal_phone">
+            +7 (727) 327 14 55 <br>
+            +7 (701) 951 62 15
+        </p>
+    </div>
+
+    <div class="sendEmailModal">
+        <div class="blueRectangle"></div>
+        <div class="sendModal_close"></div>
+        <h3 class="sendModal_subtitle"></h3>
+        <h2 class="sendModal_title">Отправить письмо в JAT</h2>
+        <div class="stripes"></div>
+        <form action="" class="sendModal_form">
+            <input type="text" class="sendModal_input" placeholder="Имя и фамилия">
+            <input type="tel" class="sendModal_input telephone" placeholder="Номер телефона">
+            <input type="text" class="sendModal_input" placeholder="Название компании">
+            <textarea class="sendModal_input _textarea" id="" cols="30" rows="10"
+                      placeholder="Что вас интересует"></textarea>
+
+        </form>
+        <button class="sendModal_button">отправить</button>
+        <p class="sendModal_adress">Алматы, 050019 <br>
+            Тимирязева 42, Атакент, Бизнес-центр <br>
+            Парк Отель, Блок F, 3-й этаж
+        </p>
+
+        <p class="sendModal_phone">
+            +7 (727) 327 14 55 <br>
+            +7 (701) 951 62 15
+        </p>
+    </div>
+
+    <div class="modalWindow">
+        <div class="modalWindow_content">
+            <p class="modalWindow_content-text">Спасибо за Ваше обращение.
+                Менеджер JAT свяжется с Вами
+                в ближайшее время.</p>
+            <button class="modalWindow_content-button">ОК</button>
+            <div class="modalWindow_content-close"></div>
+        </div>
+    </div>
+</div>
+<script>
+    function dropdownToggle() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+</script>
+</body>
+
+</html>

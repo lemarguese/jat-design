@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="contacts.css">
+    <script src="../../../../jQuery.js"></script>
+    <script src="../../../../jquery.maskedinput.min.js"></script>
+    <script src="contacts.js"></script>
+    <title>JAT - Contacts</title>
+</head>
+<body>
+<div class="mobile-jat-contacts">
+    <!-- Header -->
+    <header class="mobileHeader">
+
+        <!-- SideBar -->
+        <div class="dropdown_icon" onclick="dropdownToggle()"></div>
+        <div id="myDropdown" class="dropdown_menu">
+            <a href="../../index.html">Homepage</a>
+            <a href="../../pages/service/service.html">Services</a>
+            <a href="../../pages/hse/hse.html">HSE</a>
+            <a href="../../pages/about/about.html">About company</a>
+            <a href="../../pages/hr/hr.html">HR</a>
+            <a href="../../pages/contacts/contacts.html" class="drop_act">Contacts</a>
+        </div>
+        <div class="mobileHeader_logo"></div>
+    </header>
+    <div class="mobileCotnacts_promo">
+        <h1 class="mobileCotnacts_promo-title">Contacts</h1>
+        <img class="mobileContacts_promo-map" src="../../../../assets/icons/contacts_map.svg" alt="">
+    </div>
+
+    <!-- Contacts -->
+    <div class="mobileContacts_wrapper">
+        <div class="mobileContacts">
+            <div class="stripes"></div>
+            <p class="mobileContacts_adress-text">
+                Almaty, 050059<br/>
+                42 Timiryazeva st, Atakent Park Hotel<br/> Business Center
+                Block F, 3RD Floor
+            </p>
+            <div class="mobileContacts_phones">
+                <a href="tel:+7 (727) 327 14 55" class="mobileContacts_phone">+7 (727) 327 14 55</a>
+                <a href="tel:+7 (701) 951 62 15" class="mobileContacts_phone">+7 (701) 951 62 15</a>
+            </div>
+        </div>
+        <div class="mobileContacts_email">
+            <p class="mobileContacts_email-title">contact a manager</p>
+            <a href="mailto:ops@jat.kz" class="mobileContacts_email-link">ops@jat.kz</a>
+        </div>
+        <div class="mobileContacts_email">
+            <p class="mobileContacts_email-title">contact a manager</p>
+            <a href="mailto:sales@jat.kz" class="mobileContacts_email-link">sales@jat.kz</a>
+        </div>
+        <img src="" alt="" class="mobileContacts_img">
+    </div>
+    <div class="mobileContacts_img">
+        <div class="yellowRect"></div>
+        <div class="stripes"></div>
+
+        <img src="../../../../assets/icons/contactsimgblock.svg" alt="">
+    </div>
+
+    <!-- Form -->
+    <div class="mobileContacts_form-wrapper">
+        <div class="mobileContacts_form-block">
+            <div class="stripes"></div>
+            <h2 class="mobileContacts_form-title _animation">Leave a request and we will respond within one day</h2>
+            <form class="mobileContacts_form _animation">
+                <input type="text" name="fullname" class="mobileContacts_form-input" placeholder="First name and Last name" required>
+                <input type="text" name="company" class="mobileContacts_form-input" placeholder="Company name" required>
+                <input type="tel" name="phonenumber" class="mobileContacts_form-input telephone" placeholder="Phone number" required>
+                <textarea required name="interests" class="mobileContacts_form-input big_input"
+                          placeholder="What do you want to know?"></textarea>
+                <button class="mobileContacts_form-button _animation">send a request</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <div class="mobileFooter"></div>
+</div>
+</div>
+<div class="modalWindow">
+    <div class="modalWindow_content">
+        <p class="modalWindow_content-text">Thank you for reaching out,<br/>
+            JAT manager will contact<br/> you shortly</p>
+        <button class="modalWindow_content-button">ОК</button>
+        <div class="modalWindow_content-close"></div>
+    </div>
+</div>
+<script>
+    function dropdownToggle() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+</script>
+</body>
+</html>

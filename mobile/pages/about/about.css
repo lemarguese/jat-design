@@ -1,0 +1,999 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.mobile-jat-about {
+    overflow: hidden;
+}
+
+/* Header ------------------------------------------------------------------------------------------------------*/
+.mobileHeader {
+    position: fixed;
+    z-index: 1;
+
+    top: 0;
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: no-repeat center 100% url('../../assets/icons/Transport.svg');
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+
+.dropdown_icon {
+    position: absolute;
+    left: 10px;
+    width: 32px;
+    min-height: 21px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('../../assets/icons/dropdown_icon.svg');
+
+}
+
+.dropdown_menu {
+
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    overflow: auto;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(0, -112%);
+    transition: all 1s cubic-bezier(0, 0.81, 0.26, 0.98);
+}
+
+.drop_act {
+    background: #FFE800;
+    border: 2px solid #393940;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: #131313;
+}
+
+.dropdown_menu a {
+    height: 40px;
+    font-family: 'Montserrat';
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #131313;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.language_buttons {
+    text-align: center;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #393940;
+
+}
+
+.language_btn {
+    cursor: pointer;
+    background: none;
+    padding: 2px;
+    border-radius: 4px;
+    min-width: 29px;
+    margin: 0 1px;
+    border: 0;
+}
+
+.language_btn_active {
+    background-color: #FFE800;
+    border: 1px solid black;
+}
+
+
+.mobileHeader_logo {
+
+    width: 60px;
+    min-height: 28px;
+    margin-left: 20px;
+    background: url('../../assets/icons/header_logo.svg') no-repeat left;
+    background-size: 100%;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+
+.stripes {
+    min-height: 10px;
+    width: 64px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-image: url('../../assets/icons/stripes.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+}
+
+.mobileAbout_promo {
+    margin-top: 42px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 270px;
+    background-image: url('../../assets/icons/about_promo_bg.svg');
+}
+
+.mobileAbout_promo-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 0;
+    padding-top: 40px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+}
+
+.mobileAbout_info-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileAbout_info {
+    padding: 30px 10px;
+
+}
+
+.mobileAbout_info-title {
+
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+    color: #131313;
+}
+
+.mobileAbout_info-cards {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobileAbout_info-card {
+    width: 25%;
+    opacity: 0;
+}
+
+.card_1 {
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease 0.5s;
+}
+
+.card_2 {
+    transform: translate(-200%, 0);
+    transition: all 1.3s ease 1s;
+}
+
+.card_3 {
+    transform: translate(-300%, 0);
+    transition: all 1.3s ease 1.5s;
+}
+
+.card_4 {
+    transform: translate(-400%, 0);
+    transition: all 1.3s ease 2s;
+}
+
+.mobileAbout_info-card-title {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 10px;
+
+    text-align: center;
+
+    color: #131313;
+}
+
+.mobileAbout_info-card-img {
+    width: 100%;
+
+}
+
+.mobileAbout_mission-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.blueRect {
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #5FFFFF;
+}
+
+.mobileAbout_mission {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.mobileAbout_mission-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #131313;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease 0s;
+}
+
+.mobileAbout_mission-text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #131313;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease .5s;
+
+}
+
+.mobileAbout_team-wrapper {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid;
+    opacity: 0;
+    transition: all 1.3s ease 0s;
+}
+
+.yellowRect {
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFE800;
+}
+
+.mobileAbout_team {
+    padding: 20px 10px;
+}
+
+.mobileAbout_team-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #131313;
+}
+
+.bar1 {
+    position: absolute;
+    width: 20px;
+    bottom: -40px;
+    height: 5px;
+    background: #fff;
+    left: calc(50% - 36px);
+}
+
+.bar2 {
+    position: absolute;
+    width: 20px;
+    bottom: -40px;
+    height: 5px;
+    background: #fff;
+    left: calc(50% - 9px);
+}
+
+.bar3 {
+    position: absolute;
+    width: 20px;
+    bottom: -40px;
+    height: 5px;
+    background: #fff;
+    left: calc(50% + 20px);
+}
+
+.mobileAbout_team-slider {
+    overflow: hidden;
+    min-height: 205px;
+    padding: 0 10px;
+
+}
+
+
+.mobileAbout_team-card {
+    width: 30%;
+    min-height: 205px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileAbout_team-card-name {
+    font-family: 'Montserrat';
+    min-height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #131313;
+    margin-bottom: 0;
+
+}
+
+.mobileAbout_team-card-job {
+    height: 30px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #131313;
+    margin-top: 0;
+}
+
+.mobile_team-card-button {
+    width: 100%;
+    height: 23px;
+    border: 0;
+    background-color: transparent;
+    justify-self: flex-end;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../../assets/icons/more_btn.svg');
+    margin-top: 15px;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slider {
+    padding: 0;
+    margin: 0 30px;
+}
+
+.slick-slide {
+    margin: 0 5px;
+}
+
+.slick-prev {
+    width: 10px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url('../../assets/icons/Union_left.svg');
+    position: absolute;
+    left: 10px;
+    color: #000;
+    top: 50%;
+    font-size: 0;
+    border: 0;
+}
+
+.slick-next {
+    font-size: 0;
+    width: 10px;
+    height: 20px;
+    color: #000;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/icons/union.svg');
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border: 0;
+}
+
+.slick-dots {
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    z-index: 2;
+}
+
+.slick-dots li button {
+    width: 28px;
+    height: 31px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    line-height: 26px;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: white;
+    border: 0px solid black;
+    z-index: 2;
+}
+
+.slick-dots li button:focus {
+    outline: none;
+}
+
+li.slick-active {
+    position: relative;
+}
+
+li.slick-active::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    left: 10%;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #fff;
+    bottom: -10px;
+
+}
+
+
+.mobileAbout_principles-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileAbout_principles {
+    padding: 20px 10px;
+}
+
+.mobileAbout_principles-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #131313;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease 0s;
+}
+
+.mobileAbout_principles-subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #131313;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease 0.5s;
+}
+
+.mobileAbout_principles-text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #131313;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.3s ease 1s;
+}
+
+.mobileAbout_wealth-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #B62D39;
+    transition: all 1.3s ease 0s;
+    padding: 20px 0 40px 0;
+
+}
+
+.mobileAbout_wealth {
+    padding: 20px 10px;
+    width: 100%;
+    position: relative;
+    margin: 0 20px;
+}
+
+.slides {
+    position: static;
+
+}
+
+.whiteBG {
+    width: 90%;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: #fff;
+    position: absolute;
+    bottom: 38px;
+    left: 5%;
+    right: 5%;
+
+}
+
+.mobileAbout_wealth-title-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileAbout_wealth-title {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding: 20px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../../assets/icons/red_white.svg');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.mobileAbout_wealth-subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #FFFFFF;
+
+}
+
+.mobileAbout_wealth-text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* or 119% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.mobileAbout_wealth-control {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 33px;
+    padding: 0 10px;
+
+    margin-bottom: 30px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #393940;
+    background: #FFFFFF;
+    border: 3px solid #393940;
+    border-radius: 3px;
+}
+
+.mobileAbout_wealth-control-ctrl {
+    width: 28px;
+}
+
+.mobileAbout_wealth-control-ctrl:nth-child(2) {
+    width: 20px;
+}
+
+.mobileAbout_wealth-control-leftarrow {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    width: 28px;
+    border: 0;
+    background: none;
+}
+
+.mobileAbout_wealth-control-rightarrow {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    width: 28px;
+    border: 0;
+    background: none;
+}
+
+.mobileContacts_wrapper {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: all 1.3s ease 0s;
+}
+
+.mobileContacts {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 0 10px;
+    position: relative;
+    background: #fff;
+
+}
+
+.mobileContacts_title-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileContacts_title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    text-align: center;
+
+    color: #131313;
+    margin-bottom: 30px;
+}
+
+.mobileContacts_adress-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+.mobileContacts_phone {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 126.9%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.mobileContacts_phones {
+    margin: 20px 0;
+}
+
+.mobileContacts_email {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+.mobileContacts_email-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+    color: #393940;
+    width: 60%;
+}
+
+.mobileContacts_email-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* JAT_main_red */
+    color: #B62D39;
+    width: 30%;
+}
+
+.mobileFooter {
+    width: 100%;
+    height: 42px;
+    background: no-repeat center 100% url('../../assets/icons/Transport.svg');
+}
+
+.backdrop {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: .8;
+    display: none;
+}
+
+.personal_modal {
+    width: 100%;
+    min-height: 270px;
+    display: none;
+    transform: scale(0);
+    opacity: 0;
+    position: fixed;
+    top: calc(50% - 135px);
+    transition: all 1s ease;
+    background: #fff;
+}
+
+.personal_modal-img {
+    width: 100%;
+    min-height: 180px;
+}
+
+.modal_stripes-img {
+    width: 64px;
+    height: 10px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/icons/stripes.svg');
+    left: 45%;
+    top: 0;
+}
+
+.modal_small-yellowRectangle {
+    width: 35px;
+    height: 16px;
+    background-color: #FFE800;
+    position: absolute;
+    left: 40%;
+    top: 5px;
+}
+
+.personal_modal-info {
+    padding-top: 30px;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/icons/pers_modal-bg.svg');
+    padding-left: 40px;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal_stripes {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/icons/stripes.svg');
+}
+
+.personal_modal-info-data {
+    width: 50%;
+}
+
+.personal_modal-info-data-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+
+}
+
+.personal_modal-info-data-job {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+
+    color: #131313;
+    margin: 7px 0;
+}
+
+.close_Personal {
+    width: 23px;
+    height: 23px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../assets/icons/modal_close.svg');
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.personal_modal-info-contacts {
+    width: 40%;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+
+
+}
+
+.personal_modal-info-contacts-email {
+    margin-top: 0;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 162% */
+
+    margin-bottom: 0;
+    color: #000000;
+    position: relative;
+}
+
+.personal_modal-info-contacts-email::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: calc(50% - 5px);
+    width: 12px;
+    height: 10px;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../../assets/icons/email_icon.svg');
+}
+
+.personal_modal-info-contacts-phone {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    color: #131313;
+    margin: 7px 0;
+    position: relative;
+}
+
+.personal_modal-info-contacts-phone::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: calc(50% - 5px);
+    width: 12px;
+    height: 10px;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../../assets/icons/phone_icon.svg');
+}
+
+@keyframes sliderAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+._active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@media (max-width: 320px) {
+    .mobileContacts_email-link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        /* JAT_main_red */
+
+        color: #B62D39;
+
+        width: 35%;
+    }
+}

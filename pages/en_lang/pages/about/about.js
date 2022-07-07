@@ -1,6 +1,6 @@
 window.onload = function () {
     if (window.matchMedia('(max-width: 425px)').matches) {
-        location.assign('https://m.jat.test.invision.kz');
+        location.assign('../../../../mobile/pages/en_lang/pages/about/about.html');
     }
     routeHandlers();
     sliderEmployee(0, 2);

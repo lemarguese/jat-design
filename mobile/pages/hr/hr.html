@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="hr.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ca2cda4c-893a-415a-8c4b-12c21b66d771"
+            type="text/javascript"></script>
+    <script src="../../jQuery.js"></script>
+    <script src="../../jquery.maskedinput.min.js"></script>
+
+    <script src="hr.js"></script>
+    <title>JAT - HR</title>
+
+    <style type="text/css">
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="mobile-jat-work">
+    <!-- Header -->
+    <header class="mobileHeader">
+
+        <!-- SideBar -->
+        <div class="dropdown_icon" onclick="dropdownToggle()"></div>
+        <div id="myDropdown" class="dropdown_menu">
+            <a href="../../index.html">Главная</a>
+            <a href="../../pages/service/service.html">Услуги</a>
+            <a href="../../pages/hse/hse.html">HSE</a>
+            <a href="../../pages/about/about.html">О компании</a>
+            <a href="../../pages/hr/hr.html" class="drop_act">HR</a>
+            <a href="../../pages/contacts/contacts.html">Контакты</a>
+        </div>
+
+
+        <!-- <div class="language_buttons">
+            <button class="language_btn language_btn_active">Ru</button>
+            <button class="language_btn">En</button>
+        </div> -->
+
+        <div class="mobileHeader_logo"></div>
+
+
+    </header>
+
+    <div class="mobileHR_work">
+        <div class="mobileHR_work-bg">
+            <h2 class="mobileHR_work-title">Рaбота в JAT</h2>
+        </div>
+
+        <h3 class="mobileHR_work-subtitle">
+            <div class="attention"></div>
+            Хотите построить карьеру в транспортной компании?
+        </h3>
+    </div>
+    <!-- Vacancies -->
+    <div class="mobileHR_vacancies">
+        <div class="mobileVacancie_wrapper">
+            <div class="mobileVacancie _animation">
+
+                <h2 class="mobileVacancie_title">Специалист по логистике</h2>
+                <div class="mobileVacancie_info">
+                    <span class="mobileVacancie_info_where">В ШТАТ</span>
+                    <span class="mobileVacancie_info_city">АЛМАТЫ</span>
+                    <span> | </span>
+                    <span class="mobileVacancie_info_otdel">отдел логистики</span>
+                </div>
+                <p class="mobileVacancie_text">Обязанности: получает заявки от клиентов.
+                    Предоставляет ценовые предложения,
+                    обрабатывает заказы с партнерами по всему миру. Осуществляет мониторинг за процессом доставки и
+                    обеспечивает клиентов актуальной информацией.
+                    Контролирует процесс импортной таможенной очистки.
+                </p>
+                <button class="mobileVacancie_btn">Откликнуться на вакансию</button>
+            </div>
+        </div>
+        <div class="mobileVacancie_wrapper">
+            <div class="mobileVacancie _animation">
+                <div class="blueRectangle"></div>
+                <div class="stripes"></div>
+                <h2 class="mobileVacancie_title">Специалист по логистике</h2>
+                <div class="mobileVacancie_info">
+                    <span class="mobileVacancie_info_where">Удаленно</span>
+                    <span class="mobileVacancie_info_city">Нурсултан</span>
+                    <span> | </span>
+                    <span class="mobileVacancie_info_otdel">отдел логистики</span>
+                </div>
+                <p class="mobileVacancie_text">Обязанности: Работа в базе данных AZYRA CRM. Обрабатывает запросы о
+                    продажах и запросы о проведении встреч. Предоставляет ценовые предложения.
+                    Студенческая стажировка в отделе логистики. Летняя программа с выдачей сертификата.
+                </p>
+                <button class="mobileVacancie_btn">Откликнуться на вакансию</button>
+            </div>
+        </div>
+        <!-- Contacts -->
+        <div class="mobileContacts_wrapper _animation">
+            <div class="mobileContacts">
+                <div class="stripes"></div>
+                <div class="mobileContacts_title">Контакты</div>
+                <p class="mobileContacts_adress-text">
+                    Алматы, 050019<br>
+                    Тимирязева 42, Атакент, Бизнес-центр<br>
+                    Парк Отель, Блок F, 3-й этаж
+                </p>
+                <div class="mobileContacts_phones">
+                    <a href="tel:+7 (727) 327 14 55" class="mobileContacts_phone">+7 (727) 327 14 55</a>
+                    <a href="tel:+7 (701) 951 62 15" class="mobileContacts_phone">+7 (701) 951 62 15</a>
+                </div>
+            </div>
+            <div class="mobileContacts_email">
+                <p class="mobileContacts_email-title">Связаться с менеджером</p>
+                <a href="mailto:ops@jat.kz" class="mobileContacts_email-link">ops@jat.kz</a>
+            </div>
+            <div class="mobileContacts_email">
+                <p class="mobileContacts_email-title">Связаться с менеджером</p>
+                <a href="mailto:sales@jat.kz" class="mobileContacts_email-link">sales@jat.kz</a>
+            </div>
+            <img src="" alt="" class="mobileContacts_img">
+        </div>
+
+        <div id="map"></div>
+        <!-- Footer -->
+
+        <div class="mobileFooter"></div>
+    </div>
+</div>
+
+<div class="sendModal_wrapper"></div>
+<div class="sendModal">
+    <div class="blueRectangle"></div>
+    <div class="sendModal_close"></div>
+    <h3 class="sendModal_subtitle">Отклик на вакансию</h3>
+    <h2 class="sendModal_title">Специалист по логистике</h2>
+    <div class="stripes"></div>
+    <form action="" class="sendModal_form">
+        <input type="text" class="sendModal_input" placeholder="Имя и фамилия">
+        <input type="tel" class="sendModal_input telephone" placeholder="Номер телефона">
+        <div class="sendModal_input__wrapper">
+            <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+            <label for="input__file" class="input__file-button">
+                <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                                            src="../../assets/icons/pdf_icon.svg" alt="Выбрать файл"
+                                                            width="25"></span>
+                <span class="input__file-button-text">Прикрепить резюме (pdf, word, text)</span>
+            </label>
+        </div>
+
+    </form>
+    <button class="sendModal_button"> откликнуться на вакансию</button>
+    <p class="sendModal_adress">Алматы, 050019 <br>
+        Тимирязева 42, Атакент, Бизнес-центр <br>
+        Парк Отель, Блок F, 3-й этаж
+    </p>
+
+    <p class="sendModal_phone">
+        +7 (727) 327 14 55 <br>
+        +7 (701) 951 62 15
+    </p>
+</div>
+
+<div class="modalWindow">
+    <div class="modalWindow_content">
+        <p class="modalWindow_content-text">Спасибо за Ваше обращение.
+            Менеджер JAT свяжется с Вами
+            в ближайшее время.</p>
+        <button class="modalWindow_content-button">ОК</button>
+        <div class="modalWindow_content-close"></div>
+    </div>
+</div>
+<script>
+    function dropdownToggle() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+</script>
+</body>
+
+</html>
