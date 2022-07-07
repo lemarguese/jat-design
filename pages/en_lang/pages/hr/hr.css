@@ -411,6 +411,16 @@ button:hover {
     text-transform: uppercase;
 }
 
+.contact-info--text {
+    color: #131313;
+    text-decoration: none;
+}
+
+.contact-info_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-email--item {
     display: flex;
     flex-direction: row;
@@ -422,11 +432,6 @@ button:hover {
     margin-left: 10px;
     color: #B62D39;
 }
-
-.contact-info--text:last-child {
-    margin-left: 20px;
-}
-
 /* jat footer */
 
 .jat-footer {
@@ -512,7 +517,6 @@ button:hover {
 
 .modal-title_block, .form-inputs {
     padding: 0 0 0 125px;
-    margin-bottom: 50px;
 }
 
 .modal-title_block {
@@ -549,6 +553,7 @@ button:hover {
 .modal-btn {
     background-color: #FFE800;
     height: 50px;
+    width: 200px;
     text-transform: uppercase;
     font-weight: 550;
     font-size: 12px;
@@ -601,10 +606,21 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+}
+
+.contact-phone--text {
+    font-size: 12px;
+    text-decoration: none;
+    color: #131313;
 }
 
 .question-apply_modal {

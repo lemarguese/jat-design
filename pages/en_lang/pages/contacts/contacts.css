@@ -499,7 +499,15 @@ button:hover {
 .contact-text {
     font-size: 12px;
     font-weight: 550;
+    color: #131313;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.contact-info_block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
 }
 
 /* jat body footer */
@@ -821,10 +829,17 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {

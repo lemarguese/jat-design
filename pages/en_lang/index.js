@@ -121,10 +121,8 @@ function changeLanguage () {
     });
 
     langBlock.addEventListener('click', function () {
-        location.assign('pages/en_lang/index.html');
+        location.assign('../../index.html');
     });
-
-    // changing logic on progress
 }
 
 function closeModal() {

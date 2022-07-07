@@ -873,8 +873,9 @@ button:hover {
 .contact-text {
     color: #ffff;
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .contacts-emails {
@@ -1105,10 +1106,17 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @keyframes closeModal {

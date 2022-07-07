@@ -880,6 +880,7 @@ img {
 .contact-text {
     color: #ffff;
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 700;
     font-size: 12px;
 }

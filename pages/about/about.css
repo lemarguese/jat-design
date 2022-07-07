@@ -791,6 +791,11 @@ button:hover {
     text-transform: uppercase;
 }
 
+.contact-info--text {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-email--item {
     display: flex;
     flex-direction: row;
@@ -1148,7 +1153,9 @@ button:hover {
 
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
+    text-decoration: none;
     font-weight: 550;
+    color: #131313;
     text-transform: uppercase;
 }
 

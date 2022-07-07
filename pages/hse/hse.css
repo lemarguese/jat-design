@@ -485,6 +485,7 @@ button:hover {
     color: #ffff;
     text-transform: uppercase;
     font-weight: 700;
+    text-decoration: none;
     font-size: 10px;
 }
 

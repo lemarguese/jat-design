@@ -792,6 +792,16 @@ button:hover {
     text-transform: uppercase;
 }
 
+.contact-info_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info--text {
+    text-decoration: none;
+    color: #131313;
+}
+
 .contact-email--item {
     display: flex;
     flex-direction: row;
@@ -802,10 +812,6 @@ button:hover {
     margin-left: 10px;
     text-decoration: none;
     color: #B62D39;
-}
-
-.contact-info--text:last-child {
-    margin-left: 20px;
 }
 
 /* measurement block */
@@ -1002,7 +1008,7 @@ button:hover {
     position: absolute;
     z-index: 99;
     width: 800px;
-    max-height: 520px;
+    max-height: 550px;
     margin: auto;
     left: 0;
     right: 0;
@@ -1054,6 +1060,7 @@ button:hover {
 
 .modal-title_block, .form-inputs {
     padding: 0 0 0 125px;
+    margin-bottom: 25px;
 }
 
 .modal-title_block {
@@ -1147,10 +1154,17 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @keyframes closeModal {

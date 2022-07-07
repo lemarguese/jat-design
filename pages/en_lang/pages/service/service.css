@@ -878,6 +878,7 @@ img {
 }
 
 .contact-text {
+    text-decoration: none;
     color: #ffff;
     text-transform: uppercase;
     font-weight: 700;
@@ -1094,8 +1095,11 @@ img {
 
 .modal-content, .close-button_block {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+
+.modal-content {
+    flex-direction: column;
 }
 
 .close-button_block {
@@ -1109,7 +1113,7 @@ img {
 
 .modal-btn {
     background-color: #FFE800;
-    width: 50%;
+    width: 200px;
     height: 50px;
 }
 
@@ -1179,7 +1183,7 @@ img {
 }
 
 .modal-title_block, .form-inputs {
-    padding: 0 0 0 125px;
+    padding: 0 100px 0 125px;
 }
 
 .modal-title_block {
@@ -1273,10 +1277,17 @@ img {
     background-repeat: no-repeat;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @keyframes closeModal {

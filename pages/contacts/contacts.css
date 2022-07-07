@@ -497,9 +497,17 @@ button:hover {
     flex-direction: row;
 }
 
+.contact-phones {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
 .contact-text {
     font-size: 12px;
+    color: #131313;
     font-weight: 550;
+    text-decoration: none;
     text-transform: uppercase;
 }
 
