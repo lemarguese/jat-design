@@ -731,13 +731,16 @@ button:hover {
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
     padding-right: 100px;
 }
 
 .modal-title_block, .form-inputs {
     padding: 0 0 0 125px;
+}
+
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-title_block {
@@ -835,6 +838,8 @@ button:hover {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {

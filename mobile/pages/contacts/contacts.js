@@ -1,96 +1,3 @@
-// window.onload = function () {
-//     let serviceRoute = document.getElementsByClassName("routing-block_item service-text")[0];
-//     let hseRoute = document.getElementsByClassName("routing-block_item hse-text")[0];
-//     let aboutRoute = document.getElementsByClassName("routing-block_item about-text")[0];
-//     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
-//     let mainRoute = document.getElementsByClassName("routing-block_item main-text")[0];
-
-//     window.addEventListener('scroll', logoDrop);
-//     mailModal();
-//     window.addEventListener('scroll', routingDropUp);
-
-//     serviceRoute.addEventListener("click", function () {
-//         location.assign('../service/service.html');
-//     });
-
-//     hseRoute.addEventListener('click', function () {
-//         location.assign('../hse/hse.html');
-//     });
-
-//     aboutRoute.addEventListener('click', function () {
-//         location.assign('../about/about.html');
-//     });
-
-//     hrRoute.addEventListener('click', function () {
-//         location.assign('../hr/hr.html');
-//     });
-
-//     mainRoute.addEventListener('click', function () {
-//         location.assign('../../index.html');
-//     });
-
-//     let closeIcon = document.getElementsByClassName("close-icon")[0];
-//     closeIcon.addEventListener('click', closeMailModal);
-
-//     loadAnim();
-// }
-
-// function mailModal () {
-//     let mail = document.getElementsByClassName('mail-icon_block')[0];
-//     let mailInner = document.getElementsByClassName('question-modal')[0];
-//     let modalMail = document.getElementsByClassName('question-apply_modal')[0];
-//     mail.addEventListener('click', function () {
-//         modalMail.style.display = 'block';
-//         mailInner.style.display = 'block';
-//         mailInner.style.animation = 'openModal linear .2s';
-//     });
-// }
-
-// function routingDropUp () {
-//     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
-
-//     let aboutHR = document.getElementsByClassName('jat-body-footer')[0];
-//     let aboutHRrect = aboutHR.getBoundingClientRect();
-//     if (window.innerHeight >= aboutHRrect.top) {
-//         mailIcon.style.animation = 'opening linear .25s';
-//         setTimeout(() => {
-//             mailIcon.style.display = 'flex';
-//         }, 250);
-//     } else {
-//         mailIcon.style.animation = 'closing linear .25s';
-//         setTimeout(() => {
-//             mailIcon.style.display = 'none';
-//         }, 250);
-//     }
-// }
-
-// function closeMailModal() {
-//     let askModal = document.getElementsByClassName('question-modal')[0];
-//     let askModalBg = document.getElementsByClassName('question-apply_modal')[0];
-//     askModal.style.animation = 'closeModal linear .35s';
-
-//     setTimeout(() => {
-//         askModal.style.display = 'none';
-//         askModalBg.style.display = 'none';
-//     }, 350);
-// }
-
-// function logoDrop () {
-//     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
-//     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
-//     if (rect.top <= 0) {
-//         setTimeout(() => {
-//             dropLogo.style.display = 'block';
-//         }, 250)
-//         dropLogo.style.animation = 'dropDownLogo linear .5s';
-//     } else {
-//         dropLogo.style.animation = 'dropUpLogo linear .5s';
-//         setTimeout(() => {
-//             dropLogo.style.display = 'none';
-//         }, 250);
-//     }
-// }
-
 $(()=>{
     loadAnim();
     function loadAnim() {
@@ -153,7 +60,15 @@ $(()=>{
     function addMask(){
         $('.telephone').mask("+9 (999) 999-9999");
     }
-    
+
+    function changeLang () {
+        let langs = $('.lang-text');
+        langs[1].addEventListener('click', function () {
+            location.assign('../en_lang/pages/contacts/contacts.html');
+        });
+    }
+
+    changeLang();
     addMask();
     closeModal();
 })

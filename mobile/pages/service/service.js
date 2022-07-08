@@ -186,6 +186,14 @@ $(() => {
         $('.telephone').mask("+9 (999) 999-9999");
     }
 
+    function changeLang () {
+        let langs = $('.lang-text');
+        langs[1].addEventListener('click', function () {
+            location.assign('../en_lang/pages/service/service.html');
+        });
+    }
+
+    changeLang();
     addMask();
     sendEmail();
     modalVacancie();

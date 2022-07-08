@@ -1002,13 +1002,14 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 99;
 }
 
 .question-modal {
     position: absolute;
     z-index: 99;
     width: 800px;
-    max-height: 550px;
+    max-height: 530px;
     margin: auto;
     left: 0;
     right: 0;
@@ -1060,7 +1061,6 @@ button:hover {
 
 .modal-title_block, .form-inputs {
     padding: 0 0 0 125px;
-    margin-bottom: 25px;
 }
 
 .modal-title_block {
@@ -1142,7 +1142,7 @@ button:hover {
     margin: 9px 0;
 }
 
-.contact-block-modal-second {
+.contact-block-modal {
     padding-top: 50px;
     padding-left: 45px;
     display: flex;

@@ -53,6 +53,7 @@ $(() => {
                     top: rect.top + scrollTop, left: rect.left + scrollLeft
                 }
             }
+
             animOnScroll();
         }
     }
@@ -368,12 +369,17 @@ $(() => {
                     opacity: '1', transform: 'scale(1)'
                 })
             }, 300)
-        })
-
-
+        });
     }
 
+    function changeLang () {
+        let langs = $('.lang-text');
+        langs[1].addEventListener('click', function () {
+            location.assign('../en_lang/pages/about/about.html');
+        });
+    }
 
+    changeLang();
     Personal();
     initMap();
     loadAnim();

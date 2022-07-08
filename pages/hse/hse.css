@@ -626,6 +626,11 @@ button:hover {
     padding: 0 0 0 125px;
 }
 
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .modal-title_block {
     margin: 20px 0;
 }
@@ -721,6 +726,8 @@ button:hover {
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @keyframes dropDownLogo {

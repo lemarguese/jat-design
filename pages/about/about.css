@@ -1051,13 +1051,16 @@ button:hover {
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
     padding-right: 100px;
 }
 
 .modal-title_block, .form-inputs {
     padding: 0 0 0 125px;
+}
+
+.contact-phone_block {
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-title_block {
@@ -1153,10 +1156,10 @@ button:hover {
 
 .contact-location--text, .contact-phone--text {
     font-size: 14px;
-    text-decoration: none;
     font-weight: 550;
-    color: #131313;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #131313;
 }
 
 @keyframes closeModal {

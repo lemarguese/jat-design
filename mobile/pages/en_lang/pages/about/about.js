@@ -1,5 +1,4 @@
 $(() => {
-
     function initMap() {
         ymaps.ready(function () {
             let myMap = new ymaps.Map('map', {
@@ -53,6 +52,7 @@ $(() => {
                     top: rect.top + scrollTop, left: rect.left + scrollLeft
                 }
             }
+
             animOnScroll();
         }
     }
@@ -369,13 +369,17 @@ $(() => {
                 })
             }, 300)
         })
-
-
     }
 
+    function changeLang() {
+        let langs = $('.lang-text');
+        langs[0].addEventListener('click', function () {
+            location.assign('../../../about/about.html');
+        });
+    }
 
+    changeLang();
     Personal();
     initMap();
     loadAnim();
-    // slider();
 })
