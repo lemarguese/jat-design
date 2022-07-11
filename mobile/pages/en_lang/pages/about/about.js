@@ -11,7 +11,7 @@ $(() => {
                     hintContent: 'Собственный значок метки', balloonContent: 'Это красивая метка'
                 }, {
                     iconLayout: 'default#image',
-                    iconImageHref: '../../assets/icons/mark.png',
+                    iconImageHref: '../../../../assets/icons/mark.png',
                     iconImageSize: [30, 42],
                     iconImageOffset: [-5, -38]
                 });
