@@ -237,6 +237,4 @@ function changeLanguage () {
     langBlock.addEventListener('click', function () {
         location.assign('../en_lang/pages/hr/hr.html');
     });
-
-    // changing logic on progress
 }

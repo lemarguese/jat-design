@@ -160,11 +160,11 @@ function changeLanguage () {
     let langBlock = document.getElementsByClassName('language-selector')[0];
 
     langBlock.addEventListener('mouseenter', () => {
-        langBlock.innerText = 'En';
+        langBlock.innerText = 'Ru';
     });
 
     langBlock.addEventListener('mouseleave', () => {
-        langBlock.innerText = 'Ru';
+        langBlock.innerText = 'En';
     });
 
     langBlock.addEventListener('click', function () {
