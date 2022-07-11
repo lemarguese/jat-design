@@ -220,9 +220,9 @@ function changeSlideBack(ev) {
 
     setTimeout(() => {
         sliderImage.style.background = 'transparent';
-        sliderImage.style.transition = 'background linear 1.25s';
-    }, 500);
-    infoHowWeWork.style.animation = 'closing .5s linear 0s';
+        sliderImage.style.transition = 'background linear 2.25s';
+    }, 1500);
+    infoHowWeWork.style.animation = 'closing 1.5s linear 0s';
 
     setTimeout(() => {
         let idx = Number(ev.children[0].innerHTML);
@@ -242,10 +242,10 @@ function changeSlideBack(ev) {
             content.innerHTML = 'While we see you as our customer, we understand you too<br/> have a customer and you need JAT Transport as a reliable<br/> business partner to help  your business succeed with timely<br/> & safe  deliveries, accurate communication all at the agreed<br/> price set out at the start.'
             sliderImage.style.backgroundSize = 'cover';
         }
-    }, 500);
+    }, 1500);
     setTimeout(() => {
-        infoHowWeWork.style.animation = 'opening 1.5s linear 0s';
-    }, 500);
+        infoHowWeWork.style.animation = 'opening 2.5s linear 0s';
+    }, 1500);
 }
 
 function slide(event) {
@@ -344,7 +344,7 @@ function intervalSlider(callback, limit, index) {
         callback(document.querySelectorAll('.pagination--item')[index]);
         index += 2;
         if (limit === index) index = 5;
-    }, 3000);
+    }, 10000);
 }
 
 function telephoneMask() {

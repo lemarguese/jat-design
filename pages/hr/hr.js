@@ -83,7 +83,7 @@ function routingDropUp() {
     let upperIcon = document.getElementsByClassName('upper-icon_block')[0];
     let mailIcon = document.getElementsByClassName('mail-icon_block')[0];
 
-    let aboutHR = document.getElementsByClassName('contacts--section')[0];
+    let aboutHR = document.getElementsByClassName('jat-body-footer')[0];
     let aboutHRrect = aboutHR.getBoundingClientRect();
     if (window.innerHeight >= aboutHRrect.top) {
         upperIcon.style.animation = 'openingRoutingIcons linear 1s';
@@ -167,7 +167,7 @@ function initMap() {
                 iconLayout: 'default#image',
                 iconImageHref: '../../assets/icons/placemark-icon.png',
                 iconImageSize: [50, 62],
-                iconImageOffset: [-10, -38]
+                iconImageOffset: [-35, -50]
             });
         myMap.geoObjects
             .add(myPlacemark);

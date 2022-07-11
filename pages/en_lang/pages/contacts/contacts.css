@@ -497,7 +497,7 @@ button:hover {
 }
 
 .contact-text {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 550;
     color: #131313;
     text-transform: uppercase;
@@ -901,7 +901,7 @@ button:hover {
     }
 
     .contact-text {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .contact-image img {

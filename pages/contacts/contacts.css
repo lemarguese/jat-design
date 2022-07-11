@@ -504,7 +504,7 @@ button:hover {
 }
 
 .contact-text {
-    font-size: 12px;
+    font-size: 10px;
     color: #131313;
     font-weight: 550;
     text-decoration: none;
@@ -901,7 +901,7 @@ button:hover {
     }
 
     .contact-text {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .contact-image img {

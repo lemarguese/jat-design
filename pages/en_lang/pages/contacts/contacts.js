@@ -84,9 +84,9 @@ function initMap() {
                 balloonContent: 'Это красивая метка'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '../../assets/icons/placemark-icon.png',
+                iconImageHref: '../../../../assets/icons/placemark-icon.png',
                 iconImageSize: [50, 62],
-                iconImageOffset: [-10, -38]
+                iconImageOffset: [-35, -50]
             });
         myMap.geoObjects
             .add(myPlacemark);
