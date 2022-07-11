@@ -809,6 +809,7 @@ li.slick-active::after {
 }
 
 .personal_modal {
+    box-sizing: content-box;
     width: 100%;
     min-height: 270px;
     display: none;
@@ -848,12 +849,13 @@ li.slick-active::after {
 
 .personal_modal-info {
     padding-top: 30px;
+    padding-bottom: 10px;
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../../../assets/icons/pers_modal-bg.svg');
     padding-left: 40px;
-    height: 84px;
+    min-height: 84px;
     display: flex;
     justify-content: space-between;
 }
