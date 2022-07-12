@@ -223,9 +223,9 @@ function changeSlideBack(ev) {
 
     setTimeout(() => {
         sliderImage.style.background = 'transparent';
-        sliderImage.style.transition = 'background linear 1.25s';
-    }, 500);
-    infoHowWeWork.style.animation = 'closing .5s linear 0s';
+        sliderImage.style.transition = 'background linear 2.25s';
+    }, 1500);
+    infoHowWeWork.style.animation = 'closing 1s linear 0s';
 
     setTimeout(() => {
         let idx = Number(ev.children[0].innerHTML);
@@ -269,10 +269,10 @@ function changeSlideBack(ev) {
                 ' в начале сотрудничества.';
             sliderImage.style.backgroundSize = 'cover';
         }
-    }, 500);
+    }, 1500);
     setTimeout(() => {
-        infoHowWeWork.style.animation = 'opening 1.5s linear 0s';
-    }, 500);
+        infoHowWeWork.style.animation = 'opening 2.5s linear 0s';
+    }, 1500);
 }
 
 function slide(event) {
@@ -372,7 +372,7 @@ function intervalSlider(callback, limit, index) {
         callback(document.querySelectorAll('.pagination--item')[index]);
         index += 2;
         if (limit === index) index = 5;
-    }, 3000);
+    }, 10000);
 }
 
 function telephoneMask() {
