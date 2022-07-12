@@ -6,7 +6,7 @@ window.onload = function () {
     sliderEmployee(0, 2);
     initMap();
     mailModal();
-    intervalAnim();
+
     employeesInfoSlider();
     closeButtonHandler();
     telephoneMask();
@@ -23,6 +23,44 @@ window.onload = function () {
         });
     });
     loadAnim();
+    $('.slides').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true,
+    });
+    $('.slides .slick-prev').html('<');
+    $('.slides .slick-next').html('>')
+
+    $('.slides .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+
+    })
+    $('.slides .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        right: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-slide').css({
+        width: '100%',
+    })
+
 }
 
 function mailModal() {
@@ -64,49 +102,49 @@ function closeModal() {
     localStorage.removeItem('image');
 }
 
-function intervalAnim() {
-    let index = 2;
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    setInterval(() => {
-        changeSlide(document.getElementsByClassName('pagination--item')[index]);
-        index += 2;
-        if (index >= 6) index = 0;
-    }, 3000);
-}
+// function intervalAnim() {
+//     let index = 2;
+//     changeSlide(document.getElementsByClassName('pagination--item')[0]);
+//     setInterval(() => {
+//         changeSlide(document.getElementsByClassName('pagination--item')[index]);
+//         index += 2;
+//         if (index >= 6) index = 0;
+//     }, 3000);
+// }
 
-function changeSlide(index) {
-    let title = document.getElementsByClassName('values-content--text')[0];
-    let content = document.getElementsByClassName('info-text')[0];
-    let currentTab = document.getElementsByClassName('current-arrow');
-    let values = document.getElementsByClassName('values--section_inner')[0];
+// function changeSlide(index) {
+//     let title = document.getElementsByClassName('values-content--text')[0];
+//     let content = document.getElementsByClassName('info-text')[0];
+//     let currentTab = document.getElementsByClassName('current-arrow');
+//     let values = document.getElementsByClassName('values--section_inner')[0];
 
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-    values.style.opacity = '0';
+//     for (const currentTabElement of currentTab) {
+//         currentTabElement.style.display = 'none';
+//         currentTabElement.className = 'current-arrow';
+//     }
+//     values.style.opacity = '0';
 
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
+//     setTimeout(() => {
+//         let idx = Number(index.children[0].innerHTML);
 
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-        if (idx === 1) {
-            title.innerHTML = 'Reliability';
-            content.innerHTML = 'We are always there <br/>and updating you every <br/>step of the way.';
-        } else if (idx === 2) {
-            title.innerHTML = 'Responsibility';
-            content.innerHTML = 'We take ownership <br/>of your cargo from collection<br/> to delivery';
-        } else if (idx === 3) {
-            title.innerHTML = 'Accountability';
-            content.innerHTML = 'Count on us to always be there<br/> in case things go wrong.';
-        }
-    }, 500);
+//         currentTab[idx - 1].style.display = 'block';
+//         currentTab[idx - 1].className = 'current-arrow active-arrow';
+//         if (idx === 1) {
+//             title.innerHTML = 'Reliability';
+//             content.innerHTML = 'We are always there <br/>and updating you every <br/>step of the way.';
+//         } else if (idx === 2) {
+//             title.innerHTML = 'Responsibility';
+//             content.innerHTML = 'We take ownership <br/>of your cargo from collection<br/> to delivery';
+//         } else if (idx === 3) {
+//             title.innerHTML = 'Accountability';
+//             content.innerHTML = 'Count on us to always be there<br/> in case things go wrong.';
+//         }
+//     }, 500);
 
-    setTimeout(() => {
-        values.style.opacity = '1';
-    }, 500);
-}
+//     setTimeout(() => {
+//         values.style.opacity = '1';
+//     }, 500);
+// }
 
 function changeSlideBackground(event) {
     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
@@ -212,7 +250,7 @@ function sendInfoEmployee(event) {
 function initMap() {
     ymaps.ready(function () {
         let myMap = new ymaps.Map('map', {
-                center: [43.220899, 76.907511],
+                center: [43.225182, 76.905014],
                 zoom: 15
             }, {
                 searchControlProvider: 'yandex#search'

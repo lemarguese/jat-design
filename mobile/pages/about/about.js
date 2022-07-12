@@ -3,7 +3,7 @@ $(() => {
     function initMap() {
         ymaps.ready(function () {
             let myMap = new ymaps.Map('map', {
-                    center: [43.220899, 76.907511], zoom: 15
+                    center: [43.225182, 76.905014], zoom: 15
                 }, {
                     searchControlProvider: 'yandex#search'
                 }),
@@ -16,8 +16,19 @@ $(() => {
                     iconImageSize: [30, 42],
                     iconImageOffset: [-5, -38]
                 });
+
+                atakent = new ymaps.Placemark([43.225024, 76.906006], {
+                    hintContent: 'Собственный значок метки', balloonContent: 'Это красивая метка'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../../assets/icons/mob_atakent.svg',
+                    iconImageSize: [123, 88],
+                    iconImageOffset: [-5, -38]
+                });
             myMap.geoObjects
                 .add(myPlacemark);
+            myMap.geoObjects
+                .add(atakent);
         });
     }
 
