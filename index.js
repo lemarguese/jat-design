@@ -9,12 +9,12 @@ window.onload = function () {
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
     let index = 2;
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    setInterval(() => {
-        changeSlide(document.getElementsByClassName('pagination--item')[index]);
-        index += 2;
-        if (index >= 10) index = 0;
-    }, 3000);
+    // changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    // setInterval(() => {
+    //     changeSlide(document.getElementsByClassName('pagination--item')[index]);
+    //     index += 2;
+    //     if (index >= 10) index = 0;
+    // }, 3000);
 
     mailModal();
     telephoneMask();
@@ -96,6 +96,12 @@ window.onload = function () {
     }
     loadAnim();
     window.addEventListener('scroll', logoDrop);
+
+    $('.slides').slick({
+        dots: true,
+    });
+    $('.slick-prev').html('<');
+    $('.slick-next').html('>')
 }
 
 function mailModal() {
@@ -161,71 +167,71 @@ function routingDropUp() {
     }
 }
 
-function changeSlide(index) {
-    let title = document.getElementsByClassName('advantage-text second-text')[0];
-    let content = document.getElementsByClassName('advantage-content')[0];
-    let advWorks = document.getElementsByClassName('advantages-work--item')[0];
-    let currentTab = document.getElementsByClassName('current-arrow');
+// function changeSlide(index) {
+//     let title = document.getElementsByClassName('advantage-text second-text')[0];
+//     let content = document.getElementsByClassName('advantage-content')[0];
+//     let advWorks = document.getElementsByClassName('advantages-work--item')[0];
+//     let currentTab = document.getElementsByClassName('current-arrow');
 
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-    advWorks.style.animation = 'closing 0.5s linear 0s';
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
+//     for (const currentTabElement of currentTab) {
+//         currentTabElement.style.display = 'none';
+//         currentTabElement.className = 'current-arrow';
+//     }
+//     advWorks.style.animation = 'closing 0.5s linear 0s';
+//     setTimeout(() => {
+//         let idx = Number(index.children[0].innerHTML);
 
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-        if (idx === 1) {
-            title.innerHTML = 'Конкурентоспособные<br/> цены';
-            content.innerHTML = 'обеспечат лучшие возможные маршруты<br/> для соблюдения предельных сроков<br/> доставки на места';
+//         currentTab[idx - 1].style.display = 'block';
+//         currentTab[idx - 1].className = 'current-arrow active-arrow';
+//         if (idx === 1) {
+//             title.innerHTML = 'Конкурентоспособные<br/> цены';
+//             content.innerHTML = 'обеспечат лучшие возможные маршруты<br/> для соблюдения предельных сроков<br/> доставки на места';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/first-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 200px';
-            advWorks.style.backgroundPosition = 'center 5px, center 75px';
-        } else if (idx === 2) {
-            title.innerHTML = 'Исполненный<br/> энтузиазма персонал';
-            content.innerHTML = 'даст ответы на вопросы даже<br/> в нерабочее время';
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/first-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 200px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 75px';
+//         } else if (idx === 2) {
+//             title.innerHTML = 'Исполненный<br/> энтузиазма персонал';
+//             content.innerHTML = 'даст ответы на вопросы даже<br/> в нерабочее время';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/second-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 200px';
-            advWorks.style.backgroundPosition = 'center 5px, center 85px';
-        } else if (idx === 3) {
-            title.innerHTML = 'высокий уровень<br/> взаимодействия<br/> и отчётность';
-            content.innerHTML = '';
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/second-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 200px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 85px';
+//         } else if (idx === 3) {
+//             title.innerHTML = 'высокий уровень<br/> взаимодействия<br/> и отчётность';
+//             content.innerHTML = '';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/third-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 250px';
-            advWorks.style.backgroundPosition = 'center 5px, center 50px';
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/third-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 250px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 50px';
 
-        } else if (idx === 4) {
-            title.innerHTML = 'Владельцы компании<br/> принимают участие<br/> в работе 24/7 ';
-            content.innerHTML = '';
+//         } else if (idx === 4) {
+//             title.innerHTML = 'Владельцы компании<br/> принимают участие<br/> в работе 24/7 ';
+//             content.innerHTML = '';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
-            advWorks.style.backgroundSize = '250px, 375px';
-            advWorks.style.backgroundPosition = 'center 5px, center center';
-        } else if (idx === 5) {
-            title.innerHTML = 'прозрачность';
-            content.innerHTML = 'в области законодательства во время<br/> транспортировки, которая гарантирует<br/> защиту поставщика и клиента';
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/plane-jat.png")';
+//             advWorks.style.backgroundSize = '250px, 375px';
+//             advWorks.style.backgroundPosition = 'center 5px, center center';
+//         } else if (idx === 5) {
+//             title.innerHTML = 'прозрачность';
+//             content.innerHTML = 'в области законодательства во время<br/> транспортировки, которая гарантирует<br/> защиту поставщика и клиента';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/fifth-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 250px';
-            advWorks.style.backgroundPosition = 'center 5px, center 100px';
-        } else if (idx === 6) {
-            title.innerHTML = 'работа с претензиями';
-            content.innerHTML = 'Прозрачный процесс урегулирования<br/> претензий и управление страховыми<br/> компаниями';
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/fifth-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 250px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 100px';
+//         } else if (idx === 6) {
+//             title.innerHTML = 'работа с претензиями';
+//             content.innerHTML = 'Прозрачный процесс урегулирования<br/> претензий и управление страховыми<br/> компаниями';
 
-            advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/last-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 225px';
-            advWorks.style.backgroundPosition = 'center 5px, center 70px';
-        }
-    }, 500);
-    setTimeout(() => {
-        advWorks.style.animation = 'opening .5s linear 0s';
-    }, 500);
-}
+//             advWorks.style.backgroundImage = 'url("assets/icons/title-back.svg"), url("assets/icons/last-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 225px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 70px';
+//         }
+//     }, 500);
+//     setTimeout(() => {
+//         advWorks.style.animation = 'opening .5s linear 0s';
+//     }, 500);
+// }
 
 function changeSlideArrows(event) {
     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
@@ -336,3 +342,4 @@ function telephoneMask() {
         inputTel.value = '+7 ' + x[1] + ' ' + x[2] + ' ' + x[3];
     });
 }
+

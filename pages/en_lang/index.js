@@ -9,12 +9,12 @@ window.onload = function () {
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
     let index = 2;
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    setInterval(() => {
-        changeSlide(document.getElementsByClassName('pagination--item')[index]);
-        index += 2;
-        if (index >= 10) index = 0;
-    }, 3000);
+    // changeSlide(document.getElementsByClassName('pagination--item')[0]);
+    // setInterval(() => {
+    //     changeSlide(document.getElementsByClassName('pagination--item')[index]);
+    //     index += 2;
+    //     if (index >= 10) index = 0;
+    // }, 3000);
 
     mailModal();
     telephoneMask();
@@ -96,6 +96,11 @@ window.onload = function () {
     }
     loadAnim();
     window.addEventListener('scroll', logoDrop);
+    $('.slides').slick({
+        dots: true,
+    });
+    $('.slick-prev').html('<');
+    $('.slick-next').html('>')
 }
 
 function mailModal() {
@@ -159,92 +164,92 @@ function routingDropUp() {
     }
 }
 
-function changeSlide(index) {
-    let title = document.getElementsByClassName('advantage-text second-text')[0];
-    let content = document.getElementsByClassName('advantage-content')[0];
-    let advWorks = document.getElementsByClassName('advantages-work--item')[0];
-    let currentTab = document.getElementsByClassName('current-arrow');
+// function changeSlide(index) {
+//     let title = document.getElementsByClassName('advantage-text second-text')[0];
+//     let content = document.getElementsByClassName('advantage-content')[0];
+//     let advWorks = document.getElementsByClassName('advantages-work--item')[0];
+//     let currentTab = document.getElementsByClassName('current-arrow');
 
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-    advWorks.style.animation = 'closing 0.5s linear 0s';
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
+//     for (const currentTabElement of currentTab) {
+//         currentTabElement.style.display = 'none';
+//         currentTabElement.className = 'current-arrow';
+//     }
+//     advWorks.style.animation = 'closing 0.5s linear 0s';
+//     setTimeout(() => {
+//         let idx = Number(index.children[0].innerHTML);
 
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-        if (idx === 1) {
-            title.innerHTML = 'Competitive prices';
-            content.innerHTML = 'to meet best possible routings<br/> and deadlines for Requested<br/> on site dates';
+//         currentTab[idx - 1].style.display = 'block';
+//         currentTab[idx - 1].className = 'current-arrow active-arrow';
+//         if (idx === 1) {
+//             title.innerHTML = 'Competitive prices';
+//             content.innerHTML = 'to meet best possible routings<br/> and deadlines for Requested<br/> on site dates';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/first-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 200px';
-            advWorks.style.backgroundPosition = 'center 5px, center 75px';
-        } else if (idx === 2) {
-            title.innerHTML = 'Highly engaged<br/> workforce';
-            content.innerHTML = 'out of hours response';
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/first-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 200px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 75px';
+//         } else if (idx === 2) {
+//             title.innerHTML = 'Highly engaged<br/> workforce';
+//             content.innerHTML = 'out of hours response';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/second-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 200px';
-            advWorks.style.backgroundPosition = 'center 5px, center 85px';
-        } else if (idx === 3) {
-            title.innerHTML = 'High level<br/> communication<br/> and reporting';
-            content.innerHTML = '';
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/second-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 200px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 85px';
+//         } else if (idx === 3) {
+//             title.innerHTML = 'High level<br/> communication<br/> and reporting';
+//             content.innerHTML = '';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/third-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 250px';
-            advWorks.style.backgroundPosition = 'center 5px, center 50px';
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/third-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 250px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 50px';
 
-        } else if (idx === 4) {
-            title.innerHTML = 'Owners work<br/> in the business 24/7';
-            content.innerHTML = '';
+//         } else if (idx === 4) {
+//             title.innerHTML = 'Owners work<br/> in the business 24/7';
+//             content.innerHTML = '';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/plane-jat.png")';
-            advWorks.style.backgroundSize = '250px, 375px';
-            advWorks.style.backgroundPosition = 'center 5px, center center';
-        } else if (idx === 5) {
-            title.innerHTML = 'Ability to provide clarity';
-            content.innerHTML = 'to legislations within transportation<br/> ensuring both supplier and customer<br/> are protected';
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/plane-jat.png")';
+//             advWorks.style.backgroundSize = '250px, 375px';
+//             advWorks.style.backgroundPosition = 'center 5px, center center';
+//         } else if (idx === 5) {
+//             title.innerHTML = 'Ability to provide clarity';
+//             content.innerHTML = 'to legislations within transportation<br/> ensuring both supplier and customer<br/> are protected';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/fifth-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 250px';
-            advWorks.style.backgroundPosition = 'center 5px, center 100px';
-        } else if (idx === 6) {
-            title.innerHTML = 'Transparent claims ';
-            content.innerHTML = 'handling process and management<br/> of Insurance companies';
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/fifth-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 250px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 100px';
+//         } else if (idx === 6) {
+//             title.innerHTML = 'Transparent claims ';
+//             content.innerHTML = 'handling process and management<br/> of Insurance companies';
 
-            advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/last-slider-main.png")';
-            advWorks.style.backgroundSize = '250px, 225px';
-            advWorks.style.backgroundPosition = 'center 5px, center 70px';
-        }
-    }, 500);
-    setTimeout(() => {
-        advWorks.style.animation = 'opening .5s linear 0s';
-    }, 500);
-}
+//             advWorks.style.backgroundImage = 'url("../../assets/icons/title-back.svg"), url("../../assets/icons/last-slider-main.png")';
+//             advWorks.style.backgroundSize = '250px, 225px';
+//             advWorks.style.backgroundPosition = 'center 5px, center 70px';
+//         }
+//     }, 500);
+//     setTimeout(() => {
+//         advWorks.style.animation = 'opening .5s linear 0s';
+//     }, 500);
+// }
 
-function changeSlideArrows(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow');
-    let paginationItems = document.getElementsByClassName('pagination--item_block');
+// function changeSlideArrows(event) {
+//     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
+//     let currentTabs = document.getElementsByClassName('current-arrow');
+//     let paginationItems = document.getElementsByClassName('pagination--item_block');
 
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
+//     let idx = 0;
+//     for (let i = 0; i < currentTabs.length; i++) {
+//         if (currentTabs[i] === activeIdx) idx = i;
+//     }
 
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
+//     if (event.className === 'next-arrow') {
+//         idx++;
+//     } else {
+//         idx--;
+//     }
 
-    if (idx > 5) idx = 5;
-    else if (idx < 0) idx = 0;
-    changeSlide(paginationItems[idx].children[0]);
-}
+//     if (idx > 5) idx = 5;
+//     else if (idx < 0) idx = 0;
+//     changeSlide(paginationItems[idx].children[0]);
+// }
 
 function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];

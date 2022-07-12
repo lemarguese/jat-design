@@ -5,6 +5,8 @@
     <title>JAT - Main</title>
     <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="index.css">
+    <script src="jQuery.js"></script>
+    <script src="slick.min.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
@@ -100,77 +102,81 @@
                     <div class="about_and_hr-inner">
                         <div class="about_block">
                             <div class="advantages-work">
-                                <div class="advantages-work--item">
-                                    <p class="advantage-text">Преимущества<br/>
-                                        работы с нами</p>
-                                    <div class="advantage_block">
-                                        <p class="advantage-text second-text">работа с претензиями</p>
-                                        <p class="advantage-content">Прозрачный процесс урегулирования<br/>
-                                            претензий и управление страховыми<br/>
-                                            компаниями
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="pagination_block">
-                                    <div class="pagination-control">
-                                        <div class="prev-arrow" onclick="changeSlideArrows(this)"><</div>
-                                        <div class="pagination_block-inner">
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">1</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
-                                            <div class="pagination--item">
-                                                <p class="pagination-text">|</p>
-                                            </div>
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">2</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
-                                            <div class="pagination--item">
-                                                <p class="pagination-text">|</p>
-                                            </div>
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">3</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
-                                            <div class="pagination--item">
-                                                <p class="pagination-text">|</p>
-                                            </div>
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">4</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
-                                            <div class="pagination--item">
-                                                <p class="pagination-text">|</p>
-                                            </div>
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">5</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
-                                            <div class="pagination--item">
-                                                <p class="pagination-text">|</p>
-                                            </div>
-                                            <div class="pagination--item_block">
-                                                <div class="pagination--item" onclick="changeSlide(this)">
-                                                    <p class="pagination-text">6</p>
-                                                </div>
-                                                <div class="current-arrow"></div>
-                                            </div>
+                                <div class="mobileBestSides_wrapper _animation">
+                                    <h2 class="mobileBestSides_title">Преимущества<br> работы с нами</h2>
+                                    <div class="slides">
+                                        <!-- Firts Slide -->
+                                        <div class='mobileBestSides plain'>
+                            
+                                            <img class="mobileBestSides_content-img" src="./assets/icons/plain.svg">
+                                            <h3 class="mobileBestSides_content-title">Владельцы компании<br>
+                                                принимают участие<br>
+                                                в работе 24/7
+                                            </h3>
+                                            <p class="mobileBestSides_content-text"></p>
+                                            <div class="bar1"></div>
                                         </div>
-                                        <div class="next-arrow" onclick="changeSlideArrows(this)">></div>
+                            
+                                        <!-- Second Slide -->
+                                        <div class='mobileBestSides'>
+                                            <img class="mobileBestSides_content-img img_slide2" src="./assets/icons/index_second_slide.svg">
+                                            <h3 class="mobileBestSides_content-title">работа с претензиями<br>
+                                            </h3>
+                                            <p class="mobileBestSides_content-text">Прозрачный процесс урегулирования претензий и управление
+                                                страховыми компаниями
+                                            </p>
+                                            <div class="bar2"></div>
+                                        </div>
+                            
+                                        <!-- Third Slide -->
+                                        <div class='mobileBestSides'>
+                                            <img class="mobileBestSides_content-img img_slide3" src="./assets/icons/index_third_slide.svg">
+                                            <h3 class="mobileBestSides_content-title">прозрачность
+                                            </h3>
+                                            <p class="mobileBestSides_content-text">в области законодательства во время транспортировки, которая
+                                                гарантирует защиту поставщика и клиента</p>
+                                            <div class="bar3"></div>
+                                        </div>
+                                        <!-- Fourth Slide -->
+                                        <div class='mobileBestSides'>
+                            
+                                            <img class="mobileBestSides_content-img img_slide4" src="./assets/icons/index_fourth_slide.svg">
+                                            <h3 class="mobileBestSides_content-title">Высокий уровень
+                                                взаимодействия
+                                                и отчетность
+                                            </h3>
+                                            <p class="mobileBestSides_content-text"></p>
+                                            <div class="bar4"></div>
+                                        </div>
+                                        <!-- Fifth Slide -->
+                                        <div class='mobileBestSides'>
+                            
+                                            <img class="mobileBestSides_content-img img_slide5" src="./assets/icons/index_fifth_slide.svg">
+                                            <h3 class="mobileBestSides_content-title">
+                                                исполненный энтузиазма персонал
+                                            </h3>
+                                            <p class="mobileBestSides_content-text">даст ответы на вопросы даже в нерабочее время</p>
+                                            <div class="bar5"></div>
+                                        </div>
+                                        <!-- Sixth Slide -->
+                                        <div class='mobileBestSides'>
+                                            <img class="mobileBestSides_content-img img_slide6" src="./assets/icons/index_sixth_slide.svg">
+                                            <h3 class="mobileBestSides_content-title">конкурентоспособные
+                                                цены
+                                            </h3>
+                                            <p class="mobileBestSides_content-text">обеспечат лучшие возможные маршруты для соблюдения предельных
+                                                сроков доставки на места</p>
+                                            <div class="bar6"></div>
+                                        </div>
                                     </div>
+                            
+                            
+                                    <div class="whiteBG"></div>
+                            
+                            
                                 </div>
                             </div>
+                            
                             <div class="advantages-info">
                                 <div class="advantages-info_inner">
                                     <h1 class="advantage-info_title _animation">О компании</h1>

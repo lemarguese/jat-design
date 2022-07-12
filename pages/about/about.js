@@ -6,7 +6,7 @@ window.onload = function () {
     sliderEmployee(0, 2);
     initMap();
     mailModal();
-    intervalAnim();
+    // intervalAnim();
     employeesInfoSlider();
     closeButtonHandler();
     telephoneMask();
@@ -23,6 +23,44 @@ window.onload = function () {
         });
     });
     loadAnim();
+    $('.slides').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true,
+    });
+    $('.slides .slick-prev').html('<');
+    $('.slides .slick-next').html('>')
+
+    $('.slides .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+
+    })
+    $('.slides .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        right: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-slide').css({
+        width: '100%',
+    })
+
 }
 
 function mailModal() {
@@ -64,70 +102,70 @@ function closeModal() {
     localStorage.removeItem('image');
 }
 
-function intervalAnim() {
-    let index = 2;
-    changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    setInterval(() => {
-        changeSlide(document.getElementsByClassName('pagination--item')[index]);
-        index += 2;
-        if (index >= 6) index = 0;
-    }, 3000);
-}
+// function intervalAnim() {
+//     let index = 2;
+//     changeSlide(document.getElementsByClassName('pagination--item')[0]);
+//     setInterval(() => {
+//         changeSlide(document.getElementsByClassName('pagination--item')[index]);
+//         index += 2;
+//         if (index >= 6) index = 0;
+//     }, 3000);
+// }
 
-function changeSlide(index) {
-    let title = document.getElementsByClassName('values-content--text')[0];
-    let content = document.getElementsByClassName('info-text')[0];
-    let currentTab = document.getElementsByClassName('current-arrow');
-    let values = document.getElementsByClassName('values--section_inner')[0];
+// function changeSlide(index) {
+//     let title = document.getElementsByClassName('values-content--text')[0];
+//     let content = document.getElementsByClassName('info-text')[0];
+//     let currentTab = document.getElementsByClassName('current-arrow');
+//     let values = document.getElementsByClassName('values--section_inner')[0];
 
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-    values.style.opacity = '0';
+//     for (const currentTabElement of currentTab) {
+//         currentTabElement.style.display = 'none';
+//         currentTabElement.className = 'current-arrow';
+//     }
+//     values.style.opacity = '0';
 
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
+//     setTimeout(() => {
+//         let idx = Number(index.children[0].innerHTML);
 
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-        if (idx === 1) {
-            title.innerHTML = 'контроль';
-            content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
-        } else if (idx === 2) {
-            title.innerHTML = 'Ответственность';
-            content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
-        } else if (idx === 3) {
-            title.innerHTML = 'надежность';
-            content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
-        }
-    }, 500);
+//         currentTab[idx - 1].style.display = 'block';
+//         currentTab[idx - 1].className = 'current-arrow active-arrow';
+//         if (idx === 1) {
+//             title.innerHTML = 'контроль';
+//             content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
+//         } else if (idx === 2) {
+//             title.innerHTML = 'Ответственность';
+//             content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
+//         } else if (idx === 3) {
+//             title.innerHTML = 'надежность';
+//             content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
+//         }
+//     }, 500);
 
-    setTimeout(() => {
-        values.style.opacity = '1';
-    }, 500);
-}
+//     setTimeout(() => {
+//         values.style.opacity = '1';
+//     }, 500);
+// }
 
-function changeSlideBackground(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow');
-    let paginationItems = document.querySelectorAll('.pagination--item_block');
+// function changeSlideBackground(event) {
+//     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
+//     let currentTabs = document.getElementsByClassName('current-arrow');
+//     let paginationItems = document.querySelectorAll('.pagination--item_block');
 
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
+//     let idx = 0;
+//     for (let i = 0; i < currentTabs.length; i++) {
+//         if (currentTabs[i] === activeIdx) idx = i;
+//     }
 
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
+//     if (event.className === 'next-arrow') {
+//         idx++;
+//     } else {
+//         idx--;
+//     }
 
-    if (idx > 2) idx = 2;
-    else if (idx < 0) idx = 0;
-    changeSlide(paginationItems[idx].children[0]);
-}
+//     if (idx > 2) idx = 2;
+//     else if (idx < 0) idx = 0;
+//     changeSlide(paginationItems[idx].children[0]);
+// }
 
 function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
