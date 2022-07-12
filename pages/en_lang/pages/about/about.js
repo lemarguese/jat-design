@@ -212,7 +212,7 @@ function sendInfoEmployee(event) {
 function initMap() {
     ymaps.ready(function () {
         let myMap = new ymaps.Map('map', {
-                center: [43.220899, 76.907511],
+                center: [43.225182, 76.905014],
                 zoom: 15
             }, {
                 searchControlProvider: 'yandex#search'
