@@ -8,14 +8,6 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-route")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
-    let index = 2;
-    // changeSlide(document.getElementsByClassName('pagination--item')[0]);
-    // setInterval(() => {
-    //     changeSlide(document.getElementsByClassName('pagination--item')[index]);
-    //     index += 2;
-    //     if (index >= 10) index = 0;
-    // }, 3000);
-
     mailModal();
     telephoneMask();
     changeLanguage();
