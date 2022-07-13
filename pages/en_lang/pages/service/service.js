@@ -8,8 +8,7 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
-    intervalSlider(changeSlideBack, 11, 5);
-    intervalSlider(changeSlide, 13, 5);
+
     mailModal();
     telephoneMask();
     changeLanguage();
@@ -67,6 +66,124 @@ window.onload = function () {
         });
     });
     loadAnim();
+    $('.slides').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true,
+    });
+    $('.slides .slick-prev').html('<');
+    $('.slides .slick-next').html('>')
+
+    $('.slides .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+
+    })
+    $('.slides .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        right: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+
+    $('.slides .slick-slide').css({
+        width: '100%',
+        height: '100%',
+    })
+    
+    $('.slides_big').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true, 
+        infinite: true,
+        speed: 1000,
+        arrows: true, 
+        autoplay: true,
+        autoplaySpeed: 3000
+    });
+    $('.slides_big .slick-prev').html('<');
+    $('.slides_big .slick-next').html('>');
+
+    $('.slides_big .slick-track').css({
+        minHeight: '600px',
+        width: '100%',
+        
+    })
+    $('.slides_big .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+    })
+    $('.slides_big .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: '100px',
+        top: 'inherit',
+        zIndex: 2,
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
+        borderLeft: '2px solid black',
+    })
+    $('.slides_big .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: '212px',
+        top: 'inherit',
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
+        borderRight: '2px solid black',
+    })
+    $('.slides_big .slick-slide').css({
+        width: '100%',
+        margin: '0 0',
+        
+    })
+    $('.slides_big.slick-slider').css({
+        
+        margin: '0 0',
+        padding: '0 0',
+    })
+
+    $('.slides_big .slick-dots').css({
+        bottom: '40px',
+        left: '128px',
+        height: '31px',
+        position: 'absolute',
+        margin: '0 0',
+        padding: '0 0',
+        
+    })
+    $('.slides_big .slick-dots>li>button').css({
+        height: '31px',
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
+    })
+
+    $('.slides_big .slick-prev').html('<');
+    $('.slides_big .slick-next').html('>')
 }
 
 function closeModal() {
@@ -127,150 +244,7 @@ function closeMailModal() {
     }, 350);
 }
 
-function changeSlide(index) {
-    let title = document.getElementsByClassName('advantage-title-text')[0];
-    let content = document.getElementsByClassName('advantage-content-text')[0];
-    let advWorks = document.getElementsByClassName('advantages-work--item')[0];
-    let image = document.querySelectorAll('.advantages-image_block img')[0];
-    let currentTab = document.getElementsByClassName('current-arrow-second');
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow-second';
-    }
-    advWorks.style.animation = 'closing 0.5s linear 0s';
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
 
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
-        if (idx === 1) {
-            title.innerHTML = 'Reliability';
-            content.innerHTML = 'We are always there. We are always delivering. We are always replying with solutions.';
-            image.setAttribute('src', "../../../../assets/icons/service-slider-image-1.png");
-        } else if (idx === 2) {
-            title.innerHTML = 'Grit';
-            content.innerHTML = 'We stay the course and genuinely believe that going the extra mile, getting it done, is ingrained in the JAT DNA.';
-            image.setAttribute('src', "../../../../assets/icons/service-slider-2.png");
-        } else if (idx === 3) {
-            title.innerHTML = 'Personal attitude';
-            content.innerHTML = 'We offer dedicated JAT point of contact to handle all your shipping needs in all modes of transport.';
-            image.setAttribute('src', "../../../../assets/icons/service-slider-3.png");
-        } else if (idx === 4) {
-            title.innerHTML = 'Speed of communication';
-            content.innerHTML = 'You will immediately notice the communication and responsiveness as you start to contact JAT.';
-            image.setAttribute('src', "../../../../assets/icons/service-slider-4.png");
-        }
-    }, 500);
-
-    setTimeout(() => {
-        advWorks.style.animation = 'opening .5s linear 0s';
-    }, 500);
-}
-
-function changeSlideArrows(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow-second active-arrow-second')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow-second');
-    let paginationItems = document.querySelectorAll('.pagination_block-second .pagination--item_block');
-
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
-
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
-
-    if (idx > 3) idx = 3; else if (idx < 0) idx = 0;
-    changeSlide(paginationItems[idx].children[0]);
-}
-
-function changeSlideBackground(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow');
-    let paginationItems = document.querySelectorAll('.pagination_block .pagination--item_block');
-
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
-
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
-
-    if (idx > 2) idx = 2; else if (idx < 0) idx = 0;
-    changeSlideBack(paginationItems[idx].children[0]);
-}
-
-function changeSlideBack(ev) {
-    let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
-    let infoHowWeWork = document.getElementsByClassName('how_we_work-info')[0];
-    let content = document.querySelector('.how_we_work-content');
-
-    let currentTab = document.getElementsByClassName('current-arrow');
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-
-    setTimeout(() => {
-        sliderImage.style.background = 'transparent';
-        sliderImage.style.transition = 'background linear 2.25s';
-    }, 1500);
-    infoHowWeWork.style.animation = 'closing 1.5s linear 0s';
-
-    setTimeout(() => {
-        let idx = Number(ev.children[0].innerHTML);
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-
-        if (idx === 1) {
-            sliderImage.style.background = 'url("../../../../assets/icons/jat-service-employee.png") no-repeat center';
-            content.innerHTML = 'We offer one dedicated JAT point of contact to handle all your<br/> shipping needs in all modes of transport. You will not be transferred<br/> to another department and colleagues. You will have one name <br/>and an escalation contact. Your JAT experience will be simplicity<br/> in communication to ‘’getting things done’’.'
-            sliderImage.style.backgroundSize = 'cover';
-        } else if (idx === 2) {
-            sliderImage.style.background = 'url("../../../../assets/icons/employee-service-2.jpg") no-repeat center';
-            content.innerHTML = 'The minute we receive your Transport Order, we review the cargo details<br/> and query same with the vendor and work through our internal checklist<br/> to ensure we can start the job before booking with carriers. We update you<br/> as we progress and offer live tracking  either by mail or access to our cloud<br/> based internet tracking in which you can download all your shipping<br/> documents and cargo photos at any time.\n'
-            sliderImage.style.backgroundSize = 'cover';
-        } else if (idx === 3) {
-            sliderImage.style.background = 'url("../../../../assets/icons/employee-service-3.jpg") no-repeat center';
-            content.innerHTML = 'While we see you as our customer, we understand you too<br/> have a customer and you need JAT Transport as a reliable<br/> business partner to help  your business succeed with timely<br/> & safe  deliveries, accurate communication all at the agreed<br/> price set out at the start.'
-            sliderImage.style.backgroundSize = 'cover';
-        }
-    }, 1500);
-    setTimeout(() => {
-        infoHowWeWork.style.animation = 'opening 2.5s linear 0s';
-    }, 1500);
-}
-
-function slide(event) {
-    let serviceItem = document.getElementsByClassName("service-info--item");
-    let titlesItem = document.getElementsByClassName('titles-item');
-    let activeTitleItem = document.getElementsByClassName('titles-item active-title')[0];
-    let activeServiceItem = document.getElementsByClassName('service-info--item active-service')[0];
-
-    let idx = 0;
-
-    activeServiceItem.style.animation = 'closing 0.5s linear 0s';
-    activeTitleItem.className = 'titles-item';
-    event.className = 'titles-item active-title';
-
-    setTimeout(() => {
-
-        for (let i = 0; i < titlesItem.length; i++) {
-            if (titlesItem[i] === event) idx = i;
-        }
-        activeServiceItem.className = 'service-info--item';
-        serviceItem[idx].className = 'service-info--item active-service';
-        activeServiceItem.style.animation = 'opening 0.5s linear 0s';
-    }, 500);
-
-}
 
 function slideRight() {
     let items = document.getElementsByClassName('jat-data--item');

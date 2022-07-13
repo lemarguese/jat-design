@@ -5,10 +5,12 @@
     <title>JAT - Service</title>
     <link rel="stylesheet" href="../../../../assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="service.css">
+    <script src="../../jQuery.js"></script>
+    <script src="../../slick.min.js"></script>
     <script src="service.js"></script>
 </head>
 <body>
-<div class="jat-main">
+<div class="jat-main" style="overflow: hidden">
     <div class="jat-main_inner">
         <div class="jat-sidebar">
             <div class="routing-icons--items_block">
@@ -421,125 +423,79 @@
                     </div>
                 </div>
             </div>
-            <div class="jat-how_we_work">
-                <div class="how_we_work-inner">
-                    <div class="how_we_work-info">
-                        <div class="how_we_work-title-block">
-                            <p class="how_we_work-title _animation">How we work?</p>
-                        </div>
-                        <div class="how_we_work-content-block">
-                            <p class="how_we_work-content _animation">We offer one dedicated JAT point of contact to
-                                handle all your<br/> shipping needs in all modes of transport. You will not be
-                                transferred<br/>
-                                to
-                                another department and colleagues. You will have one name<br/> and an escalation
-                                contact.
-                                Your JAT experience will be simplicity<br/> in communication to ‘’getting things done’’.
-                            </p>
-                        </div>
-                        <div class="how_we_work-button-block">
-                            <button class="how_we_work-btn _animation">Download presentation
-                            </button>
-                        </div>
+            <div class="how_we_work-inner">
+                <div class="slides_big">
+                    <!-- 1 -->
+                    <div class="mobileService_work">
+                        <p class="desktopService_work-title">How we work?</p>
+                        <p class="desktopService_work-text">We offer one dedicated JAT point of contact to
+                            handle all your shipping needs in all modes of transport. You will not be
+                            transferred
+                            to
+                            another department and colleagues. You will have one name and an escalation
+                            contact.
+                            Your JAT experience will be simplicity in communication to ‘’getting things done’’.
+                        </p>
+                        <a href="../../../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                            презентацию</a>
                     </div>
-                    <div class="how_we_work-pagination">
-                        <div class="pagination_block">
-                            <div class="pagination-control">
-                                <div class="prev-arrow" onclick="changeSlideBackground(this)"><</div>
-                                <div class="pagination_block-inner">
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">1</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                    <div class="pagination--item">
-                                        <p class="pagination-text">|</p>
-                                    </div>
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">2</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                    <div class="pagination--item">
-                                        <p class="pagination-text">|</p>
-                                    </div>
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">3</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                </div>
-                                <div class="next-arrow" onclick="changeSlideBackground(this)">></div>
-                            </div>
-                        </div>
-                        <div class="current-arrow"></div>
+
+                    <!-- 2 -->
+                    <div class="mobileService_work work_slide2">
+                        <p class="desktopService_work-title">How we work?</p>
+                        <p class="desktopService_work-text">The minute we receive your Transport Order, we review the cargo details and query same with the vendor and work through our internal checklist to ensure we can start the job before booking with carriers. We update you as we progress and offer live tracking  either by mail or access to our cloud based internet tracking in which you can download all your shipping documents and cargo photos at any time.
+                        </p>
+                        <a href="../../../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                            презентацию</a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="mobileService_work work_slide3">
+                        <p class="desktopService_work-title">How we work?</p>
+                        <p class="desktopService_work-text">While we see you as our customer, we understand you too have a customer and you need JAT Transport as a reliable business partner to help  your business succeed with timely & safe  deliveries, accurate communication all at the agreed price set out at the start.
+                        </p>
+                        <a href="../../../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                            презентацию</a>
                     </div>
                 </div>
             </div>
+        
+       
             <div class="about_and_hr">
                 <div class="about_and_hr-inner">
                     <div class="about_block">
-                        <div class="advantages-work">
-                            <div class="advantages-work--item">
-                                <div class="advantage-text_block">
-                                    <p class="advantage-text">Why choose us?</p>
+                        <div class="mobileAbout_wealth-wrapper _animation">
+                            <h2 class="mobileAbout_wealth-title">Наши ценности</h2>
+                            <div class="whiteBG"></div>
+                            <div class="slides">
+                                <!-- 1 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image1" src="../../../../assets/icons/service-slider-image-1.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">надежность</h3>
+                                    <p class="mobileAbout_wealth-text">Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.</p>
+                                    <div class="bar1"></div>
                                 </div>
-                                <div class="advantages-image_block">
-                                    <img alt="" src="../../../../assets/icons/service-slider-image-1.png">
+    
+                                <!-- 2 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image2" src="../../../../assets/icons/service-slider-2.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">твердость характера</h3>
+                                    <p class="mobileAbout_wealth-text">Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».</p>
+                                    <div class="bar2"></div>
                                 </div>
-                                <div class="advantage_block">
-                                    <div class="advantage-title_block">
-                                        <p class="advantage-title-text">Reliability</p>
-                                    </div>
-                                    <div class="advantage-content_block">
-                                        <p class="advantage-content-text">We are always there. We are always delivering.
-                                            We are always replying with solutions.
-                                        </p>
-                                    </div>
+    
+                                <!-- 3 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image3" src="../../../../../../assets/icons/service-slider-3.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">ориентация на клиента</h3>
+                                    <p class="mobileAbout_wealth-text">За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.</p>
+                                    <div class="bar3"></div>
                                 </div>
-                            </div>
-                            <div class="pagination_block-second">
-                                <div class="pagination-control">
-                                    <div class="prev-arrow" onclick="changeSlideArrows(this)"><</div>
-                                    <div class="pagination_block-inner">
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">1</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">2</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">3</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">4</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                    </div>
-                                    <div class="next-arrow" onclick="changeSlideArrows(this)">></div>
+                                <!-- 4 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image4" src="../../../../assets/icons/service-slider-4.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">скорость коммуникации</h3>
+                                    <p class="mobileAbout_wealth-text">Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».</p>
+                                    <div class="bar4"></div>
                                 </div>
                             </div>
                         </div>

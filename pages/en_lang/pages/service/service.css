@@ -43,6 +43,7 @@ img {
     width: 15%;
     padding-top: 100px;
     margin-left: 10%;
+    min-width: 180px;
 }
 
 .routing-icons {
@@ -440,8 +441,309 @@ img {
     justify-content: center;
 }
 
-.how_we_work-inner {
+
+/* slick */
+
+.mobileBestSides_content-img {
+    display: block;
+    object-fit: cover;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.mobileAbout_wealth-wrapper {
+    position: relative;
     width: 50%;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #B62D39;
+    transition: all 1.3s ease 0s;
+    padding: 20px 0 40px 0;
+
+}
+
+.mobileAbout_wealth {
+    padding: 20px 10px;
+    width: 100%;
+    position: relative;
+    margin: 0 20px;
+}
+
+.slides {
+    position: static;
+    overflow: hidden;
+}
+
+.slick-slide {
+    margin: 0 25%;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slider {
+    padding: 0;
+    margin: 0 30px;
+}
+
+.slick-slide {
+    margin: 0 5px;
+}
+
+.slick-prev {
+
+}
+
+.slick-next {
+
+}
+
+.slick-dots {
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    z-index: 2;
+}
+
+.slick-dots li button {
+    width: 28px;
+    height: 31px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    line-height: 26px;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: white;
+    border: 0px solid black;
+    z-index: 2;
+}
+
+.slick-dots li button:focus {
+    outline: none;
+}
+
+li.slick-active {
+    position: relative;
+}
+
+li.slick-active::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    left: 10%;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #fff;
+    bottom: -10px;
+
+}
+
+.whiteBG {
+    width: 90%;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: #fff;
+    position: absolute;
+    bottom: 38px;
+    left: 5%;
+    right: 5%;
+
+}
+
+.mobileAbout_wealth-title-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobileAbout_wealth-title {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding: 20px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../../../../assets/icons/red_white.svg');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+
+.mobileAbout_wealth-subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #FFFFFF;
+
+}
+
+.mobileAbout_wealth-text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* or 119% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.mobileAbout_wealth-control {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 33px;
+    padding: 0 10px;
+
+    margin-bottom: 30px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #393940;
+    background: #FFFFFF;
+    border: 3px solid #393940;
+    border-radius: 3px;
+}
+
+.mobileAbout_wealth-control-ctrl {
+    width: 28px;
+}
+
+.mobileAbout_wealth-control-ctrl:nth-child(2) {
+    width: 20px;
+}
+
+.mobileAbout_wealth-control-leftarrow {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    width: 28px;
+    border: 0;
+    background: none;
+}
+
+.mobileAbout_wealth-control-rightarrow {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    width: 28px;
+    border: 0;
+    background: none;
+}
+
+/* slick first */
+
+.mobileService_work {
+    position: relative;
+    min-height: 100%;
+    padding: 100px 0 0 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../../../assets/icons/jat-service-employee.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.work_slide2 {
+    background-image: url("../../../../assets/icons/employee-service-2.jpg");
+}
+
+.work_slide3 {
+    background-image: url("../../../../assets/icons/employee-service-3.jpg");
+}
+.work_slide3 .desktopService_work-text{
+    width: 40%;
+}
+
+
+.desktopService_work-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #131313;
+}
+.desktopService_work-text{
+    font-family: 'Gotham Pro';
+    font-style: bold;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 26px;
+    width: 50%;
+    color: #131313;
+}
+
+.mobileService_work-button {
+    width: 368px;
+    height: 60px;
+    background: #FFE800;
+    border: 0;
+    text-decoration: none;
+    margin-top: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #131313;
+}
+
+.how_we_work-inner {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .how_we_work-title {
