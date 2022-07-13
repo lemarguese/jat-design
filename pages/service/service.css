@@ -445,7 +445,7 @@ img {
 
 .how_we_work-inner {
     width: 100%;
-    
+    position: relative;
     overflow: hidden;
 }
 
@@ -797,7 +797,7 @@ li.slick-active::after {
 .mobileService_work {
     position: relative;
     min-height: 100%;
-    padding: 100px 0 0 100px;
+    padding: 50px 0 0 100px;
     width: 100%;
     background-repeat: no-repeat;
     background-image: url('../../assets/icons/jat-service-employee.png');
@@ -837,7 +837,7 @@ li.slick-active::after {
 
 .mobileService_work-button {
     width: 368px;
-    height: 60px;
+    height: 40px;
     background: #FFE800;
     border: 0;
     text-decoration: none;

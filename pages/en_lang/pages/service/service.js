@@ -107,7 +107,7 @@ window.onload = function () {
     })
     
     $('.slides_big').slick({
-        slidesToScroll: 1, slidesToShow: 1, dots: false, 
+        slidesToScroll: 1, slidesToShow: 1, dots: true, 
         infinite: true,
         speed: 1000,
         arrows: true, 
@@ -134,8 +134,12 @@ window.onload = function () {
         height: '31px',
         position: 'absolute',
         bottom: '40px',
-        left: 'calc(50% - 90px)',
-        top: 'inherit'
+        left: '100px',
+        top: 'inherit',
+        zIndex: 2,
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
+        borderLeft: '2px solid black',
     })
     $('.slides_big .slick-next').css({
         background: 'none',
@@ -146,8 +150,11 @@ window.onload = function () {
         height: '31px',
         position: 'absolute',
         bottom: '40px',
-        right: 'calc(50% - 90px)',
-        top: 'inherit'
+        left: '212px',
+        top: 'inherit',
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
+        borderRight: '2px solid black',
     })
     $('.slides_big .slick-slide').css({
         width: '100%',
@@ -158,6 +165,21 @@ window.onload = function () {
         
         margin: '0 0',
         padding: '0 0',
+    })
+
+    $('.slides_big .slick-dots').css({
+        bottom: '40px',
+        left: '128px',
+        height: '31px',
+        position: 'absolute',
+        margin: '0 0',
+        padding: '0 0',
+        
+    })
+    $('.slides_big .slick-dots>li>button').css({
+        height: '31px',
+        borderBottom: '2px solid black',
+        borderTop: '2px solid black',
     })
 
     $('.slides_big .slick-prev').html('<');

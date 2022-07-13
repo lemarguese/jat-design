@@ -743,6 +743,7 @@ li.slick-active::after {
     width: 100%;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .how_we_work-title {
