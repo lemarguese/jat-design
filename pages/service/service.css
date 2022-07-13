@@ -43,6 +43,7 @@ img {
     width: 15%;
     padding-top: 100px;
     margin-left: 10%;
+    min-width: 180px;
 }
 
 .routing-icons {
@@ -434,14 +435,17 @@ img {
 }
 
 .how_we_work-inner {
-    padding: 50px 0 20px 75px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 600px;
+   
 }
 
 .how_we_work-inner {
-    width: 50%;
+    width: 100%;
+    
     overflow: hidden;
 }
 
@@ -792,8 +796,8 @@ li.slick-active::after {
 
 .mobileService_work {
     position: relative;
-    min-height: 193px;
-    padding: 40px 10px;
+    min-height: 100%;
+    padding: 100px 0 0 100px;
     width: 100%;
     background-repeat: no-repeat;
     background-image: url('../../assets/icons/jat-service-employee.png');
@@ -808,38 +812,50 @@ li.slick-active::after {
 .work_slide3 {
     background-image: url("../../assets/icons/employee-service-3.jpg");
 }
+.work_slide3 .desktopService_work-text{
+    width: 40%;
+}
 
-.mobileService_work-title {
+
+.desktopService_work-title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #131313;
+}
+.desktopService_work-text{
     font-family: 'Gotham Pro';
-    font-style: normal;
+    font-style: bold;
     font-weight: 800;
-    font-size: 8px;
-    line-height: 8px;
-    width: 55%;
+    font-size: 14px;
+    line-height: 26px;
+    width: 50%;
     color: #131313;
 }
 
 .mobileService_work-button {
-    width: 170px;
-    height: 40px;
+    width: 368px;
+    height: 60px;
     background: #FFE800;
     border: 0;
-    display: block;
     text-decoration: none;
-    padding: 14px 0;
+    margin-top: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 10px;
     line-height: 12px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
 
     color: #131313;
 
-    position: absolute;
-    bottom: 20%;
+
 }
 
 .advantages-work {
