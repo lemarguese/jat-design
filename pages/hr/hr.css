@@ -554,6 +554,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     padding-right: 100px;
+    position: relative;
+    z-index: 95;
 }
 
 .modal-title_block, .form-inputs {
@@ -650,6 +652,7 @@ button:hover {
 .contact-phone_block {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 }
 
 .contact-location--text, .contact-phone--text {
@@ -723,6 +726,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     padding-right: 100px;
+    position: relative;
+    z-index: 95;
 }
 
 .modal-title_block-second, .form-inputs-second {
@@ -752,7 +757,7 @@ button:hover {
 .close-button_block {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .modal-content--text {
@@ -782,6 +787,7 @@ button:hover {
 
 .textarea-modal-input {
     padding-top: 10px;
+    resize: none;
     height: 80px;
 }
 
@@ -813,7 +819,8 @@ button:hover {
     padding-left: 45px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    top: -66px;
     background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;

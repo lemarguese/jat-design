@@ -1282,6 +1282,8 @@ li.slick-active::after {
     display: flex;
     flex-direction: column;
     padding-right: 100px;
+    position: relative;
+    z-index: 95;
 }
 
 .modal-title_block, .form-inputs {
@@ -1311,7 +1313,7 @@ li.slick-active::after {
 .close-button_block {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .modal-content--text {
@@ -1342,6 +1344,7 @@ li.slick-active::after {
 .textarea-modal-input {
     padding-top: 10px;
     height: 80px;
+    resize: none;
 }
 
 .question-modal_input::placeholder {
@@ -1372,7 +1375,8 @@ li.slick-active::after {
     padding-left: 45px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    top: -66px;
     background-image:url("assets/icons/lines.svg"), url("assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;
@@ -1382,6 +1386,7 @@ li.slick-active::after {
 .contact-phone_block {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 }
 
 .contact-location--text, .contact-phone--text {

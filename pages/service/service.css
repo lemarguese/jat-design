@@ -1389,8 +1389,14 @@ li.slick-active::after {
     justify-content: center;
 }
 
+.modal-content {
+    position: relative;
+    z-index: 95;
+}
+
 .close-button_block {
     margin-right: 100px;
+    justify-content: flex-end;
 }
 
 .modal-content--text {
@@ -1467,6 +1473,8 @@ li.slick-active::after {
     display: flex;
     flex-direction: column;
     padding-right: 100px;
+    position: relative;
+    z-index: 95;
 }
 
 .modal-title_block, .form-inputs {
@@ -1496,7 +1504,7 @@ li.slick-active::after {
 .close-button_block-second {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .modal-content--text {
@@ -1517,6 +1525,7 @@ li.slick-active::after {
 .contact-phone_block {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 }
 
 .question-modal_input, .file-input_cover {
@@ -1531,6 +1540,7 @@ li.slick-active::after {
 
 .textarea-modal-input {
     padding-top: 10px;
+    resize: none;
     height: 80px;
 }
 
@@ -1562,7 +1572,8 @@ li.slick-active::after {
     padding-left: 45px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    top: -66px;
     background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;

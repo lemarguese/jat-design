@@ -102,71 +102,6 @@ function closeModal() {
     localStorage.removeItem('image');
 }
 
-// function intervalAnim() {
-//     let index = 2;
-//     changeSlide(document.getElementsByClassName('pagination--item')[0]);
-//     setInterval(() => {
-//         changeSlide(document.getElementsByClassName('pagination--item')[index]);
-//         index += 2;
-//         if (index >= 6) index = 0;
-//     }, 3000);
-// }
-
-// function changeSlide(index) {
-//     let title = document.getElementsByClassName('values-content--text')[0];
-//     let content = document.getElementsByClassName('info-text')[0];
-//     let currentTab = document.getElementsByClassName('current-arrow');
-//     let values = document.getElementsByClassName('values--section_inner')[0];
-
-//     for (const currentTabElement of currentTab) {
-//         currentTabElement.style.display = 'none';
-//         currentTabElement.className = 'current-arrow';
-//     }
-//     values.style.opacity = '0';
-
-//     setTimeout(() => {
-//         let idx = Number(index.children[0].innerHTML);
-
-//         currentTab[idx - 1].style.display = 'block';
-//         currentTab[idx - 1].className = 'current-arrow active-arrow';
-//         if (idx === 1) {
-//             title.innerHTML = 'контроль';
-//             content.innerHTML = 'Рассчитывайте на нас. Мы<br/> всегда будем рядом, если<br/> что-то пойдет не по плану. ';
-//         } else if (idx === 2) {
-//             title.innerHTML = 'Ответственность';
-//             content.innerHTML = 'Мы несем ответственность за<br/> ваш груз с момента забора<br/> до момента доставки';
-//         } else if (idx === 3) {
-//             title.innerHTML = 'надежность';
-//             content.innerHTML = 'Мы всегда рядом и держим Вас<br/> в курсе на каждом этапе пути. ';
-//         }
-//     }, 500);
-
-//     setTimeout(() => {
-//         values.style.opacity = '1';
-//     }, 500);
-// }
-
-// function changeSlideBackground(event) {
-//     let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
-//     let currentTabs = document.getElementsByClassName('current-arrow');
-//     let paginationItems = document.querySelectorAll('.pagination--item_block');
-
-//     let idx = 0;
-//     for (let i = 0; i < currentTabs.length; i++) {
-//         if (currentTabs[i] === activeIdx) idx = i;
-//     }
-
-//     if (event.className === 'next-arrow') {
-//         idx++;
-//     } else {
-//         idx--;
-//     }
-
-//     if (idx > 2) idx = 2;
-//     else if (idx < 0) idx = 0;
-//     changeSlide(paginationItems[idx].children[0]);
-// }
-
 function logoDrop() {
     let dropLogo = document.getElementsByClassName('jat-logo-sidebar')[0];
     let rect = document.getElementsByClassName('main-logo')[0].getBoundingClientRect();
@@ -406,7 +341,7 @@ function telephoneMask() {
     });
 }
 
-function changeLanguage () {
+function changeLanguage() {
     let langBlock = document.getElementsByClassName('language-selector')[0];
 
     langBlock.addEventListener('mouseenter', () => {
