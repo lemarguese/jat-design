@@ -8,8 +8,8 @@ window.onload = function () {
     let hrRoute = document.getElementsByClassName("routing-block_item hr-text")[0];
     let contactsRoute = document.getElementsByClassName("routing-block_item contacts-text")[0];
 
-    intervalSlider(changeSlideBack, 11, 5);
-    intervalSlider(changeSlide, 13, 5);
+    // intervalSlider(changeSlideBack, 11, 5);
+    // intervalSlider(changeSlide, 13, 5);
     mailModal();
     telephoneMask();
     changeLanguage();
@@ -68,6 +68,82 @@ window.onload = function () {
         });
     });
     loadAnim();
+
+    $('.slides').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true,
+    });
+    $('.slides .slick-prev').html('<');
+    $('.slides .slick-next').html('>')
+
+    $('.slides .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+
+    })
+    $('.slides .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        right: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+
+    $('.slides .slick-slide').css({
+        width: '100%',
+    })
+
+    $('.slides_big').slick({
+        slidesToScroll: 1, slidesToShow: 1, dots: true,
+    });
+    $('.slides_big .slick-prev').html('<');
+    $('.slides_big .slick-next').html('>');
+
+    $('.slides_big .slick-arrow').css({
+        background: 'none', backgroundColor: 'white', border: '0px solid black',
+    })
+    $('.slides_big .slick-prev').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        left: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides_big .slick-next').css({
+        background: 'none',
+        fontSize: '16px',
+        backgroundColor: 'white',
+        border: '0px solid black',
+        width: '28px',
+        height: '31px',
+        position: 'absolute',
+        bottom: '40px',
+        right: 'calc(50% - 90px)',
+        top: 'inherit'
+    })
+    $('.slides_big .slick-slide').css({
+        width: '100%',
+    })
 }
 
 function closeModal() {
@@ -126,153 +202,6 @@ function closeMailModal() {
         askModal.style.display = 'none';
         askModalBg.style.display = 'none';
     }, 350);
-}
-
-function changeSlide(index) {
-    let title = document.getElementsByClassName('advantage-title-text')[0];
-    let content = document.getElementsByClassName('advantage-content-text')[0];
-    let advWorks = document.getElementsByClassName('advantages-work--item')[0];
-    let image = document.querySelectorAll('.advantages-image_block img')[0];
-    let currentTab = document.getElementsByClassName('current-arrow-second');
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow-second';
-    }
-    advWorks.style.animation = 'closing 0.5s linear 0s';
-    setTimeout(() => {
-        let idx = Number(index.children[0].innerHTML);
-
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow-second active-arrow-second';
-        if (idx === 1) {
-            title.innerHTML = 'надежность';
-            content.innerHTML = 'Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.';
-            image.setAttribute('src', "../../assets/icons/service-slider-image-1.png");
-        } else if (idx === 2) {
-            title.innerHTML = 'твердость характера';
-            content.innerHTML = 'Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».';
-            image.setAttribute('src', "../../assets/icons/service-slider-2.png");
-        } else if (idx === 3) {
-            title.innerHTML = 'ориентация на клиента';
-            content.innerHTML = 'За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.';
-            image.setAttribute('src', "../../assets/icons/service-slider-3.png");
-        } else if (idx === 4) {
-            title.innerHTML = 'скорость коммуникации';
-            content.innerHTML = 'Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».';
-            image.setAttribute('src', "../../assets/icons/service-slider-4.png");
-        }
-    }, 500);
-
-    setTimeout(() => {
-        advWorks.style.animation = 'opening .5s linear 0s';
-    }, 500);
-}
-
-function changeSlideArrows(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow-second active-arrow-second')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow-second');
-    let paginationItems = document.querySelectorAll('.pagination_block-second .pagination--item_block');
-
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
-
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
-
-    if (idx > 3) idx = 3;
-    else if (idx < 0) idx = 0;
-    changeSlide(paginationItems[idx].children[0]);
-}
-
-function changeSlideBackground(event) {
-    let activeIdx = document.getElementsByClassName('current-arrow active-arrow')[0];
-    let currentTabs = document.getElementsByClassName('current-arrow');
-    let paginationItems = document.querySelectorAll('.pagination_block .pagination--item_block');
-
-    let idx = 0;
-    for (let i = 0; i < currentTabs.length; i++) {
-        if (currentTabs[i] === activeIdx) idx = i;
-    }
-
-    if (event.className === 'next-arrow') {
-        idx++;
-    } else {
-        idx--;
-    }
-
-    if (idx > 2) idx = 2;
-    else if (idx < 0) idx = 0;
-    changeSlideBack(paginationItems[idx].children[0]);
-}
-
-function changeSlideBack(ev) {
-    let sliderImage = document.getElementsByClassName('jat-how_we_work')[0];
-    let infoHowWeWork = document.getElementsByClassName('how_we_work-info')[0];
-    let content = document.querySelector('.how_we_work-content');
-
-    let currentTab = document.getElementsByClassName('current-arrow');
-    for (const currentTabElement of currentTab) {
-        currentTabElement.style.display = 'none';
-        currentTabElement.className = 'current-arrow';
-    }
-
-    setTimeout(() => {
-        sliderImage.style.background = 'transparent';
-        sliderImage.style.transition = 'background linear 2.25s';
-    }, 1500);
-    infoHowWeWork.style.animation = 'closing 1s linear 0s';
-
-    setTimeout(() => {
-        let idx = Number(ev.children[0].innerHTML);
-        currentTab[idx - 1].style.display = 'block';
-        currentTab[idx - 1].className = 'current-arrow active-arrow';
-
-        if (idx === 1) {
-            sliderImage.style.background = 'url("../../assets/icons/jat-service-employee.png") no-repeat center';
-            content.innerHTML = 'Мы предлагаем специально назначенное контактное лицо<br/>' +
-                ' компании «JAT» для удовлетворения всех ваших потребностей<br/>' +
-                ' по перевозке грузов всеми видами транспорта. Вас не будут<br/>' +
-                ' перенаправлять в другой отдел и другим коллегам. За вами<br/>' +
-                ' будет закреплен один человек и одно контактное лицо для<br/>' +
-                ' решения вопросов на более высоком уровне. Ваш опыт<br/>' +
-                ' сотрудничества с компанией «JAT» будет заключаться в<br/>' +
-                ' простоте коммуникации для «выполнения поставленных<br/>' +
-                ' задач».';
-            sliderImage.style.backgroundSize = 'cover';
-        } else if (idx === 2) {
-            sliderImage.style.background = 'url("../../assets/icons/employee-service-2.jpg") no-repeat center';
-            content.innerHTML = 'В тот момент когда мы получаем ваш Заказ на перевозку груза, мы<br/>' +
-                ' изучаем характеристики груза и запрашиваем эту же информацию у<br/>' +
-                ' поставщика и работаем по нашему внутреннему списку задач, чтобы<br/>' +
-                ' удостовериться в том, что мы можем начать работу, прежде чем<br/>' +
-                ' размещать заказ у перевозчиков. Мы предоставляем вам обновленную<br/>' +
-                ' информацию по мере выполнения задач и предлагаем отслеживание в<br/>' +
-                ' режиме реального времени по электронной почте или с помощью доступа<br/>' +
-                ' к нашей программе отслеживания в облаке, куда Вы можете загрузить<br/>' +
-                ' все ваши товаросопроводительные документы и фотографии груза в<br/>' +
-                ' любое время.'
-            sliderImage.style.backgroundSize = 'cover';
-        } else if (idx === 3) {
-            sliderImage.style.background = 'url("../../assets/icons/employee-service-3.jpg") no-repeat center';
-            content.innerHTML = 'Рассматривая Вас в качестве нашего клиента, мы<br/>' +
-                ' понимаем, что у Вас также есть клиент и вам необходима<br/>' +
-                ' компания «JAT Transport» в качестве надежного<br/>' +
-                ' делового партнера, который поможет вам добиться<br/>' +
-                ' успеха в бизнесе, благодаря своевременным и<br/>' +
-                ' безопасным доставкам грузов, четкой коммуникации –<br/> ' +
-                ' все это доступно по согласованной цене, определенной<br/>' +
-                ' в начале сотрудничества.';
-            sliderImage.style.backgroundSize = 'cover';
-        }
-    }, 1500);
-    setTimeout(() => {
-        infoHowWeWork.style.animation = 'opening 2.5s linear 0s';
-    }, 1500);
 }
 
 function slide(event) {

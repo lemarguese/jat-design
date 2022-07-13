@@ -5,6 +5,8 @@
     <title>JAT - Service</title>
     <link rel="stylesheet" href="../../assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="service.css">
+    <script src="../../jQuery.js"></script>
+    <script src="../../slick.min.js"></script>
     <script src="service.js"></script>
 </head>
 <body>
@@ -404,123 +406,78 @@
             </div>
             <div class="jat-how_we_work">
                 <div class="how_we_work-inner">
-                    <div class="how_we_work-info">
-                        <div class="how_we_work-title-block">
-                            <p class="how_we_work-title _animation">Как мы работаем</p>
+                    <div class="slides_big">
+                        <!-- 1 -->
+                        <div class="mobileService_work">
+                            <p class="mobileService_work-title">Мы предлагаем специально назначенное
+                                контактное лицо компании «JAT»
+                                для удовлетворения всех ваших потребностей
+                                по перевозке грузов всеми видами транспорта.</p>
+                            <a href="../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                                презентацию</a>
                         </div>
-                        <div class="how_we_work-content-block">
-                            <p class="how_we_work-content _animation">Мы предлагаем специально назначенное контактное
-                                лицо<br/>
-                                компании «JAT» для удовлетворения всех ваших потребностей<br/>
-                                по перевозке грузов всеми видами транспорта. Вас не будут<br/>
-                                перенаправлять в другой отдел и другим коллегам. За вами <br/>
-                                будет закреплен один человек и одно контактное лицо для<br/>
-                                решения вопросов на более высоком уровне. Ваш опыт<br/>
-                                сотрудничества с компанией «JAT» будет заключаться в<br/>
-                                простоте коммуникации для «выполнения поставленных<br/> задач».
+
+                        <!-- 2 -->
+                        <div class="mobileService_work work_slide2">
+                            <p class="mobileService_work-title work_slide2-title">«JAT Transport» надёжный партнёр, <br>
+                                который поможет вам добиться успеха
+                                в бизнесе, благодаря своевременным
+                                и безопасным доставкам грузов,
+                                четкой коммуникации</p>
+                            <a href="../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                                презентацию</a>
+                        </div>
+                        <!-- 3 -->
+                        <div class="mobileService_work work_slide3">
+                            <p class="mobileService_work-title">Отслеживание в режиме реального времени
+                                по электронной почте или с помощью доступа
+                                к нашей программе отслеживания в облаке,
+                                куда Вы можете загрузить все ваши
+                                товаросопроводительные документы
+                                и фотографии груза в любое время.
                             </p>
+                            <a href="../../mobile/assets/presentation/about_jat.pdf" class="mobileService_work-button" download="jat">скачать
+                                презентацию</a>
                         </div>
-                        <div class="how_we_work-button-block">
-                            <button class="how_we_work-btn _animation">скачать презентацию</button>
-                        </div>
-                    </div>
-                    <div class="how_we_work-pagination">
-                        <div class="pagination_block">
-                            <div class="pagination-control">
-                                <div class="prev-arrow" onclick="changeSlideBackground(this)"><</div>
-                                <div class="pagination_block-inner">
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">1</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                    <div class="pagination--item">
-                                        <p class="pagination-text">|</p>
-                                    </div>
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">2</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                    <div class="pagination--item">
-                                        <p class="pagination-text">|</p>
-                                    </div>
-                                    <div class="pagination--item_block">
-                                        <div class="pagination--item" onclick="changeSlideBack(this)">
-                                            <p class="pagination-text">3</p>
-                                        </div>
-                                        <div class="current-arrow"></div>
-                                    </div>
-                                </div>
-                                <div class="next-arrow" onclick="changeSlideBackground(this)">></div>
-                            </div>
-                        </div>
-                        <div class="current-arrow"></div>
                     </div>
                 </div>
             </div>
             <div class="about_and_hr">
                 <div class="about_and_hr-inner">
                     <div class="about_block">
-                        <div class="advantages-work">
-                            <div class="advantages-work--item">
-                                <div class="advantage-text_block">
-                                    <p class="advantage-text">почему мы?</p>
+                        <div class="mobileAbout_wealth-wrapper _animation">
+                            <h2 class="mobileAbout_wealth-title">Наши ценности</h2>
+                            <div class="whiteBG"></div>
+                            <div class="slides">
+                                <!-- 1 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image1" src="../../assets/icons/service-slider-image-1.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">надежность</h3>
+                                    <p class="mobileAbout_wealth-text">Мы всегда рядом. Мы всегда доставляем грузы. Мы всегда находим решения.</p>
+                                    <div class="bar1"></div>
                                 </div>
-                                <div class="advantages-image_block">
-                                    <img src="../../assets/icons/service-slider-image-1.png">
+
+                                <!-- 2 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image2" src="../../assets/icons/service-slider-2.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">твердость характера</h3>
+                                    <p class="mobileAbout_wealth-text">Мы придерживаемся выбранного курса и искренне верим, любое преодоление, заложено в «ДНК компании «JAT».</p>
+                                    <div class="bar2"></div>
                                 </div>
-                                <div class="advantage_block">
-                                    <div class="advantage-title_block">
-                                        <p class="advantage-title-text">надежность</p>
-                                    </div>
-                                    <div class="advantage-content_block">
-                                        <p class="advantage-content-text">Мы всегда рядом. Мы всегда доставляем
-                                            грузы. Мы всегда находим решения.</p>
-                                    </div>
+
+                                <!-- 3 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image3" src="../../assets/icons/service-slider-3.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">ориентация на клиента</h3>
+                                    <p class="mobileAbout_wealth-text">За вами будет закреплен одно контактное лицо для решения вопросов на более высоком уровне.</p>
+                                    <div class="bar3"></div>
                                 </div>
-                            </div>
-                            <div class="pagination_block-second">
-                                <div class="pagination-control">
-                                    <div class="prev-arrow" onclick="changeSlideArrows(this)"><</div>
-                                    <div class="pagination_block-inner">
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">1</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">2</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">3</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                        <div class="pagination--item">
-                                            <p class="pagination-text">|</p>
-                                        </div>
-                                        <div class="pagination--item_block">
-                                            <div class="pagination--item" onclick="changeSlide(this)">
-                                                <p class="pagination-text">4</p>
-                                            </div>
-                                            <div class="current-arrow-second"></div>
-                                        </div>
-                                    </div>
-                                    <div class="next-arrow" onclick="changeSlideArrows(this)">></div>
+                                <!-- 4 -->
+                                <div class="mobileAbout_wealth">
+                                    <img class="mobileBestSides_content-img image4" src="../../assets/icons/service-slider-4.png">
+                                    <h3 class="mobileAbout_wealth-subtitle">скорость коммуникации</h3>
+                                    <p class="mobileAbout_wealth-text">Сразу же отметите коммуникацию и отзывчивость, как только Вы обратитесь в компанию «JAT».</p>
+                                    <div class="bar4"></div>
                                 </div>
                             </div>
                         </div>
