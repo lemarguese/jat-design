@@ -199,7 +199,7 @@ button:hover {
 /* jat body */
 
 .jat-body {
-    width: 85%;
+    width: 75%;
     background-color: #fff;
     background-image: url("../../assets/icons/lines.svg"), url("../../assets/icons/transport-logo.png"), url("../../assets/icons/jat-illustration.png");
     background-position: 100px 0, -180px 0, right 50px;

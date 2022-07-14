@@ -70,11 +70,11 @@ $(() => {
     }
 
     $('.mobileAbout_team-slider').slick({
-        slidesToScroll: 3, slidesToShow: 3,
+        slidesToScroll: 3, slidesToShow: 3, 
     });
 
     $('.slides').slick({
-        slidesToScroll: 1, slidesToShow: 1, dots: true,
+        slidesToScroll: 1, slidesToShow: 1, dots: true, autoplay: true, speed: 1000, autoPlaySpeed: 3000
     });
     $('.slides .slick-prev').html('<');
     $('.slides .slick-next').html('>')

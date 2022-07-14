@@ -155,7 +155,7 @@ img {
 /* jat body */
 
 .jat-body {
-    width: 85%;
+    width: 75%;
     background-color: #fff;
     background-image: url("../../../../assets/icons/lines.svg"), url("../../../../assets/icons/transport-logo.png");
     background-position: 100px 0, -180px 0;
@@ -468,10 +468,12 @@ img {
     position: relative;
     margin: 0 20px;
 }
-
+.slick-list{
+    overflow: hidden;
+}
 .slides {
     position: static;
-    overflow: hidden;
+    
 }
 
 .slick-slide {

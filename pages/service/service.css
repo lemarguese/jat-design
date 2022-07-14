@@ -586,9 +586,12 @@ img {
     margin: 0 20px;
 }
 
+.slick-list{
+    overflow: hidden;
+}
 .slides {
     position: static;
-    overflow: hidden;
+    
 }
 
 .slick-slide {
@@ -627,7 +630,7 @@ img {
 }
 
 .slick-dots li {
-    z-index: 2;
+    z-index: 1  ;
 }
 
 .slick-dots li button {
@@ -664,7 +667,7 @@ li.slick-active::after {
     border-radius: 1px;
     background-color: #fff;
     bottom: -10px;
-
+    z-index: 5;
 }
 
 .whiteBG {

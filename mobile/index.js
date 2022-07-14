@@ -39,7 +39,7 @@ $(() => {
     }
 
     $('.slides').slick({
-        dots: true,
+        dots: true, autoplay: true, speed: 1000, autoPlaySpeed: 3000
     });
     $('.slick-prev').html('<');
     $('.slick-next').html('>')

@@ -80,12 +80,12 @@ $(() => {
         arrows: false,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 500,
+        speed: 1000,
         autoplaySpeed: 3000,
     })
 
     $('.slides').slick({
-        dots: true,
+        dots: true, autoplay: true, speed: 1000, autoPlaySpeed: 3000
     });
     $('.slick-prev').html('<');
     $('.slick-next').html('>')
