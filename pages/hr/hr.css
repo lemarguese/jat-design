@@ -506,7 +506,7 @@ button:hover {
     position: absolute;
     z-index: 99;
     width: 800px;
-    max-height: 550px;
+    max-height: 480px;
     margin: auto;
     left: 0;
     right: 0;
@@ -653,6 +653,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
+    margin-right: 25px;
 }
 
 .contact-location--text, .contact-phone--text {
@@ -820,7 +821,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     position: relative;
-    top: -66px;
+    /*top: -66px;*/
     background-image:url("../../assets/icons/lines.svg"), url("../../assets/icons/yellow-question-modal-rect.svg");
     background-size: 100px, 85px;
     background-position: 20px 10px, 0 0;
