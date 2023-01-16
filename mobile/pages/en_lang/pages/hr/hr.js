@@ -15,7 +15,7 @@ $(() => {
                     hintContent: 'Собственный значок метки', balloonContent: 'Это красивая метка'
                 }, {
                     iconLayout: 'default#image',
-                    iconImageHref: '../../assets/icons/mark.png',
+                    iconImageHref: '../../../../assets/icons/mark.png',
                     iconImageSize: [30, 42],
                     iconImageOffset: [-5, -38]
                 });
@@ -24,7 +24,7 @@ $(() => {
                     hintContent: 'Собственный значок метки', balloonContent: 'Это красивая метка'
                 }, {
                     iconLayout: 'default#image',
-                    iconImageHref: '../../assets/icons/mob_atakent.svg',
+                    iconImageHref: '../../../../assets/icons/mob_atakent.svg',
                     iconImageSize: [123, 88],
                     iconImageOffset: [-5, -38]
                 });
